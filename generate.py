@@ -61,7 +61,8 @@ BALLOTS26_FILES = {"Alabama": "al", "Colorado": "co", "North Carolina": "nc",
                    "Oregon": "or", "Tennessee": "tn",
                    "Vermont": "vt", "Iowa": "ia",
                    "Indiana": "in", "Missouri": "mo",
-                   "North Dakota": "nd"}
+                   "North Dakota": "nd",
+                   "South Dakota": "sd"}
 BALLOTS26_LABEL = {"Alabama": "Ballots cast",
                    "Colorado": "Ballots returned (Nov 5)",
                    "North Carolina": "Votes — U.S. Senate race",
@@ -91,6 +92,7 @@ BALLOTS26_LABEL = {"Alabama": "Ballots cast",
                    "Indiana": "Votes — Secretary of State race",
                    "Missouri": "Votes — State Auditor race",
                    "North Dakota": "Votes — Representative in Congress race",
+                   "South Dakota": "Votes — Governor's race",
                    "Montana": "Ballots cast"}
 # combination-quadrants.csv group values in the owner's plain words
 QUAD_LABELS = {"high rolls / high ballots": "Big voter list · many ballots",
@@ -1747,6 +1749,13 @@ def ballots26_note(d, st):
                 f'puts ballots cast statewide at 239,057, which is '
                 f'{239057 - parts:,} more. Both numbers stand as '
                 f'published.</p>')
+    if st == "South Dakota":
+        return (f'<p class="src">The 66 county figures add up to '
+                f'{parts:,} — the statewide Governor total the '
+                f'Secretary of State\'s results site displays. The '
+                f'same site puts ballots cast statewide at 310,298, '
+                f'which is {310298 - parts:,} more. Both numbers '
+                f'stand as published.</p>')
     pub = {"Alabama": (1693621, "the statewide total the Secretary of State published"),
            "Colorado": (2761449, "the total in the Secretary of State's release"),
            "Minnesota": (2830125, "the statewide Governor total in the Secretary of State's file"),
@@ -3263,7 +3272,7 @@ def build_data(d, states, counties_by_state):
             "county-ballots-or.csv", "county-ballots-tn.csv",
             "county-ballots-vt.csv", "county-ballots-ia.csv",
             "county-ballots-in.csv", "county-ballots-mo.csv",
-            "county-ballots-nd.csv",
+            "county-ballots-nd.csv", "county-ballots-sd.csv",
             "governor-results-2026.csv",
             "county-history-eavs-older.csv",
             "anomalies-vs-history.csv", "PAST-ELECTION-DAYS.md",
