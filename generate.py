@@ -5,7 +5,7 @@ host-agnostic static site (HTML/CSS, no JS needed for content) to site/
 beside this file. Python stdlib only. The map step reads us-atlas TopoJSON
 from data/maps/ (see fetch_maps(), which refetches only if a file is missing).
 """
-import csv, io, json, math, os, re, shutil, sys, urllib.request
+import csv, hashlib, io, json, math, os, re, shutil, sys, urllib.request
 from html import escape as esc
 import alaska_geography as ak_geo
 
@@ -13,6 +13,10 @@ BASE = os.path.dirname(os.path.abspath(__file__))
 SRC = os.path.join(BASE, "data")
 OUT = os.path.join(BASE, "site")
 MAPDIR = os.path.join(BASE, "data", "maps")
+ASSET_VERSIONS = {}
+for _asset in ("navigation.css", "navigation.js"):
+    with open(os.path.join(BASE, "assets", _asset), "rb") as _f:
+        ASSET_VERSIONS[_asset] = hashlib.sha256(_f.read()).hexdigest()[:12]
 
 GREEN, YELLOW, ORANGE, GREY = "#15803d", "#eab308", "#ea580c", "#9ca3af"
 VIOLET = "#7C3AED"
@@ -1154,8 +1158,8 @@ def page(title, body, depth=0, src_html=None, jump=None, yearbar=None):
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Inter:wght@400;500;600;700;800&display=swap">
 <style>{CSS}</style>
-<link rel="stylesheet" href="{root}assets/navigation.css">
-<script src="{root}assets/navigation.js" defer></script>
+<link rel="stylesheet" href="{root}assets/navigation.css?v={ASSET_VERSIONS['navigation.css']}">
+<script src="{root}assets/navigation.js?v={ASSET_VERSIONS['navigation.js']}" defer></script>
 </head>
 <body{bodycls}>
 <a class="skip-link" href="#main-content">Skip to content</a>

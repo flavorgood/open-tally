@@ -61,7 +61,7 @@ def run():
         assert page.locator('.section-index a').count() >= 10
         anchors = page.locator('.section-index a').evaluate_all('(links)=>links.map(a=>a.hash.slice(1))')
         assert all(page.locator('[id="'+anchor+'"]').count()==1 for anchor in anchors)
-        page.get_by_label('Search files').fill('citations')
+        page.get_by_label('Search files').fill('county')
         assert page.locator('[data-filter-table=files] tr:visible').count() >= 2
         results.append('Data section index targets and source file filtering pass')
         for width in [1280,390]:

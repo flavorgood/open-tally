@@ -1,6 +1,7 @@
 """Check built navigation contracts without a browser. Run after python generate.py."""
 from pathlib import Path
 import unittest
+from urllib.parse import urlsplit
 from lxml import html
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -24,7 +25,8 @@ class NavigationTests(unittest.TestCase):
                 for link in nav:
                     self.assertTrue((SITE/path).parent.joinpath(link.get('href')).resolve().exists())
                 for url in doc.xpath('//link[contains(@href,"assets/")]/@href | //script[contains(@src,"assets/")]/@src'):
-                    self.assertTrue((SITE/path).parent.joinpath(url).resolve().exists())
+                    self.assertTrue((SITE/path).parent.joinpath(urlsplit(url).path).resolve().exists())
+                    self.assertIn("v=",urlsplit(url).query)
     def test_state_and_county_static_fallback(self):
         doc=page('states/index.html')
         rows=doc.xpath('//table[@data-filter-table="states"]//tr[td]')
