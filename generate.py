@@ -60,7 +60,8 @@ BALLOTS26_FILES = {"Alabama": "al", "Colorado": "co", "North Carolina": "nc",
                    "South Carolina": "sc", "Oklahoma": "ok",
                    "Oregon": "or", "Tennessee": "tn",
                    "Vermont": "vt", "Iowa": "ia",
-                   "Indiana": "in", "Missouri": "mo"}
+                   "Indiana": "in", "Missouri": "mo",
+                   "North Dakota": "nd"}
 BALLOTS26_LABEL = {"Alabama": "Ballots cast",
                    "Colorado": "Ballots returned (Nov 5)",
                    "North Carolina": "Votes — U.S. Senate race",
@@ -89,6 +90,7 @@ BALLOTS26_LABEL = {"Alabama": "Ballots cast",
                    "Iowa": "Votes — Governor's race",
                    "Indiana": "Votes — Secretary of State race",
                    "Missouri": "Votes — State Auditor race",
+                   "North Dakota": "Votes — Representative in Congress race",
                    "Montana": "Ballots cast"}
 # combination-quadrants.csv group values in the owner's plain words
 QUAD_LABELS = {"high rolls / high ballots": "Big voter list · many ballots",
@@ -1737,6 +1739,14 @@ def ballots26_note(d, st):
                 f'— the statewide total the page displays, candidate '
                 f'by candidate. The county figures stand as printed, '
                 f'net of Kansas City; nothing has been adjusted.</p>')
+    if st == "North Dakota":
+        return (f'<p class="src">The 53 county figures add up to '
+                f'{parts:,} — the statewide Total Votes for the '
+                f'Representative in Congress contest in the '
+                f'Secretary of State\'s results app. The same app '
+                f'puts ballots cast statewide at 239,057, which is '
+                f'{239057 - parts:,} more. Both numbers stand as '
+                f'published.</p>')
     pub = {"Alabama": (1693621, "the statewide total the Secretary of State published"),
            "Colorado": (2761449, "the total in the Secretary of State's release"),
            "Minnesota": (2830125, "the statewide Governor total in the Secretary of State's file"),
@@ -3253,6 +3263,7 @@ def build_data(d, states, counties_by_state):
             "county-ballots-or.csv", "county-ballots-tn.csv",
             "county-ballots-vt.csv", "county-ballots-ia.csv",
             "county-ballots-in.csv", "county-ballots-mo.csv",
+            "county-ballots-nd.csv",
             "governor-results-2026.csv",
             "county-history-eavs-older.csv",
             "anomalies-vs-history.csv", "PAST-ELECTION-DAYS.md",
