@@ -1,0 +1,544 @@
+state,county,registered_voters,voting_age_population_2020,registered_pct_of_vap,growth_needed_pct_to_reach_100,registration_basis,registration_date
+Colorado,Adams,365272,386271,94.6,,Total registered = active + inactive (excludes preregistrants),2026-11-01
+Colorado,Alamosa,11901,12544,94.9,,Total registered = active + inactive (excludes preregistrants),2026-11-01
+Colorado,Arapahoe,479295,501680,95.5,,Total registered = active + inactive (excludes preregistrants),2026-11-01
+Colorado,Archuleta,13625,10948,124.5,24.5,Total registered = active + inactive (excludes preregistrants),2026-11-01
+Colorado,Baca,2869,2753,104.2,4.2,Total registered = active + inactive (excludes preregistrants),2026-11-01
+Colorado,Bent,3360,4745,70.8,,Total registered = active + inactive (excludes preregistrants),2026-11-01
+Colorado,Boulder,261692,268640,97.4,,Total registered = active + inactive (excludes preregistrants),2026-11-01
+Colorado,Broomfield,64515,57916,111.4,11.4,Total registered = active + inactive (excludes preregistrants),2026-11-01
+Colorado,Chaffee,19470,16471,118.2,18.2,Total registered = active + inactive (excludes preregistrants),2026-11-01
+Colorado,Cheyenne,1369,1338,102.3,2.3,Total registered = active + inactive (excludes preregistrants),2026-11-01
+Colorado,Clear Creek,8550,8011,106.7,6.7,Total registered = active + inactive (excludes preregistrants),2026-11-01
+Colorado,Conejos,5869,5515,106.4,6.4,Total registered = active + inactive (excludes preregistrants),2026-11-01
+Colorado,Costilla,3506,2879,121.8,21.8,Total registered = active + inactive (excludes preregistrants),2026-11-01
+Colorado,Crowley,2483,5284,47.0,,Total registered = active + inactive (excludes preregistrants),2026-11-01
+Colorado,Custer,5207,3996,130.3,30.3,Total registered = active + inactive (excludes preregistrants),2026-11-01
+Colorado,Delta,26519,24993,106.1,6.1,Total registered = active + inactive (excludes preregistrants),2026-11-01
+Colorado,Denver,560602,581062,96.5,,Total registered = active + inactive (excludes preregistrants),2026-11-01
+Colorado,Dolores,1888,1924,98.1,,Total registered = active + inactive (excludes preregistrants),2026-11-01
+Colorado,Douglas,325978,266006,122.5,22.5,Total registered = active + inactive (excludes preregistrants),2026-11-01
+Colorado,Eagle,40019,43263,92.5,,Total registered = active + inactive (excludes preregistrants),2026-11-01
+Colorado,El Paso,600631,558711,107.5,7.5,Total registered = active + inactive (excludes preregistrants),2026-11-01
+Colorado,Elbert,27408,20395,134.4,34.4,Total registered = active + inactive (excludes preregistrants),2026-11-01
+Colorado,Fremont,35550,41204,86.3,,Total registered = active + inactive (excludes preregistrants),2026-11-01
+Colorado,Garfield,43981,46166,95.3,,Total registered = active + inactive (excludes preregistrants),2026-11-01
+Colorado,Gilpin,5583,4916,113.6,13.6,Total registered = active + inactive (excludes preregistrants),2026-11-01
+Colorado,Grand,14262,13090,109.0,9.0,Total registered = active + inactive (excludes preregistrants),2026-11-01
+Colorado,Gunnison,14585,14028,104.0,4.0,Total registered = active + inactive (excludes preregistrants),2026-11-01
+Colorado,Hinsdale,740,657,112.6,12.6,Total registered = active + inactive (excludes preregistrants),2026-11-01
+Colorado,Huerfano,6291,5722,109.9,9.9,Total registered = active + inactive (excludes preregistrants),2026-11-01
+Colorado,Jackson,1201,1137,105.6,5.6,Total registered = active + inactive (excludes preregistrants),2026-11-01
+Colorado,Jefferson,479228,469066,102.2,2.2,Total registered = active + inactive (excludes preregistrants),2026-11-01
+Colorado,Kiowa,1108,1099,100.8,0.8,Total registered = active + inactive (excludes preregistrants),2026-11-01
+Colorado,Kit Carson,5289,5305,99.7,,Total registered = active + inactive (excludes preregistrants),2026-11-01
+Colorado,La Plata,50311,45269,111.1,11.1,Total registered = active + inactive (excludes preregistrants),2026-11-01
+Colorado,Lake,6190,5884,105.2,5.2,Total registered = active + inactive (excludes preregistrants),2026-11-01
+Colorado,Larimer,307285,289333,106.2,6.2,Total registered = active + inactive (excludes preregistrants),2026-11-01
+Colorado,Las Animas,11881,12044,98.6,,Total registered = active + inactive (excludes preregistrants),2026-11-01
+Colorado,Lincoln,3562,4485,79.4,,Total registered = active + inactive (excludes preregistrants),2026-11-01
+Colorado,Logan,14021,17431,80.4,,Total registered = active + inactive (excludes preregistrants),2026-11-01
+Colorado,Mesa,128746,123055,104.6,4.6,Total registered = active + inactive (excludes preregistrants),2026-11-01
+Colorado,Mineral,948,773,122.6,22.6,Total registered = active + inactive (excludes preregistrants),2026-11-01
+Colorado,Moffat,10249,9993,102.6,2.6,Total registered = active + inactive (excludes preregistrants),2026-11-01
+Colorado,Montezuma,22528,20464,110.1,10.1,Total registered = active + inactive (excludes preregistrants),2026-11-01
+Colorado,Montrose,35216,33608,104.8,4.8,Total registered = active + inactive (excludes preregistrants),2026-11-01
+Colorado,Morgan,20712,21390,96.8,,Total registered = active + inactive (excludes preregistrants),2026-11-01
+Colorado,Otero,13573,14318,94.8,,Total registered = active + inactive (excludes preregistrants),2026-11-01
+Colorado,Ouray,5192,4183,124.1,24.1,Total registered = active + inactive (excludes preregistrants),2026-11-01
+Colorado,Park,16792,14595,115.1,15.1,Total registered = active + inactive (excludes preregistrants),2026-11-01
+Colorado,Phillips,3163,3401,93.0,,Total registered = active + inactive (excludes preregistrants),2026-11-01
+Colorado,Pitkin,15264,14481,105.4,5.4,Total registered = active + inactive (excludes preregistrants),2026-11-01
+Colorado,Prowers,7891,8960,88.1,,Total registered = active + inactive (excludes preregistrants),2026-11-01
+Colorado,Pueblo,129354,130863,98.8,,Total registered = active + inactive (excludes preregistrants),2026-11-01
+Colorado,Rio Blanco,5080,4889,103.9,3.9,Total registered = active + inactive (excludes preregistrants),2026-11-01
+Colorado,Rio Grande,9285,8959,103.6,3.6,Total registered = active + inactive (excludes preregistrants),2026-11-01
+Colorado,Routt,22598,20060,112.7,12.7,Total registered = active + inactive (excludes preregistrants),2026-11-01
+Colorado,Saguache,5318,5096,104.4,4.4,Total registered = active + inactive (excludes preregistrants),2026-11-01
+Colorado,San Juan,868,600,144.7,44.7,Total registered = active + inactive (excludes preregistrants),2026-11-01
+Colorado,San Miguel,6848,6515,105.1,5.1,Total registered = active + inactive (excludes preregistrants),2026-11-01
+Colorado,Sedgwick,1907,1920,99.3,,Total registered = active + inactive (excludes preregistrants),2026-11-01
+Colorado,Summit,25321,25853,97.9,,Total registered = active + inactive (excludes preregistrants),2026-11-01
+Colorado,Teller,23041,20544,112.2,12.2,Total registered = active + inactive (excludes preregistrants),2026-11-01
+Colorado,Washington,3622,3722,97.3,,Total registered = active + inactive (excludes preregistrants),2026-11-01
+Colorado,Weld,266501,241833,110.2,10.2,Total registered = active + inactive (excludes preregistrants),2026-11-01
+Colorado,Yuma,6420,7320,87.7,,Total registered = active + inactive (excludes preregistrants),2026-11-01
+Delaware,Kent,148242,139805,106.0,6.0,Total registered voters,2026-11-01
+Delaware,New Castle,441080,449876,98.0,,Total registered voters,2026-11-01
+Delaware,Sussex,220309,193862,113.6,13.6,Total registered voters,2026-11-01
+Alabama,Autauga,46924,44523,105.4,5.4,Total registered = active + inactive,2026-10
+Alabama,Baldwin,214627,182471,117.6,17.6,Total registered = active + inactive,2026-10
+Alabama,Barbour,17002,20134,84.4,,Total registered = active + inactive,2026-10
+Alabama,Bibb,15036,17533,85.8,,Total registered = active + inactive,2026-10
+Alabama,Blount,43689,45403,96.2,,Total registered = active + inactive,2026-10
+Alabama,Bullock,6850,8356,82.0,,Total registered = active + inactive,2026-10
+Alabama,Butler,14287,14903,95.9,,Total registered = active + inactive,2026-10
+Alabama,Calhoun,83778,92289,90.8,,Total registered = active + inactive,2026-10
+Alabama,Chambers,26719,27791,96.1,,Total registered = active + inactive,2026-10
+Alabama,Cherokee,21406,20169,106.1,6.1,Total registered = active + inactive,2026-10
+Alabama,Chilton,32069,34385,93.3,,Total registered = active + inactive,2026-10
+Alabama,Choctaw,10357,10168,101.9,1.9,Total registered = active + inactive,2026-10
+Alabama,Clarke,18603,18249,101.9,1.9,Total registered = active + inactive,2026-10
+Alabama,Clay,10583,11299,93.7,,Total registered = active + inactive,2026-10
+Alabama,Cleburne,12440,11620,107.1,7.1,Total registered = active + inactive,2026-10
+Alabama,Coffee,39849,40774,97.7,,Total registered = active + inactive,2026-10
+Alabama,Colbert,45700,45078,101.4,1.4,Total registered = active + inactive,2026-10
+Alabama,Conecuh,9705,9277,104.6,4.6,Total registered = active + inactive,2026-10
+Alabama,Coosa,8212,8603,95.5,,Total registered = active + inactive,2026-10
+Alabama,Covington,29155,29387,99.2,,Total registered = active + inactive,2026-10
+Alabama,Crenshaw,10933,10360,105.5,5.5,Total registered = active + inactive,2026-10
+Alabama,Cullman,67455,68240,98.8,,Total registered = active + inactive,2026-10
+Alabama,Dale,36777,38048,96.7,,Total registered = active + inactive,2026-10
+Alabama,Dallas,28377,29613,95.8,,Total registered = active + inactive,2026-10
+Alabama,DeKalb,48427,53920,89.8,,Total registered = active + inactive,2026-10
+Alabama,Elmore,64795,69005,93.9,,Total registered = active + inactive,2026-10
+Alabama,Escambia,28334,28575,99.2,,Total registered = active + inactive,2026-10
+Alabama,Etowah,77176,81121,95.1,,Total registered = active + inactive,2026-10
+Alabama,Fayette,12820,12791,100.2,0.2,Total registered = active + inactive,2026-10
+Alabama,Franklin,19751,23931,82.5,,Total registered = active + inactive,2026-10
+Alabama,Geneva,20663,20820,99.2,,Total registered = active + inactive,2026-10
+Alabama,Greene,6342,6070,104.5,4.5,Total registered = active + inactive,2026-10
+Alabama,Hale,11956,11483,104.1,4.1,Total registered = active + inactive,2026-10
+Alabama,Henry,14727,13641,108.0,8.0,Total registered = active + inactive,2026-10
+Alabama,Houston,81041,82646,98.1,,Total registered = active + inactive,2026-10
+Alabama,Jackson,40808,41768,97.7,,Total registered = active + inactive,2026-10
+Alabama,Jefferson,497364,527087,94.4,,Total registered = active + inactive,2026-10
+Alabama,Lamar,11003,11019,99.9,,Total registered = active + inactive,2026-10
+Alabama,Lauderdale,71399,74908,95.3,,Total registered = active + inactive,2026-10
+Alabama,Lawrence,25966,25878,100.3,0.3,Total registered = active + inactive,2026-10
+Alabama,Lee,134526,136444,98.6,,Total registered = active + inactive,2026-10
+Alabama,Limestone,88329,79718,110.8,10.8,Total registered = active + inactive,2026-10
+Alabama,Lowndes,9378,8283,113.2,13.2,Total registered = active + inactive,2026-10
+Alabama,Macon,15241,16226,93.9,,Total registered = active + inactive,2026-10
+Alabama,Madison,337174,304143,110.9,10.9,Total registered = active + inactive,2026-10
+Alabama,Marengo,15017,15053,99.8,,Total registered = active + inactive,2026-10
+Alabama,Marion,22283,23264,95.8,,Total registered = active + inactive,2026-10
+Alabama,Marshall,68844,73530,93.6,,Total registered = active + inactive,2026-10
+Alabama,Mobile,310552,319427,97.2,,Total registered = active + inactive,2026-10
+Alabama,Monroe,15822,15562,101.7,1.7,Total registered = active + inactive,2026-10
+Alabama,Montgomery,159679,177427,90.0,,Total registered = active + inactive,2026-10
+Alabama,Morgan,88395,95485,92.6,,Total registered = active + inactive,2026-10
+Alabama,Perry,7366,6740,109.3,9.3,Total registered = active + inactive,2026-10
+Alabama,Pickens,13762,15447,89.1,,Total registered = active + inactive,2026-10
+Alabama,Pike,23510,26809,87.7,,Total registered = active + inactive,2026-10
+Alabama,Randolph,19438,17264,112.6,12.6,Total registered = active + inactive,2026-10
+Alabama,Russell,44783,44681,100.2,0.2,Total registered = active + inactive,2026-10
+Alabama,Shelby,183439,170487,107.6,7.6,Total registered = active + inactive,2026-10
+Alabama,St. Clair,74581,70092,106.4,6.4,Total registered = active + inactive,2026-10
+Alabama,Sumter,8967,9914,90.4,,Total registered = active + inactive,2026-10
+Alabama,Talladega,60958,65024,93.7,,Total registered = active + inactive,2026-10
+Alabama,Tallapoosa,32067,33012,97.1,,Total registered = active + inactive,2026-10
+Alabama,Tuscaloosa,147355,179024,82.3,,Total registered = active + inactive,2026-10
+Alabama,Walker,49162,51667,95.2,,Total registered = active + inactive,2026-10
+Alabama,Washington,13511,12081,111.8,11.8,Total registered = active + inactive,2026-10
+Alabama,Wilcox,8263,8260,100.0,0.0,Total registered = active + inactive,2026-10
+Alabama,Winston,17674,18766,94.2,,Total registered = active + inactive,2026-10
+Kentucky,Adair,13819,14861,93.0,,Total registered voters,2026-10-09
+Kentucky,Allen,15248,15641,97.5,,Total registered voters,2026-10-09
+Kentucky,Anderson,18617,18268,101.9,1.9,Total registered voters,2026-10-09
+Kentucky,Ballard,5987,6117,97.9,,Total registered voters,2026-10-09
+Kentucky,Barren,31960,33802,94.6,,Total registered voters,2026-10-09
+Kentucky,Bath,9311,9503,98.0,,Total registered voters,2026-10-09
+Kentucky,Bell,18367,18995,96.7,,Total registered voters,2026-10-09
+Kentucky,Boone,106275,100137,106.1,6.1,Total registered voters,2026-10-09
+Kentucky,Bourbon,14548,15500,93.9,,Total registered voters,2026-10-09
+Kentucky,Boyd,35336,37983,93.0,,Total registered voters,2026-10-09
+Kentucky,Boyle,22462,24326,92.3,,Total registered voters,2026-10-09
+Kentucky,Bracken,6484,6360,101.9,1.9,Total registered voters,2026-10-09
+Kentucky,Breathitt,9741,10673,91.3,,Total registered voters,2026-10-09
+Kentucky,Breckinridge,15568,15711,99.1,,Total registered voters,2026-10-09
+Kentucky,Bullitt,65252,63008,103.6,3.6,Total registered voters,2026-10-09
+Kentucky,Butler,9048,9377,96.5,,Total registered voters,2026-10-09
+Kentucky,Caldwell,9435,9903,95.3,,Total registered voters,2026-10-09
+Kentucky,Calloway,27987,30297,92.4,,Total registered voters,2026-10-09
+Kentucky,Campbell,73775,73538,100.3,0.3,Total registered voters,2026-10-09
+Kentucky,Carlisle,3701,3720,99.5,,Total registered voters,2026-10-09
+Kentucky,Carroll,7718,8104,95.2,,Total registered voters,2026-10-09
+Kentucky,Carter,18945,20774,91.2,,Total registered voters,2026-10-09
+Kentucky,Casey,11005,12064,91.2,,Total registered voters,2026-10-09
+Kentucky,Christian,46398,53678,86.4,,Total registered voters,2026-10-09
+Kentucky,Clark,29153,28694,101.6,1.6,Total registered voters,2026-10-09
+Kentucky,Clay,13545,15983,84.7,,Total registered voters,2026-10-09
+Kentucky,Clinton,7361,7098,103.7,3.7,Total registered voters,2026-10-09
+Kentucky,Crittenden,6389,6958,91.8,,Total registered voters,2026-10-09
+Kentucky,Cumberland,5289,4649,113.8,13.8,Total registered voters,2026-10-09
+Kentucky,Daviess,75804,78502,96.6,,Total registered voters,2026-10-09
+Kentucky,Edmonson,9907,9503,104.3,4.3,Total registered voters,2026-10-09
+Kentucky,Elliott,4736,5903,80.2,,Total registered voters,2026-10-09
+Kentucky,Estill,10441,11084,94.2,,Total registered voters,2026-10-09
+Kentucky,Fayette,227558,254496,89.4,,Total registered voters,2026-10-09
+Kentucky,Fleming,10874,11469,94.8,,Total registered voters,2026-10-09
+Kentucky,Floyd,26644,28039,95.0,,Total registered voters,2026-10-09
+Kentucky,Franklin,39142,40657,96.3,,Total registered voters,2026-10-09
+Kentucky,Fulton,4938,5189,95.2,,Total registered voters,2026-10-09
+Kentucky,Gallatin,6440,6497,99.1,,Total registered voters,2026-10-09
+Kentucky,Garrard,13626,13021,104.6,4.6,Total registered voters,2026-10-09
+Kentucky,Grant,18211,18397,99.0,,Total registered voters,2026-10-09
+Kentucky,Graves,26801,27768,96.5,,Total registered voters,2026-10-09
+Kentucky,Grayson,19241,20390,94.4,,Total registered voters,2026-10-09
+Kentucky,Green,8545,8644,98.9,,Total registered voters,2026-10-09
+Kentucky,Greenup,28120,27993,100.5,0.5,Total registered voters,2026-10-09
+Kentucky,Hancock,6852,6932,98.8,,Total registered voters,2026-10-09
+Kentucky,Hardin,83405,84095,99.2,,Total registered voters,2026-10-09
+Kentucky,Harlan,18150,20888,86.9,,Total registered voters,2026-10-09
+Kentucky,Harrison,14299,14477,98.8,,Total registered voters,2026-10-09
+Kentucky,Hart,13531,14376,94.1,,Total registered voters,2026-10-09
+Kentucky,Henderson,33615,34500,97.4,,Total registered voters,2026-10-09
+Kentucky,Henry,12365,12102,102.2,2.2,Total registered voters,2026-10-09
+Kentucky,Hickman,3285,3530,93.1,,Total registered voters,2026-10-09
+Kentucky,Hopkins,32833,35186,93.3,,Total registered voters,2026-10-09
+Kentucky,Jackson,9934,9994,99.4,,Total registered voters,2026-10-09
+Kentucky,Jefferson,590287,614376,96.1,,Total registered voters,2026-10-09
+Kentucky,Jessamine,41269,39704,103.9,3.9,Total registered voters,2026-10-09
+Kentucky,Johnson,16743,17751,94.3,,Total registered voters,2026-10-09
+Kentucky,Kenton,149806,128943,116.2,16.2,Total registered voters,2026-10-09
+Kentucky,Knott,10270,11228,91.5,,Total registered voters,2026-10-09
+Kentucky,Knox,23097,23183,99.6,,Total registered voters,2026-10-09
+Kentucky,LaRue,11732,11338,103.5,3.5,Total registered voters,2026-10-09
+Kentucky,Laurel,47318,47982,98.6,,Total registered voters,2026-10-09
+Kentucky,Lawrence,11480,12527,91.6,,Total registered voters,2026-10-09
+Kentucky,Lee,4726,6013,78.6,,Total registered voters,2026-10-09
+Kentucky,Leslie,7291,8243,88.5,,Total registered voters,2026-10-09
+Kentucky,Letcher,14741,16952,87.0,,Total registered voters,2026-10-09
+Kentucky,Lewis,9846,9948,99.0,,Total registered voters,2026-10-09
+Kentucky,Lincoln,18407,18576,99.1,,Total registered voters,2026-10-09
+Kentucky,Livingston,7373,7129,103.4,3.4,Total registered voters,2026-10-09
+Kentucky,Logan,19585,20978,93.4,,Total registered voters,2026-10-09
+Kentucky,Lyon,6388,7517,85.0,,Total registered voters,2026-10-09
+Kentucky,Madison,72551,73345,98.9,,Total registered voters,2026-10-09
+Kentucky,Magoffin,9098,9155,99.4,,Total registered voters,2026-10-09
+Kentucky,Marion,13620,14901,91.4,,Total registered voters,2026-10-09
+Kentucky,Marshall,25182,25125,100.2,0.2,Total registered voters,2026-10-09
+Kentucky,Martin,7031,9063,77.6,,Total registered voters,2026-10-09
+Kentucky,Mason,12618,13245,95.3,,Total registered voters,2026-10-09
+Kentucky,McCracken,60072,53058,113.2,13.2,Total registered voters,2026-10-09
+Kentucky,McCreary,10694,13028,82.1,,Total registered voters,2026-10-09
+Kentucky,McLean,6658,7091,93.9,,Total registered voters,2026-10-09
+Kentucky,Meade,22575,22345,101.0,1.0,Total registered voters,2026-10-09
+Kentucky,Menifee,5233,4719,110.9,10.9,Total registered voters,2026-10-09
+Kentucky,Mercer,18454,17634,104.7,4.7,Total registered voters,2026-10-09
+Kentucky,Metcalfe,8013,7867,101.9,1.9,Total registered voters,2026-10-09
+Kentucky,Monroe,7991,8670,92.2,,Total registered voters,2026-10-09
+Kentucky,Montgomery,20672,21511,96.1,,Total registered voters,2026-10-09
+Kentucky,Morgan,8786,10893,80.7,,Total registered voters,2026-10-09
+Kentucky,Muhlenberg,21778,24260,89.8,,Total registered voters,2026-10-09
+Kentucky,Nelson,36015,35749,100.7,0.7,Total registered voters,2026-10-09
+Kentucky,Nicholas,5426,5686,95.4,,Total registered voters,2026-10-09
+Kentucky,Ohio,16884,17951,94.1,,Total registered voters,2026-10-09
+Kentucky,Oldham,54767,49530,110.6,10.6,Total registered voters,2026-10-09
+Kentucky,Owen,8441,8533,98.9,,Total registered voters,2026-10-09
+Kentucky,Owsley,3306,3186,103.8,3.8,Total registered voters,2026-10-09
+Kentucky,Pendleton,10961,11194,97.9,,Total registered voters,2026-10-09
+Kentucky,Perry,18364,22252,82.5,,Total registered voters,2026-10-09
+Kentucky,Pike,42135,46593,90.4,,Total registered voters,2026-10-09
+Kentucky,Powell,9549,10047,95.0,,Total registered voters,2026-10-09
+Kentucky,Pulaski,51100,50635,100.9,0.9,Total registered voters,2026-10-09
+Kentucky,Robertson,1779,1727,103.0,3.0,Total registered voters,2026-10-09
+Kentucky,Rockcastle,12383,12552,98.7,,Total registered voters,2026-10-09
+Kentucky,Rowan,18027,19815,91.0,,Total registered voters,2026-10-09
+Kentucky,Russell,14085,13877,101.5,1.5,Total registered voters,2026-10-09
+Kentucky,Scott,45530,42616,106.8,6.8,Total registered voters,2026-10-09
+Kentucky,Shelby,38963,36361,107.2,7.2,Total registered voters,2026-10-09
+Kentucky,Simpson,14819,15010,98.7,,Total registered voters,2026-10-09
+Kentucky,Spencer,16714,14798,112.9,12.9,Total registered voters,2026-10-09
+Kentucky,Taylor,18715,20215,92.6,,Total registered voters,2026-10-09
+Kentucky,Todd,8259,8911,92.7,,Total registered voters,2026-10-09
+Kentucky,Trigg,11408,10975,103.9,3.9,Total registered voters,2026-10-09
+Kentucky,Trimble,7007,6631,105.7,5.7,Total registered voters,2026-10-09
+Kentucky,Union,9911,10461,94.7,,Total registered voters,2026-10-09
+Kentucky,Warren,93638,102897,91.0,,Total registered voters,2026-10-09
+Kentucky,Washington,9403,9264,101.5,1.5,Total registered voters,2026-10-09
+Kentucky,Wayne,14539,15116,96.2,,Total registered voters,2026-10-09
+Kentucky,Webster,8770,9956,88.1,,Total registered voters,2026-10-09
+Kentucky,Whitley,26018,27787,93.6,,Total registered voters,2026-10-09
+Kentucky,Wolfe,5215,5026,103.8,3.8,Total registered voters,2026-10-09
+Kentucky,Woodford,21943,20897,105.0,5.0,Total registered voters,2026-10-09
+Montana,Beaverhead,7331,7524,97.4,,"Total registered voters (county-reported; election results system, unofficial results)",2026-11-07
+Montana,Big Horn,7564,8747,86.5,,"Total registered voters (county-reported; election results system, unofficial results)",2026-11-07
+Montana,Blaine,4084,4965,82.3,,"Total registered voters (county-reported; election results system, unofficial results)",2026-11-07
+Montana,Broadwater,6283,5309,118.3,18.3,"Total registered voters (county-reported; election results system, unofficial results)",2026-11-07
+Montana,Carbon,9282,8506,109.1,9.1,"Total registered voters (county-reported; election results system, unofficial results)",2026-11-07
+Montana,Carter,1003,1088,92.2,,"Total registered voters (county-reported; election results system, unofficial results)",2026-11-07
+Montana,Cascade,52650,65587,80.3,,"Total registered voters (county-reported; election results system, unofficial results)",2026-11-07
+Montana,Chouteau,3698,4346,85.1,,"Total registered voters (county-reported; election results system, unofficial results)",2026-11-07
+Montana,Custer,7524,9247,81.4,,"Total registered voters (county-reported; election results system, unofficial results)",2026-11-07
+Montana,Daniels,1154,1311,88.0,,"Total registered voters (county-reported; election results system, unofficial results)",2026-11-07
+Montana,Dawson,5710,6974,81.9,,"Total registered voters (county-reported; election results system, unofficial results)",2026-11-07
+Montana,Deer Lodge,6254,7851,79.7,,"Total registered voters (county-reported; election results system, unofficial results)",2026-11-07
+Montana,Fallon,1802,2209,81.6,,"Total registered voters (county-reported; election results system, unofficial results)",2026-11-07
+Montana,Fergus,8188,9076,90.2,,"Total registered voters (county-reported; election results system, unofficial results)",2026-11-07
+Montana,Flathead,88047,81505,108.0,8.0,"Total registered voters (county-reported; election results system, unofficial results)",2026-11-07
+Montana,Gallatin,99945,95459,104.7,4.7,"Total registered voters (county-reported; election results system, unofficial results)",2026-11-07
+Montana,Garfield,881,897,98.2,,"Total registered voters (county-reported; election results system, unofficial results)",2026-11-07
+Montana,Glacier,7955,9448,84.2,,"Total registered voters (county-reported; election results system, unofficial results)",2026-11-07
+Montana,Golden Valley,613,661,92.7,,"Total registered voters (county-reported; election results system, unofficial results)",2026-11-07
+Montana,Granite,2794,2706,103.3,3.3,"Total registered voters (county-reported; election results system, unofficial results)",2026-11-07
+Montana,Hill,9399,11997,78.3,,"Total registered voters (county-reported; election results system, unofficial results)",2026-11-07
+Montana,Jefferson,10276,9566,107.4,7.4,"Total registered voters (county-reported; election results system, unofficial results)",2026-11-07
+Montana,Judith Basin,1610,1647,97.8,,"Total registered voters (county-reported; election results system, unofficial results)",2026-11-07
+Montana,Lake,23001,23912,96.2,,"Total registered voters (county-reported; election results system, unofficial results)",2026-11-07
+Montana,Lewis & Clark,54179,55685,97.3,,"Total registered voters (county-reported; election results system, unofficial results)",2026-11-07
+Montana,Liberty,1174,1492,78.7,,"Total registered voters (county-reported; election results system, unofficial results)",2026-11-07
+Montana,Lincoln,15310,16037,95.5,,"Total registered voters (county-reported; election results system, unofficial results)",2026-11-07
+Montana,Madison,7976,7231,110.3,10.3,"Total registered voters (county-reported; election results system, unofficial results)",2026-11-07
+Montana,McCone,1264,1353,93.4,,"Total registered voters (county-reported; election results system, unofficial results)",2026-11-07
+Montana,Meagher,1454,1591,91.4,,"Total registered voters (county-reported; election results system, unofficial results)",2026-11-07
+Montana,Mineral,4140,3719,111.3,11.3,"Total registered voters (county-reported; election results system, unofficial results)",2026-11-07
+Montana,Missoula,93866,95035,98.8,,"Total registered voters (county-reported; election results system, unofficial results)",2026-11-07
+Montana,Musselshell,3903,3820,102.2,2.2,"Total registered voters (county-reported; election results system, unofficial results)",2026-11-07
+Montana,Park,14760,14273,103.4,3.4,"Total registered voters (county-reported; election results system, unofficial results)",2026-11-07
+Montana,Petroleum,371,413,89.8,,"Total registered voters (county-reported; election results system, unofficial results)",2026-11-07
+Montana,Phillips,2646,3235,81.8,,"Total registered voters (county-reported; election results system, unofficial results)",2026-11-07
+Montana,Pondera,3793,4459,85.1,,"Total registered voters (county-reported; election results system, unofficial results)",2026-11-07
+Montana,Powder River,1237,1379,89.7,,"Total registered voters (county-reported; election results system, unofficial results)",2026-11-07
+Montana,Powell,4092,5921,69.1,,"Total registered voters (county-reported; election results system, unofficial results)",2026-11-07
+Montana,Prairie,827,883,93.7,,"Total registered voters (county-reported; election results system, unofficial results)",2026-11-07
+Montana,Ravalli,36987,35657,103.7,3.7,"Total registered voters (county-reported; election results system, unofficial results)",2026-11-07
+Montana,Richland,7595,8679,87.5,,"Total registered voters (county-reported; election results system, unofficial results)",2026-11-07
+Montana,Roosevelt,6038,7460,80.9,,"Total registered voters (county-reported; election results system, unofficial results)",2026-11-07
+Montana,Rosebud,5046,6076,83.0,,"Total registered voters (county-reported; election results system, unofficial results)",2026-11-07
+Montana,Sanders,11066,10214,108.3,8.3,"Total registered voters (county-reported; election results system, unofficial results)",2026-11-07
+Montana,Sheridan,2392,2786,85.9,,"Total registered voters (county-reported; election results system, unofficial results)",2026-11-07
+Montana,Silver Bow,24213,28121,86.1,,"Total registered voters (county-reported; election results system, unofficial results)",2026-11-07
+Montana,Stillwater,7288,7095,102.7,2.7,"Total registered voters (county-reported; election results system, unofficial results)",2026-11-07
+Montana,Sweet Grass,2935,2923,100.4,0.4,"Total registered voters (county-reported; election results system, unofficial results)",2026-11-07
+Montana,Teton,4329,4768,90.8,,"Total registered voters (county-reported; election results system, unofficial results)",2026-11-07
+Montana,Toole,2661,3971,67.0,,"Total registered voters (county-reported; election results system, unofficial results)",2026-11-07
+Montana,Treasure,533,581,91.7,,"Total registered voters (county-reported; election results system, unofficial results)",2026-11-07
+Montana,Valley,5252,5821,90.2,,"Total registered voters (county-reported; election results system, unofficial results)",2026-11-07
+Montana,Wheatland,1465,1610,91.0,,"Total registered voters (county-reported; election results system, unofficial results)",2026-11-07
+Montana,Wibaux,707,730,96.8,,"Total registered voters (county-reported; election results system, unofficial results)",2026-11-07
+Montana,Yellowstone,112332,126567,88.8,,"Total registered voters (county-reported; election results system, unofficial results)",2026-11-07
+North Carolina,Alamance,122105,133969,91.1,,Total registered voters,2026-11-03
+North Carolina,Alexander,25850,29273,88.3,,Total registered voters,2026-11-03
+North Carolina,Alleghany,8260,8942,92.4,,Total registered voters,2026-11-03
+North Carolina,Anson,16056,17845,90.0,,Total registered voters,2026-11-03
+North Carolina,Ashe,20893,21984,95.0,,Total registered voters,2026-11-03
+North Carolina,Avery,12484,15104,82.7,,Total registered voters,2026-11-03
+North Carolina,Beaufort,34161,36005,94.9,,Total registered voters,2026-11-03
+North Carolina,Bertie,12828,14896,86.1,,Total registered voters,2026-11-03
+North Carolina,Bladen,23146,23426,98.8,,Total registered voters,2026-11-03
+North Carolina,Brunswick,152052,116606,130.4,30.4,Total registered voters,2026-11-03
+North Carolina,Buncombe,221022,219874,100.5,0.5,Total registered voters,2026-11-03
+North Carolina,Burke,60849,70018,86.9,,Total registered voters,2026-11-03
+North Carolina,Cabarrus,164134,167539,98.0,,Total registered voters,2026-11-03
+North Carolina,Caldwell,56206,64436,87.2,,Total registered voters,2026-11-03
+North Carolina,Camden,8760,7887,111.1,11.1,Total registered voters,2026-11-03
+North Carolina,Carteret,58226,56213,103.6,3.6,Total registered voters,2026-11-03
+North Carolina,Caswell,15798,18596,85.0,,Total registered voters,2026-11-03
+North Carolina,Catawba,120131,126566,94.9,,Total registered voters,2026-11-03
+North Carolina,Chatham,65010,60788,106.9,6.9,Total registered voters,2026-11-03
+North Carolina,Cherokee,25116,24051,104.4,4.4,Total registered voters,2026-11-03
+North Carolina,Chowan,10365,11114,93.3,,Total registered voters,2026-11-03
+North Carolina,Clay,10298,9234,111.5,11.5,Total registered voters,2026-11-03
+North Carolina,Cleveland,69958,78032,89.7,,Total registered voters,2026-11-03
+North Carolina,Columbus,37543,40316,93.1,,Total registered voters,2026-11-03
+North Carolina,Craven,78117,79783,97.9,,Total registered voters,2026-11-03
+North Carolina,Cumberland,227659,254481,89.5,,Total registered voters,2026-11-03
+North Carolina,Currituck,25227,22004,114.6,14.6,Total registered voters,2026-11-03
+North Carolina,Dare,33016,30445,108.4,8.4,Total registered voters,2026-11-03
+North Carolina,Davidson,123758,132179,93.6,,Total registered voters,2026-11-03
+North Carolina,Davie,34026,33784,100.7,0.7,Total registered voters,2026-11-03
+North Carolina,Duplin,32729,37043,88.4,,Total registered voters,2026-11-03
+North Carolina,Durham,254028,259565,97.9,,Total registered voters,2026-11-03
+North Carolina,Edgecombe,36598,38189,95.8,,Total registered voters,2026-11-03
+North Carolina,Forsyth,278480,297388,93.6,,Total registered voters,2026-11-03
+North Carolina,Franklin,57763,53144,108.7,8.7,Total registered voters,2026-11-03
+North Carolina,Gaston,166747,177846,93.8,,Total registered voters,2026-11-03
+North Carolina,Gates,8318,8343,99.7,,Total registered voters,2026-11-03
+North Carolina,Graham,6292,6370,98.8,,Total registered voters,2026-11-03
+North Carolina,Granville,42187,48195,87.5,,Total registered voters,2026-11-03
+North Carolina,Greene,11103,16566,67.0,,Total registered voters,2026-11-03
+North Carolina,Guilford,397837,423763,93.9,,Total registered voters,2026-11-03
+North Carolina,Halifax,35633,38975,91.4,,Total registered voters,2026-11-03
+North Carolina,Harnett,97997,98069,99.9,,Total registered voters,2026-11-03
+North Carolina,Haywood,48728,51091,95.4,,Total registered voters,2026-11-03
+North Carolina,Henderson,93226,94428,98.7,,Total registered voters,2026-11-03
+North Carolina,Hertford,13758,17639,78.0,,Total registered voters,2026-11-03
+North Carolina,Hoke,37921,37472,101.2,1.2,Total registered voters,2026-11-03
+North Carolina,Hyde,3045,3785,80.4,,Total registered voters,2026-11-03
+North Carolina,Iredell,151332,143795,105.2,5.2,Total registered voters,2026-11-03
+North Carolina,Jackson,31476,35790,87.9,,Total registered voters,2026-11-03
+North Carolina,Johnston,173061,160099,108.1,8.1,Total registered voters,2026-11-03
+North Carolina,Jones,7120,7481,95.2,,Total registered voters,2026-11-03
+North Carolina,Lee,42268,48392,87.3,,Total registered voters,2026-11-03
+North Carolina,Lenoir,38502,42923,89.7,,Total registered voters,2026-11-03
+North Carolina,Lincoln,71027,68416,103.8,3.8,Total registered voters,2026-11-03
+North Carolina,Macon,29893,30345,98.5,,Total registered voters,2026-11-03
+North Carolina,Madison,17877,17481,102.3,2.3,Total registered voters,2026-11-03
+North Carolina,Martin,16750,17615,95.1,,Total registered voters,2026-11-03
+North Carolina,McDowell,31408,35805,87.7,,Total registered voters,2026-11-03
+North Carolina,Mecklenburg,851842,860025,99.0,,Total registered voters,2026-11-03
+North Carolina,Mitchell,11252,12246,91.9,,Total registered voters,2026-11-03
+North Carolina,Montgomery,17372,20177,86.1,,Total registered voters,2026-11-03
+North Carolina,Moore,82241,78212,105.2,5.2,Total registered voters,2026-11-03
+North Carolina,Nash,72441,74574,97.1,,Total registered voters,2026-11-03
+North Carolina,New Hanover,191126,184113,103.8,3.8,Total registered voters,2026-11-03
+North Carolina,Northampton,12862,14372,89.5,,Total registered voters,2026-11-03
+North Carolina,Onslow,137003,157467,87.0,,Total registered voters,2026-11-03
+North Carolina,Orange,114330,119527,95.7,,Total registered voters,2026-11-03
+North Carolina,Pamlico,10421,10478,99.5,,Total registered voters,2026-11-03
+North Carolina,Pasquotank,31803,31964,99.5,,Total registered voters,2026-11-03
+North Carolina,Pender,55154,46608,118.3,18.3,Total registered voters,2026-11-03
+North Carolina,Perquimans,10795,10592,101.9,1.9,Total registered voters,2026-11-03
+North Carolina,Person,28472,30963,92.0,,Total registered voters,2026-11-03
+North Carolina,Pitt,128371,132273,97.1,,Total registered voters,2026-11-03
+North Carolina,Polk,17516,16204,108.1,8.1,Total registered voters,2026-11-03
+North Carolina,Randolph,99908,112315,89.0,,Total registered voters,2026-11-03
+North Carolina,Richmond,28585,33238,86.0,,Total registered voters,2026-11-03
+North Carolina,Robeson,78286,88455,88.5,,Total registered voters,2026-11-03
+North Carolina,Rockingham,64560,72783,88.7,,Total registered voters,2026-11-03
+North Carolina,Rowan,102913,114968,89.5,,Total registered voters,2026-11-03
+North Carolina,Rutherford,47546,51419,92.5,,Total registered voters,2026-11-03
+North Carolina,Sampson,38924,44936,86.6,,Total registered voters,2026-11-03
+North Carolina,Scotland,22109,26845,82.4,,Total registered voters,2026-11-03
+North Carolina,Stanly,47555,49264,96.5,,Total registered voters,2026-11-03
+North Carolina,Stokes,33914,36049,94.1,,Total registered voters,2026-11-03
+North Carolina,Surry,48857,56438,86.6,,Total registered voters,2026-11-03
+North Carolina,Swain,10206,10975,93.0,,Total registered voters,2026-11-03
+North Carolina,Transylvania,26904,27299,98.6,,Total registered voters,2026-11-03
+North Carolina,Tyrrell,2385,2574,92.7,,Total registered voters,2026-11-03
+North Carolina,Union,186811,173864,107.4,7.4,Total registered voters,2026-11-03
+North Carolina,Vance,28259,32871,86.0,,Total registered voters,2026-11-03
+North Carolina,Wake,869883,860079,101.1,1.1,Total registered voters,2026-11-03
+North Carolina,Warren,13615,15292,89.0,,Total registered voters,2026-11-03
+North Carolina,Washington,8219,8850,92.9,,Total registered voters,2026-11-03
+North Carolina,Watauga,44820,46590,96.2,,Total registered voters,2026-11-03
+North Carolina,Wayne,77629,90502,85.8,,Total registered voters,2026-11-03
+North Carolina,Wilkes,45427,52651,86.3,,Total registered voters,2026-11-03
+North Carolina,Wilson,55516,61055,90.9,,Total registered voters,2026-11-03
+North Carolina,Yadkin,25798,29484,87.5,,Total registered voters,2026-11-03
+North Carolina,Yancey,14573,15105,96.5,,Total registered voters,2026-11-03
+Virginia,Accomack,26344,26872,98.0,,Total registered = active + inactive (All Voters),2026-11-01
+Virginia,Albemarle,91931,89545,102.7,2.7,Total registered = active + inactive (All Voters),2026-11-01
+Virginia,Alexandria City,119274,130034,91.7,,Total registered = active + inactive (All Voters),2026-11-01
+Virginia,Alleghany,11341,12380,91.6,,Total registered = active + inactive (All Voters),2026-11-01
+Virginia,Amelia,10727,10588,101.3,1.3,Total registered = active + inactive (All Voters),2026-11-01
+Virginia,Amherst,24143,24919,96.9,,Total registered = active + inactive (All Voters),2026-11-01
+Virginia,Appomattox,13162,12545,104.9,4.9,Total registered = active + inactive (All Voters),2026-11-01
+Virginia,Arlington,187409,196563,95.3,,Total registered = active + inactive (All Voters),2026-11-01
+Virginia,Augusta,58962,62017,95.1,,Total registered = active + inactive (All Voters),2026-11-01
+Virginia,Bath,3452,3512,98.3,,Total registered = active + inactive (All Voters),2026-11-01
+Virginia,Bedford,66852,63582,105.1,5.1,Total registered = active + inactive (All Voters),2026-11-01
+Virginia,Bland,4634,5328,87.0,,Total registered = active + inactive (All Voters),2026-11-01
+Virginia,Botetourt,27898,26924,103.6,3.6,Total registered = active + inactive (All Voters),2026-11-01
+Virginia,Bristol City,12319,13724,89.8,,Total registered = active + inactive (All Voters),2026-11-01
+Virginia,Brunswick,11497,13337,86.2,,Total registered = active + inactive (All Voters),2026-11-01
+Virginia,Buchanan,14336,16787,85.4,,Total registered = active + inactive (All Voters),2026-11-01
+Virginia,Buckingham,11662,13623,85.6,,Total registered = active + inactive (All Voters),2026-11-01
+Virginia,Buena Vista City,4619,5354,86.3,,Total registered = active + inactive (All Voters),2026-11-01
+Virginia,Campbell,43692,44155,99.0,,Total registered = active + inactive (All Voters),2026-11-01
+Virginia,Caroline,25802,23869,108.1,8.1,Total registered = active + inactive (All Voters),2026-11-01
+Virginia,Carroll,22608,23710,95.4,,Total registered = active + inactive (All Voters),2026-11-01
+Virginia,Charles City,5947,5779,102.9,2.9,Total registered = active + inactive (All Voters),2026-11-01
+Virginia,Charlotte,8656,9129,94.8,,Total registered = active + inactive (All Voters),2026-11-01
+Virginia,Charlottesville City,37063,38880,95.3,,Total registered = active + inactive (All Voters),2026-11-01
+Virginia,Chesapeake City,189368,189288,100.0,0.0,Total registered = active + inactive (All Voters),2026-11-01
+Virginia,Chesterfield,290780,276953,105.0,5.0,Total registered = active + inactive (All Voters),2026-11-01
+Virginia,Clarke,12921,11893,108.6,8.6,Total registered = active + inactive (All Voters),2026-11-01
+Virginia,Colonial Heights City,13426,14237,94.3,,Total registered = active + inactive (All Voters),2026-11-01
+Virginia,Covington City,3954,4560,86.7,,Total registered = active + inactive (All Voters),2026-11-01
+Virginia,Craig,4026,3973,101.3,1.3,Total registered = active + inactive (All Voters),2026-11-01
+Virginia,Culpeper,40430,39903,101.3,1.3,Total registered = active + inactive (All Voters),2026-11-01
+Virginia,Cumberland,7973,7701,103.5,3.5,Total registered = active + inactive (All Voters),2026-11-01
+Virginia,Danville City,29381,33776,87.0,,Total registered = active + inactive (All Voters),2026-11-01
+Virginia,Dickenson,9998,11373,87.9,,Total registered = active + inactive (All Voters),2026-11-01
+Virginia,Dinwiddie,22170,21990,100.8,0.8,Total registered = active + inactive (All Voters),2026-11-01
+Virginia,Emporia City,4113,4398,93.5,,Total registered = active + inactive (All Voters),2026-11-01
+Virginia,Essex,8676,8598,100.9,0.9,Total registered = active + inactive (All Voters),2026-11-01
+Virginia,Fairfax,824165,882106,93.4,,Total registered = active + inactive (All Voters),2026-11-01
+Virginia,Fairfax City,19229,19443,98.9,,Total registered = active + inactive (All Voters),2026-11-01
+Virginia,Falls Church City,12584,11049,113.9,13.9,Total registered = active + inactive (All Voters),2026-11-01
+Virginia,Fauquier,58900,56104,105.0,5.0,Total registered = active + inactive (All Voters),2026-11-01
+Virginia,Floyd,12401,12408,99.9,,Total registered = active + inactive (All Voters),2026-11-01
+Virginia,Fluvanna,22488,21838,103.0,3.0,Total registered = active + inactive (All Voters),2026-11-01
+Virginia,Franklin,42044,44197,95.1,,Total registered = active + inactive (All Voters),2026-11-01
+Virginia,Franklin City,6355,6293,101.0,1.0,Total registered = active + inactive (All Voters),2026-11-01
+Virginia,Frederick,75629,70428,107.4,7.4,Total registered = active + inactive (All Voters),2026-11-01
+Virginia,Fredericksburg City,21226,22249,95.4,,Total registered = active + inactive (All Voters),2026-11-01
+Virginia,Galax City,4269,5318,80.3,,Total registered = active + inactive (All Voters),2026-11-01
+Virginia,Giles,12597,13425,93.8,,Total registered = active + inactive (All Voters),2026-11-01
+Virginia,Gloucester,31761,31072,102.2,2.2,Total registered = active + inactive (All Voters),2026-11-01
+Virginia,Goochland,25184,20405,123.4,23.4,Total registered = active + inactive (All Voters),2026-11-01
+Virginia,Grayson,11160,12874,86.7,,Total registered = active + inactive (All Voters),2026-11-01
+Virginia,Greene,16715,15892,105.2,5.2,Total registered = active + inactive (All Voters),2026-11-01
+Virginia,Greensville,6537,9691,67.5,,Total registered = active + inactive (All Voters),2026-11-01
+Virginia,Halifax,25818,27225,94.8,,Total registered = active + inactive (All Voters),2026-11-01
+Virginia,Hampton City,104371,109170,95.6,,Total registered = active + inactive (All Voters),2026-11-01
+Virginia,Hanover,90967,85823,106.0,6.0,Total registered = active + inactive (All Voters),2026-11-01
+Virginia,Harrisonburg City,27815,42444,65.5,,Total registered = active + inactive (All Voters),2026-11-01
+Virginia,Henrico,256069,258936,98.9,,Total registered = active + inactive (All Voters),2026-11-01
+Virginia,Henry,37570,41087,91.4,,Total registered = active + inactive (All Voters),2026-11-01
+Virginia,Highland,1847,1903,97.1,,Total registered = active + inactive (All Voters),2026-11-01
+Virginia,Hopewell City,16563,17545,94.4,,Total registered = active + inactive (All Voters),2026-11-01
+Virginia,Isle of Wight,33664,30382,110.8,10.8,Total registered = active + inactive (All Voters),2026-11-01
+Virginia,James City,67375,62868,107.2,7.2,Total registered = active + inactive (All Voters),2026-11-01
+Virginia,King & Queen,5656,5456,103.7,3.7,Total registered = active + inactive (All Voters),2026-11-01
+Virginia,King George,21952,19948,110.0,10.0,Total registered = active + inactive (All Voters),2026-11-01
+Virginia,King William,15422,13744,112.2,12.2,Total registered = active + inactive (All Voters),2026-11-01
+Virginia,Lancaster,9774,9388,104.1,4.1,Total registered = active + inactive (All Voters),2026-11-01
+Virginia,Lee,16035,17900,89.6,,Total registered = active + inactive (All Voters),2026-11-01
+Virginia,Lexington City,4312,6489,66.5,,Total registered = active + inactive (All Voters),2026-11-01
+Virginia,Loudoun,314976,302792,104.0,4.0,Total registered = active + inactive (All Voters),2026-11-01
+Virginia,Louisa,33060,29861,110.7,10.7,Total registered = active + inactive (All Voters),2026-11-01
+Virginia,Lunenburg,8342,9579,87.1,,Total registered = active + inactive (All Voters),2026-11-01
+Virginia,Lynchburg City,61221,64409,95.1,,Total registered = active + inactive (All Voters),2026-11-01
+Virginia,Madison,10911,10922,99.9,,Total registered = active + inactive (All Voters),2026-11-01
+Virginia,Manassas City,24963,31660,78.8,,Total registered = active + inactive (All Voters),2026-11-01
+Virginia,Manassas Park City,10019,12701,78.9,,Total registered = active + inactive (All Voters),2026-11-01
+Virginia,Martinsville City,9300,10659,87.3,,Total registered = active + inactive (All Voters),2026-11-01
+Virginia,Mathews,7568,7212,104.9,4.9,Total registered = active + inactive (All Voters),2026-11-01
+Virginia,Mecklenburg,24009,24728,97.1,,Total registered = active + inactive (All Voters),2026-11-01
+Virginia,Middlesex,9080,9035,100.5,0.5,Total registered = active + inactive (All Voters),2026-11-01
+Virginia,Montgomery,68198,83609,81.6,,Total registered = active + inactive (All Voters),2026-11-01
+Virginia,Nelson,12220,12287,99.5,,Total registered = active + inactive (All Voters),2026-11-01
+Virginia,New Kent,21961,18177,120.8,20.8,Total registered = active + inactive (All Voters),2026-11-01
+Virginia,Newport News City,128455,144719,88.8,,Total registered = active + inactive (All Voters),2026-11-01
+Virginia,Norfolk City,149856,192486,77.9,,Total registered = active + inactive (All Voters),2026-11-01
+Virginia,Northampton,10126,10057,100.7,0.7,Total registered = active + inactive (All Voters),2026-11-01
+Virginia,Northumberland,10886,10114,107.6,7.6,Total registered = active + inactive (All Voters),2026-11-01
+Virginia,Norton City,2626,2895,90.7,,Total registered = active + inactive (All Voters),2026-11-01
+Virginia,Nottoway,10111,12721,79.5,,Total registered = active + inactive (All Voters),2026-11-01
+Virginia,Orange,31174,28591,109.0,9.0,Total registered = active + inactive (All Voters),2026-11-01
+Virginia,Page,18298,18981,96.4,,Total registered = active + inactive (All Voters),2026-11-01
+Virginia,Patrick,13593,14532,93.5,,Total registered = active + inactive (All Voters),2026-11-01
+Virginia,Petersburg City,25303,27056,93.5,,Total registered = active + inactive (All Voters),2026-11-01
+Virginia,Pittsylvania,46543,48776,95.4,,Total registered = active + inactive (All Voters),2026-11-01
+Virginia,Poquoson City,10504,9593,109.5,9.5,Total registered = active + inactive (All Voters),2026-11-01
+Virginia,Portsmouth City,71669,76164,94.1,,Total registered = active + inactive (All Voters),2026-11-01
+Virginia,Powhatan,25692,23936,107.3,7.3,Total registered = active + inactive (All Voters),2026-11-01
+Virginia,Prince Edward,14433,18384,78.5,,Total registered = active + inactive (All Voters),2026-11-01
+Virginia,Prince George,26177,34541,75.8,,Total registered = active + inactive (All Voters),2026-11-01
+Virginia,Prince William,336809,353402,95.3,,Total registered = active + inactive (All Voters),2026-11-01
+Virginia,Pulaski,24804,27769,89.3,,Total registered = active + inactive (All Voters),2026-11-01
+Virginia,Radford City,9928,13832,71.8,,Total registered = active + inactive (All Voters),2026-11-01
+Virginia,Rappahannock,6485,6139,105.6,5.6,Total registered = active + inactive (All Voters),2026-11-01
+Virginia,Richmond,5838,7348,79.5,,Total registered = active + inactive (All Voters),2026-11-01
+Virginia,Richmond City,169893,187946,90.4,,Total registered = active + inactive (All Voters),2026-11-01
+Virginia,Roanoke,75591,77144,98.0,,Total registered = active + inactive (All Voters),2026-11-01
+Virginia,Roanoke City,68854,78948,87.2,,Total registered = active + inactive (All Voters),2026-11-01
+Virginia,Rockbridge,17415,18521,94.0,,Total registered = active + inactive (All Voters),2026-11-01
+Virginia,Rockingham,61836,65371,94.6,,Total registered = active + inactive (All Voters),2026-11-01
+Virginia,Russell,19441,20830,93.3,,Total registered = active + inactive (All Voters),2026-11-01
+Virginia,Salem City,18235,20582,88.6,,Total registered = active + inactive (All Voters),2026-11-01
+Virginia,Scott,16229,17656,91.9,,Total registered = active + inactive (All Voters),2026-11-01
+Virginia,Shenandoah,34374,34862,98.6,,Total registered = active + inactive (All Voters),2026-11-01
+Virginia,Smyth,21159,23953,88.3,,Total registered = active + inactive (All Voters),2026-11-01
+Virginia,Southampton,13590,14513,93.6,,Total registered = active + inactive (All Voters),2026-11-01
+Virginia,Spotsylvania,115608,105356,109.7,9.7,Total registered = active + inactive (All Voters),2026-11-01
+Virginia,Stafford,120934,115060,105.1,5.1,Total registered = active + inactive (All Voters),2026-11-01
+Virginia,Staunton City,19707,21005,93.8,,Total registered = active + inactive (All Voters),2026-11-01
+Virginia,Suffolk City,79367,72009,110.2,10.2,Total registered = active + inactive (All Voters),2026-11-01
+Virginia,Surry,5871,5429,108.1,8.1,Total registered = active + inactive (All Voters),2026-11-01
+Virginia,Sussex,7320,9211,79.5,,Total registered = active + inactive (All Voters),2026-11-01
+Virginia,Tazewell,28345,32852,86.3,,Total registered = active + inactive (All Voters),2026-11-01
+Virginia,Virginia Beach City,344291,358086,96.1,,Total registered = active + inactive (All Voters),2026-11-01
+Virginia,Warren,32573,31741,102.6,2.6,Total registered = active + inactive (All Voters),2026-11-01
+Virginia,Washington,41216,43964,93.7,,Total registered = active + inactive (All Voters),2026-11-01
+Virginia,Waynesboro City,17209,17424,98.8,,Total registered = active + inactive (All Voters),2026-11-01
+Virginia,Westmoreland,15684,15055,104.2,4.2,Total registered = active + inactive (All Voters),2026-11-01
+Virginia,Williamsburg City,12578,13910,90.4,,Total registered = active + inactive (All Voters),2026-11-01
+Virginia,Winchester City,19507,22235,87.7,,Total registered = active + inactive (All Voters),2026-11-01
+Virginia,Wise,25641,29151,88.0,,Total registered = active + inactive (All Voters),2026-11-01
+Virginia,Wythe,21975,22692,96.8,,Total registered = active + inactive (All Voters),2026-11-01
+Virginia,York,54655,52982,103.2,3.2,Total registered = active + inactive (All Voters),2026-11-01

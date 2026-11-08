@@ -1,0 +1,52 @@
+state,registered_voters,ballots_cast,turnout_pct,status,source
+Alabama,3852947,1693621,44.0,preliminary,"Alabama Secretary of State - AlabamaVotes.gov 2026 General Election unofficial statewide results (all 67 counties reporting, updated Nov 4 2026)"
+Alaska,605433,215912,35.7,still counting,"Alaska Division of Elections - 2026 General Election Election Summary Report, unofficial results (Nov 4 2026)"
+Arizona,4374827,,,still counting,Arizona Secretary of State - State Voter Registration Report for November 2026 General Election (active registrations; ballots cast not yet published - statewide canvass Nov 23 2026)
+Arkansas,1856044,893335,48.1,preliminary,Arkansas Secretary of State figures as of Nov 5 2026 via University of Arkansas Extension 2026 turnout report - unofficial
+California,23273590,8906017,38.3,still counting,California Secretary of State - Report of Registration Oct 19 2026 and Unprocessed Ballots Report Nov 6 2026 (ballots counted to date; est. 4816722 ballots still unprocessed)
+Colorado,4619533,2761449,59.8,still counting,Colorado Secretary of State - 2026 General Election Ballots Returned report as of Nov 5 2026 (registered total includes inactive voters)
+Connecticut,2255397,,,preliminary,Connecticut Secretary of the State - voter registration statistics as of Oct 19 2026 (active registered voters; official ballots-cast total not yet published)
+Delaware,810407,384862,47.5,preliminary,"Delaware Department of Elections - 2026 General Election unofficial results (all 530 election districts reporting, Nov 4 2026)"
+District of Columbia,453471,,,still counting,DC Board of Elections - Monthly Report of Voter Registration Statistics as of Sep 30 2026 (ballots-cast total not yet published; mail ballots accepted through Nov 13 2026)
+Florida,13704495,8335497,60.8,preliminary,Florida Division of Elections - Florida Election Watch unofficial election night results (registered = active registered voters at Oct 5 2026 book closing)
+Georgia,7537798,4206732,55.8,preliminary,Georgia Secretary of State election results via Athens Politics Nerd summary of SOS results
+Hawaii,853399,391251,45.8,preliminary,Hawaii Office of Elections Statewide Summary Report 4 via Hawaii Free Press
+Idaho,1056201,731980,69.3,preliminary,Idaho Secretary of State Vote Idaho unofficial results via Idaho Capital Sun reporting
+Illinois,8320873,,,still counting,Illinois State Board of Elections data via ABC7 early voting tracker - registered voters as of Nov 2 2026
+Indiana,4758551,,,preliminary,Indiana Voter Portal indianavoters.in.gov - registered total as of Oct 8 2026
+Iowa,2178374,1380528,63.4,preliminary,Iowa Secretary of State election results and Nov 4 2026 press release
+Kansas,2027520,,,preliminary,Kansas Secretary of State voter registration statistics Oct 1 2026 via Topeka Capital-Journal
+Kentucky,3393480,1445743,42.6,preliminary,Kentucky Secretary of State Election Night Reporting
+Louisiana,2978143,,,preliminary,Louisiana Secretary of State Statewide Report of Registered Voters Oct 1 2026
+Maine,968244,,,still counting,Independent Voter Project voter stats - total registered updated Nov 2026
+Maryland,4293322,2035917,47.4,preliminary,"Maryland State Board of Elections - Unofficial Turnout (2026 Gubernatorial General, MIB1/Early/Election Day/MIB2) run 11/6/2026; registered shown as Eligible Voters, ballots as Cards Cast"
+Massachusetts,5230765,,,still counting,Massachusetts Secretary of the Commonwealth - registered voters from state voter data as of 10/30/2026 (via Secretary's turnout update); no official statewide ballots-cast total published yet
+Michigan,,4840262,,preliminary,Michigan Secretary of State unofficial count via MLive (Michael Kransz) - 4840262 voted; exact total registered voters (active plus inactive) not published in sources found - SOS reported only approx 7.42 million active registered voters on 11/2/2026
+Minnesota,3927715,2852436,72.6,preliminary,"Minnesota Secretary of State election results site (updated 11/6/2026) - Voters Registered at 7AM; ballots are Estimated Total Number of Voters (estimated from Governor race, to be replaced by actual precinct statistics)"
+Mississippi,2094567,,,still counting,Mississippi Secretary of State - registered voters figure cited to SOS in Nov 4 reporting (SignalData/AP-sourced); SOS has not published a statewide ballots-cast total - counties certify by 11/13/2026
+Missouri,,2114237,,preliminary,"Missouri Secretary of State unofficial results (as of 11/4/2026, all 3214 precincts) - ballots per SOS definition: total votes in highest-turnout statewide issue (Constitutional Amendment 3: 2114237); exact statewide registered voter total not published - SOS cited only approx 4.4 million pre-election"
+Montana,808879,486746,60.2,preliminary,"Montana Secretary of State - electionresults.mt.gov statewide voter turnout (results last updated 11/7/2026); unofficial until canvassed, provisional ballots still to be counted"
+Nebraska,1265162,767046,60.6,preliminary,Nebraska Secretary of State - electionresults.nebraska.gov Unofficial Results (last updated 11/6/2026 4:59 PM CT)
+Nevada,2103563,,,still counting,Nevada Secretary of State - Silver State Election portal (active registered voters 2103563); portal turnout reporting was incomplete (14 of 17 counties at first release) and mail ballots postmarked by Election Day could arrive until 11/7/2026 - no statewide ballots-cast total published yet
+New Hampshire,,641625,,preliminary,"New Hampshire Secretary of State's Office via WMUR - more than 641625 residents cast ballots; total registered voters for this election not yet published (New Hampshire has Election Day registration, so the checklist total is compiled after the election)"
+New Jersey,6746886,2919882,43.3,still counting,NJ Division of Elections statewide voter registration statistics as of Nov 1 2026 (registered); Decision Desk HQ total votes in U.S. Senate race as of Nov 7 (ballots - top-of-ballot contest; Division of Elections publishes no statewide election-night results; certification Dec 3)
+New Mexico,1469718,731209,49.8,preliminary,New Mexico Secretary of State election results page (electionresults.sos.nm.gov) - Unofficial Results updated Nov 6 2026 9:55 AM MT; 100% of precincts reported; state labels denominator Eligible Voters
+New York,13572803,6092408,44.9,still counting,New York State Board of Elections registered voters as of Nov 1 2026 via New York Focus turnout tracker (registered); Associated Press total votes in Governor race (ballots counted in top-of-ballot contest; mail and affidavit ballots still being counted)
+North Carolina,7885046,4223102,53.6,preliminary,NC State Board of Elections Election Results Dashboard - unofficial results; county canvass Nov 13
+North Dakota,no registration,239057,,preliminary,North Dakota Secretary of State news release Nov 3 2026 - unofficial election-night results; county canvass Nov 16; state canvass Nov 18; ND has no voter registration and reports turnout against eligible voters (39.8%)
+Ohio,7984590,4658250,58.3,preliminary,Ohio Secretary of State unofficial results via Secretary Frank LaRose - 4658250 ballots counted (ballots); Ohio Secretary of State voter file count via Ohio Early Vote 2026 analysis (registered - SOS has not published a statewide registration total for this election)
+Oklahoma,2455735,1120139,45.6,preliminary,Oklahoma State Election Board official pre-election registration report as of Nov 1 2026 (registered); Oklahoma State Election Board unofficial results - total votes in Governor race as reported Nov 5 (ballots - top-of-ballot contest; Board reported statewide turnout of 45.67%; state/federal certification Nov 10)
+Oregon,3109084,1891605,60.8,still counting,Oregon Secretary of State results page (results.oregonvotes.gov) - Unofficial General Election results updated Nov 7 2026 8:00 AM PT; denominator is Active Registered Voters; certification Dec 10
+Pennsylvania,9052695,4985768,55.1,still counting,Pennsylvania Department of State certified voter registration statistics for Nov 3 2026 General Election (registered); Associated Press total votes in Governor race from PA Department of State unofficial returns - 98.83% estimated vote counted (ballots - top-of-ballot contest)
+Rhode Island,794987,358609,45.1,preliminary,RI Department of State Voter Turnout Tracker registration base as of Nov 1 2026 (registered); RI Board of Elections total votes in Governor race - unofficial results updated Nov 4 2026 8:02 PM via Six State Signal (ballots - top-of-ballot contest; tracker last published total was 346497 at 7:00 PM Nov 3)
+South Carolina,3438317,2052130,59.7,preliminary,South Carolina Election Commission - 2026 Statewide General Election results page via SC Votes
+South Dakota,628563,310298,49.4,preliminary,South Dakota Secretary of State - Unofficial Results General Election November 3 2026
+Tennessee,4778320,2102474,44.0,preliminary,Tennessee Secretary of State unofficial results for Governor via ACLU-TN and ThinkTennessee - ballots_cast is votes in the Governor race
+Texas,19041684,9907381,52.0,preliminary,Texas Secretary of State unofficial returns November 5 via Texas Impact and TexPolls
+Utah,1784255,,,still counting,Utah Lieutenant Governor / vote.utah.gov Current Voter Registration Statistics November 2 2026 - active registered voters; no statewide ballots cast total published as of November 7
+Vermont,506404,310747,61.4,preliminary,Vermont Secretary of State unofficial results via Waterbury Roundabout
+Virginia,6494213,3590222,55.3,preliminary,Virginia Department of Elections - registration statistics November 1 2026 and unofficial results via Virginia Free Press; ballots_cast is total votes in the U.S. Senate race
+Washington,5170949,3228428,62.4,still counting,Washington Secretary of State - 2026 November General Election Ballot Return Statistics November 6 2026; ballots_cast is ballots returned
+West Virginia,1210385,463912,38.3,preliminary,West Virginia Secretary of State Kris Warner - preliminary turnout announcement November 6 2026 via EIN Presswire
+Wisconsin,3634846,2660389,73.2,preliminary,Wisconsin Elections Commission registered voters November 1 via Milwaukee Journal Sentinel; ballots_cast is ballots in the Governor race and WEC does not publish official turnout until certification
+Wyoming,281219,191688,68.2,preliminary,Wyoming Secretary of State unofficial Total Ballots Cast summary via Brownstein Hyatt Farber Schreck / JD Supra; registered voters from official registration records via EurWeb

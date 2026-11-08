@@ -1,0 +1,824 @@
+data_file,state,source_key
+turnout-2026-11-03.csv,Alabama,al-sos-results
+turnout-2026-11-03.csv,Alaska,ak-doe-enr-2026
+turnout-2026-11-03.csv,Arizona,az-sos-registration-report
+turnout-2026-11-03.csv,Arkansas,ar-sos-elections
+turnout-2026-11-03.csv,California,ca-sos-registration-statistics
+turnout-2026-11-03.csv,California,ca-sos-unprocessed-ballots
+turnout-2026-11-03.csv,Colorado,co-sos-registration
+turnout-2026-11-03.csv,Colorado,co-sos-ballot-returns
+turnout-2026-11-03.csv,Connecticut,ct-sots-sov
+turnout-2026-11-03.csv,Delaware,de-doe-registration-report
+turnout-2026-11-03.csv,Delaware,de-doe-results-2026
+turnout-2026-11-03.csv,District of Columbia,dc-boe
+turnout-2026-11-03.csv,Florida,fl-election-watch
+turnout-2026-11-03.csv,Georgia,ga-sos-elections
+turnout-2026-11-03.csv,Hawaii,hi-office-elections
+turnout-2026-11-03.csv,Idaho,id-voteidaho
+turnout-2026-11-03.csv,Illinois,il-sboe
+turnout-2026-11-03.csv,Indiana,in-sos-voter-portal
+turnout-2026-11-03.csv,Iowa,ia-sos-results
+turnout-2026-11-03.csv,Kansas,ks-sos-elections
+turnout-2026-11-03.csv,Kentucky,ky-sbe
+turnout-2026-11-03.csv,Louisiana,la-sos-registration-report
+turnout-2026-11-03.csv,Maine,me-sos-elections
+turnout-2026-11-03.csv,Maryland,md-sbe
+turnout-2026-11-03.csv,Massachusetts,ma-sec-elections
+turnout-2026-11-03.csv,Michigan,mi-dos-elections
+turnout-2026-11-03.csv,Minnesota,mn-sos-results-2026
+turnout-2026-11-03.csv,Mississippi,ms-sos
+turnout-2026-11-03.csv,Missouri,mo-sos-enr
+turnout-2026-11-03.csv,Montana,mt-sos-results
+turnout-2026-11-03.csv,Nebraska,ne-sos-results
+turnout-2026-11-03.csv,Nevada,nv-sos-elections
+turnout-2026-11-03.csv,New Hampshire,nh-sos-elections
+turnout-2026-11-03.csv,New Jersey,nj-dos-elections
+turnout-2026-11-03.csv,New Mexico,nm-sos-results
+turnout-2026-11-03.csv,New York,ny-boe
+turnout-2026-11-03.csv,North Carolina,nc-sbe-results
+turnout-2026-11-03.csv,North Carolina,nc-sbe-registration
+turnout-2026-11-03.csv,North Dakota,nd-sos-results
+turnout-2026-11-03.csv,Ohio,oh-sos-elections
+turnout-2026-11-03.csv,Oklahoma,ok-oeb
+turnout-2026-11-03.csv,Oregon,or-sos-results
+turnout-2026-11-03.csv,Pennsylvania,pa-dos-returns
+turnout-2026-11-03.csv,Rhode Island,ri-boe-results
+turnout-2026-11-03.csv,South Carolina,sc-sec-enr
+turnout-2026-11-03.csv,South Dakota,sd-sos-results
+turnout-2026-11-03.csv,Tennessee,tn-sos-elections
+turnout-2026-11-03.csv,Texas,tx-sos-elections
+turnout-2026-11-03.csv,Utah,ut-voteutah-registration
+turnout-2026-11-03.csv,Vermont,vt-sos-elections
+turnout-2026-11-03.csv,Virginia,va-doe-registration-statistics
+turnout-2026-11-03.csv,Virginia,va-doe-enr
+turnout-2026-11-03.csv,Washington,wa-sos-elections
+turnout-2026-11-03.csv,West Virginia,wv-sos-elections
+turnout-2026-11-03.csv,Wisconsin,wi-wec
+turnout-2026-11-03.csv,Wyoming,wy-sos-elections
+census-registered-2026.csv,Alabama,al-sos-results
+census-registered-2026.csv,Alabama,census-2020-apportionment
+census-registered-2026.csv,Alaska,ak-doe-enr-2026
+census-registered-2026.csv,Alaska,census-2020-apportionment
+census-registered-2026.csv,Arizona,az-sos-registration-report
+census-registered-2026.csv,Arizona,census-2020-apportionment
+census-registered-2026.csv,Arkansas,ar-sos-elections
+census-registered-2026.csv,Arkansas,census-2020-apportionment
+census-registered-2026.csv,California,ca-sos-registration-statistics
+census-registered-2026.csv,California,ca-sos-unprocessed-ballots
+census-registered-2026.csv,California,census-2020-apportionment
+census-registered-2026.csv,Colorado,co-sos-registration
+census-registered-2026.csv,Colorado,co-sos-ballot-returns
+census-registered-2026.csv,Colorado,census-2020-apportionment
+census-registered-2026.csv,Connecticut,ct-sots-sov
+census-registered-2026.csv,Connecticut,census-2020-apportionment
+census-registered-2026.csv,Delaware,de-doe-registration-report
+census-registered-2026.csv,Delaware,de-doe-results-2026
+census-registered-2026.csv,Delaware,census-2020-apportionment
+census-registered-2026.csv,District of Columbia,dc-boe
+census-registered-2026.csv,District of Columbia,census-2020-apportionment
+census-registered-2026.csv,Florida,fl-election-watch
+census-registered-2026.csv,Florida,census-2020-apportionment
+census-registered-2026.csv,Georgia,ga-sos-elections
+census-registered-2026.csv,Georgia,census-2020-apportionment
+census-registered-2026.csv,Hawaii,hi-office-elections
+census-registered-2026.csv,Hawaii,census-2020-apportionment
+census-registered-2026.csv,Idaho,id-voteidaho
+census-registered-2026.csv,Idaho,census-2020-apportionment
+census-registered-2026.csv,Illinois,il-sboe
+census-registered-2026.csv,Illinois,census-2020-apportionment
+census-registered-2026.csv,Indiana,in-sos-voter-portal
+census-registered-2026.csv,Indiana,census-2020-apportionment
+census-registered-2026.csv,Iowa,ia-sos-results
+census-registered-2026.csv,Iowa,census-2020-apportionment
+census-registered-2026.csv,Kansas,ks-sos-elections
+census-registered-2026.csv,Kansas,census-2020-apportionment
+census-registered-2026.csv,Kentucky,ky-sbe
+census-registered-2026.csv,Kentucky,census-2020-apportionment
+census-registered-2026.csv,Louisiana,la-sos-registration-report
+census-registered-2026.csv,Louisiana,census-2020-apportionment
+census-registered-2026.csv,Maine,me-sos-elections
+census-registered-2026.csv,Maine,census-2020-apportionment
+census-registered-2026.csv,Maryland,md-sbe
+census-registered-2026.csv,Maryland,census-2020-apportionment
+census-registered-2026.csv,Massachusetts,ma-sec-elections
+census-registered-2026.csv,Massachusetts,census-2020-apportionment
+census-registered-2026.csv,Michigan,mi-dos-elections
+census-registered-2026.csv,Michigan,census-2020-apportionment
+census-registered-2026.csv,Minnesota,mn-sos-results-2026
+census-registered-2026.csv,Minnesota,census-2020-apportionment
+census-registered-2026.csv,Mississippi,ms-sos
+census-registered-2026.csv,Mississippi,census-2020-apportionment
+census-registered-2026.csv,Missouri,mo-sos-enr
+census-registered-2026.csv,Missouri,census-2020-apportionment
+census-registered-2026.csv,Montana,mt-sos-results
+census-registered-2026.csv,Montana,census-2020-apportionment
+census-registered-2026.csv,Nebraska,ne-sos-results
+census-registered-2026.csv,Nebraska,census-2020-apportionment
+census-registered-2026.csv,Nevada,nv-sos-elections
+census-registered-2026.csv,Nevada,census-2020-apportionment
+census-registered-2026.csv,New Hampshire,nh-sos-elections
+census-registered-2026.csv,New Hampshire,census-2020-apportionment
+census-registered-2026.csv,New Jersey,nj-dos-elections
+census-registered-2026.csv,New Jersey,census-2020-apportionment
+census-registered-2026.csv,New Mexico,nm-sos-results
+census-registered-2026.csv,New Mexico,census-2020-apportionment
+census-registered-2026.csv,New York,ny-boe
+census-registered-2026.csv,New York,census-2020-apportionment
+census-registered-2026.csv,North Carolina,nc-sbe-results
+census-registered-2026.csv,North Carolina,nc-sbe-registration
+census-registered-2026.csv,North Carolina,census-2020-apportionment
+census-registered-2026.csv,North Dakota,nd-sos-results
+census-registered-2026.csv,North Dakota,census-2020-apportionment
+census-registered-2026.csv,Ohio,oh-sos-elections
+census-registered-2026.csv,Ohio,census-2020-apportionment
+census-registered-2026.csv,Oklahoma,ok-oeb
+census-registered-2026.csv,Oklahoma,census-2020-apportionment
+census-registered-2026.csv,Oregon,or-sos-results
+census-registered-2026.csv,Oregon,census-2020-apportionment
+census-registered-2026.csv,Pennsylvania,pa-dos-returns
+census-registered-2026.csv,Pennsylvania,census-2020-apportionment
+census-registered-2026.csv,Rhode Island,ri-boe-results
+census-registered-2026.csv,Rhode Island,census-2020-apportionment
+census-registered-2026.csv,South Carolina,sc-sec-enr
+census-registered-2026.csv,South Carolina,census-2020-apportionment
+census-registered-2026.csv,South Dakota,sd-sos-results
+census-registered-2026.csv,South Dakota,census-2020-apportionment
+census-registered-2026.csv,Tennessee,tn-sos-elections
+census-registered-2026.csv,Tennessee,census-2020-apportionment
+census-registered-2026.csv,Texas,tx-sos-elections
+census-registered-2026.csv,Texas,census-2020-apportionment
+census-registered-2026.csv,Utah,ut-voteutah-registration
+census-registered-2026.csv,Utah,census-2020-apportionment
+census-registered-2026.csv,Vermont,vt-sos-elections
+census-registered-2026.csv,Vermont,census-2020-apportionment
+census-registered-2026.csv,Virginia,va-doe-registration-statistics
+census-registered-2026.csv,Virginia,va-doe-enr
+census-registered-2026.csv,Virginia,census-2020-apportionment
+census-registered-2026.csv,Washington,wa-sos-elections
+census-registered-2026.csv,Washington,census-2020-apportionment
+census-registered-2026.csv,West Virginia,wv-sos-elections
+census-registered-2026.csv,West Virginia,census-2020-apportionment
+census-registered-2026.csv,Wisconsin,wi-wec
+census-registered-2026.csv,Wisconsin,census-2020-apportionment
+census-registered-2026.csv,Wyoming,wy-sos-elections
+census-registered-2026.csv,Wyoming,census-2020-apportionment
+vap-2020-pl.csv,Alabama,census-pl-94171
+vap-2020-pl.csv,Alaska,census-pl-94171
+vap-2020-pl.csv,Arizona,census-pl-94171
+vap-2020-pl.csv,Arkansas,census-pl-94171
+vap-2020-pl.csv,California,census-pl-94171
+vap-2020-pl.csv,Colorado,census-pl-94171
+vap-2020-pl.csv,Connecticut,census-pl-94171
+vap-2020-pl.csv,Delaware,census-pl-94171
+vap-2020-pl.csv,District of Columbia,census-pl-94171
+vap-2020-pl.csv,Florida,census-pl-94171
+vap-2020-pl.csv,Georgia,census-pl-94171
+vap-2020-pl.csv,Hawaii,census-pl-94171
+vap-2020-pl.csv,Idaho,census-pl-94171
+vap-2020-pl.csv,Illinois,census-pl-94171
+vap-2020-pl.csv,Indiana,census-pl-94171
+vap-2020-pl.csv,Iowa,census-pl-94171
+vap-2020-pl.csv,Kansas,census-pl-94171
+vap-2020-pl.csv,Kentucky,census-pl-94171
+vap-2020-pl.csv,Louisiana,census-pl-94171
+vap-2020-pl.csv,Maine,census-pl-94171
+vap-2020-pl.csv,Maryland,census-pl-94171
+vap-2020-pl.csv,Massachusetts,census-pl-94171
+vap-2020-pl.csv,Michigan,census-pl-94171
+vap-2020-pl.csv,Minnesota,census-pl-94171
+vap-2020-pl.csv,Mississippi,census-pl-94171
+vap-2020-pl.csv,Missouri,census-pl-94171
+vap-2020-pl.csv,Montana,census-pl-94171
+vap-2020-pl.csv,Nebraska,census-pl-94171
+vap-2020-pl.csv,Nevada,census-pl-94171
+vap-2020-pl.csv,New Hampshire,census-pl-94171
+vap-2020-pl.csv,New Jersey,census-pl-94171
+vap-2020-pl.csv,New Mexico,census-pl-94171
+vap-2020-pl.csv,New York,census-pl-94171
+vap-2020-pl.csv,North Carolina,census-pl-94171
+vap-2020-pl.csv,North Dakota,census-pl-94171
+vap-2020-pl.csv,Ohio,census-pl-94171
+vap-2020-pl.csv,Oklahoma,census-pl-94171
+vap-2020-pl.csv,Oregon,census-pl-94171
+vap-2020-pl.csv,Pennsylvania,census-pl-94171
+vap-2020-pl.csv,Rhode Island,census-pl-94171
+vap-2020-pl.csv,South Carolina,census-pl-94171
+vap-2020-pl.csv,South Dakota,census-pl-94171
+vap-2020-pl.csv,Tennessee,census-pl-94171
+vap-2020-pl.csv,Texas,census-pl-94171
+vap-2020-pl.csv,Utah,census-pl-94171
+vap-2020-pl.csv,Vermont,census-pl-94171
+vap-2020-pl.csv,Virginia,census-pl-94171
+vap-2020-pl.csv,Washington,census-pl-94171
+vap-2020-pl.csv,West Virginia,census-pl-94171
+vap-2020-pl.csv,Wisconsin,census-pl-94171
+vap-2020-pl.csv,Wyoming,census-pl-94171
+county-vap-2020.csv,Alabama,census-pl-94171
+county-vap-2020.csv,Alaska,census-pl-94171
+county-vap-2020.csv,Arizona,census-pl-94171
+county-vap-2020.csv,Arkansas,census-pl-94171
+county-vap-2020.csv,California,census-pl-94171
+county-vap-2020.csv,Colorado,census-pl-94171
+county-vap-2020.csv,Connecticut,census-pl-94171
+county-vap-2020.csv,Delaware,census-pl-94171
+county-vap-2020.csv,District of Columbia,census-pl-94171
+county-vap-2020.csv,Florida,census-pl-94171
+county-vap-2020.csv,Georgia,census-pl-94171
+county-vap-2020.csv,Hawaii,census-pl-94171
+county-vap-2020.csv,Idaho,census-pl-94171
+county-vap-2020.csv,Illinois,census-pl-94171
+county-vap-2020.csv,Indiana,census-pl-94171
+county-vap-2020.csv,Iowa,census-pl-94171
+county-vap-2020.csv,Kansas,census-pl-94171
+county-vap-2020.csv,Kentucky,census-pl-94171
+county-vap-2020.csv,Louisiana,census-pl-94171
+county-vap-2020.csv,Maine,census-pl-94171
+county-vap-2020.csv,Maryland,census-pl-94171
+county-vap-2020.csv,Massachusetts,census-pl-94171
+county-vap-2020.csv,Michigan,census-pl-94171
+county-vap-2020.csv,Minnesota,census-pl-94171
+county-vap-2020.csv,Mississippi,census-pl-94171
+county-vap-2020.csv,Missouri,census-pl-94171
+county-vap-2020.csv,Montana,census-pl-94171
+county-vap-2020.csv,Nebraska,census-pl-94171
+county-vap-2020.csv,Nevada,census-pl-94171
+county-vap-2020.csv,New Hampshire,census-pl-94171
+county-vap-2020.csv,New Jersey,census-pl-94171
+county-vap-2020.csv,New Mexico,census-pl-94171
+county-vap-2020.csv,New York,census-pl-94171
+county-vap-2020.csv,North Carolina,census-pl-94171
+county-vap-2020.csv,North Dakota,census-pl-94171
+county-vap-2020.csv,Ohio,census-pl-94171
+county-vap-2020.csv,Oklahoma,census-pl-94171
+county-vap-2020.csv,Oregon,census-pl-94171
+county-vap-2020.csv,Pennsylvania,census-pl-94171
+county-vap-2020.csv,Rhode Island,census-pl-94171
+county-vap-2020.csv,South Carolina,census-pl-94171
+county-vap-2020.csv,South Dakota,census-pl-94171
+county-vap-2020.csv,Tennessee,census-pl-94171
+county-vap-2020.csv,Texas,census-pl-94171
+county-vap-2020.csv,Utah,census-pl-94171
+county-vap-2020.csv,Vermont,census-pl-94171
+county-vap-2020.csv,Virginia,census-pl-94171
+county-vap-2020.csv,Washington,census-pl-94171
+county-vap-2020.csv,West Virginia,census-pl-94171
+county-vap-2020.csv,Wisconsin,census-pl-94171
+county-vap-2020.csv,Wyoming,census-pl-94171
+county-registered-all.csv,Alabama,al-sos-vr-statistics
+county-registered-all.csv,Alaska,ak-doe-sovc-2026
+county-registered-all.csv,Colorado,co-sos-registration
+county-registered-all.csv,Delaware,de-doe-registration-report
+county-registered-all.csv,Kentucky,ky-sbe-registration-statistics
+county-registered-all.csv,Montana,mt-sos-turnout-data
+county-registered-all.csv,North Carolina,nc-sbe-voter-stats
+county-registered-all.csv,Virginia,va-doe-registration-statistics
+turnout-history-national.csv,United States,eac-eavs-2014
+turnout-history-national.csv,United States,eac-eavs-2016
+turnout-history-national.csv,United States,international-idea-turnout
+turnout-history-national.csv,United States,eac-eavs-2020
+turnout-history-national.csv,United States,eac-eavs-2022-report
+turnout-history-national.csv,United States,eac-eavs-2024-report
+turnout-history-national.csv,United States,census-cps-voting
+turnout-history-national.csv,United States,uf-election-lab-turnout
+turnout-history-states.csv,Alaska,eac-brief-ak-2018
+turnout-history-states.csv,Alaska,eac-brief-ak-2022
+turnout-history-states.csv,Alaska,ak-doe-2022-summary
+turnout-history-states.csv,Alaska,eac-eavs-2024-report
+turnout-history-states.csv,Alaska,ak-doe-2024-summary
+turnout-history-states.csv,California,ca-sos-historical-voter-reg
+turnout-history-states.csv,Idaho,id-voteidaho-history
+turnout-history-states.csv,Idaho,eac-brief-id-2024
+turnout-history-states.csv,Michigan,eac-brief-mi-2018
+turnout-history-states.csv,Michigan,eac-brief-mi-2022
+turnout-history-states.csv,Michigan,eac-brief-mi-2024
+turnout-history-states.csv,Michigan,mi-dos-elections
+turnout-history-states.csv,Minnesota,mn-sos-historical-turnout
+turnout-history-states.csv,New Hampshire,eac-brief-nh-2018
+turnout-history-states.csv,New Hampshire,eac-brief-nh-2022
+turnout-history-states.csv,New Hampshire,eac-brief-nh-2024
+turnout-history-states.csv,New Hampshire,nh-sos-elections
+turnout-history-states.csv,Utah,ut-voteutah-historical
+turnout-history-states.csv,Utah,eac-brief-ut-2022
+turnout-history-states.csv,Utah,eac-brief-ut-2024
+turnout-history-states.csv,West Virginia,eac-brief-wv-2018
+turnout-history-states.csv,West Virginia,eac-brief-wv-2022
+turnout-history-states.csv,West Virginia,wv-sos-elections
+turnout-history-states.csv,Wisconsin,eac-brief-wi-2018
+turnout-history-states.csv,Wisconsin,eac-eavs-2024-report
+turnout-history-states.csv,Wyoming,eac-brief-wy-2018
+turnout-history-states.csv,Wyoming,eac-brief-wy-2022
+turnout-history-states.csv,Wyoming,eac-eavs-2024-report
+turnout-history-states.csv,Wyoming,wy-sos-ballots-cast
+state-factors-expanded.csv,Alabama,bls-laus-release
+state-factors-expanded.csv,Alabama,bls-qcew-release
+state-factors-expanded.csv,Alabama,census-acs-b17001
+state-factors-expanded.csv,Alabama,census-bps
+state-factors-expanded.csv,Alabama,census-bfs
+state-factors-expanded.csv,Alabama,eia-epm
+state-factors-expanded.csv,Alaska,bls-laus-release
+state-factors-expanded.csv,Alaska,bls-qcew-release
+state-factors-expanded.csv,Alaska,census-acs-b17001
+state-factors-expanded.csv,Alaska,census-bps
+state-factors-expanded.csv,Alaska,census-bfs
+state-factors-expanded.csv,Alaska,eia-epm
+state-factors-expanded.csv,Arizona,bls-laus-release
+state-factors-expanded.csv,Arizona,bls-qcew-release
+state-factors-expanded.csv,Arizona,census-acs-b17001
+state-factors-expanded.csv,Arizona,census-bps
+state-factors-expanded.csv,Arizona,census-bfs
+state-factors-expanded.csv,Arizona,eia-epm
+state-factors-expanded.csv,Arkansas,bls-laus-release
+state-factors-expanded.csv,Arkansas,bls-qcew-release
+state-factors-expanded.csv,Arkansas,census-acs-b17001
+state-factors-expanded.csv,Arkansas,census-bps
+state-factors-expanded.csv,Arkansas,census-bfs
+state-factors-expanded.csv,Arkansas,eia-epm
+state-factors-expanded.csv,California,bls-laus-release
+state-factors-expanded.csv,California,bls-qcew-release
+state-factors-expanded.csv,California,census-acs-b17001
+state-factors-expanded.csv,California,census-bps
+state-factors-expanded.csv,California,census-bfs
+state-factors-expanded.csv,California,eia-epm
+state-factors-expanded.csv,Colorado,bls-laus-release
+state-factors-expanded.csv,Colorado,bls-qcew-release
+state-factors-expanded.csv,Colorado,census-acs-b17001
+state-factors-expanded.csv,Colorado,census-bps
+state-factors-expanded.csv,Colorado,census-bfs
+state-factors-expanded.csv,Colorado,eia-epm
+state-factors-expanded.csv,Connecticut,bls-laus-release
+state-factors-expanded.csv,Connecticut,bls-qcew-release
+state-factors-expanded.csv,Connecticut,census-acs-b17001
+state-factors-expanded.csv,Connecticut,census-bps
+state-factors-expanded.csv,Connecticut,census-bfs
+state-factors-expanded.csv,Connecticut,eia-epm
+state-factors-expanded.csv,Delaware,bls-laus-release
+state-factors-expanded.csv,Delaware,bls-qcew-release
+state-factors-expanded.csv,Delaware,census-acs-b17001
+state-factors-expanded.csv,Delaware,census-bps
+state-factors-expanded.csv,Delaware,census-bfs
+state-factors-expanded.csv,Delaware,eia-epm
+state-factors-expanded.csv,District of Columbia,bls-laus-release
+state-factors-expanded.csv,District of Columbia,bls-qcew-release
+state-factors-expanded.csv,District of Columbia,census-acs-b17001
+state-factors-expanded.csv,District of Columbia,census-bps
+state-factors-expanded.csv,District of Columbia,census-bfs
+state-factors-expanded.csv,District of Columbia,eia-epm
+state-factors-expanded.csv,Florida,bls-laus-release
+state-factors-expanded.csv,Florida,bls-qcew-release
+state-factors-expanded.csv,Florida,census-acs-b17001
+state-factors-expanded.csv,Florida,census-bps
+state-factors-expanded.csv,Florida,census-bfs
+state-factors-expanded.csv,Florida,eia-epm
+state-factors-expanded.csv,Georgia,bls-laus-release
+state-factors-expanded.csv,Georgia,bls-qcew-release
+state-factors-expanded.csv,Georgia,census-acs-b17001
+state-factors-expanded.csv,Georgia,census-bps
+state-factors-expanded.csv,Georgia,census-bfs
+state-factors-expanded.csv,Georgia,eia-epm
+state-factors-expanded.csv,Hawaii,bls-laus-release
+state-factors-expanded.csv,Hawaii,bls-qcew-release
+state-factors-expanded.csv,Hawaii,census-acs-b17001
+state-factors-expanded.csv,Hawaii,census-bps
+state-factors-expanded.csv,Hawaii,census-bfs
+state-factors-expanded.csv,Hawaii,eia-epm
+state-factors-expanded.csv,Idaho,bls-laus-release
+state-factors-expanded.csv,Idaho,bls-qcew-release
+state-factors-expanded.csv,Idaho,census-acs-b17001
+state-factors-expanded.csv,Idaho,census-bps
+state-factors-expanded.csv,Idaho,census-bfs
+state-factors-expanded.csv,Idaho,eia-epm
+state-factors-expanded.csv,Illinois,bls-laus-release
+state-factors-expanded.csv,Illinois,bls-qcew-release
+state-factors-expanded.csv,Illinois,census-acs-b17001
+state-factors-expanded.csv,Illinois,census-bps
+state-factors-expanded.csv,Illinois,census-bfs
+state-factors-expanded.csv,Illinois,eia-epm
+state-factors-expanded.csv,Indiana,bls-laus-release
+state-factors-expanded.csv,Indiana,bls-qcew-release
+state-factors-expanded.csv,Indiana,census-acs-b17001
+state-factors-expanded.csv,Indiana,census-bps
+state-factors-expanded.csv,Indiana,census-bfs
+state-factors-expanded.csv,Indiana,eia-epm
+state-factors-expanded.csv,Iowa,bls-laus-release
+state-factors-expanded.csv,Iowa,bls-qcew-release
+state-factors-expanded.csv,Iowa,census-acs-b17001
+state-factors-expanded.csv,Iowa,census-bps
+state-factors-expanded.csv,Iowa,census-bfs
+state-factors-expanded.csv,Iowa,eia-epm
+state-factors-expanded.csv,Kansas,bls-laus-release
+state-factors-expanded.csv,Kansas,bls-qcew-release
+state-factors-expanded.csv,Kansas,census-acs-b17001
+state-factors-expanded.csv,Kansas,census-bps
+state-factors-expanded.csv,Kansas,census-bfs
+state-factors-expanded.csv,Kansas,eia-epm
+state-factors-expanded.csv,Kentucky,bls-laus-release
+state-factors-expanded.csv,Kentucky,bls-qcew-release
+state-factors-expanded.csv,Kentucky,census-acs-b17001
+state-factors-expanded.csv,Kentucky,census-bps
+state-factors-expanded.csv,Kentucky,census-bfs
+state-factors-expanded.csv,Kentucky,eia-epm
+state-factors-expanded.csv,Louisiana,bls-laus-release
+state-factors-expanded.csv,Louisiana,bls-qcew-release
+state-factors-expanded.csv,Louisiana,census-acs-b17001
+state-factors-expanded.csv,Louisiana,census-bps
+state-factors-expanded.csv,Louisiana,census-bfs
+state-factors-expanded.csv,Louisiana,eia-epm
+state-factors-expanded.csv,Maine,bls-laus-release
+state-factors-expanded.csv,Maine,bls-qcew-release
+state-factors-expanded.csv,Maine,census-acs-b17001
+state-factors-expanded.csv,Maine,census-bps
+state-factors-expanded.csv,Maine,census-bfs
+state-factors-expanded.csv,Maine,eia-epm
+state-factors-expanded.csv,Maryland,bls-laus-release
+state-factors-expanded.csv,Maryland,bls-qcew-release
+state-factors-expanded.csv,Maryland,census-acs-b17001
+state-factors-expanded.csv,Maryland,census-bps
+state-factors-expanded.csv,Maryland,census-bfs
+state-factors-expanded.csv,Maryland,eia-epm
+state-factors-expanded.csv,Massachusetts,bls-laus-release
+state-factors-expanded.csv,Massachusetts,bls-qcew-release
+state-factors-expanded.csv,Massachusetts,census-acs-b17001
+state-factors-expanded.csv,Massachusetts,census-bps
+state-factors-expanded.csv,Massachusetts,census-bfs
+state-factors-expanded.csv,Massachusetts,eia-epm
+state-factors-expanded.csv,Michigan,bls-laus-release
+state-factors-expanded.csv,Michigan,bls-qcew-release
+state-factors-expanded.csv,Michigan,census-acs-b17001
+state-factors-expanded.csv,Michigan,census-bps
+state-factors-expanded.csv,Michigan,census-bfs
+state-factors-expanded.csv,Michigan,eia-epm
+state-factors-expanded.csv,Minnesota,bls-laus-release
+state-factors-expanded.csv,Minnesota,bls-qcew-release
+state-factors-expanded.csv,Minnesota,census-acs-b17001
+state-factors-expanded.csv,Minnesota,census-bps
+state-factors-expanded.csv,Minnesota,census-bfs
+state-factors-expanded.csv,Minnesota,eia-epm
+state-factors-expanded.csv,Mississippi,bls-laus-release
+state-factors-expanded.csv,Mississippi,bls-qcew-release
+state-factors-expanded.csv,Mississippi,census-acs-b17001
+state-factors-expanded.csv,Mississippi,census-bps
+state-factors-expanded.csv,Mississippi,census-bfs
+state-factors-expanded.csv,Mississippi,eia-epm
+state-factors-expanded.csv,Missouri,bls-laus-release
+state-factors-expanded.csv,Missouri,bls-qcew-release
+state-factors-expanded.csv,Missouri,census-acs-b17001
+state-factors-expanded.csv,Missouri,census-bps
+state-factors-expanded.csv,Missouri,census-bfs
+state-factors-expanded.csv,Missouri,eia-epm
+state-factors-expanded.csv,Montana,bls-laus-release
+state-factors-expanded.csv,Montana,bls-qcew-release
+state-factors-expanded.csv,Montana,census-acs-b17001
+state-factors-expanded.csv,Montana,census-bps
+state-factors-expanded.csv,Montana,census-bfs
+state-factors-expanded.csv,Montana,eia-epm
+state-factors-expanded.csv,Nebraska,bls-laus-release
+state-factors-expanded.csv,Nebraska,bls-qcew-release
+state-factors-expanded.csv,Nebraska,census-acs-b17001
+state-factors-expanded.csv,Nebraska,census-bps
+state-factors-expanded.csv,Nebraska,census-bfs
+state-factors-expanded.csv,Nebraska,eia-epm
+state-factors-expanded.csv,Nevada,bls-laus-release
+state-factors-expanded.csv,Nevada,bls-qcew-release
+state-factors-expanded.csv,Nevada,census-acs-b17001
+state-factors-expanded.csv,Nevada,census-bps
+state-factors-expanded.csv,Nevada,census-bfs
+state-factors-expanded.csv,Nevada,eia-epm
+state-factors-expanded.csv,New Hampshire,bls-laus-release
+state-factors-expanded.csv,New Hampshire,bls-qcew-release
+state-factors-expanded.csv,New Hampshire,census-acs-b17001
+state-factors-expanded.csv,New Hampshire,census-bps
+state-factors-expanded.csv,New Hampshire,census-bfs
+state-factors-expanded.csv,New Hampshire,eia-epm
+state-factors-expanded.csv,New Jersey,bls-laus-release
+state-factors-expanded.csv,New Jersey,bls-qcew-release
+state-factors-expanded.csv,New Jersey,census-acs-b17001
+state-factors-expanded.csv,New Jersey,census-bps
+state-factors-expanded.csv,New Jersey,census-bfs
+state-factors-expanded.csv,New Jersey,eia-epm
+state-factors-expanded.csv,New Mexico,bls-laus-release
+state-factors-expanded.csv,New Mexico,bls-qcew-release
+state-factors-expanded.csv,New Mexico,census-acs-b17001
+state-factors-expanded.csv,New Mexico,census-bps
+state-factors-expanded.csv,New Mexico,census-bfs
+state-factors-expanded.csv,New Mexico,eia-epm
+state-factors-expanded.csv,New York,bls-laus-release
+state-factors-expanded.csv,New York,bls-qcew-release
+state-factors-expanded.csv,New York,census-acs-b17001
+state-factors-expanded.csv,New York,census-bps
+state-factors-expanded.csv,New York,census-bfs
+state-factors-expanded.csv,New York,eia-epm
+state-factors-expanded.csv,North Carolina,bls-laus-release
+state-factors-expanded.csv,North Carolina,bls-qcew-release
+state-factors-expanded.csv,North Carolina,census-acs-b17001
+state-factors-expanded.csv,North Carolina,census-bps
+state-factors-expanded.csv,North Carolina,census-bfs
+state-factors-expanded.csv,North Carolina,eia-epm
+state-factors-expanded.csv,North Dakota,bls-laus-release
+state-factors-expanded.csv,North Dakota,bls-qcew-release
+state-factors-expanded.csv,North Dakota,census-acs-b17001
+state-factors-expanded.csv,North Dakota,census-bps
+state-factors-expanded.csv,North Dakota,census-bfs
+state-factors-expanded.csv,North Dakota,eia-epm
+state-factors-expanded.csv,Ohio,bls-laus-release
+state-factors-expanded.csv,Ohio,bls-qcew-release
+state-factors-expanded.csv,Ohio,census-acs-b17001
+state-factors-expanded.csv,Ohio,census-bps
+state-factors-expanded.csv,Ohio,census-bfs
+state-factors-expanded.csv,Ohio,eia-epm
+state-factors-expanded.csv,Oklahoma,bls-laus-release
+state-factors-expanded.csv,Oklahoma,bls-qcew-release
+state-factors-expanded.csv,Oklahoma,census-acs-b17001
+state-factors-expanded.csv,Oklahoma,census-bps
+state-factors-expanded.csv,Oklahoma,census-bfs
+state-factors-expanded.csv,Oklahoma,eia-epm
+state-factors-expanded.csv,Oregon,bls-laus-release
+state-factors-expanded.csv,Oregon,bls-qcew-release
+state-factors-expanded.csv,Oregon,census-acs-b17001
+state-factors-expanded.csv,Oregon,census-bps
+state-factors-expanded.csv,Oregon,census-bfs
+state-factors-expanded.csv,Oregon,eia-epm
+state-factors-expanded.csv,Pennsylvania,bls-laus-release
+state-factors-expanded.csv,Pennsylvania,bls-qcew-release
+state-factors-expanded.csv,Pennsylvania,census-acs-b17001
+state-factors-expanded.csv,Pennsylvania,census-bps
+state-factors-expanded.csv,Pennsylvania,census-bfs
+state-factors-expanded.csv,Pennsylvania,eia-epm
+state-factors-expanded.csv,Rhode Island,bls-laus-release
+state-factors-expanded.csv,Rhode Island,bls-qcew-release
+state-factors-expanded.csv,Rhode Island,census-acs-b17001
+state-factors-expanded.csv,Rhode Island,census-bps
+state-factors-expanded.csv,Rhode Island,census-bfs
+state-factors-expanded.csv,Rhode Island,eia-epm
+state-factors-expanded.csv,South Carolina,bls-laus-release
+state-factors-expanded.csv,South Carolina,bls-qcew-release
+state-factors-expanded.csv,South Carolina,census-acs-b17001
+state-factors-expanded.csv,South Carolina,census-bps
+state-factors-expanded.csv,South Carolina,census-bfs
+state-factors-expanded.csv,South Carolina,eia-epm
+state-factors-expanded.csv,South Dakota,bls-laus-release
+state-factors-expanded.csv,South Dakota,bls-qcew-release
+state-factors-expanded.csv,South Dakota,census-acs-b17001
+state-factors-expanded.csv,South Dakota,census-bps
+state-factors-expanded.csv,South Dakota,census-bfs
+state-factors-expanded.csv,South Dakota,eia-epm
+state-factors-expanded.csv,Tennessee,bls-laus-release
+state-factors-expanded.csv,Tennessee,bls-qcew-release
+state-factors-expanded.csv,Tennessee,census-acs-b17001
+state-factors-expanded.csv,Tennessee,census-bps
+state-factors-expanded.csv,Tennessee,census-bfs
+state-factors-expanded.csv,Tennessee,eia-epm
+state-factors-expanded.csv,Texas,bls-laus-release
+state-factors-expanded.csv,Texas,bls-qcew-release
+state-factors-expanded.csv,Texas,census-acs-b17001
+state-factors-expanded.csv,Texas,census-bps
+state-factors-expanded.csv,Texas,census-bfs
+state-factors-expanded.csv,Texas,eia-epm
+state-factors-expanded.csv,Utah,bls-laus-release
+state-factors-expanded.csv,Utah,bls-qcew-release
+state-factors-expanded.csv,Utah,census-acs-b17001
+state-factors-expanded.csv,Utah,census-bps
+state-factors-expanded.csv,Utah,census-bfs
+state-factors-expanded.csv,Utah,eia-epm
+state-factors-expanded.csv,Vermont,bls-laus-release
+state-factors-expanded.csv,Vermont,bls-qcew-release
+state-factors-expanded.csv,Vermont,census-acs-b17001
+state-factors-expanded.csv,Vermont,census-bps
+state-factors-expanded.csv,Vermont,census-bfs
+state-factors-expanded.csv,Vermont,eia-epm
+state-factors-expanded.csv,Virginia,bls-laus-release
+state-factors-expanded.csv,Virginia,bls-qcew-release
+state-factors-expanded.csv,Virginia,census-acs-b17001
+state-factors-expanded.csv,Virginia,census-bps
+state-factors-expanded.csv,Virginia,census-bfs
+state-factors-expanded.csv,Virginia,eia-epm
+state-factors-expanded.csv,Washington,bls-laus-release
+state-factors-expanded.csv,Washington,bls-qcew-release
+state-factors-expanded.csv,Washington,census-acs-b17001
+state-factors-expanded.csv,Washington,census-bps
+state-factors-expanded.csv,Washington,census-bfs
+state-factors-expanded.csv,Washington,eia-epm
+state-factors-expanded.csv,West Virginia,bls-laus-release
+state-factors-expanded.csv,West Virginia,bls-qcew-release
+state-factors-expanded.csv,West Virginia,census-acs-b17001
+state-factors-expanded.csv,West Virginia,census-bps
+state-factors-expanded.csv,West Virginia,census-bfs
+state-factors-expanded.csv,West Virginia,eia-epm
+state-factors-expanded.csv,Wisconsin,bls-laus-release
+state-factors-expanded.csv,Wisconsin,bls-qcew-release
+state-factors-expanded.csv,Wisconsin,census-acs-b17001
+state-factors-expanded.csv,Wisconsin,census-bps
+state-factors-expanded.csv,Wisconsin,census-bfs
+state-factors-expanded.csv,Wisconsin,eia-epm
+state-factors-expanded.csv,Wyoming,bls-laus-release
+state-factors-expanded.csv,Wyoming,bls-qcew-release
+state-factors-expanded.csv,Wyoming,census-acs-b17001
+state-factors-expanded.csv,Wyoming,census-bps
+state-factors-expanded.csv,Wyoming,census-bfs
+state-factors-expanded.csv,Wyoming,eia-epm
+state-claims-weeks.csv,Alabama,dol-weekly-claims
+state-claims-weeks.csv,Alaska,dol-weekly-claims
+state-claims-weeks.csv,Arizona,dol-weekly-claims
+state-claims-weeks.csv,Arkansas,dol-weekly-claims
+state-claims-weeks.csv,California,dol-weekly-claims
+state-claims-weeks.csv,Colorado,dol-weekly-claims
+state-claims-weeks.csv,Connecticut,dol-weekly-claims
+state-claims-weeks.csv,Delaware,dol-weekly-claims
+state-claims-weeks.csv,District of Columbia,dol-weekly-claims
+state-claims-weeks.csv,Florida,dol-weekly-claims
+state-claims-weeks.csv,Georgia,dol-weekly-claims
+state-claims-weeks.csv,Hawaii,dol-weekly-claims
+state-claims-weeks.csv,Idaho,dol-weekly-claims
+state-claims-weeks.csv,Illinois,dol-weekly-claims
+state-claims-weeks.csv,Indiana,dol-weekly-claims
+state-claims-weeks.csv,Iowa,dol-weekly-claims
+state-claims-weeks.csv,Kansas,dol-weekly-claims
+state-claims-weeks.csv,Kentucky,dol-weekly-claims
+state-claims-weeks.csv,Louisiana,dol-weekly-claims
+state-claims-weeks.csv,Maine,dol-weekly-claims
+state-claims-weeks.csv,Maryland,dol-weekly-claims
+state-claims-weeks.csv,Massachusetts,dol-weekly-claims
+state-claims-weeks.csv,Michigan,dol-weekly-claims
+state-claims-weeks.csv,Minnesota,dol-weekly-claims
+state-claims-weeks.csv,Mississippi,dol-weekly-claims
+state-claims-weeks.csv,Missouri,dol-weekly-claims
+state-claims-weeks.csv,Montana,dol-weekly-claims
+state-claims-weeks.csv,Nebraska,dol-weekly-claims
+state-claims-weeks.csv,Nevada,dol-weekly-claims
+state-claims-weeks.csv,New Hampshire,dol-weekly-claims
+state-claims-weeks.csv,New Jersey,dol-weekly-claims
+state-claims-weeks.csv,New Mexico,dol-weekly-claims
+state-claims-weeks.csv,New York,dol-weekly-claims
+state-claims-weeks.csv,North Carolina,dol-weekly-claims
+state-claims-weeks.csv,North Dakota,dol-weekly-claims
+state-claims-weeks.csv,Ohio,dol-weekly-claims
+state-claims-weeks.csv,Oklahoma,dol-weekly-claims
+state-claims-weeks.csv,Oregon,dol-weekly-claims
+state-claims-weeks.csv,Pennsylvania,dol-weekly-claims
+state-claims-weeks.csv,Rhode Island,dol-weekly-claims
+state-claims-weeks.csv,South Carolina,dol-weekly-claims
+state-claims-weeks.csv,South Dakota,dol-weekly-claims
+state-claims-weeks.csv,Tennessee,dol-weekly-claims
+state-claims-weeks.csv,Texas,dol-weekly-claims
+state-claims-weeks.csv,Utah,dol-weekly-claims
+state-claims-weeks.csv,Vermont,dol-weekly-claims
+state-claims-weeks.csv,Virginia,dol-weekly-claims
+state-claims-weeks.csv,Washington,dol-weekly-claims
+state-claims-weeks.csv,West Virginia,dol-weekly-claims
+state-claims-weeks.csv,Wisconsin,dol-weekly-claims
+state-claims-weeks.csv,Wyoming,dol-weekly-claims
+gas-aaa-2026-11-05.csv,United States,aaa-gas-daily
+gas-aaa-2026-11-05.csv,Alabama,aaa-gas-daily
+gas-aaa-2026-11-05.csv,Alaska,aaa-gas-daily
+gas-aaa-2026-11-05.csv,Arizona,aaa-gas-daily
+gas-aaa-2026-11-05.csv,Arkansas,aaa-gas-daily
+gas-aaa-2026-11-05.csv,California,aaa-gas-daily
+gas-aaa-2026-11-05.csv,Colorado,aaa-gas-daily
+gas-aaa-2026-11-05.csv,Connecticut,aaa-gas-daily
+gas-aaa-2026-11-05.csv,Delaware,aaa-gas-daily
+gas-aaa-2026-11-05.csv,District of Columbia,aaa-gas-daily
+gas-aaa-2026-11-05.csv,Florida,aaa-gas-daily
+gas-aaa-2026-11-05.csv,Georgia,aaa-gas-daily
+gas-aaa-2026-11-05.csv,Hawaii,aaa-gas-daily
+gas-aaa-2026-11-05.csv,Idaho,aaa-gas-daily
+gas-aaa-2026-11-05.csv,Illinois,aaa-gas-daily
+gas-aaa-2026-11-05.csv,Indiana,aaa-gas-daily
+gas-aaa-2026-11-05.csv,Iowa,aaa-gas-daily
+gas-aaa-2026-11-05.csv,Kansas,aaa-gas-daily
+gas-aaa-2026-11-05.csv,Kentucky,aaa-gas-daily
+gas-aaa-2026-11-05.csv,Louisiana,aaa-gas-daily
+gas-aaa-2026-11-05.csv,Maine,aaa-gas-daily
+gas-aaa-2026-11-05.csv,Maryland,aaa-gas-daily
+gas-aaa-2026-11-05.csv,Massachusetts,aaa-gas-daily
+gas-aaa-2026-11-05.csv,Michigan,aaa-gas-daily
+gas-aaa-2026-11-05.csv,Minnesota,aaa-gas-daily
+gas-aaa-2026-11-05.csv,Mississippi,aaa-gas-daily
+gas-aaa-2026-11-05.csv,Missouri,aaa-gas-daily
+gas-aaa-2026-11-05.csv,Montana,aaa-gas-daily
+gas-aaa-2026-11-05.csv,Nebraska,aaa-gas-daily
+gas-aaa-2026-11-05.csv,Nevada,aaa-gas-daily
+gas-aaa-2026-11-05.csv,New Hampshire,aaa-gas-daily
+gas-aaa-2026-11-05.csv,New Jersey,aaa-gas-daily
+gas-aaa-2026-11-05.csv,New Mexico,aaa-gas-daily
+gas-aaa-2026-11-05.csv,New York,aaa-gas-daily
+gas-aaa-2026-11-05.csv,North Carolina,aaa-gas-daily
+gas-aaa-2026-11-05.csv,North Dakota,aaa-gas-daily
+gas-aaa-2026-11-05.csv,Ohio,aaa-gas-daily
+gas-aaa-2026-11-05.csv,Oklahoma,aaa-gas-daily
+gas-aaa-2026-11-05.csv,Oregon,aaa-gas-daily
+gas-aaa-2026-11-05.csv,Pennsylvania,aaa-gas-daily
+gas-aaa-2026-11-05.csv,Rhode Island,aaa-gas-daily
+gas-aaa-2026-11-05.csv,South Carolina,aaa-gas-daily
+gas-aaa-2026-11-05.csv,South Dakota,aaa-gas-daily
+gas-aaa-2026-11-05.csv,Tennessee,aaa-gas-daily
+gas-aaa-2026-11-05.csv,Texas,aaa-gas-daily
+gas-aaa-2026-11-05.csv,Utah,aaa-gas-daily
+gas-aaa-2026-11-05.csv,Vermont,aaa-gas-daily
+gas-aaa-2026-11-05.csv,Virginia,aaa-gas-daily
+gas-aaa-2026-11-05.csv,Washington,aaa-gas-daily
+gas-aaa-2026-11-05.csv,West Virginia,aaa-gas-daily
+gas-aaa-2026-11-05.csv,Wisconsin,aaa-gas-daily
+gas-aaa-2026-11-05.csv,Wyoming,aaa-gas-daily
+gas-aaa-2026-11-06.csv,United States,aaa-gas-daily
+gas-aaa-2026-11-06.csv,Alabama,aaa-gas-daily
+gas-aaa-2026-11-06.csv,Alaska,aaa-gas-daily
+gas-aaa-2026-11-06.csv,Arizona,aaa-gas-daily
+gas-aaa-2026-11-06.csv,Arkansas,aaa-gas-daily
+gas-aaa-2026-11-06.csv,California,aaa-gas-daily
+gas-aaa-2026-11-06.csv,Colorado,aaa-gas-daily
+gas-aaa-2026-11-06.csv,Connecticut,aaa-gas-daily
+gas-aaa-2026-11-06.csv,Delaware,aaa-gas-daily
+gas-aaa-2026-11-06.csv,District of Columbia,aaa-gas-daily
+gas-aaa-2026-11-06.csv,Florida,aaa-gas-daily
+gas-aaa-2026-11-06.csv,Georgia,aaa-gas-daily
+gas-aaa-2026-11-06.csv,Hawaii,aaa-gas-daily
+gas-aaa-2026-11-06.csv,Idaho,aaa-gas-daily
+gas-aaa-2026-11-06.csv,Illinois,aaa-gas-daily
+gas-aaa-2026-11-06.csv,Indiana,aaa-gas-daily
+gas-aaa-2026-11-06.csv,Iowa,aaa-gas-daily
+gas-aaa-2026-11-06.csv,Kansas,aaa-gas-daily
+gas-aaa-2026-11-06.csv,Kentucky,aaa-gas-daily
+gas-aaa-2026-11-06.csv,Louisiana,aaa-gas-daily
+gas-aaa-2026-11-06.csv,Maine,aaa-gas-daily
+gas-aaa-2026-11-06.csv,Maryland,aaa-gas-daily
+gas-aaa-2026-11-06.csv,Massachusetts,aaa-gas-daily
+gas-aaa-2026-11-06.csv,Michigan,aaa-gas-daily
+gas-aaa-2026-11-06.csv,Minnesota,aaa-gas-daily
+gas-aaa-2026-11-06.csv,Mississippi,aaa-gas-daily
+gas-aaa-2026-11-06.csv,Missouri,aaa-gas-daily
+gas-aaa-2026-11-06.csv,Montana,aaa-gas-daily
+gas-aaa-2026-11-06.csv,Nebraska,aaa-gas-daily
+gas-aaa-2026-11-06.csv,Nevada,aaa-gas-daily
+gas-aaa-2026-11-06.csv,New Hampshire,aaa-gas-daily
+gas-aaa-2026-11-06.csv,New Jersey,aaa-gas-daily
+gas-aaa-2026-11-06.csv,New Mexico,aaa-gas-daily
+gas-aaa-2026-11-06.csv,New York,aaa-gas-daily
+gas-aaa-2026-11-06.csv,North Carolina,aaa-gas-daily
+gas-aaa-2026-11-06.csv,North Dakota,aaa-gas-daily
+gas-aaa-2026-11-06.csv,Ohio,aaa-gas-daily
+gas-aaa-2026-11-06.csv,Oklahoma,aaa-gas-daily
+gas-aaa-2026-11-06.csv,Oregon,aaa-gas-daily
+gas-aaa-2026-11-06.csv,Pennsylvania,aaa-gas-daily
+gas-aaa-2026-11-06.csv,Rhode Island,aaa-gas-daily
+gas-aaa-2026-11-06.csv,South Carolina,aaa-gas-daily
+gas-aaa-2026-11-06.csv,South Dakota,aaa-gas-daily
+gas-aaa-2026-11-06.csv,Tennessee,aaa-gas-daily
+gas-aaa-2026-11-06.csv,Texas,aaa-gas-daily
+gas-aaa-2026-11-06.csv,Utah,aaa-gas-daily
+gas-aaa-2026-11-06.csv,Vermont,aaa-gas-daily
+gas-aaa-2026-11-06.csv,Virginia,aaa-gas-daily
+gas-aaa-2026-11-06.csv,Washington,aaa-gas-daily
+gas-aaa-2026-11-06.csv,West Virginia,aaa-gas-daily
+gas-aaa-2026-11-06.csv,Wisconsin,aaa-gas-daily
+gas-aaa-2026-11-06.csv,Wyoming,aaa-gas-daily
+gas-aaa-2026-11-07.csv,United States,aaa-gas-daily
+gas-aaa-2026-11-07.csv,Alabama,aaa-gas-daily
+gas-aaa-2026-11-07.csv,Alaska,aaa-gas-daily
+gas-aaa-2026-11-07.csv,Arizona,aaa-gas-daily
+gas-aaa-2026-11-07.csv,Arkansas,aaa-gas-daily
+gas-aaa-2026-11-07.csv,California,aaa-gas-daily
+gas-aaa-2026-11-07.csv,Colorado,aaa-gas-daily
+gas-aaa-2026-11-07.csv,Connecticut,aaa-gas-daily
+gas-aaa-2026-11-07.csv,Delaware,aaa-gas-daily
+gas-aaa-2026-11-07.csv,District of Columbia,aaa-gas-daily
+gas-aaa-2026-11-07.csv,Florida,aaa-gas-daily
+gas-aaa-2026-11-07.csv,Georgia,aaa-gas-daily
+gas-aaa-2026-11-07.csv,Hawaii,aaa-gas-daily
+gas-aaa-2026-11-07.csv,Idaho,aaa-gas-daily
+gas-aaa-2026-11-07.csv,Illinois,aaa-gas-daily
+gas-aaa-2026-11-07.csv,Indiana,aaa-gas-daily
+gas-aaa-2026-11-07.csv,Iowa,aaa-gas-daily
+gas-aaa-2026-11-07.csv,Kansas,aaa-gas-daily
+gas-aaa-2026-11-07.csv,Kentucky,aaa-gas-daily
+gas-aaa-2026-11-07.csv,Louisiana,aaa-gas-daily
+gas-aaa-2026-11-07.csv,Maine,aaa-gas-daily
+gas-aaa-2026-11-07.csv,Maryland,aaa-gas-daily
+gas-aaa-2026-11-07.csv,Massachusetts,aaa-gas-daily
+gas-aaa-2026-11-07.csv,Michigan,aaa-gas-daily
+gas-aaa-2026-11-07.csv,Minnesota,aaa-gas-daily
+gas-aaa-2026-11-07.csv,Mississippi,aaa-gas-daily
+gas-aaa-2026-11-07.csv,Missouri,aaa-gas-daily
+gas-aaa-2026-11-07.csv,Montana,aaa-gas-daily
+gas-aaa-2026-11-07.csv,Nebraska,aaa-gas-daily
+gas-aaa-2026-11-07.csv,Nevada,aaa-gas-daily
+gas-aaa-2026-11-07.csv,New Hampshire,aaa-gas-daily
+gas-aaa-2026-11-07.csv,New Jersey,aaa-gas-daily
+gas-aaa-2026-11-07.csv,New Mexico,aaa-gas-daily
+gas-aaa-2026-11-07.csv,New York,aaa-gas-daily
+gas-aaa-2026-11-07.csv,North Carolina,aaa-gas-daily
+gas-aaa-2026-11-07.csv,North Dakota,aaa-gas-daily
+gas-aaa-2026-11-07.csv,Ohio,aaa-gas-daily
+gas-aaa-2026-11-07.csv,Oklahoma,aaa-gas-daily
+gas-aaa-2026-11-07.csv,Oregon,aaa-gas-daily
+gas-aaa-2026-11-07.csv,Pennsylvania,aaa-gas-daily
+gas-aaa-2026-11-07.csv,Rhode Island,aaa-gas-daily
+gas-aaa-2026-11-07.csv,South Carolina,aaa-gas-daily
+gas-aaa-2026-11-07.csv,South Dakota,aaa-gas-daily
+gas-aaa-2026-11-07.csv,Tennessee,aaa-gas-daily
+gas-aaa-2026-11-07.csv,Texas,aaa-gas-daily
+gas-aaa-2026-11-07.csv,Utah,aaa-gas-daily
+gas-aaa-2026-11-07.csv,Vermont,aaa-gas-daily
+gas-aaa-2026-11-07.csv,Virginia,aaa-gas-daily
+gas-aaa-2026-11-07.csv,Washington,aaa-gas-daily
+gas-aaa-2026-11-07.csv,West Virginia,aaa-gas-daily
+gas-aaa-2026-11-07.csv,Wisconsin,aaa-gas-daily
+gas-aaa-2026-11-07.csv,Wyoming,aaa-gas-daily
