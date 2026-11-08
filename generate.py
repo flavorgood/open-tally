@@ -58,7 +58,8 @@ BALLOTS26_FILES = {"Alabama": "al", "Colorado": "co", "North Carolina": "nc",
                    "Louisiana": "la", "Hawaii": "hi", "Georgia": "ga",
                    "New York": "ny", "West Virginia": "wv",
                    "South Carolina": "sc", "Oklahoma": "ok",
-                   "Oregon": "or"}
+                   "Oregon": "or", "Tennessee": "tn",
+                   "Vermont": "vt", "Iowa": "ia"}
 BALLOTS26_LABEL = {"Alabama": "Ballots cast",
                    "Colorado": "Ballots returned (Nov 5)",
                    "North Carolina": "Votes — U.S. Senate race",
@@ -82,6 +83,9 @@ BALLOTS26_LABEL = {"Alabama": "Ballots cast",
                    "South Carolina": "Votes — Governor's race",
                    "Oklahoma": "Votes — Governor's race",
                    "Oregon": "Votes — Governor's race",
+                   "Tennessee": "Votes — Governor's race",
+                   "Vermont": "Votes — Governor's race (towns added up)",
+                   "Iowa": "Votes — Governor's race",
                    "Montana": "Ballots cast"}
 # combination-quadrants.csv group values in the owner's plain words
 QUAD_LABELS = {"high rolls / high ballots": "Big voter list · many ballots",
@@ -352,8 +356,7 @@ def load():
     # 2026 Governor results, one row per state that held a race, from
     # each state's own published results (governor-results-2026.csv;
     # the notes file in the tracker folder carries its flags: AK and
-    # KS uncalled, TN/VT/IA recorded but not read off the official
-    # portal, nine states with no official statewide figures yet).
+    # KS uncalled, nine states with no official statewide figures yet).
     usps = {"AL": "Alabama", "AK": "Alaska", "AZ": "Arizona",
             "AR": "Arkansas", "CA": "California", "CO": "Colorado",
             "CT": "Connecticut", "DE": "Delaware",
@@ -1682,6 +1685,15 @@ def ballots26_note(d, st):
                 f'{parts:,}. The statewide report puts turnout at '
                 f'391,251 — {parts - 391251} fewer. Both numbers stand '
                 f'as published.</p>')
+    if st == "Vermont":
+        return (f'<p class="src">The 14 county figures add up to '
+                f'{parts:,} — Governor candidate votes, the towns '
+                f'added up within each county (Vermont reports by '
+                f'town). The town file\'s own Total Votes column adds '
+                f'up to 311,510 — the Total Votes Cast the site '
+                f'displays — which includes 2,131 blank votes and '
+                f'324 overvotes as printed. Both numbers stand as '
+                f'published.</p>')
     if st == "Wyoming":
         return (f'<p class="src">20 of Wyoming\'s 23 counties are '
                 f'shown; they add up to {parts:,}. The files for '
@@ -1718,6 +1730,8 @@ def ballots26_note(d, st):
            "New York": (6102694, "the statewide Governor total the State Board's election-night site displays"),
            "West Virginia": (456128, "the statewide Senate total in the Secretary of State's file"),
            "Oklahoma": (1120930, "the statewide total displayed on the State Election Board's portal"),
+           "Tennessee": (2102474, "the sum of the dashboard's 15 printed statewide candidates; the dashboard prints no statewide total"),
+           "Iowa": (1366516, "the statewide Vote Cast in the Secretary of State's file"),
            "Montana": (486746, "the statewide total the Secretary of State published")}
     if st in pub:
         total, who = pub[st]
@@ -2176,11 +2190,10 @@ def count_summary_rows(d, s):
 
 # Race states whose governor rows carry no verified statewide
 # figures: nine with no official figures published yet (collection
-# notes), plus TN, VT and IA, whose rows were not read directly off
-# the official portal in this pass and stay unpublished here.
+# notes).
 GOV26_NO_VERIFIED = {"Illinois", "Maine", "Massachusetts", "Michigan",
                      "Nebraska", "Nevada", "New Hampshire", "Texas",
-                     "Wisconsin", "Tennessee", "Vermont", "Iowa"}
+                     "Wisconsin"}
 
 def _gov_party(raw):
     """The plain party word for a governor-results party string, and
@@ -3216,7 +3229,9 @@ def build_data(d, states, counties_by_state):
             "county-ballots-hi.csv", "county-ballots-ga.csv",
             "county-ballots-ny.csv", "county-ballots-wv.csv",
             "county-ballots-sc.csv", "county-ballots-ok.csv",
-            "county-ballots-or.csv", "governor-results-2026.csv",
+            "county-ballots-or.csv", "county-ballots-tn.csv",
+            "county-ballots-vt.csv", "county-ballots-ia.csv",
+            "governor-results-2026.csv",
             "county-history-eavs-older.csv",
             "anomalies-vs-history.csv", "PAST-ELECTION-DAYS.md",
             "state-economics-tracker.csv", "flags.csv",
