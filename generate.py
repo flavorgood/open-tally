@@ -624,7 +624,7 @@ td.l{white-space:nowrap}
 }
 .maptoggle{position:relative}
 .mt-in{position:absolute;opacity:0;pointer-events:none}
-.mt-tabs{display:flex;gap:8px;margin:12px 0 4px}
+.mt-tabs{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0 4px}
 .mt-tabs label{font-size:12px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;
   color:var(--ink2);border:1px solid var(--line2);padding:6px 14px;cursor:pointer}
 #frontmap-list:checked~.mt-tabs label[for=frontmap-list],
@@ -1007,9 +1007,9 @@ def front_map_block(d, states):
         '<input class="mt-in" type="radio" name="frontmap" id="frontmap-list" checked>',
         '<input class="mt-in" type="radio" name="frontmap" id="frontmap-base">',
         '<input class="mt-in" type="radio" name="frontmap" id="frontmap-cur">',
-        '<div class="mt-tabs"><label for="frontmap-list">Voter lists</label>'
-        '<label for="frontmap-base">Election Day</label>'
-        '<label for="frontmap-cur">Today</label></div>',
+        '<div class="mt-tabs"><label for="frontmap-list">Registered voters vs adults</label>'
+        '<label for="frontmap-base">State economies · Election Day</label>'
+        '<label for="frontmap-cur">State economies · Today</label></div>',
         f'<div class="mt-pane mt-list">{national_map(fips, fills)}{LEGEND}</div>',
         f'<div class="mt-pane mt-base">{national_map(fips, fills_b)}{leg_b}</div>',
         f'<div class="mt-pane mt-cur">{national_map(fips, fills_c)}{leg_c}</div>',
