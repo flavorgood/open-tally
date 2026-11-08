@@ -1,0 +1,123 @@
+state,district,winner,winner_party,winner_votes,runner_up,runner_up_party,runner_up_votes,result,source
+AK,At-large,Nick Begich,REP,105647,Bill Hill,NON,86023,not called — leader only,"Alaska Division of Elections, 2026 General Election Summary Report (printed 11/4/2026 1:09 PM; 400 of 401 precincts reporting)"
+GA,1,"James ""Jim"" Kingston",REP,140241,Amanda Hollowell,DEM,132535,hold,Georgia SOS media export JSON (results as published Nov 7)
+GA,2,Sanford Bishop,DEM,148250,Matt Day,REP,95608,hold,Georgia SOS media export JSON (results as published Nov 7)
+GA,3,Brian Jack,REP,188587,Maura Keller,DEM,133146,hold,Georgia SOS media export JSON (results as published Nov 7)
+GA,4,"Henry ""Hank"" Johnson Jr.",DEM,217144,Jim Duffie,REP,45619,hold,Georgia SOS media export JSON (results as published Nov 7)
+GA,5,Nikema Williams,DEM,274618,"John ""Bongo"" Salvesen",REP,29843,hold,Georgia SOS media export JSON (results as published Nov 7)
+GA,6,Lucy McBath,DEM,263803,Kevin E. Martin,REP,62335,hold,Georgia SOS media export JSON (results as published Nov 7)
+GA,7,Rich McCormick,REP,191552,Tony Kozycki,DEM,149342,hold,Georgia SOS media export JSON (results as published Nov 7)
+GA,8,Austin Scott,REP,160135,Kelly Esti,DEM,104902,hold,Georgia SOS media export JSON (results as published Nov 7)
+GA,9,Andrew Clyde,REP,182930,Caitlyn Gegen,DEM,125584,hold,Georgia SOS media export JSON (results as published Nov 7)
+GA,10,Houston Gaines,REP,174278,"Pamela ""Pam"" Delancy",DEM,150945,hold,Georgia SOS media export JSON (results as published Nov 7)
+GA,11,John Cowan,REP,182189,Chris Harden,DEM,146890,hold,Georgia SOS media export JSON (results as published Nov 7)
+GA,12,Rick W. Allen,REP,140870,Ceretta Smith,DEM,129582,hold,Georgia SOS media export JSON (results as published Nov 7)
+GA,13,Jasmine Clark,DEM,247937,Jonathan Chavez,REP,62650,hold,Georgia SOS media export JSON (results as published Nov 7)
+GA,14,Clay Fuller,REP,168761,Shawn Harris,DEM,118344,hold,Georgia SOS media export JSON (results as published Nov 7)
+IA,1,Christina Bohannan,DEM,182396,Mariannette Miller-Meeks,REP,150471,flip REP to DEM,Iowa SOS Clarity detail text file (contest Totals row; 99 counties); candidate parties from the Iowa Secretary of State 2026 general-election candidate list
+IA,2,Lindsay James,DEM,171484,Joe Mitchell,REP,157722,flip REP to DEM,Iowa SOS Clarity detail text file (contest Totals row; 99 counties); candidate parties from the Iowa Secretary of State 2026 general-election candidate list
+IA,3,Sarah Trone Garriott,DEM,189217,Zach Nunn,REP,163441,flip REP to DEM,Iowa SOS Clarity detail text file (contest Totals row; 99 counties); candidate parties from the Iowa Secretary of State 2026 general-election candidate list
+IA,4,Chris McGowan,REP,178845,Dave Dawson,DEM,123940,hold,Iowa SOS Clarity detail text file (contest Totals row; 99 counties); candidate parties from the Iowa Secretary of State 2026 general-election candidate list
+IN,1,Frank J. Mrvan,DEM,140368,Barb Regnitz,REP,82847,hold,Indiana SOS AllOfficeResults JSON (precinct rows aggregated to district totals)
+IN,2,Rudy Yakym,REP,98507,Jamee Decio,DEM,89036,hold,Indiana SOS AllOfficeResults JSON (precinct rows aggregated to district totals)
+IN,3,Marlin A. Stutzman,REP,109724,Kelly Thompson,DEM,90248,hold,Indiana SOS AllOfficeResults JSON (precinct rows aggregated to district totals)
+IN,4,Jim Baird,REP,115017,Drew Cox,DEM,97143,hold,Indiana SOS AllOfficeResults JSON (precinct rows aggregated to district totals)
+IN,5,J.D. Ford,DEM,134449,Victoria Spartz,REP,125870,flip REP to DEM,Indiana SOS AllOfficeResults JSON (precinct rows aggregated to district totals)
+IN,6,Jefferson Shreve,REP,111104,Cynthia (Cinde) Wirth,DEM,90542,hold,Indiana SOS AllOfficeResults JSON (precinct rows aggregated to district totals)
+IN,7,André Carson,DEM,159211,Patrick Mcauley,REP,42208,hold,Indiana SOS AllOfficeResults JSON (precinct rows aggregated to district totals)
+IN,8,Mark Messmer,REP,117555,Mary Allen,DEM,94979,hold,Indiana SOS AllOfficeResults JSON (precinct rows aggregated to district totals)
+IN,9,Erin Houchin,REP,121402,Brad A. Meyer,DEM,97845,hold,Indiana SOS AllOfficeResults JSON (precinct rows aggregated to district totals)
+MD,1,Andy Harris,REP,159275,Dan Schwartz,DEM,138636,hold,"Maryland State Board of Elections 2026 general-election results pages by county (24 counties, refreshed 11/07/2026 09:37:43 PM; district totals are the sum of the Board's per-county district tables; provisional ballots are marked NR — not reported — in every county table)"
+MD,2,"John ""Johnny O"" Olszewski, Jr.",DEM,159591,Dave Wallace,REP,94442,hold,"Maryland State Board of Elections 2026 general-election results pages by county (24 counties, refreshed 11/07/2026 09:37:43 PM; district totals are the sum of the Board's per-county district tables; provisional ballots are marked NR — not reported — in every county table)"
+MD,3,Sarah Elfreth,DEM,199468,Berney Flowers,REP,96904,hold,"Maryland State Board of Elections 2026 general-election results pages by county (24 counties, refreshed 11/07/2026 09:37:43 PM; district totals are the sum of the Board's per-county district tables; provisional ballots are marked NR — not reported — in every county table)"
+MD,4,Glenn F. Ivey,DEM,159965,George E. McDermott,REP,11016,hold,"Maryland State Board of Elections 2026 general-election results pages by county (24 counties, refreshed 11/07/2026 09:37:43 PM; district totals are the sum of the Board's per-county district tables; provisional ballots are marked NR — not reported — in every county table)"
+MD,5,Adrian Boafo,DEM,209018,Chris Chaffee,REP,89353,hold,"Maryland State Board of Elections 2026 general-election results pages by county (24 counties, refreshed 11/07/2026 09:37:43 PM; district totals are the sum of the Board's per-county district tables; provisional ballots are marked NR — not reported — in every county table)"
+MD,6,April McClain Delaney,DEM,152559,Robin Ficker,REP,101883,hold,"Maryland State Board of Elections 2026 general-election results pages by county (24 counties, refreshed 11/07/2026 09:37:43 PM; district totals are the sum of the Board's per-county district tables; provisional ballots are marked NR — not reported — in every county table)"
+MD,7,Kweisi Mfume,DEM,158362,Scott M. Collier,REP,29170,hold,"Maryland State Board of Elections 2026 general-election results pages by county (24 counties, refreshed 11/07/2026 09:37:43 PM; district totals are the sum of the Board's per-county district tables; provisional ballots are marked NR — not reported — in every county table)"
+MD,8,Jamie Raskin,DEM,215689,Cheryl Riley,REP,39424,hold,"Maryland State Board of Elections 2026 general-election results pages by county (24 counties, refreshed 11/07/2026 09:37:43 PM; district totals are the sum of the Board's per-county district tables; provisional ballots are marked NR — not reported — in every county table)"
+NC,1,Don Davis,DEM,156572,Laurie Buckhout,REP,146287,hold,"North Carolina State Board of Elections election-night results file (er.ncsbe.gov, enr/20261103/data/results_0.txt; 290 of 290 precincts reporting; the file's U.S. Senate line matches the recorded statewide totals to the vote)"
+NC,2,Deborah K. Ross,DEM,245402,Eugene F. Douglass,REP,76763,hold,"North Carolina State Board of Elections election-night results file (er.ncsbe.gov, enr/20261103/data/results_0.txt; 156 of 156 precincts reporting; the file's U.S. Senate line matches the recorded statewide totals to the vote)"
+NC,3,Greg Murphy,REP,117583,Raymond Smith,DEM,117350,not called — leader only,"North Carolina State Board of Elections election-night results file (er.ncsbe.gov, enr/20261103/data/results_0.txt; 190 of 190 precincts reporting; the file's U.S. Senate line matches the recorded statewide totals to the vote)"
+NC,4,Valerie P. Foushee,DEM,283255,Mahesh (Max) Ganorkar,REP,67799,hold,"North Carolina State Board of Elections election-night results file (er.ncsbe.gov, enr/20261103/data/results_0.txt; 142 of 142 precincts reporting; the file's U.S. Senate line matches the recorded statewide totals to the vote)"
+NC,5,Chuck Hubbard,DEM,139034,Virginia Foxx,REP,138935,not called — leader only,"North Carolina State Board of Elections election-night results file (er.ncsbe.gov, enr/20261103/data/results_0.txt; 230 of 230 precincts reporting; the file's U.S. Senate line matches the recorded statewide totals to the vote)"
+NC,6,Cyril Jefferson,DEM,140001,Addison McDowell,REP,133737,flip REP to DEM,"North Carolina State Board of Elections election-night results file (er.ncsbe.gov, enr/20261103/data/results_0.txt; 195 of 195 precincts reporting; the file's U.S. Senate line matches the recorded statewide totals to the vote)"
+NC,7,David Rouzer,REP,159985,Kimberly Hardy,DEM,157560,not called — leader only,"North Carolina State Board of Elections election-night results file (er.ncsbe.gov, enr/20261103/data/results_0.txt; 183 of 183 precincts reporting; the file's U.S. Senate line matches the recorded statewide totals to the vote)"
+NC,8,Mark Harris,REP,147094,Colby Watson,DEM,141915,hold,"North Carolina State Board of Elections election-night results file (er.ncsbe.gov, enr/20261103/data/results_0.txt; 193 of 193 precincts reporting; the file's U.S. Senate line matches the recorded statewide totals to the vote)"
+NC,9,Richard N. Ojeda II,DEM,138707,Richard Hudson,REP,132692,flip REP to DEM,"North Carolina State Board of Elections election-night results file (er.ncsbe.gov, enr/20261103/data/results_0.txt; 169 of 169 precincts reporting; the file's U.S. Senate line matches the recorded statewide totals to the vote)"
+NC,10,Pat Harrigan,REP,146166,Ashley Bell,DEM,143137,hold,"North Carolina State Board of Elections election-night results file (er.ncsbe.gov, enr/20261103/data/results_0.txt; 187 of 187 precincts reporting; the file's U.S. Senate line matches the recorded statewide totals to the vote)"
+NC,11,Jamie Ager,DEM,195637,Jennifer Capps Balkcom,REP,141427,flip REP to DEM,"North Carolina State Board of Elections election-night results file (er.ncsbe.gov, enr/20261103/data/results_0.txt; 290 of 290 precincts reporting; the file's U.S. Senate line matches the recorded statewide totals to the vote)"
+NC,12,Alma S. Adams,DEM,219672,Jack Codiga,REP,50864,hold,"North Carolina State Board of Elections election-night results file (er.ncsbe.gov, enr/20261103/data/results_0.txt; 145 of 145 precincts reporting; the file's U.S. Senate line matches the recorded statewide totals to the vote)"
+NC,13,Paul Barringer,DEM,159981,Brad Knott,REP,152329,flip REP to DEM,"North Carolina State Board of Elections election-night results file (er.ncsbe.gov, enr/20261103/data/results_0.txt; 140 of 140 precincts reporting; the file's U.S. Senate line matches the recorded statewide totals to the vote)"
+NC,14,Lakesha Womack,DEM,147388,Tim Moore,REP,140973,flip REP to DEM,"North Carolina State Board of Elections election-night results file (er.ncsbe.gov, enr/20261103/data/results_0.txt; 142 of 142 precincts reporting; the file's U.S. Senate line matches the recorded statewide totals to the vote)"
+ND,At-large,Julie Fedorchak,REP,134477,Trygve Hammer,DEM,85892,hold,North Dakota SOS results app full-election JSON (all 358 precincts reporting)
+NE,1,Mike Flood,REP,127001,Chris Backemeyer,DEM,118135,hold,"Nebraska SOS all-races county CSV export (resultsCSV.aspx, district totals)"
+NE,2,Denise Powell,DEM,143785,Brinker Harding,REP,103494,flip REP to DEM,"Nebraska SOS all-races county CSV export (resultsCSV.aspx, district totals)"
+NE,3,Adrian Smith,REP,174062,Becky Kelly Stille,DEM,48926,hold,"Nebraska SOS all-races county CSV export (resultsCSV.aspx, district totals)"
+OH,1,Greg Landsman,DEM,176453,Eric Conroy,REP,139343,hold,Ohio SOS Unofficial Canvass workbook (district Total row)
+OH,2,David J. Taylor,REP,175411,Jen Mazzuckelli,DEM,97638,hold,Ohio SOS Unofficial Canvass workbook (district Total row)
+OH,3,Joyce Beatty,DEM,231925,Cleophus Dulaney,REP,68407,hold,Ohio SOS Unofficial Canvass workbook (district Total row)
+OH,4,Jim Jordan,REP,197084,Joshua D. Kolasinski,DEM,95497,hold,Ohio SOS Unofficial Canvass workbook (district Total row)
+OH,5,Bob Latta,REP,163382,Brian A. Shaver,DEM,128142,hold,Ohio SOS Unofficial Canvass workbook (district Total row)
+OH,6,Michael A. Rulli,REP,163675,Elizabeth Kirtley,DEM,107310,hold,Ohio SOS Unofficial Canvass workbook (district Total row)
+OH,7,Brian Poindexter,DEM,180614,Max Miller,REP,148177,flip REP to DEM,Ohio SOS Unofficial Canvass workbook (district Total row)
+OH,8,Warren Davidson,REP,168689,Vanessa Enoch,DEM,154828,hold,Ohio SOS Unofficial Canvass workbook (district Total row)
+OH,9,Marcy Kaptur,DEM,159306,Derek Merrin,REP,142830,hold,Ohio SOS Unofficial Canvass workbook (district Total row)
+OH,10,Kristina Knickerbocker,DEM,149024,Mike Turner,REP,144086,flip REP to DEM,Ohio SOS Unofficial Canvass workbook (district Total row)
+OH,11,Shontel M. Brown,DEM,219971,Mike Kirchner,REP,43373,hold,Ohio SOS Unofficial Canvass workbook (district Total row)
+OH,12,Troy Balderson,REP,191926,Jerrad Christian,DEM,131211,hold,Ohio SOS Unofficial Canvass workbook (district Total row)
+OH,13,Emilia Sykes,DEM,190593,Carey Coleman,REP,122078,hold,Ohio SOS Unofficial Canvass workbook (district Total row)
+OH,14,David P. Joyce,REP,179467,Maria Jukic,DEM,146651,hold,Ohio SOS Unofficial Canvass workbook (district Total row)
+OH,15,Don Leonard,DEM,149287,Mike Carey,REP,130225,flip REP to DEM,Ohio SOS Unofficial Canvass workbook (district Total row)
+OK,1,Mark Tedford,REP,121397,John Croisant,DEM,110707,hold,Oklahoma State Election Board county-results CSV (district races summed across counties; portal displayed total reconciles for Senate)
+OK,2,Josh Brecheen,REP,144054,Brandon Wade,DEM,61409,hold,Oklahoma State Election Board county-results CSV (district races summed across counties; portal displayed total reconciles for Senate)
+OK,3,Frank D. Lucas,REP,122181,Suzie Byrd,DEM,68832,hold,Oklahoma State Election Board county-results CSV (district races summed across counties; portal displayed total reconciles for Senate)
+OK,4,Tom Cole,REP,125631,Mitchell Jacob,DEM,86108,hold,Oklahoma State Election Board county-results CSV (district races summed across counties; portal displayed total reconciles for Senate)
+OK,5,Stephanie Bice,REP,131023,Jena Nelson,DEM,127687,hold,Oklahoma State Election Board county-results CSV (district races summed across counties; portal displayed total reconciles for Senate)
+OR,1,Suzanne Bonamici,DEM,216617,Barbara J Kahl,REP,87915,hold,Oregon SOS per-county results CSV files (36 counties; district races summed across counties — the same files whose Governor parts reconcile exactly to the portal total)
+OR,2,Cliff Bentz,REP,192748,Chris Beck,DEM,118271,hold,Oregon SOS per-county results CSV files (36 counties; district races summed across counties — the same files whose Governor parts reconcile exactly to the portal total)
+OR,3,Maxine E Dexter,DEM,232711,Loran Ayles,REP,67622,hold,Oregon SOS per-county results CSV files (36 counties; district races summed across counties — the same files whose Governor parts reconcile exactly to the portal total)
+OR,4,Val Hoyle,DEM,179514,Monique DeSpain,REP,143176,hold,Oregon SOS per-county results CSV files (36 counties; district races summed across counties — the same files whose Governor parts reconcile exactly to the portal total)
+OR,5,Janelle S Bynum,DEM,187734,Patti Adair,REP,150934,hold,Oregon SOS per-county results CSV files (36 counties; district races summed across counties — the same files whose Governor parts reconcile exactly to the portal total)
+OR,6,Andrea Salinas,DEM,150080,David Russ,REP,107279,hold,Oregon SOS per-county results CSV files (36 counties; district races summed across counties — the same files whose Governor parts reconcile exactly to the portal total)
+PA,1,Bob Harvie,DEM,188087,Brian Fitzpatrick,REP,168531,flip REP to DEM,"Pennsylvania Department of State election-returns RSS feed, ""2026 General Election - Results by Office"" (feed ID 83; per-county candidate rows summed — the feed's Governor item reconciles exactly to the site's displayed totals)"
+PA,2,Brendan F. Boyle,DEM,148570,Jessica Arriaga,REP,35413,hold,"Pennsylvania Department of State election-returns RSS feed, ""2026 General Election - Results by Office"" (feed ID 83; per-county candidate rows summed — the feed's Governor item reconciles exactly to the site's displayed totals)"
+PA,3,Chris Rabb,DEM,254163,Dennis Mahoney,TIP,17361,hold,"Pennsylvania Department of State election-returns RSS feed, ""2026 General Election - Results by Office"" (feed ID 83; per-county candidate rows summed — the feed's Governor item reconciles exactly to the site's displayed totals)"
+PA,4,Madeleine Dean,DEM,231425,Aurora Stuski,REP,113464,hold,"Pennsylvania Department of State election-returns RSS feed, ""2026 General Election - Results by Office"" (feed ID 83; per-county candidate rows summed — the feed's Governor item reconciles exactly to the site's displayed totals)"
+PA,5,Mary Gay Scanlon,DEM,213497,Nick Manganaro,REP,82731,hold,"Pennsylvania Department of State election-returns RSS feed, ""2026 General Election - Results by Office"" (feed ID 83; per-county candidate rows summed — the feed's Governor item reconciles exactly to the site's displayed totals)"
+PA,6,Chrissy Houlahan,DEM,198715,Marty Young,REP,110297,hold,"Pennsylvania Department of State election-returns RSS feed, ""2026 General Election - Results by Office"" (feed ID 83; per-county candidate rows summed — the feed's Governor item reconciles exactly to the site's displayed totals)"
+PA,7,Bob Brooks,DEM,164543,Ryan Mackenzie,REP,128738,flip REP to DEM,"Pennsylvania Department of State election-returns RSS feed, ""2026 General Election - Results by Office"" (feed ID 83; per-county candidate rows summed — the feed's Governor item reconciles exactly to the site's displayed totals)"
+PA,8,Paige Cognetti,DEM,153764,Rob Bresnahan Jr.,REP,128589,flip REP to DEM,"Pennsylvania Department of State election-returns RSS feed, ""2026 General Election - Results by Office"" (feed ID 83; per-county candidate rows summed — the feed's Governor item reconciles exactly to the site's displayed totals)"
+PA,9,Dan Meuser,REP,165550,Rachel Wallace,DEM,103652,hold,"Pennsylvania Department of State election-returns RSS feed, ""2026 General Election - Results by Office"" (feed ID 83; per-county candidate rows summed — the feed's Governor item reconciles exactly to the site's displayed totals)"
+PA,10,Janelle Stelson,DEM,173671,Scott Perry,REP,141731,flip REP to DEM,"Pennsylvania Department of State election-returns RSS feed, ""2026 General Election - Results by Office"" (feed ID 83; per-county candidate rows summed — the feed's Governor item reconciles exactly to the site's displayed totals)"
+PA,11,Lloyd K. Smucker,REP,167385,Nancy Mannion,DEM,133970,hold,"Pennsylvania Department of State election-returns RSS feed, ""2026 General Election - Results by Office"" (feed ID 83; per-county candidate rows summed — the feed's Governor item reconciles exactly to the site's displayed totals)"
+PA,12,Summer Lee,DEM,194205,James Hayes,REP,102571,hold,"Pennsylvania Department of State election-returns RSS feed, ""2026 General Election - Results by Office"" (feed ID 83; per-county candidate rows summed — the feed's Governor item reconciles exactly to the site's displayed totals)"
+PA,13,John Joyce,REP,189780,Beth Farnham,DEM,91482,hold,"Pennsylvania Department of State election-returns RSS feed, ""2026 General Election - Results by Office"" (feed ID 83; per-county candidate rows summed — the feed's Governor item reconciles exactly to the site's displayed totals)"
+PA,14,Guy Reschenthaler,REP,159088,Alan Bradstock,DEM,117432,hold,"Pennsylvania Department of State election-returns RSS feed, ""2026 General Election - Results by Office"" (feed ID 83; per-county candidate rows summed — the feed's Governor item reconciles exactly to the site's displayed totals)"
+PA,15,"Glenn ""G.T."" Thompson",REP,171084,Ray Bilger,DEM,96664,hold,"Pennsylvania Department of State election-returns RSS feed, ""2026 General Election - Results by Office"" (feed ID 83; per-county candidate rows summed — the feed's Governor item reconciles exactly to the site's displayed totals)"
+PA,16,Mike Kelly,REP,154144,Justin Wagner,DEM,131637,hold,"Pennsylvania Department of State election-returns RSS feed, ""2026 General Election - Results by Office"" (feed ID 83; per-county candidate rows summed — the feed's Governor item reconciles exactly to the site's displayed totals)"
+PA,17,Chris Deluzio,DEM,207711,Tony Guy,REP,122919,hold,"Pennsylvania Department of State election-returns RSS feed, ""2026 General Election - Results by Office"" (feed ID 83; per-county candidate rows summed — the feed's Governor item reconciles exactly to the site's displayed totals)"
+SC,1,Nancy Lacore,DEM,162103,Jenny Costa Honeycutt,REP,158751,flip REP to DEM,South Carolina Election Commission Clarity summary file (46 of 46 counties reporting)
+SC,2,Joe Wilson,REP,147791,Zyon Khalifa,DEM,144865,not called — leader only,South Carolina Election Commission Clarity summary file (46 of 46 counties reporting)
+SC,3,Sheri Biggs,REP,173960,Eunice Lehmacher,DEM,93955,hold,South Carolina Election Commission Clarity summary file (46 of 46 counties reporting)
+SC,4,William Timmons,REP,146944,Courtney McClain,DEM,129742,hold,South Carolina Election Commission Clarity summary file (46 of 46 counties reporting)
+SC,5,Wes Climer,REP,151497,Mallory Dittmer,DEM,135203,hold,South Carolina Election Commission Clarity summary file (46 of 46 counties reporting)
+SC,6,James E Jim Clyburn,DEM,180840,John Peterson,REP,79584,hold,South Carolina Election Commission Clarity summary file (46 of 46 counties reporting)
+SC,7,Russell Fry,REP,172439,John Gregory Vincent,DEM,131445,hold,South Carolina Election Commission Clarity summary file (46 of 46 counties reporting)
+SD,At-large,Marty Jackley,REP,195588,"Nicole ""Nikki"" Gronli",DEM,109997,hold,"South Dakota SOS statewide results workbook (United States Representative sheet, printed TOTALS row); candidate parties from the South Dakota Secretary of State 2026 general-election candidate list"
+UT,1,Ben McAdams,DEM,174492,Riley Owen,REP,65190,flip REP to DEM,"Utah Lt. Governor media export JSON (export-General11032026, Nov 7)"
+UT,2,Blake D. Moore,REP,126992,Peter Crosby,DEM,106944,hold,"Utah Lt. Governor media export JSON (export-General11032026, Nov 7)"
+UT,3,Celeste Maloy,REP,143317,Kent S. Udell,DEM,88016,hold,"Utah Lt. Governor media export JSON (export-General11032026, Nov 7)"
+UT,4,Mike Kennedy,REP,141984,Jonny Larsen,DEM,102988,hold,"Utah Lt. Governor media export JSON (export-General11032026, Nov 7)"
+VA,1,Shannon L. Taylor,DEM,209476,"Robert J. ""Rob"" Wittman",REP,199009,flip REP to DEM,Virginia Dept. of Elections media export JSON (results as published Nov 7)
+VA,2,Elaine G. Luria,DEM,179126,Jen A. Kiggans,REP,150456,flip REP to DEM,Virginia Dept. of Elections media export JSON (results as published Nov 7)
+VA,3,"Robert C. ""Bobby"" Scott",DEM,180110,"Edwin Rivera, Jr.",REP,59643,hold,Virginia Dept. of Elections media export JSON (results as published Nov 7)
+VA,4,Jennifer L. McClellan,DEM,223916,"Robert P. ""Family Man"" Murray, Jr.",REP,81190,hold,Virginia Dept. of Elections media export JSON (results as published Nov 7)
+VA,5,John J. McGuire III,REP,181471,Tom S. P. Perriello,DEM,174007,hold,Virginia Dept. of Elections media export JSON (results as published Nov 7)
+VA,6,Ben L. Cline,REP,175926,Beth A. Macy,DEM,140685,hold,Virginia Dept. of Elections media export JSON (results as published Nov 7)
+VA,7,Eugene S. Vindman,DEM,192456,Doug A. Ollivant,REP,121285,hold,Virginia Dept. of Elections media export JSON (results as published Nov 7)
+VA,8,"Donald S. Beyer, Jr.",DEM,251863,Tony A. Sabio,REP,56758,hold,Virginia Dept. of Elections media export JSON (results as published Nov 7)
+VA,9,H. Morgan Griffith,REP,194107,Joy A. Powers,DEM,99837,hold,Virginia Dept. of Elections media export JSON (results as published Nov 7)
+VA,10,Suhas Subramanyam,DEM,204213,Dave T. Beckwith,REP,121110,hold,Virginia Dept. of Elections media export JSON (results as published Nov 7)
+VA,11,James R. Walkinshaw,DEM,252071,Arthur G. Purves,REP,82116,hold,Virginia Dept. of Elections media export JSON (results as published Nov 7)
+WV,1,Carol Miller,REP,118735,Vince George,DEM,82347,hold,"West Virginia SOS detail workbook, contest Total row (Election Day columns still partial at collection; see notes)"
+WV,2,Riley Moore,REP,143756,Ace Parsi,DEM,98235,hold,"West Virginia SOS detail workbook, contest Total row"

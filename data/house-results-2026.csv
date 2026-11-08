@@ -1,0 +1,52 @@
+state,seats,split_before,split_after,change,uncalled_districts,uncalled_count,status,as_of,source
+AL,7,5 REP / 2 DEM,,not yet known,,0,no district results read yet — see notes,2026-11-08,
+AK,1,1 REP,,not yet known,At-large,1,unofficial — uncalled,2026-11-08,"Alaska Division of Elections 2026 General Election Summary Report, printed 11/4/2026 (read fresh)"
+AZ,9,6 REP / 3 DEM,,not yet known,,0,no district results read yet — see notes,2026-11-08,
+AR,4,4 REP,,not yet known,,0,no district results read yet — see notes,2026-11-08,
+CA,52,8 REP / 43 DEM / 1 IND,,not yet known,,0,no district results read yet — see notes,2026-11-08,
+CO,8,4 REP / 4 DEM,,not yet known,,0,no district results read yet — see notes,2026-11-08,
+CT,5,5 DEM,,not yet known,,0,no district results read yet — see notes,2026-11-08,
+DE,1,1 DEM,,not yet known,,0,no district results read yet — see notes,2026-11-08,
+DC,1,"1 DEM (delegate, non-voting)",,not yet known,,0,delegate race not read in this pass — see notes,2026-11-08,
+FL,28,20 REP / 7 DEM / 1 VACANT,,not yet known,,0,no district results read yet — see notes,2026-11-08,
+GA,14,9 REP / 5 DEM,9 REP / 5 DEM,no change,,0,unofficial,2026-11-08,Georgia SOS media export JSON (on file from the governor pass)
+HI,2,2 DEM,,not yet known,,0,no district results read yet — see notes,2026-11-08,
+ID,2,2 REP,,not yet known,,0,no district results read yet — see notes,2026-11-08,
+IL,17,3 REP / 14 DEM,,not yet known,,0,no district results read yet — see notes,2026-11-08,
+IN,9,7 REP / 2 DEM,6 REP / 3 DEM,+1 Democratic,,0,unofficial,2026-11-08,Indiana SOS AllOfficeResults JSON (on file from the governor pass)
+IA,4,4 REP,1 REP / 3 DEM,+3 Democratic,,0,unofficial,2026-11-08,Iowa SOS Clarity detail text file (on file from the governor pass); parties from the SOS 2026 candidate list
+KS,4,3 REP / 1 DEM,,not yet known,,0,no district results read yet — see notes,2026-11-08,
+KY,6,5 REP / 1 DEM,,not yet known,,0,no district results read yet — see notes,2026-11-08,
+LA,6,4 REP / 2 DEM,,not yet known,,0,no district results read yet — see notes,2026-11-08,
+ME,2,2 DEM,,not yet known,,0,no district results read yet — see notes,2026-11-08,
+MD,8,1 REP / 7 DEM,1 REP / 7 DEM,no change,,0,unofficial,2026-11-08,"Maryland State Board of Elections 2026 results pages by county, refreshed 11/07/2026 09:37:43 PM (read fresh)"
+MA,9,9 DEM,,not yet known,,0,no district results read yet — see notes,2026-11-08,
+MI,13,7 REP / 6 DEM,,not yet known,,0,no district results read yet — see notes,2026-11-08,
+MN,8,4 REP / 4 DEM,,not yet known,,0,no district results read yet — see notes,2026-11-08,
+MS,4,3 REP / 1 DEM,,not yet known,,0,no district results read yet — see notes,2026-11-08,
+MO,8,6 REP / 2 DEM,,not yet known,,0,no district results read yet — see notes,2026-11-08,
+MT,2,2 REP,,not yet known,,0,no district results read yet — see notes,2026-11-08,
+NE,3,3 REP,2 REP / 1 DEM,+1 Democratic,,0,unofficial,2026-11-08,Nebraska SOS all-races county CSV export (on file from the governor pass)
+NV,4,1 REP / 3 DEM,,not yet known,,0,no district results read yet — see notes,2026-11-08,
+NH,2,2 DEM,,not yet known,,0,no district results read yet — see notes,2026-11-08,
+NJ,12,3 REP / 9 DEM,,not yet known,,0,no district results read yet — see notes,2026-11-08,
+NM,3,3 DEM,,not yet known,,0,no district results read yet — see notes,2026-11-08,
+NY,26,7 REP / 19 DEM,,not yet known,,0,no district results read yet — see notes,2026-11-08,
+NC,14,10 REP / 4 DEM,,not yet known,District 3; District 5; District 7,3,unofficial — partly uncalled,2026-11-08,"North Carolina State Board of Elections election-night results file, enr/20261103/data/results_0.txt (read fresh)"
+ND,1,1 REP,1 REP,no change,,0,unofficial,2026-11-08,North Dakota SOS results app full-election JSON (on file from the county pass)
+OH,15,10 REP / 5 DEM,7 REP / 8 DEM,+3 Democratic,,0,unofficial,2026-11-08,Ohio SOS Unofficial Canvass workbook (on file from the governor pass)
+OK,5,5 REP,5 REP,no change,,0,unofficial,2026-11-08,Oklahoma State Election Board county-results CSV (on file from the Senate pass)
+OR,6,1 REP / 5 DEM,1 REP / 5 DEM,no change,,0,unofficial,2026-11-08,"Oregon SOS per-county results CSV files, 36 counties (on file from the county pass)"
+PA,17,10 REP / 7 DEM,6 REP / 11 DEM,+4 Democratic,,0,unofficial,2026-11-08,"Pennsylvania Dept. of State election-returns RSS feed, Results by Office, feed ID 83 (read fresh)"
+RI,2,2 DEM,,not yet known,,0,no district results read yet — see notes,2026-11-08,
+SC,7,6 REP / 1 DEM,,not yet known,District 2,1,unofficial — partly uncalled,2026-11-08,South Carolina Election Commission Clarity summary file (on file from the governor pass)
+SD,1,1 REP,1 REP,no change,,0,unofficial,2026-11-08,South Dakota SOS statewide results workbook (on file from the county pass); parties from the SOS 2026 candidate list
+TN,9,8 REP / 1 DEM,,not yet known,,0,no district results read yet — see notes,2026-11-08,
+TX,38,24 REP / 13 DEM / 1 VACANT,,not yet known,,0,no district results read yet — see notes,2026-11-08,
+UT,4,4 REP,3 REP / 1 DEM,+1 Democratic,,0,unofficial,2026-11-08,Utah Lt. Governor media export JSON (on file from the governor pass)
+VT,1,1 DEM,,not yet known,,0,no district results read yet — see notes,2026-11-08,
+VA,11,5 REP / 6 DEM,3 REP / 8 DEM,+2 Democratic,,0,unofficial,2026-11-08,Virginia Dept. of Elections media export JSON (on file from the governor pass)
+WA,10,2 REP / 8 DEM,,not yet known,,0,no district results read yet — see notes,2026-11-08,
+WV,2,2 REP,2 REP,no change,,0,unofficial,2026-11-08,West Virginia SOS detail workbook (on file from the Senate pass)
+WI,8,6 REP / 2 DEM,,not yet known,,0,no district results read yet — see notes,2026-11-08,
+WY,1,1 REP,,not yet known,,0,no district results read yet — see notes,2026-11-08,
