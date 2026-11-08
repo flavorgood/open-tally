@@ -7,6 +7,7 @@ from data/maps/ (see fetch_maps(), which refetches only if a file is missing).
 """
 import csv, io, json, math, os, re, shutil, sys, urllib.request
 from html import escape as esc
+import alaska_geography as ak_geo
 
 BASE = os.path.dirname(os.path.abspath(__file__))
 SRC = os.path.join(BASE, "data")
@@ -272,7 +273,10 @@ def load():
     with open(f"{SRC}/county-roll-integrity-all.csv") as f:
         d["roll_co_de"] = list(csv.DictReader(f))
     with open(f"{SRC}/ak-district-roll-integrity.csv") as f:
-        d["roll_ak"] = list(csv.DictReader(f))
+        d["roll_ak_raw"] = list(csv.DictReader(f))
+    with open(os.path.join(SRC, ak_geo.POPULATION_FILE)) as f:
+        d["roll_ak"] = ak_geo.district_comparisons(
+            d["roll_ak_raw"], list(csv.DictReader(f)))
     with open(f"{SRC}/turnout-history-national.csv") as f:
         d["hist_nat"] = list(csv.DictReader(f))
     with open(f"{SRC}/turnout-history-states.csv") as f:
@@ -1078,23 +1082,66 @@ body.yrb .footer{margin-bottom:148px}
 }
 """
 
+def section_index(body):
+    """Add stable, static links to every top-level section of long reference pages."""
+    links = []
+    used = set(re.findall(r'\bid=["\']([^"\']+)', body))
+    def heading(match):
+        attrs, label = match.groups()
+        existing = re.search(r'\bid=["\']([^"\']+)', attrs)
+        if existing:
+            anchor = existing.group(1)
+        else:
+            base = slugify(re.sub(r"<[^>]+>", "", label)) or "section"
+            anchor, i = base, 2
+            while anchor in used:
+                anchor, i = f"{base}-{i}", i + 1
+            used.add(anchor)
+            attrs += f' id="{anchor}"'
+        links.append(f'<li><a href="#{esc(anchor)}">{label}</a></li>')
+        return f'<h2{attrs}>{label}</h2>'
+    body = re.sub(r"<h2([^>]*)>(.*?)</h2>", heading, body, flags=re.S)
+    index = ('<nav class="section-index" aria-label="On this page">'
+             '<h2>On this page</h2><ul>' + "".join(links) + '</ul></nav>')
+    return re.sub(r"(</h1>)", lambda m: m.group(1) + index, body, count=1)
+
+
+MEASURE_NOTE = ('<p class="measure-note">Population context: ratios labeled '
+                '“Adults (2020)” compare election records with residents age '
+                '18+ counted in the 2020 Census. Registration records and '
+                'population counts have different reference dates and '
+                'coverage. Where available, 2025 population estimates are '
+                'shown separately.</p>')
+
+
 def page(title, body, depth=0, src_html=None, jump=None, yearbar=None):
     root = "../" * depth
     if src_html is None:
         src_html = (f'Sources: <a class="cite" href="{esc(PL_URL)}">U.S. Census Bureau</a>'
                     ' · State election offices')
+    active = ("states" if depth >= 2 or title == "States & Counties" else
+              "rankings" if title == "Compare states" else
+              "data" if title in ("Data & Sources", "Definitions") else "overview")
+    destinations = [("overview", "index.html", "Overview"),
+                    ("states", "states/index.html", "States & Counties"),
+                    ("rankings", "rankings/index.html", "Compare"),
+                    ("data", "data/index.html", "Data & Sources")]
+    nav = "".join(f'<a href="{root}{path}"' +
+                  (' aria-current="page"' if key == active else '') +
+                  f'>{label}</a>' for key, path, label in destinations)
     jump_html = ""
     if jump:
-        jump_html = ('<nav class="jumpbar">' + "".join(
+        jump_html = ('<nav class="jumpbar" aria-label="On this page"><span class="jumpbar-label">On this page</span>' + "".join(
             f'<a href="#{esc(i)}">{esc(l)}</a>' for i, l in jump) + "</nav>\n")
     yrbar_html = ""
     bodycls = ""
     if yearbar:
         prefix, years = yearbar
+        year_label = "Map year" if prefix == "fyr" else "Count year"
         items = "".join(f'<label for="{prefix}{y}">{y}</label>'
                         for y in years)
         yrbar_html = (f'<nav class="yrbar"><div class="yrbar-in">'
-                      f'<span class="yrlab">Year</span>{items}'
+                      f'<span class="yrlab">{year_label}</span>{items}'
                       f'</div></nav>\n')
         bodycls = ' class="yrb"'
     return f"""<!DOCTYPE html>
@@ -1107,13 +1154,16 @@ def page(title, body, depth=0, src_html=None, jump=None, yearbar=None):
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Inter:wght@400;500;600;700;800&display=swap">
 <style>{CSS}</style>
+<link rel="stylesheet" href="{root}assets/navigation.css">
+<script src="{root}assets/navigation.js" defer></script>
 </head>
 <body{bodycls}>
-<header class="site-head"><div class="wordmark">Open <span class="accent">Tally</span></div><nav class="mainnav"><a href="{root}index.html#states">States</a><a href="{root}data/index.html">Data</a><a href="{root}definitions/index.html">Definitions</a></nav></header>
+<a class="skip-link" href="#main-content">Skip to content</a>
+<header class="site-head"><div class="wordmark"><a href="{root}index.html" aria-label="Open Tally home">Open <span class="accent">Tally</span></a></div><nav class="mainnav" aria-label="Primary">{nav}</nav></header>
 <p class="notice">{STANDING_NOTICE}</p>
-{jump_html}{body}
-<div class="footer"><span>Open Tally</span><span>{src_html}</span></div>
-{yrbar_html}<nav class="botnav"><div class="botnav-in"><a href="{root}index.html">The Map</a><a href="{root}states/index.html">States</a><a href="{root}rankings/index.html">Rankings</a><a href="{root}data/index.html">Data</a><a href="{root}definitions/index.html">Definitions</a></div></nav>
+{jump_html}<main id="main-content">{body}</main>
+<div class="footer"><span>Open Tally · <a href="{root}definitions/index.html">Definitions & methods</a> · <a href="#main-content">Back to top</a></span><span>{src_html}</span></div>
+{yrbar_html}
 </body>
 </html>"""
 
@@ -1191,7 +1241,7 @@ def year_switch(panes):
     """The year switcher: CSS radio panes, the front map switch's
     mechanism. panes: [(year, pane_html)] in display order; the first
     (2026) is selected. Zero JavaScript."""
-    out = ['<div class="yrsw">']
+    out = ['<p class="context-note">Choose a year for the count below. Other sections keep their labeled dates. Adult ratios use the 2020 Census unless labeled otherwise.</p><div class="yrsw">']
     for i, (y, _h) in enumerate(panes):
         chk = " checked" if i == 0 else ""
         out.append(f'<input class="yr-in" type="radio" name="yrsw" '
@@ -1199,7 +1249,7 @@ def year_switch(panes):
     out.append('<div class="yr-tabs">' + "".join(
         f'<label for="yr{y}">{y}</label>' for y, _h in panes) + "</div>")
     for y, h in panes:
-        out.append(f'<div class="yr-pane yp{y}">{h}</div>')
+        out.append(f'<div class="yr-pane yp{y}" aria-label="{y} count"><h3>{y} count</h3>{h}</div>')
     out.append("</div>")
     return "\n".join(out)
 
@@ -1294,7 +1344,7 @@ def flag_sentence(d, row, s):
 
 def flags_block(sentences, anchor=None):
     if not sentences: return ""
-    h2 = f'<h2 id="{anchor}">Flags</h2>' if anchor else "<h2>Flags</h2>"
+    h2 = f'<h2 id="{anchor}">Data notes</h2>' if anchor else "<h2>Data notes</h2>"
     out = [h2, '<div class="flags">']
     for snt in sentences:
         out.append(f"<div>{esc(snt)}</div>")
@@ -2488,8 +2538,9 @@ def patterns_html(d, states, counties_by_state):
     if n_over:
         out.append(f'<div class="flags"><div>{n_over} of the {n_meas} '
                    f'counties measured have more registered voters than '
-                   f'adults who live there.</div></div>')
-        out.append("<h3>Counties over the line, by state</h3>")
+                   f'adults counted in the 2020 Census.</div></div>')
+        out.append(MEASURE_NOTE)
+        out.append("<h3>Counties above the 2020 population comparison, by state</h3>")
         out.append('<div class="adds">')
         for st in sorted(olc, key=lambda s: (-olc[s][0], s)):
             x, y = olc[st]
@@ -2609,6 +2660,9 @@ def front_adds_lines(d, states, counties_by_state):
     for r in d["county_anoms"]:
         if r["anomaly_type"] != "rolls_over_total_population": continue
         st, geo = r["state"], r["county"]
+        # Legacy Alaska anomaly rows compare different district boundaries.
+        if st == "Alaska" and geo.startswith("House District"):
+            continue
         reg = _first_int(r["value"]); pop = _first_int(r["state_reference_value"])
         if geo.startswith("House District"):
             lines.append(f'<a href="states/{states[st]["slug"]}/index.html">'
@@ -2625,6 +2679,12 @@ def front_adds_lines(d, states, counties_by_state):
         else:
             lines.append(f'{esc(geo)} County, {esc(st)} — {reg:,} '
                          f'registered voters, {pop:,} residents.')
+    for r in ak_geo.over_total_population(d["roll_ak"]):
+        lines.append(f'<a href="states/alaska/index.html#districts">'
+                     f'Alaska {esc(r["district"])}</a> — '
+                     f'{int(r["registered_voters"]):,} registered voters in 2026, '
+                     f'{int(r["total_population_2020"]):,} residents counted in '
+                     '2020 on the same district boundaries.')
     # offices that published two different totals for the same thing
     for row in d["flag_rows"]:
         if row["scope"] == "state" and row["flag_label"] in (
@@ -2737,14 +2797,12 @@ def state_adds_lines(d, s, counties_by_state):
                          f"voters than residents — the most is {top['name']}: "
                          f"{top['reg']:,} registered, {top['pop']:,} residents.")
     if st == "Alaska":
-        for r in d["county_anoms"]:
-            if (r["anomaly_type"] == "rolls_over_total_population"
-                    and r["state"] == "Alaska"):
-                reg = _first_int(r["value"])
-                pop = _first_int(r["state_reference_value"])
-                lines.append(f"Alaska {r['county']} has more registered "
-                             f"voters than residents: {reg:,} registered "
-                             f"voters, {pop:,} residents.")
+        for r in ak_geo.over_total_population(d["roll_ak"]):
+            reg = int(r["registered_voters"])
+            pop = int(r["total_population_2020"])
+            lines.append(f"Alaska {r['district']} has {reg:,} registered "
+                         f"voters in 2026 and {pop:,} residents counted in "
+                         "2020 on the same district boundaries.")
     if st == "Pennsylvania":
         lines.append("In Bedford County, the parts of the state's own "
                      "feed — Election Day, mail, and provisional votes — "
@@ -2774,6 +2832,22 @@ def state_adds_lines(d, s, counties_by_state):
                      "change as additional ballots are scanned and "
                      "tabulated.\"")
     return lines
+
+def alaska_geography_note():
+    """Keep boundary vintage and the retained legacy inputs visible."""
+    return ('<p class="small" id="alaska-geography">Alaska district comparisons '
+            'use <a class="cite" href="' + esc(ak_geo.SOURCE_URL) + '">'
+            '2020 Census adult populations retabulated to 2024 district '
+            'boundaries</a>, matching the <a class="cite" href="' +
+            esc(ak_geo.BOUNDARIES_URL) + '">final 2023 House plan</a>. '
+            'The ratios compare registration from 2026 with the population '
+            'age 18 and over counted in 2020. '
+            'The original ak-district-vap-2020 and ak-district-roll-integrity '
+            'files remain available unchanged, but their population figures '
+            'use the previous 2013 districts. Their ratios and the Alaska '
+            'row in county-anomalies.csv must not be reused for current '
+            'district comparisons. See ALASKA-GEOGRAPHY.md in the source '
+            'files for the extraction and validation record.</p>')
 
 NAT_HIST_KEY = {"2014": "eac-eavs-2014", "2016": "eac-eavs-2016",
                 "2018": "international-idea-turnout", "2020": "eac-eavs-2020",
@@ -3379,8 +3453,17 @@ def national_panel_html(d, states):
 def build_front(d, states, counties_by_state):
     jump = [("map", "The Map"), ("election-day", "Election Day"),
             ("patterns", "Patterns"), ("states", "Every state"),
-            ("record", "The record")]
-    mods = []
+            ("record", "Latest updates")]
+    mods = ['<section class="finder" aria-label="Find a place">'
+            '<h1>Find the numbers for your community.</h1>'
+            '<p>Explore election records by state and county, compare places, '
+            'and follow each figure to its source.</p>'
+            '<form action="states/index.html" method="get"><div class="field">'
+            '<label for="find-state">Start with a state</label>'
+            '<input id="find-state" name="q" type="search" '
+            'placeholder="State name or abbreviation" autocomplete="off">'
+            '</div><button type="submit">Find my state</button></form>'
+            '<p class="context-note">Choose your state, then search its counties.</p></section>']
     # one map, leading the front page at the full width of its
     # module; beside it, the country's numbers before any tap, then
     # a panel per state (all 51 in the static HTML) that the one
@@ -3416,8 +3499,9 @@ def build_front(d, states, counties_by_state):
     seg.append("<h3>U.S. House</h3>")
     for ln in house_ed_lines(d):
         seg.append(f'<p class="small">{ln}</p>')
-    seg.append("<h3>The country</h3>")
+    seg.append('<details class="record-details"><summary>National economic indicators</summary>')
     seg.append(cards_html(national_ed_cards(d)))
+    seg.append("</details>")
     mods.append(mod("\n".join(seg)))
     # pattern summaries built from the joins already in the data
     mods.append(mod(patterns_html(d, states, counties_by_state)))
@@ -3446,7 +3530,7 @@ def build_front(d, states, counties_by_state):
     # the record: the latest entries on the front page; the full
     # dated record lives on the Data page
     seg = ['<h2 id="record">The record</h2><div class=\'log\'>']
-    for ln in list(reversed(d["log_lines"]))[:5]:
+    for ln in list(reversed(d["log_lines"]))[:3]:
         seg.append(f"<div>{esc(ln)}</div>")
     seg.append("</div>")
     seg.append('<p class="small">The full record: '
@@ -3467,7 +3551,8 @@ def build_states_page(d, states):
               and s["name"] != "District of Columbia"]
     ranked.sort(key=lambda s: -s["bal_pct_adults"])
     body = ['<div class="crumb"><a href="../index.html">Open Tally</a></div>',
-            "<h1>States</h1>"]
+            "<h1>States & Counties</h1>",
+            '<p>Find a state, then open its county directory. Search by name or postal abbreviation.</p>', MEASURE_NOTE]
     if ranked:
         top, bot = ranked[0], ranked[-1]
         body.append(tline(
@@ -3476,7 +3561,7 @@ def build_states_page(d, states):
             f"every 100 adults — {fmt_pct(top['bal_pct_adults'])} — "
             f"and {esc(bot['name'])} the fewest, "
             f"{fmt_pct(bot['bal_pct_adults'])}."))
-    body.append("<table><tr><th class='l'>State</th><th>Registered</th>"
+    body.append("<table data-filter-table='states'><tr><th class='l'>State</th><th>Registered</th>"
                 "<th>Ballots cast</th><th>Adults (2020)</th>"
                 "<th>Ballots % of adults</th></tr>")
     for name in sorted(states):
@@ -3493,21 +3578,21 @@ def build_states_page(d, states):
         else:
             bal_cell = fmt_int(s["ballots"])
         body.append(
-            f'<tr><td class="l"><a href="{s["slug"]}/index.html">{esc(name)}</a></td>'
+            f'<tr data-search="{esc(name)}" data-abbreviation="{USPS_BY_NAME.get(name, "")}"><td class="l"><a href="{s["slug"]}/index.html">{esc(name)}</a><br><a class="small" href="{s["slug"]}/index.html#counties">Find a county</a></td>'
             f'<td>{reg_cell}</td><td>{bal_cell}</td>'
             f'<td>{linked(d, "census-pl-94171", fmt_int(s["vap"]))}</td>'
             f'{band_td(linked(d, bk, fmt_pct(s["bal_pct_adults"])), s["bal_pct_adults"])}</tr>')
     body.append("</table>")
     body.append('<p class="small">Rankings: <a href="../rankings/index.html">Rankings</a>'
                 ' · Downloads: <a href="../data/index.html">Data</a></p>')
-    write("states/index.html", page("States", "\n".join(body), depth=1))
+    write("states/index.html", page("States & Counties", "\n".join(body), depth=1))
 
 def build_rankings_page(d, states):
     """The Rankings page: the full ranking tables — every state ranked
     by ballots % of adults, and the state economy rankings for
     Election Day and today that used to sit on the front page."""
     body = ['<div class="crumb"><a href="../index.html">Open Tally</a></div>',
-            "<h1>Rankings</h1>"]
+            "<h1>Compare states</h1>", MEASURE_NOTE]
     ranked = [s for s in states.values() if s["bal_pct_adults"] is not None and s["name"] != "District of Columbia"]
     ranked.sort(key=lambda s: -s["bal_pct_adults"])
     ranks, prev, rk_ = {}, None, 0
@@ -3539,7 +3624,7 @@ def build_rankings_page(d, states):
     body.append("<h2>State economies</h2>")
     body.append(econ_rank_tables(d, states, prefix="../"))
     body.append(econ_full_tables(d, states))
-    write("rankings/index.html", page("Rankings", "\n".join(body), depth=1))
+    write("rankings/index.html", page("Compare states", section_index("\n".join(body)), depth=1))
 
 def build_state_pages(d, states, counties_by_state, county_info):
     hist = {}
@@ -3549,7 +3634,7 @@ def build_state_pages(d, states, counties_by_state, county_info):
     reg_rows = d["reg_by_county"]
     for name, s in states.items():
         hist_by_year = {r["election_year"]: r for r in hist.get(name, [])}
-        seg_map = [f'<div class="crumb"><a href="../../index.html">Open Tally</a></div>', f"<h1>{esc(name)}</h1>"]
+        seg_map = [f'<div class="crumb"><a href="../../index.html">Overview</a> · <a href="../index.html">States & Counties</a></div>', f"<h1>{esc(name)}</h1>"]
         # one map leads the state page: the shaded county map where the
         # state has one; the state's own outline in its band color only
         # where there is no county map to show
@@ -3618,7 +3703,8 @@ def build_state_pages(d, states, counties_by_state, county_info):
         seg_adds = []
         adds = state_adds_lines(d, s, counties_by_state)
         if adds:
-            seg_adds.append('<h2 id="adds">What doesn\'t add up</h2><div class="adds">')
+            adds_title = "Published comparisons"
+            seg_adds.append(f'<h2 id="adds">{esc(adds_title)}</h2><div class="adds">')
             for ln in adds: seg_adds.append(f"<div>{esc(ln)}</div>")
             seg_adds.append("</div>")
         # --- The count, with the year switch: 2026 in front, then the
@@ -3855,7 +3941,8 @@ def build_state_pages(d, states, counties_by_state, county_info):
                 seg_past.append("</table>")
                 seg_past.append(ANOMS_SRC)
         # counties
-        seg_counties = ['<h2 id="counties">Counties</h2>']
+        seg_counties = ['<h2 id="counties">Counties</h2>',
+                        '<p class="small">Search for a county or county equivalent. Open its name for the full record and past elections.</p>']
         est_any = any(d["est_by_county"].get((name, c["_nkey"])) for c in clist)
         has_b26 = any(d["ballots26_by_county"].get((name, c["_nkey"])) for c in clist)
         _cvals = []
@@ -3885,7 +3972,7 @@ def build_state_pages(d, states, counties_by_state, county_info):
             seg_counties.append(tline(
                 f"{len(clist)} counties. No county figures "
                 f"published for 2026."))
-        seg_counties.append("<table><tr><th class='l'>County</th><th>Registered</th><th>Adults (2020)</th><th>Registered % of adults</th>"
+        seg_counties.append("<table data-filter-table='counties'><tr><th class='l'>County</th><th>Registered</th><th>Adults (2020)</th><th>Registered % of adults</th>"
                     + (f"<th>{esc(BALLOTS26_LABEL[name])}</th>" if has_b26 else "")
                     + ("<th>Adults (2025 estimate)</th><th>Registered % of adults (2025 estimate)</th>" if est_any else "")
                     + ("<th>Registered % of citizen adults</th>" if has_roll else "")
@@ -3965,8 +4052,9 @@ def build_state_pages(d, states, counties_by_state, county_info):
             seg_counties.append(tline(
                 f"Alaska reports by its {len(d['roll_ak'])} House "
                 f"districts, not by county. {_ax} districts have "
-                f"more registered voters than adults who live "
-                f"there."))
+                f"2026 registration totals above their 2020 adult "
+                f"populations, using the same district boundaries."))
+            seg_counties.append(alaska_geography_note())
             seg_counties.append("<table><tr><th class='l'>District</th><th>Registered</th><th>Adults (2020)</th><th>Registered % of adults</th><th>Ballots cast</th></tr>")
             ak_ck = county_reg_key(d, "Alaska")
             for r in sorted(d["roll_ak"], key=lambda x: int(x["district"].split()[-1])):
@@ -3974,7 +4062,7 @@ def build_state_pages(d, states, counties_by_state, county_info):
                 pct_td_a, fired_rule = pct_td_html(d, pct, ak_ck)
                 if fired_rule: county_rule = True
                 seg_counties.append(f'<tr><td class="l">{esc(r["district"])}</td><td>{linked(d, ak_ck, fmt_int(num(r["registered_voters"])))}</td>'
-                            f'<td>{linked(d, "census-pl-94171", fmt_int(num(r["voting_age_population_2020"])))}</td>'
+                            f'<td><a class="cite" href="{esc(ak_geo.SOURCE_URL)}">{fmt_int(num(r["voting_age_population_2020"]))}</a></td>'
                             f'{pct_td_a}<td>{fmt_int(d["ak_ballots"].get(r["district"]))}</td></tr>')
             seg_counties.append("</table>")
             ak_src = next((r["source"] for r in d["county_reg"] if r["state"] == "Alaska"), "")
@@ -3998,8 +4086,9 @@ def build_state_pages(d, states, counties_by_state, county_info):
                      if (fnum(r["registered_pct_of_vap"]) or 0) > 100)
             if ax:
                 sents.insert(0, f"{ax} of {len(d['roll_ak'])} House "
-                                f"districts in Alaska have more registered "
-                                f"voters than adults who live there.")
+                                f"districts in Alaska have 2026 registration "
+                                f"totals above their 2020 adult populations "
+                                f"on the same boundaries.")
                 precise = True
         else:
             olc = over_line_counts(d).get(name)
@@ -4046,7 +4135,9 @@ def build_state_pages(d, states, counties_by_state, county_info):
         if outline: jump.append(("map", "Map"))
         jump.append(("count", "The count"))
         if seg_past: jump.append(("next-to-past", "Past elections"))
-        jump.append(("counties", "Counties"))
+        jump.append(("counties", "Find a county"))
+        jump.extend(extra_jump)
+        if fb: jump.append(("flags", "Data notes"))
         write(f'states/{s["slug"]}/index.html',
               page(name, "\n".join(mods), depth=2, src_html=footer_src(d, rk),
                    jump=jump,
@@ -4096,7 +4187,22 @@ def build_county_pages(d, states, counties_by_state):
                 cc_td, _cf = pct_td_html(d, cpct, ck, bare_none=True)
                 tbl.append(f'<tr><td class="l">Citizen adults (2020–2024)</td><td>{fmt_int(cv)}</td></tr>')
                 tbl.append(f'<tr><td class="l">Registered % of citizen adults</td>{cc_td}</tr>')
-            panes = [("2026", "<table>" + "".join(tbl) + "</table>")]
+            current_sources = []
+            if gr:
+                current_sources.append(f'<p class="src">Registered — Who is counted: {esc(gr["basis"])} · {esc(fmt_date(gr["report_date"]))}</p>')
+                current_sources.append(f'<p class="src">Source: {esc(plain_src(gr["source"]))}</p>')
+                if ck in d["citations"]:
+                    cc = d["citations"][ck]
+                    current_sources.append(f'<p class="src">Citation: <a class="cite" href="{esc(cc["url"])}">'
+                                f'{esc(cc["publisher"])} — {esc(cc["title"])}</a></p>')
+            current_sources.append(f'<p class="src">Adults — <a class="cite" href="{esc(PL_URL)}">U.S. Census Bureau</a>, 2020 Census Redistricting Data (PL 94-171), Table P3</p>')
+            if er:
+                current_sources.append(f'<p class="src">2025 estimates — {esc(er["source"])}.</p>')
+            if reg and cv:
+                current_sources.append(f'<p class="src">Citizen adults — {esc(d["cvap_county_src"])}</p>')
+            if brow is not None and bval is not None:
+                current_sources.append(f'<p class="src">{esc(BALLOTS26_LABEL[name])} — {esc(brow["source"])}</p>')
+            panes = [("2026", "<table>" + "".join(tbl) + "</table>" + "".join(current_sources))]
             # past cycles on the same switch, from the federal
             # survey's county files; a year the county published
             # nothing for stays empty, never filled
@@ -4124,17 +4230,24 @@ def build_county_pages(d, states, counties_by_state):
                     "</table>")
                 if hr.get("notes"):
                     pane += f'<p class="src">{esc(hr["notes"])}</p>'
+                if hk:
+                    cc = d["citations"][hk]
+                    pane += (f'<p class="src">{year} source: '
+                             f'<a class="cite" href="{esc(cc["url"])}">'
+                             f'{esc(cc["publisher"])} — {esc(cc["title"])}</a></p>')
+                pane += '<p class="src">Adult denominator: U.S. Census Bureau, 2020 Census, residents age 18+.</p>'
                 panes.append((year, pane))
-            body = [f'<div class="crumb"><a href="../../../index.html">Open Tally</a> · <a href="../../../states/{s["slug"]}/index.html">{esc(name)}</a></div>',
-                    f"<h1>{esc(c['county_name'])}</h1>"]
+            body = [f'<div class="crumb"><a href="../../../index.html">Overview</a> · <a href="../../../states/index.html">States & Counties</a> · <a href="../../../states/{s["slug"]}/index.html#counties">{esc(name)}</a></div>',
+                    f"<h1>{esc(c['county_name'])}</h1>",
+                    '<p class="context-note">Overview: 2026 election records. Select a different year in The count below.</p>']
             if reg and pop and reg > pop:
                 body.append(f'<p class="bigflag">More registered voters '
                             f'than residents: {reg:,} registered, {pop:,} '
-                            f'total residents.</p>')
+                            f'residents counted in the 2020 Census.</p>')
             elif reg and vap and reg > vap:
                 body.append(f'<p class="bigflag">More registered voters '
                             f'than adults: {reg:,} registered, {vap:,} '
-                            f'adults.</p>')
+                            f'adults counted in the 2020 Census.</p>')
             # the county's numbers in context, before the tables:
             # its voter list against its adults, and where that
             # share stands among the counties measured in its state
@@ -4150,8 +4263,8 @@ def build_county_pages(d, states, counties_by_state):
                 suf = ("th" if 10 <= rank % 100 <= 20 else
                        {1: "st", 2: "nd", 3: "rd"}.get(rank % 10, "th"))
                 ctx = (f"{reg:,} registered voters against {vap:,} "
-                       f"adults — {pct:.1f} registered for every 100 "
-                       f"adults.")
+                       f"adults counted in the 2020 Census — {pct:.1f} registered for every 100 "
+                       f"2020 adults.")
                 if len(peers) > 1:
                     ctx += (f" Of the {len(peers)} counties measured "
                             f"in {esc(name)}, that count is the "
@@ -4163,22 +4276,9 @@ def build_county_pages(d, states, counties_by_state):
                     f"{vap:,} adults — "
                     f"{round(bval0 / vap * 100, 1):.1f} ballots for "
                     f"every 100 adults."))
+            body.append(MEASURE_NOTE)
             body.append('<h2 id="count">The count</h2>')
             body.append(year_switch(panes))
-            if gr:
-                body.append(f'<p class="src">Registered — Who is counted: {esc(gr["basis"])} · {esc(fmt_date(gr["report_date"]))}</p>')
-                body.append(f'<p class="src">Source: {esc(plain_src(gr["source"]))}</p>')
-                if ck in d["citations"]:
-                    cc = d["citations"][ck]
-                    body.append(f'<p class="src">Citation: <a class="cite" href="{esc(cc["url"])}">'
-                                f'{esc(cc["publisher"])} — {esc(cc["title"])}</a></p>')
-            body.append(f'<p class="src">Adults — <a class="cite" href="{esc(PL_URL)}">U.S. Census Bureau</a>, 2020 Census Redistricting Data (PL 94-171), Table P3</p>')
-            if er:
-                body.append(f'<p class="src">2025 estimates — {esc(er["source"])}.</p>')
-            if reg and cv:
-                body.append(f'<p class="src">Citizen adults — {esc(d["cvap_county_src"])}</p>')
-            if brow is not None and bval is not None:
-                body.append(f'<p class="src">{esc(BALLOTS26_LABEL[name])} — {esc(brow["source"])}</p>')
             if any_eavs:
                 body.append('<p class="src">Past elections — U.S. Election '
                             'Assistance Commission, Election Administration '
@@ -4295,10 +4395,18 @@ def build_downloads(d, states):
                       "registered_voters": num(r["registered_voters"]),
                       "adults": num(r["voting_age_population_2020"]),
                       "registered_per_100_adults":
-                          fnum(r["registered_pct_of_vap"])})
+                          fnum(r["registered_pct_of_vap"]),
+                      "population_geography": r["population_geography"],
+                      "population_year": r["population_year"],
+                      "population_boundary_vintage": r["population_boundary_vintage"],
+                      "registration_year": r["registration_year"],
+                      "population_source_url": r["population_source_url"]})
     _write_dl(dl, "county-voter-list",
               ["state", "county", "registered_voters", "adults",
-               "registered_per_100_adults"], vrows, counts)
+               "registered_per_100_adults", "population_geography",
+               "population_year", "population_boundary_vintage",
+               "registration_year",
+               "population_source_url"], vrows, counts)
     hist = {}
     for r in d["hist_states"]:
         hist.setdefault(r["state"], {})[r["election_year"]] = r
@@ -4375,6 +4483,7 @@ def build_data(d, states, counties_by_state):
             "county-registered-co-de-ak.csv", "county-registered-co-de-ak.json",
             "county-roll-integrity-co-de.csv", "county-roll-integrity-co-de.json",
             "ak-district-vap-2020.csv", "ak-district-vap-2020.json",
+            ak_geo.POPULATION_FILE, "ALASKA-GEOGRAPHY.md",
             "MANIFEST.md", "DEFINITIONS.md"]
     for fn in csvs:
         shutil.copy(os.path.join(SRC, fn), os.path.join(OUT, "data", fn))
@@ -4409,11 +4518,20 @@ def build_data(d, states, counties_by_state):
         ri.append({"geography": r["district"], "type": "house_district", "state": "Alaska",
                    "registered_voters": num(r["registered_voters"]),
                    "adults_2020": num(r["voting_age_population_2020"]),
-                   "registered_pct_of_adults": fnum(r["registered_pct_of_vap"])})
+                   "registered_pct_of_adults": fnum(r["registered_pct_of_vap"]),
+                   "population_geography": r["population_geography"],
+                   "population_year": r["population_year"],
+                   "population_boundary_vintage": r["population_boundary_vintage"],
+                   "registration_year": r["registration_year"],
+                   "population_source_url": r["population_source_url"],
+                   "census_geoid": r["census_geoid"]})
     with open(os.path.join(OUT, "data", "registered-share-of-adults.json"), "w") as f:
         json.dump(ri, f, indent=1)
     files = sorted(os.listdir(os.path.join(OUT, "data")))
-    body = ["<h1>Data</h1>"]
+    body = ["<h1>Data & Sources</h1>",
+            '<p>Download the records, inspect comparisons, or follow the update log. '
+            '<a class="cite" href="../definitions/index.html">Read definitions and methods</a>.</p>', MEASURE_NOTE]
+    body.append(alaska_geography_note())
     # the combined files lead the page: the whole record, in files,
     # each with its row count, above the per-file listing
     dlc = d.get("dl_counts", {})
@@ -4430,9 +4548,10 @@ def build_data(d, states, counties_by_state):
             body.append(f'<tr><td class="l"><a href="../downloads/{fn}">'
                         f'{fn}</a></td><td>{dlc.get(fn, 0):,}</td></tr>')
         body.append("</table>")
+    body.append("<h2>Source files</h2>")
     body.append(tline(f"{len(files)} files — the files this site "
                       f"is built from, as they stand."))
-    body.append("<table><tr><th class='l'>File</th><th>Size</th></tr>")
+    body.append("<table data-filter-table='files'><tr><th class='l'>File</th><th>Size</th></tr>")
     for fn in files:
         sz = os.path.getsize(os.path.join(OUT, "data", fn))
         body.append(f'<tr><td class="l"><a href="{fn}">{esc(fn)}</a></td><td>{sz:,} bytes</td></tr>')
@@ -4603,7 +4722,7 @@ def build_data(d, states, counties_by_state):
     for ln in reversed(d["log_lines"]):
         body.append(f"<div>{esc(ln)}</div>")
     body.append("</div>")
-    write("data/index.html", page("Data", "\n".join(body), depth=1))
+    write("data/index.html", page("Data & Sources", section_index("\n".join(body)), depth=1))
 
 def build_definitions(d):
     defs = [
@@ -4771,6 +4890,9 @@ def main():
     if os.path.exists(OUT):
         shutil.rmtree(OUT)
     os.makedirs(OUT)
+    for asset in ("navigation.css", "navigation.js"):
+        with open(os.path.join(BASE, "assets", asset)) as f:
+            write(f"assets/{asset}", f.read())
     build_front(d, states, counties_by_state)
     build_states_page(d, states)
     build_rankings_page(d, states)
