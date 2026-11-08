@@ -627,11 +627,13 @@ td.l{white-space:nowrap}
 .mt-tabs{display:flex;gap:8px;margin:12px 0 4px}
 .mt-tabs label{font-size:12px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;
   color:var(--ink2);border:1px solid var(--line2);padding:6px 14px;cursor:pointer}
-#ecomap-base:checked~.mt-tabs label[for=ecomap-base],
-#ecomap-cur:checked~.mt-tabs label[for=ecomap-cur]{color:var(--ink);border-color:var(--ink)}
+#frontmap-list:checked~.mt-tabs label[for=frontmap-list],
+#frontmap-base:checked~.mt-tabs label[for=frontmap-base],
+#frontmap-cur:checked~.mt-tabs label[for=frontmap-cur]{color:var(--ink);border-color:var(--ink)}
 .mt-pane{display:none}
-#ecomap-base:checked~.mt-base{display:block}
-#ecomap-cur:checked~.mt-cur{display:block}
+#frontmap-list:checked~.mt-list{display:block}
+#frontmap-base:checked~.mt-base{display:block}
+#frontmap-cur:checked~.mt-cur{display:block}
 """
 
 def page(title, body, depth=0, src_html=None):
@@ -651,7 +653,7 @@ def page(title, body, depth=0, src_html=None):
 <style>{CSS}</style>
 </head>
 <body>
-<header class="site-head"><div class="wordmark">Open <span class="accent">Tally</span></div><div class="tagline">Every election number, from the office that issued it.</div><nav class="mainnav"><a href="{root}index.html#states">States</a><a href="{root}data/index.html">Data</a><a href="{root}definitions/index.html">Definitions</a></nav></header>
+<header class="site-head"><div class="wordmark">Open <span class="accent">Tally</span></div><nav class="mainnav"><a href="{root}index.html#states">States</a><a href="{root}data/index.html">Data</a><a href="{root}definitions/index.html">Definitions</a></nav></header>
 {body}
 <div class="footer"><span>Open Tally</span><span>{src_html}</span></div>
 </body>
@@ -986,7 +988,11 @@ def econ_today_color(e):
 def econ_chip(color_name):
     return f'<span class="chip" style="background:{ECON_FILL[color_name]}"></span>'
 
-def econ_map_block(d):
+def front_map_block(d, states):
+    """One map, three shadings on a switch: the voter lists, then state
+    economies on Election Day and today."""
+    fills = {n: (VIOLET if (s["reg_pct_adults"] or 0) > 100 else band(s["reg_pct_adults"]))
+             for n, s in states.items()}
     fills_b = {n: ECON_FILL[econ_baseline_color(e)] for n, e in d["econ"].items()}
     fills_c = {n: ECON_FILL[econ_today_color(e)] for n, e in d["econ"].items()}
     fips = {f: n for f, n in FIPS_STATE.items()}
@@ -997,12 +1003,14 @@ def econ_map_block(d):
              + econ_chip("yellow") + 'Mixed &nbsp; ' + econ_chip("orange")
              + 'Worse &nbsp; ' + econ_chip("grey") + 'No new numbers yet</div>')
     return "\n".join([
-        '<h3>State economies</h3>',
         '<div class="maptoggle">',
-        '<input class="mt-in" type="radio" name="ecomap" id="ecomap-base" checked>',
-        '<input class="mt-in" type="radio" name="ecomap" id="ecomap-cur">',
-        '<div class="mt-tabs"><label for="ecomap-base">Election Day</label>'
-        '<label for="ecomap-cur">Today</label></div>',
+        '<input class="mt-in" type="radio" name="frontmap" id="frontmap-list" checked>',
+        '<input class="mt-in" type="radio" name="frontmap" id="frontmap-base">',
+        '<input class="mt-in" type="radio" name="frontmap" id="frontmap-cur">',
+        '<div class="mt-tabs"><label for="frontmap-list">Voter lists</label>'
+        '<label for="frontmap-base">Election Day</label>'
+        '<label for="frontmap-cur">Today</label></div>',
+        f'<div class="mt-pane mt-list">{national_map(fips, fills)}{LEGEND}</div>',
         f'<div class="mt-pane mt-base">{national_map(fips, fills_b)}{leg_b}</div>',
         f'<div class="mt-pane mt-cur">{national_map(fips, fills_c)}{leg_c}</div>',
         '</div>'])
@@ -1561,13 +1569,9 @@ ANOMS_SRC = ('<p class="src">2026 figures: as published on this site. '
 
 def build_front(d, states, counties_by_state):
     body = []
-    # map first — the owner's brief has the map leading the front page
-    fills = {n: (VIOLET if (s["reg_pct_adults"] or 0) > 100 else band(s["reg_pct_adults"]))
-             for n, s in states.items()}
+    # one map, leading the front page, its shadings on a switch
     body.append("<h2>The Map</h2>")
-    body.append(national_map({f: n for f, n in FIPS_STATE.items()}, fills))
-    body.append(LEGEND)
-    body.append(econ_map_block(d))
+    body.append(front_map_block(d, states))
     body.append("<h2>Election Day vs today</h2>")
     body.append('<p class="edsub">Election Day — Tuesday, November 3, 2026</p>')
     body.append("<h3>Governors</h3>")
