@@ -2049,9 +2049,9 @@ def build_state_pages(d, states, counties_by_state, county_info):
     reg_rows = d["reg_by_county"]
     for name, s in states.items():
         body = [f'<div class="crumb"><a href="../../index.html">Open Tally</a></div>', f"<h1>{esc(name)}</h1>"]
-        # maps lead the state page: the state's own outline in its band
-        # color, then the shaded county map (2026 where it exists, the
-        # labeled 2024 map otherwise)
+        # one map leads the state page: the shaded county map where the
+        # state has one; the state's own outline in its band color only
+        # where there is no county map to show
         clist = counties_by_state.get(name, [])
         fills, fips_names = {}, {}
         has_roll = any(roll_co_de.get((name, c["_nkey"])) for c in clist)
@@ -2075,25 +2075,37 @@ def build_state_pages(d, states, counties_by_state, county_info):
                 else:
                     v24 = num(hr["reg_2024"]) if hr else None
                 pct = round(v24 / vapc * 100, 1) if (v24 and vapc) else None
-                fills[c["county_name"]] = band(pct)
+                fills[c["county_name"]] = VIOLET if (pct or 0) > 100 else band(pct)
         if not has_roll and name != "Alaska":
             map_note = ("County shading: 2024 — ballots per 100 adults."
                         if name == "North Dakota" else
                         "County shading: 2024 — registered voters as a "
                         "share of adults.")
-        outline_fill = (VIOLET if (s["reg_pct_adults"] or 0) > 100
-                        else band(s["reg_pct_adults"]))
         county_links = {c["county_name"]:
                         f'../../counties/{s["slug"]}/{c["_slug"]}/index.html'
                         for c in clist}
-        outline = state_outline_map(name, outline_fill)
-        if outline:
-            outline = outline.replace("<svg ", '<svg id="map" ', 1)
-        body.append(outline)
-        body.append(state_map(name, fips_names, fills, county_links))
+        cmap = state_map(name, fips_names, fills, county_links)
+        if cmap:
+            # the county map is this page's map — a separate state
+            # outline above it would draw the same state twice
+            outline = cmap
+            body.append(cmap.replace("<svg ", '<svg id="map" ', 1))
+        else:
+            outline_fill = (VIOLET if (s["reg_pct_adults"] or 0) > 100
+                            else band(s["reg_pct_adults"]))
+            outline = state_outline_map(name, outline_fill)
+            if outline:
+                outline = outline.replace("<svg ", '<svg id="map" ', 1)
+            body.append(outline)
         if map_note:
             body.append(f'<p class="src">{map_note}</p>')
-        body.append(LEGEND)
+        if name == "North Dakota":
+            body.append('<div class="legend">Ballots per 100 adults: '
+                        f'{chip(80)}Under 90 &nbsp; {chip(95)}90 – 100 &nbsp; '
+                        f'{vchip()}More ballots than adults who live there '
+                        f'&nbsp; {chip(None)}No data</div>')
+        else:
+            body.append(LEGEND)
         ed = state_ed_html(d, s)
         if ed: body.append(ed)
         adds = state_adds_lines(d, s, counties_by_state)
