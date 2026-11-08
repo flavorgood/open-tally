@@ -1510,12 +1510,41 @@ def national_history_table(d):
             f'<td>{chip(t_reg)}{linked(d, k, fmt_pct(t_reg))}</td>'
             f'<td>{chip(t_vap)}{linked(d, "census-cps-voting", fmt_pct(t_vap))}</td>'
             f'<td>{chip(t_vep)}{linked(d, "uf-election-lab-turnout", fmt_pct(t_vep))}</td></tr>')
+    # 2026, computed at build time from the project's own collection
+    # (turnout-2026-11-03.csv, state election offices). Each sum covers
+    # only the jurisdictions that published that figure; the turnout
+    # percentages use matched sets — never the two grand sums divided.
+    bal = {s: num(r["ballots_cast"]) for s, r in d["turnout"].items()}
+    reg = {s: num(r["registered_voters"]) for s, r in d["turnout"].items()}
+    bset = {s: v for s, v in bal.items() if v is not None}
+    rset = {s: v for s, v in reg.items() if v is not None}
+    both = set(bset) & set(rset)
+    t_reg26 = 100.0 * sum(bset[s] for s in both) / sum(rset[s] for s in both)
+    t_vap26 = (100.0 * sum(bset.values())
+               / sum(d["vap"][s] for s in bset))
+    rows.append(
+        '<tr><td>2026</td><td class="l">Midterm</td>'
+        f'<td>{fmt_int(sum(bset.values()))}</td>'
+        f'<td>{fmt_int(sum(rset.values()))}</td>'
+        f'<td>{chip(t_reg26)}{fmt_pct(t_reg26)}</td>'
+        f'<td>{chip(t_vap26)}{fmt_pct(t_vap26)}</td>'
+        f'<td>{chip(None)}{fmt_pct(None)}</td></tr>')
     rows.append("</table>")
     rows.append('<p class="src">Ballots cast and registered voters: '
                 'U.S. Election Assistance Commission, EAVS reports. '
                 'Turnout % of adults: U.S. Census Bureau, Current '
                 'Population Survey. Turnout % of eligible voters: '
                 'UF Election Lab.</p>')
+    rows.append(
+        '<p class="src">2026: state election offices, November 3, 2026 '
+        'general election — the count is still going. Ballots cast is '
+        f'counted so far in the {len(bset)} states that have published '
+        f'a total; registered voters covers the {len(rset)} jurisdictions '
+        f'that have published one. Turnout % of registered uses only '
+        f'the {len(both)} jurisdictions that published both figures; '
+        'turnout % of adults uses the ballots above against the 2020 '
+        'Census count of adults in those same states. No turnout % of '
+        'eligible voters has been published for 2026.</p>')
     return "\n".join(rows)
 
 def past_days_table_html(d):
