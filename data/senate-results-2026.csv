@@ -1,0 +1,51 @@
+state,winner,winner_party,winner_votes,runner_up,runner_up_party,runner_up_votes,total_votes,total_basis,status,as_of,source_url
+AL,Barry Moore,REP,917860,Everett Wess,DEM,758465,1678372,sum of printed candidates,unofficial,2026-11-04,https://www2.alabamavotes.gov/electionNight/statewideResultsByContest.aspx?ecode=1001305
+AK,"Peltola, Mary",DEM,102962,"Sullivan, Dan S.",REP,102325,214428,displayed,unofficial - uncalled,2026-11-04,https://www.elections.alaska.gov/enr/26GENR/results/ElectionSummaryReportRPT.pdf
+AZ,,,,,,,,,No Senate race in 2026,,
+AR,,,,,,,,,unofficial - portal not extractable in this pass,,https://arkansas.tally-enr.com/
+CA,,,,,,,,,No Senate race in 2026,,
+CO,,,,,,,,,unofficial - portal not extractable in this pass,,https://results.enr.clarityelections.com/CO/127407/web.345435/#/summary
+CT,,,,,,,,,No Senate race in 2026,,
+DE,,,,,,,,,unofficial - portal not extractable in this pass,,https://elections.delaware.gov/results/enr/GE2026.html
+FL,Ashley Moody,REP,4211455,Angie Nixon,DEM,3974148,8280268,displayed,unofficial,2026-11-06,https://floridaelectionwatch.gov/TrackCounty/DES
+GA,Jon Ossoff,Dem,2466695,Mike Collins,Rep,1712587,4179282,sum of printed candidates,unofficial,2026-11-07,https://results.sos.ga.gov/results/public/Georgia/11032026GeneralAndSpecialElection
+HI,,,,,,,,,No Senate race in 2026,,
+ID,Jim Risch,Republican,401778,Todd Achilles,Independent,238342,710724,sum of printed candidates,unofficial,2026-11-07,https://results.voteidaho.gov/results/public/id/nov2026
+IL,,,,,,,,,unofficial - no official statewide general total posted,,https://www.elections.il.gov/ElectionOperations/ElectionVoteTotals.aspx
+IN,,,,,,,,,No Senate race in 2026,,
+IA,Josh Turek,DEM,686486,Ashley Hinson,REP,630615,1360839,sum of printed candidates,unofficial,2026-11-07,https://electionresults.iowa.gov/IA/127077/web.345435/#/summary
+KS,Adam Hamilton,D,561143,Roger Marshall,R,505558,1099896,displayed,unofficial,2026-11-06,https://ent.sos.ks.gov/kssos_ent.html
+KY,Andy BARR,REP,784869,Charles BOOKER,DEM,612357,1427270,sum of printed candidates,unofficial,2026-11-07,https://vrsws.sos.ky.gov/liveresults/?id=36
+LA,Julia Letlow,REP,745961,Jamie Davis,DEM,720111,1466072,displayed,unofficial,2026-11-07,https://voterportal.sos.la.gov/Graphical
+ME,,,,,,,,,unofficial - no statewide tabulation published,2026-11-04,https://www.maine.gov/sos/news/uniformed-service-and-overseas-voters-uocava-results-november-3-2026-federal-and-governor
+MD,,,,,,,,,No Senate race in 2026,,
+MA,,,,,,,,,no statewide general-election tabulation posted,,https://electionstats.state.ma.us/elections/search/year_from:1970/year_to:2026
+MI,,,,,,,,,official portal unreachable in this pass,,https://mielections.us/election/results/2026GEN_CENR.html
+MN,Peggy Flanagan,Democratic-Farmer-Labor,1520571,Michele Tafoya,Republican,1233465,2831418,sum of printed candidates,Unofficial,2026-11-07,https://electionresults.sos.mn.gov/Results/Index?ErsElectionId=201&officeInElectionIdList=38485&officeInElectionIdList=-1&scenario=USSenate&electionDate=11%2F03%2F2026%2000%3A00%3A00
+MS,,,,,,,,,unofficial - no official statewide total posted,2026-11-04,https://www.sos.ms.gov/news/official-statement-election-update
+MO,,,,,,,,,No Senate race in 2026,,
+MT,,,,,,,,,unofficial - portal not extractable in this pass,2026-11-07,https://electionresults.mt.gov/
+NE,Pete Ricketts,Republican,378244,Dan Osborn,By Petition,331250,754367,displayed,unofficial,2026-11-06,https://electionresults.nebraska.gov/resultsSW.aspx?type=SW&map=CTY
+NV,,,,,,,,,No Senate race in 2026,,
+NH,,,,,,,,,official summary file not readable in this pass,,https://www.sos.nh.gov/2026-general-election-results
+NJ,Cory Booker,DEM,,Justin Murphy,REP,,,,unofficial - no official statewide general total posted,,https://www.nj.gov/state/elections/election-night-results.shtml
+NM,BEN R LUJAN,Democrat,458756,LARRY E MARKER,Republican,266434,725190,displayed,unofficial,2026-11-07,https://electionresults.sos.nm.gov/resultsSW.aspx?type=FED&map=CTY
+NY,,,,,,,,,No Senate race in 2026,,
+NC,Roy Cooper,DEM,2467972,Michael Whatley,REP,1643114,4203218,sum of printed candidates,unofficial,2026-11-07,https://er.ncsbe.gov/enr/20261103/data/results_0.txt
+ND,,,,,,,,,No Senate race in 2026,,
+OH,Sherrod Brown,D,2301042,Jon Husted,R,2077748,4601925,displayed,Unofficial Canvass,2026-11-07,https://publicfiles.ohiosos.gov/election-results/enr/EMSReportingGeneralElectionResults.xlsx
+OK,Kevin Hern,Republican,639860,N'Kiyla Jasmine Thomas,Democratic,439522,1118730,displayed total on the State Election Board results portal,unofficial,2026-11-08,https://results.okelections.gov/OKER/?elecDate=20261103
+OR,Jeff Merkley,"Democrat, Working Families",1081731,David Brock Smith,Republican,719926,1862284,displayed total on the SOS results page,unofficial,2026-11-07,https://results.oregonvotes.gov/resultsSW.aspx?type=FED&map=CTY
+PA,,,,,,,,,No Senate race in 2026,,
+RI,John F. Reed,DEM,240069,Raymond T. McKay,REP,105346,359645,sum of printed candidates,unofficial,2026-11-07,https://electionresults.ri.gov/results/public/rhodeisland/elections/2026StatewideGeneralElection
+SC,Annie Andrews,DEM,1043712,Darline Graham,REP,951896,2040895,displayed,unofficial,2026-11-07,https://scvotes.gov/2026-general-election-results/
+SD,Mike Rounds,Republican,184589,Brian L. Bengs,Democratic,120513,305102,displayed,Unofficial,2026-11-06,https://electionresults.sd.gov/resultsSW.aspx?type=SWR&map=CTY
+TN,Bill Hagerty,Republican,1138436,Marquita Bradshaw,Democratic,886974,2066869,"sum of the 10 candidates printed on the dashboard (no total displayed)",Final Unofficial Results,2026-11-08,https://elections.tn.gov/categories/congressional/offices
+TX,James Talarico,Democratic,5444982,Ken Paxton,Republican,4249373,9889704,displayed Race Total on the SOS Election Night Results system,unofficial,2026-11-07,https://goelect.txelections.civixapps.com/ivis-enr-ui/races
+UT,,,,,,,,,No Senate race in 2026,,
+VT,,,,,,,,,No Senate race in 2026,,
+VA,Mark R. Warner,DEM,2200151,Bert Mizusawa,REP,1380564,3590246,displayed,unofficial,2026-11-07,https://enr.elections.virginia.gov/results/public/virginia/elections/2026-November-General
+WA,,,,,,,,,No Senate race in 2026,,
+WV,Shelley Moore Capito,Republican,266067,Rachel Fetty Anderson,Democratic,172922,456128,displayed,unofficial,2026-11-07,https://sos.wv.gov/elections/Pages/default.aspx
+WI,,,,,,,,,No Senate race in 2026,,
+WY,Harriet Hageman,R,122157,James Byrd,D,65097,188246,"sum of the SOS's 23 county unofficial precinct-by-precinct summary PDFs (candidates plus write-ins; Converse and Lincoln county write-ins unread - garbled PDF text)",Unofficial,2026-11-03,https://sos.wyo.gov/Elections/Docs/2026/2026GeneralResults.aspx

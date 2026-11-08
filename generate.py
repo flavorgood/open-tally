@@ -392,6 +392,16 @@ def load():
     with open(f"{SRC}/governor-results-2026.csv") as f:
         d["gov26"] = {usps[r["state"]]: r for r in csv.DictReader(f)
                       if r["state"] in usps}
+    # 2026 U.S. Senate results, one row per state (senate-results-
+    # 2026.csv; the notes file in the tracker folder carries the
+    # national count, the previous-holder table and its flags: AK
+    # uncalled with a leader, MS uncalled with no published total,
+    # twelve race states with no verified statewide figures yet,
+    # fifteen states with no race; DC elects no Senator and has
+    # no row).
+    with open(f"{SRC}/senate-results-2026.csv") as f:
+        d["sen26"] = {usps[r["state"]]: r for r in csv.DictReader(f)
+                      if r["state"] in usps}
     # --- Election Day vs today spine (frozen baseline + dated record) ---
     with open(f"{SRC}/BASELINE-2026-11-03.md") as f:
         d["baseline_text"] = f.read()
@@ -1209,6 +1219,31 @@ def governor_ed_cards(d):
                       "the office going in."))
     return cards
 
+def senate_ed_lines(d):
+    """The national U.S. Senate picture in plain lines, from
+    senate-results-2026-notes.md: the count before Election Day
+    and on the results this file has verified, the seats that
+    were voted on and the seats that were not on any ballot, the
+    verified flips, and what is still open. The after count
+    carries its 'on verified results' qualifier — Alaska and
+    Mississippi are still counting and Maine has published no
+    statewide count, so the count can still move."""
+    flips = [s for s in ("Iowa", "Kansas", "North Carolina", "Ohio",
+                         "South Carolina", "Texas")
+             if s in SEN26_FLIPS]
+    return [
+        "U.S. Senate before Election Day: 53 Republicans, "
+        "45 Democrats, 2 Independents. On verified results: "
+        "47 Republicans, 51 Democrats, 2 Independents.",
+        "35 seats were voted on (held going in by 22 Republicans "
+        "and 13 Democrats). 65 seats were not on the ballot and "
+        "do not change.",
+        "Changed from Republican to Democrat: "
+        + ", ".join(flips) + ".",
+        "Still counting: Alaska and Mississippi. Maine has "
+        "published no statewide count.",
+    ]
+
 # ---------------------------------------------------------------- tracker economics
 # Ranking method recovered from the tracker artifact (its COMP table and
 # compScores function): every state is scored on the same fourteen
@@ -1451,6 +1486,7 @@ def state_ed_html(d, s):
     the Election Day baseline factors with 'No newer number yet.'"""
     st = s["name"]
     gov = gov_line_html(d, st)
+    sen = senate_line_html(d, st)
     rows = []
     if st in d["flip_unemp"]:
         rows.append(("Unemployment rate",
@@ -1501,9 +1537,10 @@ def state_ed_html(d, s):
         if r:
             val = linked(d, FACTOR_CITE.get(fname), fmt_factor(r))
             rows.append((fname, f"{val} ({r['period']})", None, None, GREY))
-    if not gov and not rows: return ""
+    if not gov and not sen and not rows: return ""
     out = ['<h2 id="election-day">Election Day vs today</h2>']
     if gov: out.append(f'<div class="govline">{gov}</div>')
+    if sen: out.append(f'<div class="govline">{sen}</div>')
     if rows:
         out.append("<table><tr><th class='l'>Measure</th><th>Election Day</th>"
                    "<th>Today</th><th>Change</th></tr>")
@@ -2352,6 +2389,76 @@ def panel_gov_html(d, name):
     inner = gov_line_html(d, name)
     return f'<div class="govline">{inner}</div>' if inner else ""
 
+# Senate seats that changed from Republican to Democratic, each
+# verified on the state's own figures (senate-results-2026-notes.md,
+# previous-holder table). Maine's alleged flip is not among them:
+# the state has published no statewide tabulation.
+SEN26_FLIPS = {"Iowa", "Kansas", "North Carolina", "Ohio",
+               "South Carolina", "Texas"}
+
+def senate_line_html(d, st):
+    """The U.S. Senate line for one state, shared by the front
+    panel and the state page's Election Day block, in the governor
+    line's style. Figures come from senate-results-2026.csv:
+    verified rows print the winner, the runner-up and both vote
+    counts with the file's status and date, and a seat that
+    changed party says so in the governor line's changed-office
+    wording; Alaska prints both leaders and 'not called', never a
+    winner, with its ranked-choice tabulation date; Mississippi,
+    still counting with no state-published total, says so; race
+    states without verified figures print the standing sentence
+    and nothing from the file; states with no 2026 Senate race
+    say so. DC elects no Senator and has no row — it prints the
+    standing sentence, as a race state without figures does."""
+    dem = f'<span style="color:{DEM_BLUE}">Democrat</span>'
+    rep = f'<span style="color:{REP_RED}">Republican</span>'
+    row = d["sen26"].get(st)
+    if row is None:
+        return ("U.S. Senate: no verified statewide figures in the "
+                "record yet.")
+    status = (row["status"] or "").strip()
+    if status == "No Senate race in 2026":
+        return "U.S. Senate — no race in 2026."
+    if st == "Mississippi":
+        return ("U.S. Senate — still counting; the state has "
+                "published no statewide total yet.")
+    wv, rv = num(row["winner_votes"]), num(row["runner_up_votes"])
+    if "uncalled" in status.lower():
+        line = (f"U.S. Senate — not called. "
+                f"{esc(_gov_name(row['winner']))} "
+                f"({_gov_party_span(row['winner_party'])}) leads with "
+                f"{wv:,} votes; {esc(_gov_name(row['runner_up']))} "
+                f"({_gov_party_span(row['runner_up_party'])}) has "
+                f"{rv:,}.")
+        line += (" The ranked-choice tabulation lands "
+                 "November 18, 2026.")
+        line += f" Unofficial, as of {fmt_date(row['as_of'])}."
+        return line
+    if wv is None or rv is None:
+        return ("U.S. Senate: no verified statewide figures in the "
+                "record yet.")
+    status_disp = status[:1].upper() + status[1:]
+    if st in SEN26_FLIPS:
+        flip = (f"U.S. Senate — the seat changed from {rep} to "
+                f"{dem}. {esc(_gov_name(row['winner']))}, a {dem}, "
+                f"won.")
+        return (f"{flip} {esc(_gov_name(row['winner']))} received "
+                f"{wv:,} votes; {esc(_gov_name(row['runner_up']))} "
+                f"received {rv:,}. {esc(status_disp)}, as of "
+                f"{fmt_date(row['as_of'])}.")
+    return (f"U.S. Senate — {esc(_gov_name(row['winner']))} "
+            f"({_gov_party_span(row['winner_party'])}) won with "
+            f"{wv:,} votes. {esc(_gov_name(row['runner_up']))} "
+            f"({_gov_party_span(row['runner_up_party'])}) received "
+            f"{rv:,}. {esc(status_disp)}, as of "
+            f"{fmt_date(row['as_of'])}.")
+
+def panel_senate_html(d, name):
+    """A front-panel Senate line — the same Senate line the state
+    page's Election Day block carries."""
+    inner = senate_line_html(d, name)
+    return f'<div class="govline">{inner}</div>' if inner else ""
+
 def state_panel_html(d, s, br, cr):
     """One state's panel for the front map, embedded in the page's
     static HTML for all 51 states and shown beside the map when the
@@ -2380,6 +2487,7 @@ def state_panel_html(d, s, br, cr):
     return (f'<div class="spanel" id="sp-{s["slug"]}" hidden>'
             f'<h3>{esc(st)}</h3>'
             + panel_gov_html(d, st)
+            + panel_senate_html(d, st)
             + f'<div class="pview pv-list">{count_summary_rows(d, s)}</div>'
             + f'<div class="pview pv-base" hidden>{pv_base}</div>'
             + f'<div class="pview pv-cur" hidden>{pv_cur}</div>'
@@ -2467,6 +2575,9 @@ def build_front(d, states, counties_by_state):
                    f'were Democrats and {gm.group(2)} were Republicans. '
                    f'For 2027: {gm.group(3)} Democrats, {gm.group(4)} '
                    f'Republicans, Kansas not decided.</p>')
+    seg.append("<h3>U.S. Senate</h3>")
+    for ln in senate_ed_lines(d):
+        seg.append(f'<p class="small">{ln}</p>')
     seg.append("<h3>The country</h3>")
     seg.append(cards_html(national_ed_cards(d)))
     mods.append(mod("\n".join(seg)))
@@ -3300,6 +3411,7 @@ def build_data(d, states, counties_by_state):
             "county-ballots-ne.csv", "county-ballots-ut.csv",
             "county-ballots-nv.csv",
             "governor-results-2026.csv",
+            "senate-results-2026.csv",
             "county-history-eavs-older.csv",
             "anomalies-vs-history.csv", "PAST-ELECTION-DAYS.md",
             "state-economics-tracker.csv", "flags.csv",
