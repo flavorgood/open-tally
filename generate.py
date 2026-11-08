@@ -1828,16 +1828,17 @@ def econ_full_tables(d, states):
          "than when the index started.",
          f"Prices rose fastest in {esc(hn)}, {hv:+.1f}% in the "
          f"year to Election Day.")
-    level_rows("hpi", lambda v, e: f"{e['hpi']} (index)",
+    level_rows("hpi", lambda v, e: f"{e['hpi']} (Q2 2026)",
                "hpi_move", "%", True, YR)
-    out.append('<p class="src">Federal Housing Finance Agency.</p>')
+    out.append('<p class="src">Federal Housing Finance Agency, '
+               'Q2 2026.</p>')
     n, v = top("pcpi", lambda x: f"${int(x):,}")
     head("Personal income per person",
          "All the income in a state, divided by the people who "
          "live there.", f"{esc(n)} was highest, {v}.")
-    level_rows("pcpi", lambda v, e: f"${int(v):,}",
+    level_rows("pcpi", lambda v, e: f"${int(v):,} (2025)",
                "pcpi_move", "%", True, YR)
-    out.append('<p class="src">Bureau of Economic Analysis.</p>')
+    out.append('<p class="src">Bureau of Economic Analysis, 2025.</p>')
     # the six dated readings from the expanded factor file
     fnames = ["Average weekly wage", "Electricity price - all sectors",
               "New business applications", "Building permits",
@@ -2060,14 +2061,14 @@ def econ_rows(d, st):
         if h is not None:
             chg, fill = _move_cell(fnum(e["hpi_move"]), "%",
                                    True, "in the year to Election Day")
-            rows.append(("House price index", f"{e['hpi']} (index)",
+            rows.append(("House price index", f"{e['hpi']} (Q2 2026)",
                          None, chg, fill))
         p = fnum(e["pcpi"])
         if p is not None:
             chg, fill = _move_cell(fnum(e["pcpi_move"]), "%",
                                    True, "in the year to Election Day")
             rows.append(("Personal income per person",
-                         f"${int(p):,}", None, chg, fill))
+                         f"${int(p):,} (2025)", None, chg, fill))
     fac = d["factors"].get(st, {})
     for fname in ("Average weekly wage", "New business applications",
                   "Building permits", "Labor force participation rate",
