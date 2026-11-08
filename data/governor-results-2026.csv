@@ -19,7 +19,7 @@ MA,,,,,,,,,no statewide general-election tabulation posted,,https://electionstat
 MI,,,,,,,,,official portal unreachable in this pass,,https://mielections.us/election/results/2026GEN_CENR.html
 MN,Amy Klobuchar and Ben Schierer,Democratic-Farmer-Labor,1569714,Lisa Demuth and Ryan Wilson,Republican,1206576,2830125,sum of printed candidates,Unofficial,2026-11-03,https://electionresultsfiles.sos.mn.gov/20261103/allracesbycounty.txt
 NE,Jim Pillen and Joe Kelly,Republican,381335,Lynne Walz and Ben Steffen,Democratic,321145,755863,displayed TOTAL VOTES on the SOS results page,unofficial,2026-11-07,https://electionresults.nebraska.gov/resultsSW.aspx?type=SW&map=CTY
-NV,,,,,,,,,unofficial - portal not extractable in this pass,,https://silverstateelection.nv.gov/
+NV,Aaron Ford,Democratic,562396,Joseph Lombardo,Republican,479571,1089636,"displayed ""received votes"" total on the SOS results app",unofficial,2026-11-07,https://silverstateelection.nv.gov/race/87b59f32-db3e-461d-b6a9-8917c7e04113
 NH,,,,,,,,,official summary file not readable in this pass,,https://www.sos.nh.gov/2026-general-election-results
 NM,DEB HAALAND AND STEPHANIE GARCIA RICHARD,Democrat,416176,GREGGORY D HULL AND DAVID M GALLEGOS,Republican,309436,725612,displayed,unofficial,2026-11-08,https://electionresults.sos.nm.gov/resultsSW.aspx?type=SW&map=CTY
 NY,Kathy C. Hochul / Adrienne E. Adams,DEM + WOR,3613985,Bruce A. Blakeman / Todd Hood,REP + CON + Vote Affordable,2414376,6102694,displayed,Unofficial,2026-11-06,https://nyenr.elections.ny.gov/
@@ -31,7 +31,7 @@ RI,Helena Buonanno Foulkes,DEM,207216,Kenneth Block,Ind,99785,359223,sum of prin
 SC,Alan Wilson / Mike Reichenbach,REP,1051010,Jermaine Johnson / Sam Skardon,DEM,960269,2037622,displayed,unofficial,2026-11-07,https://scvotes.gov/2026-general-election-results/
 SD,Larry Rhoden and Tony Venhuizen,Republican,193334,Dan Ahlers and Steven McCleerey,Democratic,111161,304495,displayed,Unofficial,2026-11-06,https://electionresults.sd.gov/ResultsSW.aspx?type=SWALL&map=ORM
 TN,Marsha Blackburn,Republican,957136,Jerri Green,Democratic,902953,2102474,"sum of the 15 candidates printed on the dashboard (no total displayed)",Final Unofficial Results,2026-11-03,https://elections.tn.gov/categories/governor/offices
-TX,Gina Hinojosa,Democratic,,Greg Abbott,Republican,,,,"unofficial - official ENR blocked, votes not recorded",,https://goelect.txelections.civixapps.com/ivis-enr-ui/races
+TX,Gina Hinojosa,Democratic,5230789,Greg Abbott,Republican,4524527,9907381,displayed Race Total on the SOS Election Night Results system,unofficial,2026-11-07,https://goelect.txelections.civixapps.com/ivis-enr-ui/races
 VT,Phil Scott,Republican,162042,Amanda Janoo,Democratic/Progressive,141631,311510,displayed Total Votes Cast on the SOS results page (includes blank votes and overvotes as printed),unofficial,2026-11-07,https://electionresults.vermont.gov/
 WI,,,,,,,,,no official statewide total exists yet,,https://myvote.wi.gov/en-us/Election-Results
 WY,Eric Barlow,Republican,128480,Rebecca Bextel,Constitution,31438,188072,sum of printed candidates,Unofficial,2026-11-03,https://sos.wyo.gov/Elections/Docs/2026/2026GeneralResults.aspx

@@ -64,7 +64,8 @@ BALLOTS26_FILES = {"Alabama": "al", "Colorado": "co", "North Carolina": "nc",
                    "North Dakota": "nd",
                    "South Dakota": "sd",
                    "Nebraska": "ne",
-                   "Utah": "ut"}
+                   "Utah": "ut",
+                   "Nevada": "nv"}
 BALLOTS26_LABEL = {"Alabama": "Ballots cast",
                    "Colorado": "Ballots returned (Nov 5)",
                    "North Carolina": "Votes — U.S. Senate race",
@@ -97,6 +98,7 @@ BALLOTS26_LABEL = {"Alabama": "Ballots cast",
                    "South Dakota": "Votes — Governor's race",
                    "Nebraska": "Votes — Governor's race",
                    "Utah": "Votes — Constitutional Amendment B",
+                   "Nevada": "Votes — Governor's race",
                    "Montana": "Ballots cast"}
 # combination-quadrants.csv group values in the owner's plain words
 QUAD_LABELS = {"high rolls / high ballots": "Big voter list · many ballots",
@@ -1773,6 +1775,12 @@ def ballots26_note(d, st):
                 f'Amendment B in the state\'s media export. The '
                 f'export publishes no ballots-cast figure; nothing '
                 f'else is recorded.</p>')
+    if st == "Nevada":
+        return (f'<p class="src">The 17 county figures add up to '
+                f'{parts:,} — the statewide total the Secretary of '
+                f'State\'s results app displays for the Governor '
+                f'contest. The feed publishes no ballots-cast '
+                f'figure; nothing else is recorded.</p>')
     pub = {"Alabama": (1693621, "the statewide total the Secretary of State published"),
            "Colorado": (2761449, "the total in the Secretary of State's release"),
            "Minnesota": (2830125, "the statewide Governor total in the Secretary of State's file"),
@@ -2246,11 +2254,10 @@ def count_summary_rows(d, s):
             "</table>")
 
 # Race states whose governor rows carry no verified statewide
-# figures: eight with no official figures published yet (collection
+# figures: six with no official figures published yet (collection
 # notes).
 GOV26_NO_VERIFIED = {"Illinois", "Maine", "Massachusetts", "Michigan",
-                     "Nevada", "New Hampshire", "Texas",
-                     "Wisconsin"}
+                     "New Hampshire", "Wisconsin"}
 
 def _gov_party(raw):
     """The plain party word for a governor-results party string, and
@@ -3291,6 +3298,7 @@ def build_data(d, states, counties_by_state):
             "county-ballots-in.csv", "county-ballots-mo.csv",
             "county-ballots-nd.csv", "county-ballots-sd.csv",
             "county-ballots-ne.csv", "county-ballots-ut.csv",
+            "county-ballots-nv.csv",
             "governor-results-2026.csv",
             "county-history-eavs-older.csv",
             "anomalies-vs-history.csv", "PAST-ELECTION-DAYS.md",
