@@ -515,6 +515,33 @@ def geom_polys(geom, arcs):
         return [[_ring(arcs, r) for r in poly] for poly in geom["arcs"]]
     return []
 
+_COUNTY_POLYS = None
+
+def county_polys():
+    """{county fips: (name, polys)} for every county the site draws:
+    the us-atlas counties TopoJSON, plus the two Alaska census areas
+    the Census county file carries that the TopoJSON's vintage
+    predates — Chugach (02063) and Copper River (02066), split out
+    of Valdez-Cordova in 2019. Their boundaries are the Census
+    Bureau's own (TIGERweb, Census 2020 vintage), kept in
+    data/maps/ak-successors.json. Valdez-Cordova (02261) is not a
+    current county — the Census file carries no such county — and
+    its retired outline is never drawn; its ground is the two
+    successor census areas above."""
+    global _COUNTY_POLYS
+    if _COUNTY_POLYS is not None: return _COUNTY_POLYS
+    arcs, geoms = load_topo(f"{MAPDIR}/counties-10m.json", "counties")
+    out = {fips: (g["properties"]["name"], geom_polys(g, arcs))
+           for fips, g in geoms.items()}
+    p = os.path.join(MAPDIR, "ak-successors.json")
+    if os.path.exists(p):
+        for fips, rec in json.load(open(p)).items():
+            polys = [[[(float(x), float(y)) for x, y in ring]
+                      for ring in poly] for poly in rec["polys"]]
+            out[fips] = (rec["name"], polys)
+    _COUNTY_POLYS = out
+    return out
+
 def albers(lon, lat, lon0, lat0, p1, p2):
     """Spherical Albers equal-area conic (unit sphere). y grows north."""
     la, lo = math.radians(lat), math.radians(lon)
@@ -538,8 +565,11 @@ def region_of(lon, lat):
 def project_polys(polys, proj):
     return [[[albers(lon, lat, **proj) for lon, lat in ring] for ring in poly] for poly in polys]
 
-def fit(polys_list, width, height, pad=4):
-    """Fit projected polys into width x height. Returns (mapped_polys, scale)."""
+def _fit_params(polys_list, width, height, pad=4):
+    """The fit transform for a set of projected polys: (minx, maxy,
+    scale, ox, oy). Kept separate from applying it so a second set of
+    shapes (the counties under the states) can ride the exact same
+    transform the states were fitted with."""
     xs = [p[0] for polys in polys_list for poly in polys for ring in poly for p in ring]
     ys = [p[1] for polys in polys_list for poly in polys for ring in poly for p in ring]
     minx, maxx, miny, maxy = min(xs), max(xs), min(ys), max(ys)
@@ -547,11 +577,17 @@ def fit(polys_list, width, height, pad=4):
     s = min((width - 2 * pad) / bw, (height - 2 * pad) / bh)
     ox = pad + ((width - 2 * pad) - bw * s) / 2.0
     oy = pad + ((height - 2 * pad) - bh * s) / 2.0
-    out = []
-    for polys in polys_list:
-        out.append([[[(ox + (x - minx) * s, oy + (maxy - y) * s) for x, y in ring]
-                     for ring in poly] for poly in polys])
-    return out, s
+    return (minx, maxy, s, ox, oy)
+
+def _apply_fit(polys, prm):
+    minx, maxy, s, ox, oy = prm
+    return [[[(ox + (x - minx) * s, oy + (maxy - y) * s) for x, y in ring]
+             for ring in poly] for poly in polys]
+
+def fit(polys_list, width, height, pad=4):
+    """Fit projected polys into width x height. Returns (mapped_polys, scale)."""
+    prm = _fit_params(polys_list, width, height, pad)
+    return [_apply_fit(polys, prm) for polys in polys_list], prm[2]
 
 def simplify(ring, eps):
     """Douglas-Peucker on a projected (screen-space) ring."""
@@ -585,13 +621,22 @@ def polys_to_path(polys, eps=0.7):
             parts.append(d)
     return "".join(parts)
 
-def national_map(state_fips, fills, links=None):
+def national_map(state_fips, fills, links=None, county_fills=None,
+                 county_names=None):
     """Composite Albers USA SVG. state_fips: {fips: state name}; fills: {name: color};
-    links: optional {name: href} — each state path becomes a link."""
+    links: optional {name: href} — each state path becomes a link.
+    With county_fills ({county fips: color}), the drawing is the
+    counties: every county in the 51 jurisdictions is drawn, shaded
+    from county_fills (grey where a county carries no figure), and
+    the state paths draw over them as outlines in the state colors —
+    the state fill is transparent, so the counties show through,
+    the state's border carries its color, and the state path still
+    takes the tap that opens the state's panel."""
     arcs, geoms = load_topo(f"{MAPDIR}/states-10m.json", "states")
     W, H = 960, 600
     by_region = {"CONUS": [], "AK": [], "HI": []}
     meta = []  # (region idx placeholder, name)
+    layout = {}  # state name -> (region, projection)
     for fips, name in state_fips.items():
         g = geoms.get(fips)
         if not g: continue
@@ -602,6 +647,7 @@ def national_map(state_fips, fills, links=None):
         clat = sum(p[1] for p in ring0) / len(ring0)
         reg = region_of(clon, clat)
         proj = {"CONUS": CONUS, "AK": AKP, "HI": HIP}[reg]
+        layout[name] = (reg, proj)
         pp = project_polys(polys, proj)
         # AK polygons crossing the antimeridian: re-project wrapped longitudes
         if reg == "AK":
@@ -619,51 +665,104 @@ def national_map(state_fips, fills, links=None):
         by_region[reg].append(pp)
         meta.append((reg, len(by_region[reg]) - 1, name))
     flat = by_region["CONUS"] + by_region["AK"] + by_region["HI"]
-    mapped, s = fit(flat, W, H, pad=6)
+    prm = _fit_params(flat, W, H, pad=6)
+    mapped = [_apply_fit(polys, prm) for polys in flat]
     idx = {"CONUS": 0, "AK": len(by_region["CONUS"]), "HI": len(by_region["CONUS"]) + len(by_region["AK"])}
     # rescale AK by 0.35 and HI by 1.0 around their own bboxes, then place:
     paths = {}
+    rescale_prm = {}  # state name -> its placement transform, for its counties
     for reg, i, name in meta:
         polys = mapped[idx[reg] + i]
         if reg == "AK":
-            polys = rescale_place(polys, 0.35, W, H, anchor="bl")
+            rp = _rescale_params(polys, 0.35, W, H, anchor="bl")
+            rescale_prm[name] = rp
+            polys = _apply_rescale(polys, rp)
         elif reg == "HI":
-            polys = rescale_place(polys, 1.0, W, H, anchor="hi")
+            rp = _rescale_params(polys, 1.0, W, H, anchor="hi")
+            rescale_prm[name] = rp
+            polys = _apply_rescale(polys, rp)
         paths[name] = polys_to_path(polys)
     svg = [f'<svg viewBox="0 0 {W} {H}" class="map" role="img" aria-label="United States">']
+    if county_fills is not None:
+        # the counties ride the states' own transforms: each county
+        # is projected with its state's projection, fitted with the
+        # states' fit, and placed with its state's placement — so a
+        # county lands exactly inside its state's outline
+        # the drawn counties are exactly the site's counties — the
+        # keys of county_fills, which the caller builds from the
+        # Census county file. A geometry unit the Census file does
+        # not carry (the retired Valdez-Cordova) is never drawn.
+        by_state = {}
+        allp = county_polys()
+        for cfips in county_fills:
+            rec = allp.get(cfips)
+            sname = state_fips.get(cfips[:2])
+            if rec is not None and sname is not None and sname in layout:
+                by_state.setdefault(sname, []).append((cfips, rec[0], rec[1]))
+        for sname, clist in by_state.items():
+            reg, proj = layout[sname]
+            for cfips, cname, cpolys in clist:
+                if reg == "AK":
+                    pp = [[ [albers(lon - 360 if lon > 0 else lon, lat, **AKP)
+                             for lon, lat in ring]
+                            for ring in poly] for poly in cpolys]
+                else:
+                    pp = project_polys(cpolys, proj)
+                mp = _apply_fit(pp, prm)
+                if sname in rescale_prm:
+                    mp = _apply_rescale(mp, rescale_prm[sname])
+                disp = (county_names or {}).get(cfips, cname)
+                svg.append(f'<path d="{polys_to_path(mp)}" '
+                           f'fill="{county_fills.get(cfips, GREY)}">'
+                           f'<title>{esc(disp)}, {esc(sname)}</title></path>')
     for name, d in paths.items():
-        p = f'<path d="{d}" fill="{fills.get(name, GREY)}"><title>{esc(name)}</title></path>'
+        if county_fills is not None:
+            p = (f'<path class="sout" d="{d}" fill="#000000" fill-opacity="0" '
+                 f'style="stroke:{fills.get(name, GREY)}">'
+                 f'<title>{esc(name)}</title></path>')
+        else:
+            p = f'<path d="{d}" fill="{fills.get(name, GREY)}"><title>{esc(name)}</title></path>'
         if links and name in links:
             p = f'<a href="{esc(links[name])}">{p}</a>'
         svg.append(p)
     svg.append("</svg>")
     return "".join(svg)
 
-def rescale_place(polys, factor, W, H, anchor):
-    """Shrink polys by factor about their bbox center, then move bbox to an anchor box."""
+def _rescale_params(polys, factor, W, H, anchor):
+    """The rescale_place transform for a set of polys, as parameters:
+    (cx, cy, factor, tx, ty) — scale about the bbox center, then
+    translate so the scaled bbox lands on the anchor box. Separate
+    from applying it so shapes that tile the same ground (a state's
+    counties under the state) can ride the state's own transform."""
     xs = [p[0] for poly in polys for ring in poly for p in ring]
     ys = [p[1] for poly in polys for ring in poly for p in ring]
     minx, maxx, miny, maxy = min(xs), max(xs), min(ys), max(ys)
     cx, cy = (minx + maxx) / 2, (miny + maxy) / 2
-    scaled = [[[(cx + (x - cx) * factor, cy + (y - cy) * factor) for x, y in ring]
-               for ring in poly] for poly in polys]
-    xs = [p[0] for poly in scaled for ring in poly for p in ring]
-    ys = [p[1] for poly in scaled for ring in poly for p in ring]
-    minx, maxx, miny, maxy = min(xs), max(xs), min(ys), max(ys)
-    if anchor == "bl":    tx, ty = 4 - minx, (H - 2) - maxy
-    elif anchor == "hi":  tx, ty = 300 - minx, (H - 4) - maxy
+    sminx, smaxx = cx + (minx - cx) * factor, cx + (maxx - cx) * factor
+    sminy, smaxy = cy + (miny - cy) * factor, cy + (maxy - cy) * factor
+    if anchor == "bl":    tx, ty = 4 - sminx, (H - 2) - smaxy
+    elif anchor == "hi":  tx, ty = 300 - sminx, (H - 4) - smaxy
     else:                 tx, ty = 0, 0
-    return [[[(x + tx, y + ty) for x, y in ring] for ring in poly] for poly in scaled]
+    return (cx, cy, factor, tx, ty)
+
+def _apply_rescale(polys, prm):
+    cx, cy, factor, tx, ty = prm
+    return [[[(cx + (x - cx) * factor + tx, cy + (y - cy) * factor + ty)
+              for x, y in ring] for ring in poly] for poly in polys]
+
+def rescale_place(polys, factor, W, H, anchor):
+    """Shrink polys by factor about their bbox center, then move bbox to an anchor box."""
+    return _apply_rescale(polys, _rescale_params(polys, factor, W, H, anchor))
 
 def state_map(state_name, county_fips_names, fills, links=None):
     """Single-state county map, fitted Albers. county_fips_names: {fips: display name};
     links: optional {display name: href} — each county path becomes a link."""
-    arcs, geoms = load_topo(f"{MAPDIR}/counties-10m.json", "counties")
+    allp = county_polys()
     raw, names = [], []
     for fips, nm in county_fips_names.items():
-        g = geoms.get(fips)
-        if not g: continue
-        raw.append(geom_polys(g, arcs)); names.append(nm)
+        rec = allp.get(fips)
+        if not rec: continue
+        raw.append(rec[1]); names.append(nm)
     if not raw: return ""
     lons = [p[0] for polys in raw for poly in polys for ring in poly for p in ring]
     lats = [p[1] for polys in raw for poly in polys for ring in poly for p in ring]
@@ -764,6 +863,7 @@ tr.hl td{font-weight:700}
 .chip{display:inline-block;width:11px;height:11px;border-radius:2px;margin-right:7px}
 .map{width:100%;height:auto;display:block;margin:14px 0}
 .map path{stroke:var(--panel);stroke-width:1.1}
+.map path.sout{stroke-width:1.8}
 .legend{font-size:13px;color:var(--ink2);margin:10px 0 16px;line-height:1.7}
 .small{font-size:13.5px;color:var(--ink2);line-height:1.6}
 .src{font-size:13px;color:var(--ink2);margin:6px 0 14px;line-height:1.55}
@@ -1329,31 +1429,43 @@ def econ_chip(color_name):
     return f'<span class="chip" style="background:{ECON_FILL[color_name]}"></span>'
 
 def front_map_block(d, states):
-    """One map, three shadings on a switch: the voter lists, then state
-    economies on Election Day and today."""
-    fills = {n: (VIOLET if (s["reg_pct_adults"] or 0) > 100 else band(s["reg_pct_adults"]))
-             for n, s in states.items()}
-    fills_b = {n: ECON_FILL[econ_baseline_color(e)] for n, e in d["econ"].items()}
-    fills_c = {n: ECON_FILL[econ_today_color(e)] for n, e in d["econ"].items()}
+    """One map, one view: the count. The counties are the drawing —
+    every county shaded by its 2026 ballots as a share of the adults
+    who live there, grey where no office has published a county
+    figure. Over the counties, each state's outline is drawn in the
+    state's voter-list shading: registered voters as a share of
+    adults. Tapping a state opens its panel, as before."""
+    outline = {n: (VIOLET if (s["reg_pct_adults"] or 0) > 100
+                   else band(s["reg_pct_adults"]))
+               for n, s in states.items()}
+    cfills = {}
+    for c in d["counties"]:
+        r = d["ballots26_by_county"].get((c["state"], c["_nkey"]))
+        bal = num(r["ballots_cast"]) if r else None
+        vap = num(c["voting_age_population_2020"])
+        pct = (round(bal / vap * 100, 1)
+               if (bal is not None and vap) else None)
+        cfills[c["county_fips"]] = (VIOLET if (pct or 0) > 100
+                                    else band(pct))
     fips = {f: n for f, n in FIPS_STATE.items()}
     links = {n: f'states/{s["slug"]}/index.html' for n, s in states.items()}
-    leg_b = ('<div class="legend">Election Day: ' + econ_chip("green")
-             + 'Getting better &nbsp; ' + econ_chip("yellow") + 'Mixed &nbsp; '
-             + econ_chip("orange") + 'Getting worse</div>')
-    leg_c = ('<div class="legend">Today: ' + econ_chip("green") + 'Better &nbsp; '
-             + econ_chip("yellow") + 'Mixed &nbsp; ' + econ_chip("orange")
-             + 'Worse &nbsp; ' + econ_chip("grey") + 'No new numbers yet</div>')
+    cnames = {c["county_fips"]: c["county_name"] for c in d["counties"]}
+    leg_states = ('<div class="legend">State outline — registered voters '
+                  'as a share of adults: ' + chip(80) + 'Under 90% &nbsp; '
+                  + chip(95) + '90% – 100% &nbsp; ' + vchip()
+                  + 'More registered voters than adults who live there '
+                  '&nbsp; ' + chip(None) + 'No data</div>')
+    leg_counties = ('<div class="legend">Counties — ballots as a share of '
+                    'adults, 2026: ' + chip(80) + 'Under 90% &nbsp; '
+                    + chip(95) + '90% – 100% &nbsp; ' + vchip()
+                    + 'More ballots than adults who live there &nbsp; '
+                    + chip(None) + 'No figure published</div>')
     return "\n".join([
         '<div class="maptoggle">',
-        '<input class="mt-in" type="radio" name="frontmap" id="frontmap-list" checked>',
-        '<input class="mt-in" type="radio" name="frontmap" id="frontmap-base">',
-        '<input class="mt-in" type="radio" name="frontmap" id="frontmap-cur">',
-        '<div class="mt-tabs"><label for="frontmap-list">Registered voters vs adults</label>'
-        '<label for="frontmap-base">State economies · Election Day</label>'
-        '<label for="frontmap-cur">State economies · Today</label></div>',
-        f'<div class="mt-pane mt-list">{national_map(fips, fills, links)}{LEGEND}</div>',
-        f'<div class="mt-pane mt-base">{national_map(fips, fills_b, links)}{leg_b}</div>',
-        f'<div class="mt-pane mt-cur">{national_map(fips, fills_c, links)}{leg_c}</div>',
+        national_map(fips, outline, links, county_fills=cfills,
+                     county_names=cnames),
+        leg_states,
+        leg_counties,
         '</div>'])
 
 def econ_rank_tables(d, states, prefix=""):
