@@ -1,0 +1,52 @@
+state,registered_pct_of_vap,ballots_pct_of_vap,quadrant,rolls_over_100,ballots_missing
+Alabama,98.4,43.2,high rolls / low ballots,no,no
+Alaska,109.3,39.0,high rolls / low ballots,yes,no
+Arizona,78.9,,not classifiable,no,yes
+Arkansas,80.3,38.6,low rolls / low ballots,no,no
+California,75.5,28.9,low rolls / low ballots,no,no
+Colorado,102.4,61.2,high rolls / high ballots,yes,no
+Connecticut,78.6,,not classifiable,no,yes
+Delaware,103.4,49.1,high rolls / high ballots,yes,no
+District of Columbia,78.8,,not classifiable,no,yes
+Florida,79.0,48.1,low rolls / low ballots,no,no
+Georgia,91.7,51.2,high rolls / high ballots,no,no
+Hawaii,73.8,33.8,low rolls / low ballots,no,no
+Idaho,76.7,53.2,low rolls / high ballots,no,no
+Illinois,83.2,,not classifiable,no,yes
+Indiana,91.6,,not classifiable,no,yes
+Iowa,88.9,56.3,high rolls / high ballots,no,no
+Kansas,90.9,,not classifiable,no,yes
+Kentucky,97.4,41.5,high rolls / low ballots,no,no
+Louisiana,83.4,,not classifiable,no,yes
+Maine,87.2,,not classifiable,no,yes
+Maryland,89.2,42.3,high rolls / low ballots,no,no
+Massachusetts,92.4,,not classifiable,no,yes
+Michigan,,61.2,not classifiable,no,no
+Minnesota,89.5,65.0,high rolls / high ballots,no,no
+Mississippi,92.0,,not classifiable,no,yes
+Missouri,,44.3,not classifiable,no,no
+Montana,95.1,57.3,high rolls / high ballots,no,no
+Nebraska,85.7,52.0,low rolls / high ballots,no,no
+Nevada,87.2,,not classifiable,no,yes
+New Hampshire,,57.3,not classifiable,no,no
+New Jersey,92.7,40.1,high rolls / low ballots,no,no
+New Mexico,89.7,44.6,high rolls / low ballots,no,no
+New York,84.4,37.9,low rolls / low ballots,no,no
+North Carolina,96.7,51.8,high rolls / high ballots,no,no
+North Dakota,,40.1,not classifiable,no,no
+Ohio,86.7,50.6,low rolls / high ballots,no,no
+Oklahoma,81.6,37.2,low rolls / low ballots,no,no
+Oregon,92.2,56.1,high rolls / high ballots,no,no
+Pennsylvania,87.4,48.2,low rolls / high ballots,no,no
+Rhode Island,89.6,40.4,high rolls / low ballots,no,no
+South Carolina,85.6,51.1,low rolls / high ballots,no,no
+South Dakota,93.9,46.4,high rolls / low ballots,no,no
+Tennessee,88.7,39.0,high rolls / low ballots,no,no
+Texas,87.1,45.3,low rolls / low ballots,no,no
+Utah,76.8,,not classifiable,no,yes
+Vermont,96.6,59.2,high rolls / high ballots,no,no
+Virginia,96.3,53.2,high rolls / high ballots,no,no
+Washington,85.8,53.6,low rolls / high ballots,no,no
+West Virginia,84.5,32.4,low rolls / low ballots,no,no
+Wisconsin,78.8,57.7,low rolls / high ballots,no,no
+Wyoming,63.7,43.4,low rolls / low ballots,no,no
