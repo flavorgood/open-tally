@@ -17,6 +17,24 @@ GREEN, YELLOW, ORANGE, GREY = "#15803d", "#eab308", "#ea580c", "#9ca3af"
 VIOLET = "#7C3AED"
 PL_URL = ""  # set in main() from citations.csv
 
+# The Election Day vs today spine lives in the tracker folder: the
+# daily updates land there, so every generation first refreshes the
+# spine inputs in data/ from it. Where the tracker folder does not
+# exist (a host building from this repo alone), the copies in data/
+# are the record and nothing is refreshed.
+TRACKER = os.path.join(os.path.dirname(BASE), "economic-tracker")
+SPINE_FILES = ["RECORD-LOG.md", "BASELINE-2026-11-03.md",
+               "state-factors-expanded.csv", "state-claims-weeks.csv",
+               "gas-aaa-2026-11-03.csv", "gas-aaa-2026-11-05.csv",
+               "gas-aaa-2026-11-07.csv"]
+
+def refresh_spine():
+    if not os.path.isdir(TRACKER): return
+    for fn in SPINE_FILES:
+        src = os.path.join(TRACKER, fn)
+        if os.path.exists(src):
+            shutil.copy(src, os.path.join(SRC, fn))
+
 STATE_ABBR = {}  # filled below
 STATES_ORDER = []  # 51 names, alphabetical as in turnout CSV
 
@@ -181,6 +199,14 @@ def load():
         d["econ"] = {r["state"]: r for r in csv.DictReader(f)}
     with open(f"{SRC}/cvap-state.csv") as f:
         d["cvap_state"] = {r["state"]: r for r in csv.DictReader(f)}
+    # Census Bureau population estimates, Vintage 2025 (July 1, 2025):
+    # a second, newer denominator set that sits beside the 2020 counts —
+    # never blended with them, and never in place of the citizen-adult
+    # (CVAP) figures, which are a different basis entirely.
+    with open(f"{SRC}/census-estimates-state.csv") as f:
+        d["est_state"] = {r["state"]: r for r in csv.DictReader(f)}
+    with open(f"{SRC}/census-estimates-county.csv") as f:
+        d["est_county_rows"] = list(csv.DictReader(f))
     with open(f"{SRC}/state-roll-integrity-cvap.csv") as f:
         d["cvap_roll"] = {r["state"]: r for r in csv.DictReader(f)}
     with open(f"{SRC}/cvap-county.csv") as f:
@@ -231,6 +257,7 @@ def load():
                     out[r["state"]] = fnum(r["price"])
         return out
     d["gas3"] = _gas("gas-aaa-2026-11-03.csv")
+    d["gas5"] = _gas("gas-aaa-2026-11-05.csv")
     d["gas7"] = _gas("gas-aaa-2026-11-07.csv")
     gov, in_spot = {}, False
     for ln in d["baseline_text"].splitlines():
@@ -258,6 +285,8 @@ def build_states(d):
         vap = d["vap"][name]
         reg = num(t["registered_voters"])
         bal = num(t["ballots_cast"])
+        est = d["est_state"].get(name)
+        est_adults = num(est["adults_18plus"]) if est else None
         states[name] = {
             "name": name, "slug": slugify(name),
             "registered": reg, "ballots": bal,
@@ -269,6 +298,12 @@ def build_states(d):
             "pct_census_ballots": fnum(c["pct_census_ballots"]),
             "reg_pct_adults": (round(reg / vap * 100, 1) if reg and vap else None),
             "bal_pct_adults": (round(bal / vap * 100, 1) if bal and vap else None),
+            "est_adults": est_adults,
+            "est_pop": (num(est["total_population"]) if est else None),
+            "est_src": (est["source"] if est else ""),
+            "est_url": (est["source_url"] if est else ""),
+            "reg_pct_est": (round(reg / est_adults * 100, 1) if reg and est_adults else None),
+            "bal_pct_est": (round(bal / est_adults * 100, 1) if bal and est_adults else None),
         }
     return states
 
@@ -697,6 +732,21 @@ def pct_cell_html(d, pct, citekey=None, bare_none=False):
                 f'<span class="flaglab">{esc(d["flag_rule"]["flag_label"])}</span>'), True
     return chip(pct) + linked(d, citekey, fmt_pct(pct)), False
 
+def est_num_html(v, url):
+    """A 2025-estimate figure, linked to its Census Bureau source file."""
+    if v is None or not url: return fmt_int(v)
+    return f'<a class="cite" href="{esc(url)}">{fmt_int(v)}</a>'
+
+def est_pct_html(pct, url):
+    """A share of adults on the 2025-estimate base. A different
+    denominator, not two figures for the same measure disagreeing:
+    banded normally (orange over 100), never violet, never the
+    flag rule."""
+    if pct is None: return chip(None) + fmt_pct(None)
+    txt = fmt_pct(pct)
+    if url: txt = f'<a class="cite" href="{esc(url)}">{txt}</a>'
+    return chip(pct) + txt
+
 def _detail_numbers(detail):
     """Integers of 10,000+ in a flag detail, in order (the totals)."""
     return [int(x.replace(",", "")) for x in re.findall(r"\d[\d,]*", detail)
@@ -757,6 +807,16 @@ def over_pop(d, counties_by_state):
                             "reg": reg, "pop": pop})
         if lst: out[st] = lst
     d["over_pop"] = out
+    return out
+
+def over_line_counts(d):
+    """{state: (counties over 100% of adults, counties measured)} —
+    recomputed from the county roll file's rows on every build."""
+    out = {}
+    for r in d["roll_co_de"]:
+        x, y = out.get(r["state"], (0, 0))
+        pct = fnum(r["registered_pct_of_vap"])
+        out[r["state"]] = (x + (1 if (pct or 0) > 100 else 0), y + 1)
     return out
 
 def _link_state(text, st, states):
@@ -1039,12 +1099,21 @@ def national_ed_table(d):
     gdp = find(r"(\+[\d.]+)% advance Q3", base)
     row("Real GDP growth", (gdp + "%") if gdp else None,
         "Q3 2026, first estimate", None, "", "—")
+    # S&P 500: the tracker record carries the move since Election Day
+    # and Friday's close, not an Election Day close of its own — the
+    # baseline cell stays empty rather than backing a close out of
+    # the percentage.
+    rows.append(("S&P 500", "—", "7,376.86 (Fri, Nov 6 close)",
+                 f'<span style="color:{ORANGE}">−2.54% since '
+                 f'Election Day</span>'))
     out = ["<table><tr><th class='l'>Measure</th><th>Election Day</th>"
            "<th>Today</th><th>Change</th></tr>"]
     for label, b, c, chg in rows:
         out.append(f'<tr><td class="l">{esc(label)}</td><td>{esc(b)}</td>'
                    f'<td>{esc(c)}</td><td>{chg}</td></tr>')
     out.append("</table>")
+    out.append('<p class="src">S&amp;P 500 — the tracker record '
+               '(CNBC market data).</p>')
     return "\n".join(out)
 
 def fmt_factor(r):
@@ -1094,6 +1163,17 @@ def state_ed_html(d, s):
                f'<span style="color:{GREEN if diff < 0 else ORANGE}">{gtxt}</span>')
         rows.append(("Gas, regular", f"${g3:.2f} (Nov 3)",
                      f"${g7:.2f} (Nov 7)", chg))
+    # the per-state pair every state has: Nov 5 to Nov 7 (AAA). The
+    # Nov 5 figure is the state baseline — it is never labeled
+    # Election Day; only the four states above have a Nov 3 figure.
+    g5, g7b = d["gas5"].get(st), d["gas7"].get(st)
+    if g5 is not None and g7b is not None:
+        diff = round(g7b - g5, 2)
+        gtxt = (("+$" if diff > 0 else "−$") + f"{abs(diff):.2f}")
+        chg = ("→ No change" if diff == 0 else
+               f'<span style="color:{GREEN if diff < 0 else ORANGE}">{gtxt}</span>')
+        rows.append(("Gas, regular — from Nov 5", f"${g5:.2f} (Nov 5)",
+                     f"${g7b:.2f} (Nov 7)", chg))
     fac = d["factors"].get(st, {})
     for fname in ("Average weekly wage", "New business applications",
                   "Building permits", "Labor force participation rate",
@@ -1147,18 +1227,18 @@ def state_extra_sections(d, s):
             if act and tot and s["registered"] == act and tot > act:
                 out.append(f'<p class="src">The registration number at the '
                            f'top of this page counts active voters only; '
-                           f'the full roll is {tot:,}.</p>')
+                           f'the full voter list is {tot:,}.</p>')
             out.append(f'<p class="src">Source: {esc(sr["source"])}</p>')
     rm = d["removals"].get(st)
     if rm and num(rm["removed_total"]):
         rt = num(rm["removed_total"])
         out.append("<h2>Removals</h2><table>")
-        out.append(f'<tr><td class="l">Removed from the rolls</td><td>{fmt_int(rt)}</td></tr>')
+        out.append(f'<tr><td class="l">Removed from the voter list</td><td>{fmt_int(rt)}</td></tr>')
         out.append(f'<tr><td class="l">Period</td><td class="l">'
                    f'{fmt_date(rm["period_start"])} – {fmt_date(rm["period_end"])}</td></tr>')
         if s["registered"]:
             share = rt / s["registered"] * 100
-            out.append(f'<tr><td class="l">Share of the roll</td>'
+            out.append(f'<tr><td class="l">Share of the voter list</td>'
                        f'<td>{chip(share)}{share:.1f}%</td></tr>')
         for lab, col in (("Moved", "removed_moved"), ("Deceased", "removed_deceased"),
                          ("Felony", "removed_felony"), ("Duplicate", "removed_duplicate"),
@@ -1169,7 +1249,7 @@ def state_extra_sections(d, s):
             if v is not None:
                 out.append(f'<tr><td class="l">{lab}</td><td>{fmt_int(v)}</td></tr>')
         if num(rm["added_total"]):
-            out.append(f'<tr><td class="l">Added to the rolls</td>'
+            out.append(f'<tr><td class="l">Added to the voter list</td>'
                        f'<td>{fmt_int(num(rm["added_total"]))}</td></tr>')
         if num(rm["confirmation_notices_mailed"]):
             out.append(f'<tr><td class="l">Confirmation notices mailed</td>'
@@ -1286,6 +1366,19 @@ def front_adds_lines(d, states, counties_by_state):
         if row:
             snt = esc(flag_sentence(d, row, states[st]))
             lines.append(_link_state(snt, st, states))
+    # ballots published, no registration total published
+    mi = states.get("Michigan")
+    if mi and mi["registered"] is None and mi["ballots"] is not None:
+        lines.append(f'<a href="states/{mi["slug"]}/index.html">Michigan</a>'
+                     f' — {mi["ballots"]:,} ballots counted so far. '
+                     f'No registration total has been published.')
+    # states whose voter lists outnumber their adults (2020 counts)
+    for nm in sorted(states):
+        s = states[nm]
+        if (s["reg_pct_adults"] or 0) > 100:
+            lines.append(f'<a href="states/{s["slug"]}/index.html">'
+                         f'{esc(nm)}</a> — {s["registered"]:,} registered '
+                         f'voters, {s["vap"]:,} adults.')
     # a published figure that counts active voters only, full roll larger
     for st, sr in d["splits"].items():
         if st not in states: continue
@@ -1294,7 +1387,7 @@ def front_adds_lines(d, states, counties_by_state):
             lines.append(f'<a href="states/{states[st]["slug"]}/index.html">'
                          f'{esc(st)}</a> — the published registration number '
                          f'({act:,}) counts active voters only. The full '
-                         f'roll is {tot:,}.')
+                         f'voter list is {tot:,}.')
     # largest ballots change against 2022 in the history comparison
     cands = []
     for r in d["anoms"]:
@@ -1312,6 +1405,28 @@ def front_adds_lines(d, states, counties_by_state):
                      f'{esc(st)}</a> — {b26:,} ballots in 2026; {b22:,} in '
                      f'2022. Registered voters: {r26:,} in 2026; {r22:,} '
                      f'in 2022.')
+    # Minnesota's voter list against 2022, from the history comparison
+    for r in d["anoms"]:
+        if r["state"] == "Minnesota" and r["measure"] == "registered_voters":
+            r26, r22 = _first_int(r["value_2026"]), _first_int(r["value_2022"])
+            if r26 and r22:
+                lines.append(f'<a href="states/{states["Minnesota"]["slug"]}/index.html">'
+                             f'Minnesota</a> — registered voters: {r26:,} '
+                             f'in 2026; {r22:,} in 2022.')
+    # West Virginia's ballots against both past cycles, same comparison
+    for r in d["anoms"]:
+        if r["state"] == "West Virginia" and r["measure"] == "ballots":
+            b26 = _first_int(r["value_2026"]); b22 = _first_int(r["value_2022"])
+            b18 = _first_int(r["value_2018"])
+            wr22 = next((num(h["registered_voters"]) for h in d["hist_states"]
+                         if h["state"] == "West Virginia"
+                         and h["election_year"] == "2022"), None)
+            wr26 = states["West Virginia"]["registered"]
+            if b26 and b22 and b18 and wr26 and wr22:
+                lines.append(f'<a href="states/{states["West Virginia"]["slug"]}/index.html">'
+                             f'West Virginia</a> — ballots: {b26:,} in 2026; '
+                             f'{b22:,} in 2022; {b18:,} in 2018. Registered '
+                             f'voters: {wr26:,} in 2026; {wr22:,} in 2022.')
     # a count its own office has not finished
     row = d["state_flags"].get(("California", "ballots_cast"))
     if row:
@@ -1476,6 +1591,15 @@ def build_front(d, states, counties_by_state):
     body.append('<p class="small">National numbers as known on the day.</p>')
     body.append(past_days_table_html(d))
     adds = front_adds_lines(d, states, counties_by_state)
+    # the over-the-line county count is a headline figure: recomputed
+    # from the county roll file on every build, in the flag treatment
+    olc = over_line_counts(d)
+    n_over = sum(x for x, _ in olc.values())
+    n_meas = sum(y for _, y in olc.values())
+    if n_over:
+        body.append(f'<div class="flags"><div>{n_over} of the {n_meas} '
+                    f'counties measured have more registered voters than '
+                    f'adults who live there.</div></div>')
     if adds:
         body.append('<h2>What doesn\'t add up</h2><div class="adds">')
         for ln in adds: body.append(f"<div>{ln}</div>")
@@ -1483,6 +1607,7 @@ def build_front(d, states, counties_by_state):
     # states as simple linked rows (the full table lives on the Data page)
     body.append('<h2 id="states">Every state</h2>')
     body.append("<table><tr><th class='l'>State</th><th>Registered</th>"
+                "<th>Ballots cast</th><th>Adults (2020)</th>"
                 "<th>Ballots % of adults</th></tr>")
     for name in sorted(states):
         s = states[name]
@@ -1492,9 +1617,15 @@ def build_front(d, states, counties_by_state):
                                   linked(d, rk, fmt_int(s["registered"])))
         else:
             reg_cell = "No registration" if name == "North Dakota" else "—"
+        if s["ballots"] is not None:
+            bal_cell, _ = flagged(d, name, "ballots_cast",
+                                  linked(d, bk, fmt_int(s["ballots"])))
+        else:
+            bal_cell = fmt_int(s["ballots"])
         body.append(
             f'<tr><td class="l"><a href="states/{s["slug"]}/index.html">{esc(name)}</a></td>'
-            f'<td>{reg_cell}</td>'
+            f'<td>{reg_cell}</td><td>{bal_cell}</td>'
+            f'<td>{linked(d, "census-pl-94171", fmt_int(s["vap"]))}</td>'
             f'<td>{linked(d, bk, fmt_pct(s["bal_pct_adults"]))}</td></tr>')
     body.append("</table>")
     # rankings by ballots % of adults — highest 10 and lowest 10
@@ -1608,10 +1739,13 @@ def build_state_pages(d, states, counties_by_state, county_info):
         body.append("<table>"
             f'<tr><td class="l">Registered voters</td><td>{reg_html}</td></tr>'
             f'<tr><td class="l">Adults (2020)</td><td>{linked(d, "census-pl-94171", fmt_int(s["vap"]))}</td></tr>'
+            f'<tr><td class="l">Adults (2025 estimate)</td><td>{est_num_html(s["est_adults"], s["est_url"])}</td></tr>'
             f'<tr><td class="l">Registered % of adults</td><td>{pct_html}</td></tr>'
+            f'<tr><td class="l">Registered % of adults (2025 estimate)</td><td>{est_pct_html(s["reg_pct_est"], s["est_url"])}</td></tr>'
             + cvap_rows +
             f'<tr><td class="l">Ballots cast</td><td>{bal_html}</td></tr>'
             f'<tr><td class="l">Ballots % of adults</td><td>{chip(s["bal_pct_adults"])}{linked(d, bk, fmt_pct(s["bal_pct_adults"]))}</td></tr>'
+            f'<tr><td class="l">Ballots % of adults (2025 estimate)</td><td>{est_pct_html(s["bal_pct_est"], s["est_url"])}</td></tr>'
             f'<tr><td class="l">Turnout % of registered</td><td>{linked(d, bk, fmt_pct(s["turnout_pct"]))}</td></tr>'
             f'<tr><td class="l">Population (2020 Census)</td><td>{linked(d, "census-2020-apportionment", fmt_int(s["census_pop"]))}</td></tr>'
             f'<tr><td class="l">Registered % of population</td><td>{chip(s["pct_census_registered"])}{linked(d, rk, fmt_pct(s["pct_census_registered"]))}</td></tr>'
@@ -1622,6 +1756,9 @@ def build_state_pages(d, states, counties_by_state, county_info):
         if cvr:
             body.append(f'<p class="src">Citizen adults — '
                         f'{esc(d["cvap_state"][name]["source"])}.</p>')
+        if s["est_adults"]:
+            body.append(f'<p class="src">Adults (2025 estimate) — '
+                        f'{esc(s["est_src"])}.</p>')
         cite_keys = []
         for k in (rk, bk, "census-pl-94171", "census-2020-apportionment"):
             if k and k not in cite_keys: cite_keys.append(k)
@@ -1652,7 +1789,9 @@ def build_state_pages(d, states, counties_by_state, county_info):
                 body.append(ANOMS_SRC)
         # counties
         body.append("<h2>Counties</h2>")
+        est_any = any(d["est_by_county"].get((name, c["_nkey"])) for c in clist)
         body.append("<table><tr><th class='l'>County</th><th>Registered</th><th>Adults (2020)</th><th>Registered % of adults</th>"
+                    + ("<th>Adults (2025 estimate)</th><th>Registered % of adults (2025 estimate)</th>" if est_any else "")
                     + ("<th>Registered % of citizen adults</th>" if has_roll else "")
                     + "</tr>")
         ck = county_reg_key(d, name)
@@ -1671,9 +1810,17 @@ def build_state_pages(d, states, counties_by_state, county_info):
                 cpct = round(reg / cv * 100, 1) if (reg and cv) else None
                 cc_, _r = pct_cell_html(d, cpct, None)
                 cvap_cell = f'<td>{cc_}</td>'
+            est_cell = ""
+            if est_any:
+                er = d["est_by_county"].get(key)
+                ea = num(er["adults_18plus"]) if er else None
+                epct = round(reg / ea * 100, 1) if (reg and ea) else None
+                eurl = er["source_url"] if er else ""
+                est_cell = (f'<td>{est_num_html(ea, eurl)}</td>'
+                            f'<td>{est_pct_html(epct, eurl)}</td>')
             body.append(f'<tr><td class="l"><a href="../../counties/{s["slug"]}/{c["_slug"]}/index.html">{esc(c["county_name"])}</a></td>'
                         f'<td>{reg_c}</td><td>{linked(d, "census-pl-94171", fmt_int(num(c["voting_age_population_2020"])))}</td>'
-                        f'<td>{pct_c}</td>{cvap_cell}</tr>')
+                        f'<td>{pct_c}</td>{est_cell}{cvap_cell}</tr>')
         body.append("</table>")
         if name == "Alaska":
             body.append("<h2>House Districts</h2>")
@@ -1696,12 +1843,30 @@ def build_state_pages(d, states, counties_by_state, county_info):
         extra = state_extra_sections(d, s)
         if extra: body.append(extra)
         sents = [flag_sentence(d, fr, s) for fr in fired]
+        # the over-the-line county count is a headline figure on every
+        # measured state's page: X of Y counties (districts in Alaska)
+        precise = False
+        if name == "Alaska":
+            ax = sum(1 for r in d["roll_ak"]
+                     if (fnum(r["registered_pct_of_vap"]) or 0) > 100)
+            if ax:
+                sents.insert(0, f"{ax} of {len(d['roll_ak'])} House "
+                                f"districts in Alaska have more registered "
+                                f"voters than adults who live there.")
+                precise = True
+        else:
+            olc = over_line_counts(d).get(name)
+            if olc and olc[0]:
+                sents.insert(0, f"{olc[0]} of {olc[1]} counties in {name} "
+                                f"have more registered voters than adults "
+                                f"who live there.")
+                precise = True
         if pct_rule or county_rule:
             if (s["reg_pct_adults"] or 0) > 100:
                 sents.append(f"{name} has more registered voters than adults "
                              f"who live there: {s['registered']:,} registered "
                              f"voters, {s['vap']:,} adults.")
-            else:
+            elif not precise:
                 sents.append(f"Some counties in {name} have more registered "
                              f"voters than adults who live there.")
         fb = flags_block(sents)
@@ -1723,13 +1888,24 @@ def build_county_pages(d, states, counties_by_state):
             ck = county_reg_key(d, name)
             reg_c = linked(d, ck, fmt_int(reg)) if reg is not None else fmt_int(reg)
             pct_c, fired_rule = pct_cell_html(d, pct, ck, bare_none=True)
+            er = d["est_by_county"].get(key)
+            ea = num(er["adults_18plus"]) if er else None
+            epop = num(er["total_population"]) if er else None
+            epct = round(reg / ea * 100, 1) if (reg and ea) else None
+            tbl = [f'<tr><td class="l">State</td><td class="l"><a href="../../../states/{s["slug"]}/index.html">{esc(name)}</a></td></tr>',
+                   f'<tr><td class="l">Population (2020)</td><td>{linked(d, "census-pl-94171", fmt_int(num(c["total_population_2020"])))}</td></tr>']
+            if er:
+                tbl.append(f'<tr><td class="l">Population (2025 estimate)</td><td>{est_num_html(epop, er["source_url"])}</td></tr>')
+            tbl.append(f'<tr><td class="l">Adults (2020)</td><td>{linked(d, "census-pl-94171", fmt_int(num(c["voting_age_population_2020"])))}</td></tr>')
+            if er:
+                tbl.append(f'<tr><td class="l">Adults (2025 estimate)</td><td>{est_num_html(ea, er["source_url"])}</td></tr>')
+            tbl.append(f'<tr><td class="l">Registered voters</td><td>{reg_c}</td></tr>')
+            tbl.append(f'<tr><td class="l">Registered % of adults</td><td>{pct_c}</td></tr>')
+            if er and reg is not None:
+                tbl.append(f'<tr><td class="l">Registered % of adults (2025 estimate)</td><td>{est_pct_html(epct, er["source_url"])}</td></tr>')
             body = [f'<div class="crumb"><a href="../../../index.html">Open Tally</a> · <a href="../../../states/{s["slug"]}/index.html">{esc(name)}</a></div>',
                     f"<h1>{esc(c['county_name'])}</h1>", "<h2>Election Day</h2>", "<table>",
-                    f'<tr><td class="l">State</td><td class="l"><a href="../../../states/{s["slug"]}/index.html">{esc(name)}</a></td></tr>',
-                    f'<tr><td class="l">Population (2020)</td><td>{linked(d, "census-pl-94171", fmt_int(num(c["total_population_2020"])))}</td></tr>',
-                    f'<tr><td class="l">Adults (2020)</td><td>{linked(d, "census-pl-94171", fmt_int(num(c["voting_age_population_2020"])))}</td></tr>',
-                    f'<tr><td class="l">Registered voters</td><td>{reg_c}</td></tr>',
-                    f'<tr><td class="l">Registered % of adults</td><td>{pct_c}</td></tr>',
+                    *tbl,
                     "</table>"]
             mtb = d["mt_by_county"].get(key) if name == "Montana" else None
             if mtb is not None:
@@ -1761,6 +1937,8 @@ def build_county_pages(d, states, counties_by_state):
                     body.append(f'<p class="src">Citation: <a class="cite" href="{esc(cc["url"])}">'
                                 f'{esc(cc["publisher"])} — {esc(cc["title"])}</a></p>')
             body.append(f'<p class="src">Adults — <a class="cite" href="{esc(PL_URL)}">U.S. Census Bureau</a>, 2020 Census Redistricting Data (PL 94-171), Table P3</p>')
+            if er:
+                body.append(f'<p class="src">2025 estimates — {esc(er["source"])}.</p>')
             if reg and cv:
                 body.append(f'<p class="src">Citizen adults — {esc(d["cvap_county_src"])}</p>')
             if name == "Montana" and mtb is not None:
@@ -1792,7 +1970,8 @@ def build_county_pages(d, states, counties_by_state):
 def build_data(d, states):
     os.makedirs(os.path.join(OUT, "data"), exist_ok=True)
     csvs = ["turnout-2026-11-03.csv", "census-registered-2026.csv", "vap-2020-pl.csv",
-            "county-vap-2020.csv", "county-registered-all.csv",
+            "county-vap-2020.csv", "census-estimates-state.csv",
+            "census-estimates-county.csv", "county-registered-all.csv",
             "county-roll-integrity-all.csv", "ak-district-roll-integrity.csv",
             "turnout-history-national.csv", "turnout-history-states.csv",
             "cvap-state.csv", "cvap-county.csv", "state-roll-integrity-cvap.csv",
@@ -1802,7 +1981,11 @@ def build_data(d, states):
             "unofficial-vs-certified-2024.csv", "combination-quadrants.csv",
             "county-anomalies.csv", "county-ballots-mt.csv",
             "anomalies-vs-history.csv", "PAST-ELECTION-DAYS.md",
-            "state-economics-tracker.csv", "flags.csv"]
+            "state-economics-tracker.csv", "flags.csv",
+            "county-registered-co-de-ak.csv", "county-registered-co-de-ak.json",
+            "county-roll-integrity-co-de.csv", "county-roll-integrity-co-de.json",
+            "ak-district-vap-2020.csv", "ak-district-vap-2020.json",
+            "MANIFEST.md", "DEFINITIONS.md"]
     for fn in csvs:
         shutil.copy(os.path.join(SRC, fn), os.path.join(OUT, "data", fn))
     sj = []
@@ -1911,12 +2094,20 @@ def build_data(d, states):
                     f'<td>{fmt_int(num(r["margin_change"]))}</td></tr>')
     body.append("</table>")
     # rolls and ballots combined
-    body.append("<h2>Rolls and ballots, combined</h2>")
-    body.append("<table><tr><th class='l'>State</th><th>Registered % of adults</th>"
-                "<th>Ballots % of adults</th><th class='l'>Quadrant</th></tr>")
+    body.append("<h2>Voter lists and ballots, combined</h2>")
+    body.append("<table><tr><th class='l'>State</th><th>Registered</th>"
+                "<th>Adults (2020)</th><th>Registered % of adults</th>"
+                "<th>Ballots cast</th><th>Ballots % of adults</th>"
+                "<th class='l'>Quadrant</th></tr>")
     for r in d["quadrants"]:
+        s = states.get(r["state"])
+        cnt = (f'<td>{fmt_int(s["registered"])}</td>'
+               f'<td>{fmt_int(s["vap"])}</td>') if s else '<td>—</td><td>—</td>'
+        bal = f'<td>{fmt_int(s["ballots"])}</td>' if s else '<td>—</td>'
         body.append(f'<tr><td class="l">{esc(r["state"])}</td>'
+                    + cnt +
                     f'<td>{chip(fnum(r["registered_pct_of_vap"]))}{fmt_pct(fnum(r["registered_pct_of_vap"]))}</td>'
+                    + bal +
                     f'<td>{chip(fnum(r["ballots_pct_of_vap"]))}{fmt_pct(fnum(r["ballots_pct_of_vap"]))}</td>'
                     f'<td class="l">{esc(r["quadrant"])}</td></tr>')
     body.append("</table>")
@@ -1947,13 +2138,16 @@ def build_data(d, states):
 
 def build_definitions(d):
     defs = [
-        ("Registered voters", "People on a state's voter rolls."),
+        ("Registered voters", "People on a state's voter list."),
         ("Adults (2020)", "Residents age 18 and over — U.S. Census Bureau, 2020 Census."),
+        ("Adults (2025 estimate)", "The Census Bureau's estimate of residents aged 18 and over on July 1, 2025. Residents, not citizens."),
         ("Registered % of adults", "Registered voters ÷ adults."),
+        ("Registered % of adults (2025 estimate)", "Registered voters ÷ adults (2025 estimate)."),
         ("Citizen adults (2020–2024)", "Residents age 18 and over who are U.S. citizens — U.S. Census Bureau, Citizen Voting Age Population tabulation from the American Community Survey."),
         ("Registered % of citizen adults", "Registered voters ÷ citizen adults."),
         ("Ballots cast", "Ballots counted in the general election of November 3, 2026."),
         ("Ballots % of adults", "Ballots cast ÷ adults."),
+        ("Ballots % of adults (2025 estimate)", "Ballots cast ÷ adults (2025 estimate)."),
         ("Turnout % of registered", "Ballots cast ÷ registered voters."),
         ("Still counting", "The state has not published a final ballots-cast total."),
         ("No registration", "North Dakota does not register voters."),
@@ -1971,6 +2165,7 @@ def build_definitions(d):
 
 def main():
     global PL_URL
+    refresh_spine()
     fetch_maps()
     d = load()
     PL_URL = d["citations"]["census-pl-94171"]["url"]
@@ -1994,6 +2189,13 @@ def main():
                          for r in d["cvap_county"]}
     d["cvap_county_src"] = d["cvap_county"][0]["source"] if d["cvap_county"] else ""
     d["hist_by_fips"] = {(r["state"], r["fips"]): r for r in d["county_hist"]}
+    # 2025 population estimates join on the same normalized county
+    # names. Connecticut is excluded outright: its estimates are the
+    # 9 planning regions, not the 8 historic counties the site uses,
+    # and the two geographies are never joined (unknown stays unknown).
+    d["est_by_county"] = resolve_county_rows(
+        [r for r in d["est_county_rows"] if r["state"] != "Connecticut"],
+        counties_by_state, "county")
     mt, mt_valid = {}, {c["_nkey"] for c in counties_by_state.get("Montana", [])}
     for r in d["mt_ballots"]:
         for k in county_key_variants(r["county"]):

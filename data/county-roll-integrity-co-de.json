@@ -1,0 +1,672 @@
+[
+ {
+  "state": "Colorado",
+  "county": "Adams",
+  "registered_voters": 365272,
+  "voting_age_population_2020": 386271,
+  "registered_pct_of_vap": 94.6,
+  "growth_needed_pct_to_reach_100": null,
+  "registration_basis": "Total registered = active + inactive (excludes preregistrants)",
+  "registration_date": "2026-11-01"
+ },
+ {
+  "state": "Colorado",
+  "county": "Alamosa",
+  "registered_voters": 11901,
+  "voting_age_population_2020": 12544,
+  "registered_pct_of_vap": 94.9,
+  "growth_needed_pct_to_reach_100": null,
+  "registration_basis": "Total registered = active + inactive (excludes preregistrants)",
+  "registration_date": "2026-11-01"
+ },
+ {
+  "state": "Colorado",
+  "county": "Arapahoe",
+  "registered_voters": 479295,
+  "voting_age_population_2020": 501680,
+  "registered_pct_of_vap": 95.5,
+  "growth_needed_pct_to_reach_100": null,
+  "registration_basis": "Total registered = active + inactive (excludes preregistrants)",
+  "registration_date": "2026-11-01"
+ },
+ {
+  "state": "Colorado",
+  "county": "Archuleta",
+  "registered_voters": 13625,
+  "voting_age_population_2020": 10948,
+  "registered_pct_of_vap": 124.5,
+  "growth_needed_pct_to_reach_100": 24.5,
+  "registration_basis": "Total registered = active + inactive (excludes preregistrants)",
+  "registration_date": "2026-11-01"
+ },
+ {
+  "state": "Colorado",
+  "county": "Baca",
+  "registered_voters": 2869,
+  "voting_age_population_2020": 2753,
+  "registered_pct_of_vap": 104.2,
+  "growth_needed_pct_to_reach_100": 4.2,
+  "registration_basis": "Total registered = active + inactive (excludes preregistrants)",
+  "registration_date": "2026-11-01"
+ },
+ {
+  "state": "Colorado",
+  "county": "Bent",
+  "registered_voters": 3360,
+  "voting_age_population_2020": 4745,
+  "registered_pct_of_vap": 70.8,
+  "growth_needed_pct_to_reach_100": null,
+  "registration_basis": "Total registered = active + inactive (excludes preregistrants)",
+  "registration_date": "2026-11-01"
+ },
+ {
+  "state": "Colorado",
+  "county": "Boulder",
+  "registered_voters": 261692,
+  "voting_age_population_2020": 268640,
+  "registered_pct_of_vap": 97.4,
+  "growth_needed_pct_to_reach_100": null,
+  "registration_basis": "Total registered = active + inactive (excludes preregistrants)",
+  "registration_date": "2026-11-01"
+ },
+ {
+  "state": "Colorado",
+  "county": "Broomfield",
+  "registered_voters": 64515,
+  "voting_age_population_2020": 57916,
+  "registered_pct_of_vap": 111.4,
+  "growth_needed_pct_to_reach_100": 11.4,
+  "registration_basis": "Total registered = active + inactive (excludes preregistrants)",
+  "registration_date": "2026-11-01"
+ },
+ {
+  "state": "Colorado",
+  "county": "Chaffee",
+  "registered_voters": 19470,
+  "voting_age_population_2020": 16471,
+  "registered_pct_of_vap": 118.2,
+  "growth_needed_pct_to_reach_100": 18.2,
+  "registration_basis": "Total registered = active + inactive (excludes preregistrants)",
+  "registration_date": "2026-11-01"
+ },
+ {
+  "state": "Colorado",
+  "county": "Cheyenne",
+  "registered_voters": 1369,
+  "voting_age_population_2020": 1338,
+  "registered_pct_of_vap": 102.3,
+  "growth_needed_pct_to_reach_100": 2.3,
+  "registration_basis": "Total registered = active + inactive (excludes preregistrants)",
+  "registration_date": "2026-11-01"
+ },
+ {
+  "state": "Colorado",
+  "county": "Clear Creek",
+  "registered_voters": 8550,
+  "voting_age_population_2020": 8011,
+  "registered_pct_of_vap": 106.7,
+  "growth_needed_pct_to_reach_100": 6.7,
+  "registration_basis": "Total registered = active + inactive (excludes preregistrants)",
+  "registration_date": "2026-11-01"
+ },
+ {
+  "state": "Colorado",
+  "county": "Conejos",
+  "registered_voters": 5869,
+  "voting_age_population_2020": 5515,
+  "registered_pct_of_vap": 106.4,
+  "growth_needed_pct_to_reach_100": 6.4,
+  "registration_basis": "Total registered = active + inactive (excludes preregistrants)",
+  "registration_date": "2026-11-01"
+ },
+ {
+  "state": "Colorado",
+  "county": "Costilla",
+  "registered_voters": 3506,
+  "voting_age_population_2020": 2879,
+  "registered_pct_of_vap": 121.8,
+  "growth_needed_pct_to_reach_100": 21.8,
+  "registration_basis": "Total registered = active + inactive (excludes preregistrants)",
+  "registration_date": "2026-11-01"
+ },
+ {
+  "state": "Colorado",
+  "county": "Crowley",
+  "registered_voters": 2483,
+  "voting_age_population_2020": 5284,
+  "registered_pct_of_vap": 47.0,
+  "growth_needed_pct_to_reach_100": null,
+  "registration_basis": "Total registered = active + inactive (excludes preregistrants)",
+  "registration_date": "2026-11-01"
+ },
+ {
+  "state": "Colorado",
+  "county": "Custer",
+  "registered_voters": 5207,
+  "voting_age_population_2020": 3996,
+  "registered_pct_of_vap": 130.3,
+  "growth_needed_pct_to_reach_100": 30.3,
+  "registration_basis": "Total registered = active + inactive (excludes preregistrants)",
+  "registration_date": "2026-11-01"
+ },
+ {
+  "state": "Colorado",
+  "county": "Delta",
+  "registered_voters": 26519,
+  "voting_age_population_2020": 24993,
+  "registered_pct_of_vap": 106.1,
+  "growth_needed_pct_to_reach_100": 6.1,
+  "registration_basis": "Total registered = active + inactive (excludes preregistrants)",
+  "registration_date": "2026-11-01"
+ },
+ {
+  "state": "Colorado",
+  "county": "Denver",
+  "registered_voters": 560602,
+  "voting_age_population_2020": 581062,
+  "registered_pct_of_vap": 96.5,
+  "growth_needed_pct_to_reach_100": null,
+  "registration_basis": "Total registered = active + inactive (excludes preregistrants)",
+  "registration_date": "2026-11-01"
+ },
+ {
+  "state": "Colorado",
+  "county": "Dolores",
+  "registered_voters": 1888,
+  "voting_age_population_2020": 1924,
+  "registered_pct_of_vap": 98.1,
+  "growth_needed_pct_to_reach_100": null,
+  "registration_basis": "Total registered = active + inactive (excludes preregistrants)",
+  "registration_date": "2026-11-01"
+ },
+ {
+  "state": "Colorado",
+  "county": "Douglas",
+  "registered_voters": 325978,
+  "voting_age_population_2020": 266006,
+  "registered_pct_of_vap": 122.5,
+  "growth_needed_pct_to_reach_100": 22.5,
+  "registration_basis": "Total registered = active + inactive (excludes preregistrants)",
+  "registration_date": "2026-11-01"
+ },
+ {
+  "state": "Colorado",
+  "county": "Eagle",
+  "registered_voters": 40019,
+  "voting_age_population_2020": 43263,
+  "registered_pct_of_vap": 92.5,
+  "growth_needed_pct_to_reach_100": null,
+  "registration_basis": "Total registered = active + inactive (excludes preregistrants)",
+  "registration_date": "2026-11-01"
+ },
+ {
+  "state": "Colorado",
+  "county": "El Paso",
+  "registered_voters": 600631,
+  "voting_age_population_2020": 558711,
+  "registered_pct_of_vap": 107.5,
+  "growth_needed_pct_to_reach_100": 7.5,
+  "registration_basis": "Total registered = active + inactive (excludes preregistrants)",
+  "registration_date": "2026-11-01"
+ },
+ {
+  "state": "Colorado",
+  "county": "Elbert",
+  "registered_voters": 27408,
+  "voting_age_population_2020": 20395,
+  "registered_pct_of_vap": 134.4,
+  "growth_needed_pct_to_reach_100": 34.4,
+  "registration_basis": "Total registered = active + inactive (excludes preregistrants)",
+  "registration_date": "2026-11-01"
+ },
+ {
+  "state": "Colorado",
+  "county": "Fremont",
+  "registered_voters": 35550,
+  "voting_age_population_2020": 41204,
+  "registered_pct_of_vap": 86.3,
+  "growth_needed_pct_to_reach_100": null,
+  "registration_basis": "Total registered = active + inactive (excludes preregistrants)",
+  "registration_date": "2026-11-01"
+ },
+ {
+  "state": "Colorado",
+  "county": "Garfield",
+  "registered_voters": 43981,
+  "voting_age_population_2020": 46166,
+  "registered_pct_of_vap": 95.3,
+  "growth_needed_pct_to_reach_100": null,
+  "registration_basis": "Total registered = active + inactive (excludes preregistrants)",
+  "registration_date": "2026-11-01"
+ },
+ {
+  "state": "Colorado",
+  "county": "Gilpin",
+  "registered_voters": 5583,
+  "voting_age_population_2020": 4916,
+  "registered_pct_of_vap": 113.6,
+  "growth_needed_pct_to_reach_100": 13.6,
+  "registration_basis": "Total registered = active + inactive (excludes preregistrants)",
+  "registration_date": "2026-11-01"
+ },
+ {
+  "state": "Colorado",
+  "county": "Grand",
+  "registered_voters": 14262,
+  "voting_age_population_2020": 13090,
+  "registered_pct_of_vap": 109.0,
+  "growth_needed_pct_to_reach_100": 9.0,
+  "registration_basis": "Total registered = active + inactive (excludes preregistrants)",
+  "registration_date": "2026-11-01"
+ },
+ {
+  "state": "Colorado",
+  "county": "Gunnison",
+  "registered_voters": 14585,
+  "voting_age_population_2020": 14028,
+  "registered_pct_of_vap": 104.0,
+  "growth_needed_pct_to_reach_100": 4.0,
+  "registration_basis": "Total registered = active + inactive (excludes preregistrants)",
+  "registration_date": "2026-11-01"
+ },
+ {
+  "state": "Colorado",
+  "county": "Hinsdale",
+  "registered_voters": 740,
+  "voting_age_population_2020": 657,
+  "registered_pct_of_vap": 112.6,
+  "growth_needed_pct_to_reach_100": 12.6,
+  "registration_basis": "Total registered = active + inactive (excludes preregistrants)",
+  "registration_date": "2026-11-01"
+ },
+ {
+  "state": "Colorado",
+  "county": "Huerfano",
+  "registered_voters": 6291,
+  "voting_age_population_2020": 5722,
+  "registered_pct_of_vap": 109.9,
+  "growth_needed_pct_to_reach_100": 9.9,
+  "registration_basis": "Total registered = active + inactive (excludes preregistrants)",
+  "registration_date": "2026-11-01"
+ },
+ {
+  "state": "Colorado",
+  "county": "Jackson",
+  "registered_voters": 1201,
+  "voting_age_population_2020": 1137,
+  "registered_pct_of_vap": 105.6,
+  "growth_needed_pct_to_reach_100": 5.6,
+  "registration_basis": "Total registered = active + inactive (excludes preregistrants)",
+  "registration_date": "2026-11-01"
+ },
+ {
+  "state": "Colorado",
+  "county": "Jefferson",
+  "registered_voters": 479228,
+  "voting_age_population_2020": 469066,
+  "registered_pct_of_vap": 102.2,
+  "growth_needed_pct_to_reach_100": 2.2,
+  "registration_basis": "Total registered = active + inactive (excludes preregistrants)",
+  "registration_date": "2026-11-01"
+ },
+ {
+  "state": "Colorado",
+  "county": "Kiowa",
+  "registered_voters": 1108,
+  "voting_age_population_2020": 1099,
+  "registered_pct_of_vap": 100.8,
+  "growth_needed_pct_to_reach_100": 0.8,
+  "registration_basis": "Total registered = active + inactive (excludes preregistrants)",
+  "registration_date": "2026-11-01"
+ },
+ {
+  "state": "Colorado",
+  "county": "Kit Carson",
+  "registered_voters": 5289,
+  "voting_age_population_2020": 5305,
+  "registered_pct_of_vap": 99.7,
+  "growth_needed_pct_to_reach_100": null,
+  "registration_basis": "Total registered = active + inactive (excludes preregistrants)",
+  "registration_date": "2026-11-01"
+ },
+ {
+  "state": "Colorado",
+  "county": "La Plata",
+  "registered_voters": 50311,
+  "voting_age_population_2020": 45269,
+  "registered_pct_of_vap": 111.1,
+  "growth_needed_pct_to_reach_100": 11.1,
+  "registration_basis": "Total registered = active + inactive (excludes preregistrants)",
+  "registration_date": "2026-11-01"
+ },
+ {
+  "state": "Colorado",
+  "county": "Lake",
+  "registered_voters": 6190,
+  "voting_age_population_2020": 5884,
+  "registered_pct_of_vap": 105.2,
+  "growth_needed_pct_to_reach_100": 5.2,
+  "registration_basis": "Total registered = active + inactive (excludes preregistrants)",
+  "registration_date": "2026-11-01"
+ },
+ {
+  "state": "Colorado",
+  "county": "Larimer",
+  "registered_voters": 307285,
+  "voting_age_population_2020": 289333,
+  "registered_pct_of_vap": 106.2,
+  "growth_needed_pct_to_reach_100": 6.2,
+  "registration_basis": "Total registered = active + inactive (excludes preregistrants)",
+  "registration_date": "2026-11-01"
+ },
+ {
+  "state": "Colorado",
+  "county": "Las Animas",
+  "registered_voters": 11881,
+  "voting_age_population_2020": 12044,
+  "registered_pct_of_vap": 98.6,
+  "growth_needed_pct_to_reach_100": null,
+  "registration_basis": "Total registered = active + inactive (excludes preregistrants)",
+  "registration_date": "2026-11-01"
+ },
+ {
+  "state": "Colorado",
+  "county": "Lincoln",
+  "registered_voters": 3562,
+  "voting_age_population_2020": 4485,
+  "registered_pct_of_vap": 79.4,
+  "growth_needed_pct_to_reach_100": null,
+  "registration_basis": "Total registered = active + inactive (excludes preregistrants)",
+  "registration_date": "2026-11-01"
+ },
+ {
+  "state": "Colorado",
+  "county": "Logan",
+  "registered_voters": 14021,
+  "voting_age_population_2020": 17431,
+  "registered_pct_of_vap": 80.4,
+  "growth_needed_pct_to_reach_100": null,
+  "registration_basis": "Total registered = active + inactive (excludes preregistrants)",
+  "registration_date": "2026-11-01"
+ },
+ {
+  "state": "Colorado",
+  "county": "Mesa",
+  "registered_voters": 128746,
+  "voting_age_population_2020": 123055,
+  "registered_pct_of_vap": 104.6,
+  "growth_needed_pct_to_reach_100": 4.6,
+  "registration_basis": "Total registered = active + inactive (excludes preregistrants)",
+  "registration_date": "2026-11-01"
+ },
+ {
+  "state": "Colorado",
+  "county": "Mineral",
+  "registered_voters": 948,
+  "voting_age_population_2020": 773,
+  "registered_pct_of_vap": 122.6,
+  "growth_needed_pct_to_reach_100": 22.6,
+  "registration_basis": "Total registered = active + inactive (excludes preregistrants)",
+  "registration_date": "2026-11-01"
+ },
+ {
+  "state": "Colorado",
+  "county": "Moffat",
+  "registered_voters": 10249,
+  "voting_age_population_2020": 9993,
+  "registered_pct_of_vap": 102.6,
+  "growth_needed_pct_to_reach_100": 2.6,
+  "registration_basis": "Total registered = active + inactive (excludes preregistrants)",
+  "registration_date": "2026-11-01"
+ },
+ {
+  "state": "Colorado",
+  "county": "Montezuma",
+  "registered_voters": 22528,
+  "voting_age_population_2020": 20464,
+  "registered_pct_of_vap": 110.1,
+  "growth_needed_pct_to_reach_100": 10.1,
+  "registration_basis": "Total registered = active + inactive (excludes preregistrants)",
+  "registration_date": "2026-11-01"
+ },
+ {
+  "state": "Colorado",
+  "county": "Montrose",
+  "registered_voters": 35216,
+  "voting_age_population_2020": 33608,
+  "registered_pct_of_vap": 104.8,
+  "growth_needed_pct_to_reach_100": 4.8,
+  "registration_basis": "Total registered = active + inactive (excludes preregistrants)",
+  "registration_date": "2026-11-01"
+ },
+ {
+  "state": "Colorado",
+  "county": "Morgan",
+  "registered_voters": 20712,
+  "voting_age_population_2020": 21390,
+  "registered_pct_of_vap": 96.8,
+  "growth_needed_pct_to_reach_100": null,
+  "registration_basis": "Total registered = active + inactive (excludes preregistrants)",
+  "registration_date": "2026-11-01"
+ },
+ {
+  "state": "Colorado",
+  "county": "Otero",
+  "registered_voters": 13573,
+  "voting_age_population_2020": 14318,
+  "registered_pct_of_vap": 94.8,
+  "growth_needed_pct_to_reach_100": null,
+  "registration_basis": "Total registered = active + inactive (excludes preregistrants)",
+  "registration_date": "2026-11-01"
+ },
+ {
+  "state": "Colorado",
+  "county": "Ouray",
+  "registered_voters": 5192,
+  "voting_age_population_2020": 4183,
+  "registered_pct_of_vap": 124.1,
+  "growth_needed_pct_to_reach_100": 24.1,
+  "registration_basis": "Total registered = active + inactive (excludes preregistrants)",
+  "registration_date": "2026-11-01"
+ },
+ {
+  "state": "Colorado",
+  "county": "Park",
+  "registered_voters": 16792,
+  "voting_age_population_2020": 14595,
+  "registered_pct_of_vap": 115.1,
+  "growth_needed_pct_to_reach_100": 15.1,
+  "registration_basis": "Total registered = active + inactive (excludes preregistrants)",
+  "registration_date": "2026-11-01"
+ },
+ {
+  "state": "Colorado",
+  "county": "Phillips",
+  "registered_voters": 3163,
+  "voting_age_population_2020": 3401,
+  "registered_pct_of_vap": 93.0,
+  "growth_needed_pct_to_reach_100": null,
+  "registration_basis": "Total registered = active + inactive (excludes preregistrants)",
+  "registration_date": "2026-11-01"
+ },
+ {
+  "state": "Colorado",
+  "county": "Pitkin",
+  "registered_voters": 15264,
+  "voting_age_population_2020": 14481,
+  "registered_pct_of_vap": 105.4,
+  "growth_needed_pct_to_reach_100": 5.4,
+  "registration_basis": "Total registered = active + inactive (excludes preregistrants)",
+  "registration_date": "2026-11-01"
+ },
+ {
+  "state": "Colorado",
+  "county": "Prowers",
+  "registered_voters": 7891,
+  "voting_age_population_2020": 8960,
+  "registered_pct_of_vap": 88.1,
+  "growth_needed_pct_to_reach_100": null,
+  "registration_basis": "Total registered = active + inactive (excludes preregistrants)",
+  "registration_date": "2026-11-01"
+ },
+ {
+  "state": "Colorado",
+  "county": "Pueblo",
+  "registered_voters": 129354,
+  "voting_age_population_2020": 130863,
+  "registered_pct_of_vap": 98.8,
+  "growth_needed_pct_to_reach_100": null,
+  "registration_basis": "Total registered = active + inactive (excludes preregistrants)",
+  "registration_date": "2026-11-01"
+ },
+ {
+  "state": "Colorado",
+  "county": "Rio Blanco",
+  "registered_voters": 5080,
+  "voting_age_population_2020": 4889,
+  "registered_pct_of_vap": 103.9,
+  "growth_needed_pct_to_reach_100": 3.9,
+  "registration_basis": "Total registered = active + inactive (excludes preregistrants)",
+  "registration_date": "2026-11-01"
+ },
+ {
+  "state": "Colorado",
+  "county": "Rio Grande",
+  "registered_voters": 9285,
+  "voting_age_population_2020": 8959,
+  "registered_pct_of_vap": 103.6,
+  "growth_needed_pct_to_reach_100": 3.6,
+  "registration_basis": "Total registered = active + inactive (excludes preregistrants)",
+  "registration_date": "2026-11-01"
+ },
+ {
+  "state": "Colorado",
+  "county": "Routt",
+  "registered_voters": 22598,
+  "voting_age_population_2020": 20060,
+  "registered_pct_of_vap": 112.7,
+  "growth_needed_pct_to_reach_100": 12.7,
+  "registration_basis": "Total registered = active + inactive (excludes preregistrants)",
+  "registration_date": "2026-11-01"
+ },
+ {
+  "state": "Colorado",
+  "county": "Saguache",
+  "registered_voters": 5318,
+  "voting_age_population_2020": 5096,
+  "registered_pct_of_vap": 104.4,
+  "growth_needed_pct_to_reach_100": 4.4,
+  "registration_basis": "Total registered = active + inactive (excludes preregistrants)",
+  "registration_date": "2026-11-01"
+ },
+ {
+  "state": "Colorado",
+  "county": "San Juan",
+  "registered_voters": 868,
+  "voting_age_population_2020": 600,
+  "registered_pct_of_vap": 144.7,
+  "growth_needed_pct_to_reach_100": 44.7,
+  "registration_basis": "Total registered = active + inactive (excludes preregistrants)",
+  "registration_date": "2026-11-01"
+ },
+ {
+  "state": "Colorado",
+  "county": "San Miguel",
+  "registered_voters": 6848,
+  "voting_age_population_2020": 6515,
+  "registered_pct_of_vap": 105.1,
+  "growth_needed_pct_to_reach_100": 5.1,
+  "registration_basis": "Total registered = active + inactive (excludes preregistrants)",
+  "registration_date": "2026-11-01"
+ },
+ {
+  "state": "Colorado",
+  "county": "Sedgwick",
+  "registered_voters": 1907,
+  "voting_age_population_2020": 1920,
+  "registered_pct_of_vap": 99.3,
+  "growth_needed_pct_to_reach_100": null,
+  "registration_basis": "Total registered = active + inactive (excludes preregistrants)",
+  "registration_date": "2026-11-01"
+ },
+ {
+  "state": "Colorado",
+  "county": "Summit",
+  "registered_voters": 25321,
+  "voting_age_population_2020": 25853,
+  "registered_pct_of_vap": 97.9,
+  "growth_needed_pct_to_reach_100": null,
+  "registration_basis": "Total registered = active + inactive (excludes preregistrants)",
+  "registration_date": "2026-11-01"
+ },
+ {
+  "state": "Colorado",
+  "county": "Teller",
+  "registered_voters": 23041,
+  "voting_age_population_2020": 20544,
+  "registered_pct_of_vap": 112.2,
+  "growth_needed_pct_to_reach_100": 12.2,
+  "registration_basis": "Total registered = active + inactive (excludes preregistrants)",
+  "registration_date": "2026-11-01"
+ },
+ {
+  "state": "Colorado",
+  "county": "Washington",
+  "registered_voters": 3622,
+  "voting_age_population_2020": 3722,
+  "registered_pct_of_vap": 97.3,
+  "growth_needed_pct_to_reach_100": null,
+  "registration_basis": "Total registered = active + inactive (excludes preregistrants)",
+  "registration_date": "2026-11-01"
+ },
+ {
+  "state": "Colorado",
+  "county": "Weld",
+  "registered_voters": 266501,
+  "voting_age_population_2020": 241833,
+  "registered_pct_of_vap": 110.2,
+  "growth_needed_pct_to_reach_100": 10.2,
+  "registration_basis": "Total registered = active + inactive (excludes preregistrants)",
+  "registration_date": "2026-11-01"
+ },
+ {
+  "state": "Colorado",
+  "county": "Yuma",
+  "registered_voters": 6420,
+  "voting_age_population_2020": 7320,
+  "registered_pct_of_vap": 87.7,
+  "growth_needed_pct_to_reach_100": null,
+  "registration_basis": "Total registered = active + inactive (excludes preregistrants)",
+  "registration_date": "2026-11-01"
+ },
+ {
+  "state": "Delaware",
+  "county": "Kent",
+  "registered_voters": 148242,
+  "voting_age_population_2020": 139805,
+  "registered_pct_of_vap": 106.0,
+  "growth_needed_pct_to_reach_100": 6.0,
+  "registration_basis": "Total registered voters",
+  "registration_date": "2026-11-01"
+ },
+ {
+  "state": "Delaware",
+  "county": "New Castle",
+  "registered_voters": 441080,
+  "voting_age_population_2020": 449876,
+  "registered_pct_of_vap": 98.0,
+  "growth_needed_pct_to_reach_100": null,
+  "registration_basis": "Total registered voters",
+  "registration_date": "2026-11-01"
+ },
+ {
+  "state": "Delaware",
+  "county": "Sussex",
+  "registered_voters": 220309,
+  "voting_age_population_2020": 193862,
+  "registered_pct_of_vap": 113.6,
+  "growth_needed_pct_to_reach_100": 13.6,
+  "registration_basis": "Total registered voters",
+  "registration_date": "2026-11-01"
+ }
+]

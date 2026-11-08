@@ -1,0 +1,965 @@
+[
+ {
+  "state": "Colorado",
+  "geography_type": "county",
+  "geography_name": "Adams",
+  "registered_voters": 365272,
+  "basis": "Total registered = active + inactive (excludes preregistrants)",
+  "report_date": "2026-11-01",
+  "source": "Colorado Secretary of State - October 2026 voter registration statistics workbook (OctoberStatistics2026.xlsx), Status sheet, as of 00:30 on 11/01/2026"
+ },
+ {
+  "state": "Colorado",
+  "geography_type": "county",
+  "geography_name": "Alamosa",
+  "registered_voters": 11901,
+  "basis": "Total registered = active + inactive (excludes preregistrants)",
+  "report_date": "2026-11-01",
+  "source": "Colorado Secretary of State - October 2026 voter registration statistics workbook (OctoberStatistics2026.xlsx), Status sheet, as of 00:30 on 11/01/2026"
+ },
+ {
+  "state": "Colorado",
+  "geography_type": "county",
+  "geography_name": "Arapahoe",
+  "registered_voters": 479295,
+  "basis": "Total registered = active + inactive (excludes preregistrants)",
+  "report_date": "2026-11-01",
+  "source": "Colorado Secretary of State - October 2026 voter registration statistics workbook (OctoberStatistics2026.xlsx), Status sheet, as of 00:30 on 11/01/2026"
+ },
+ {
+  "state": "Colorado",
+  "geography_type": "county",
+  "geography_name": "Archuleta",
+  "registered_voters": 13625,
+  "basis": "Total registered = active + inactive (excludes preregistrants)",
+  "report_date": "2026-11-01",
+  "source": "Colorado Secretary of State - October 2026 voter registration statistics workbook (OctoberStatistics2026.xlsx), Status sheet, as of 00:30 on 11/01/2026"
+ },
+ {
+  "state": "Colorado",
+  "geography_type": "county",
+  "geography_name": "Baca",
+  "registered_voters": 2869,
+  "basis": "Total registered = active + inactive (excludes preregistrants)",
+  "report_date": "2026-11-01",
+  "source": "Colorado Secretary of State - October 2026 voter registration statistics workbook (OctoberStatistics2026.xlsx), Status sheet, as of 00:30 on 11/01/2026"
+ },
+ {
+  "state": "Colorado",
+  "geography_type": "county",
+  "geography_name": "Bent",
+  "registered_voters": 3360,
+  "basis": "Total registered = active + inactive (excludes preregistrants)",
+  "report_date": "2026-11-01",
+  "source": "Colorado Secretary of State - October 2026 voter registration statistics workbook (OctoberStatistics2026.xlsx), Status sheet, as of 00:30 on 11/01/2026"
+ },
+ {
+  "state": "Colorado",
+  "geography_type": "county",
+  "geography_name": "Boulder",
+  "registered_voters": 261692,
+  "basis": "Total registered = active + inactive (excludes preregistrants)",
+  "report_date": "2026-11-01",
+  "source": "Colorado Secretary of State - October 2026 voter registration statistics workbook (OctoberStatistics2026.xlsx), Status sheet, as of 00:30 on 11/01/2026"
+ },
+ {
+  "state": "Colorado",
+  "geography_type": "county",
+  "geography_name": "Broomfield",
+  "registered_voters": 64515,
+  "basis": "Total registered = active + inactive (excludes preregistrants)",
+  "report_date": "2026-11-01",
+  "source": "Colorado Secretary of State - October 2026 voter registration statistics workbook (OctoberStatistics2026.xlsx), Status sheet, as of 00:30 on 11/01/2026"
+ },
+ {
+  "state": "Colorado",
+  "geography_type": "county",
+  "geography_name": "Chaffee",
+  "registered_voters": 19470,
+  "basis": "Total registered = active + inactive (excludes preregistrants)",
+  "report_date": "2026-11-01",
+  "source": "Colorado Secretary of State - October 2026 voter registration statistics workbook (OctoberStatistics2026.xlsx), Status sheet, as of 00:30 on 11/01/2026"
+ },
+ {
+  "state": "Colorado",
+  "geography_type": "county",
+  "geography_name": "Cheyenne",
+  "registered_voters": 1369,
+  "basis": "Total registered = active + inactive (excludes preregistrants)",
+  "report_date": "2026-11-01",
+  "source": "Colorado Secretary of State - October 2026 voter registration statistics workbook (OctoberStatistics2026.xlsx), Status sheet, as of 00:30 on 11/01/2026"
+ },
+ {
+  "state": "Colorado",
+  "geography_type": "county",
+  "geography_name": "Clear Creek",
+  "registered_voters": 8550,
+  "basis": "Total registered = active + inactive (excludes preregistrants)",
+  "report_date": "2026-11-01",
+  "source": "Colorado Secretary of State - October 2026 voter registration statistics workbook (OctoberStatistics2026.xlsx), Status sheet, as of 00:30 on 11/01/2026"
+ },
+ {
+  "state": "Colorado",
+  "geography_type": "county",
+  "geography_name": "Conejos",
+  "registered_voters": 5869,
+  "basis": "Total registered = active + inactive (excludes preregistrants)",
+  "report_date": "2026-11-01",
+  "source": "Colorado Secretary of State - October 2026 voter registration statistics workbook (OctoberStatistics2026.xlsx), Status sheet, as of 00:30 on 11/01/2026"
+ },
+ {
+  "state": "Colorado",
+  "geography_type": "county",
+  "geography_name": "Costilla",
+  "registered_voters": 3506,
+  "basis": "Total registered = active + inactive (excludes preregistrants)",
+  "report_date": "2026-11-01",
+  "source": "Colorado Secretary of State - October 2026 voter registration statistics workbook (OctoberStatistics2026.xlsx), Status sheet, as of 00:30 on 11/01/2026"
+ },
+ {
+  "state": "Colorado",
+  "geography_type": "county",
+  "geography_name": "Crowley",
+  "registered_voters": 2483,
+  "basis": "Total registered = active + inactive (excludes preregistrants)",
+  "report_date": "2026-11-01",
+  "source": "Colorado Secretary of State - October 2026 voter registration statistics workbook (OctoberStatistics2026.xlsx), Status sheet, as of 00:30 on 11/01/2026"
+ },
+ {
+  "state": "Colorado",
+  "geography_type": "county",
+  "geography_name": "Custer",
+  "registered_voters": 5207,
+  "basis": "Total registered = active + inactive (excludes preregistrants)",
+  "report_date": "2026-11-01",
+  "source": "Colorado Secretary of State - October 2026 voter registration statistics workbook (OctoberStatistics2026.xlsx), Status sheet, as of 00:30 on 11/01/2026"
+ },
+ {
+  "state": "Colorado",
+  "geography_type": "county",
+  "geography_name": "Delta",
+  "registered_voters": 26519,
+  "basis": "Total registered = active + inactive (excludes preregistrants)",
+  "report_date": "2026-11-01",
+  "source": "Colorado Secretary of State - October 2026 voter registration statistics workbook (OctoberStatistics2026.xlsx), Status sheet, as of 00:30 on 11/01/2026"
+ },
+ {
+  "state": "Colorado",
+  "geography_type": "county",
+  "geography_name": "Denver",
+  "registered_voters": 560602,
+  "basis": "Total registered = active + inactive (excludes preregistrants)",
+  "report_date": "2026-11-01",
+  "source": "Colorado Secretary of State - October 2026 voter registration statistics workbook (OctoberStatistics2026.xlsx), Status sheet, as of 00:30 on 11/01/2026"
+ },
+ {
+  "state": "Colorado",
+  "geography_type": "county",
+  "geography_name": "Dolores",
+  "registered_voters": 1888,
+  "basis": "Total registered = active + inactive (excludes preregistrants)",
+  "report_date": "2026-11-01",
+  "source": "Colorado Secretary of State - October 2026 voter registration statistics workbook (OctoberStatistics2026.xlsx), Status sheet, as of 00:30 on 11/01/2026"
+ },
+ {
+  "state": "Colorado",
+  "geography_type": "county",
+  "geography_name": "Douglas",
+  "registered_voters": 325978,
+  "basis": "Total registered = active + inactive (excludes preregistrants)",
+  "report_date": "2026-11-01",
+  "source": "Colorado Secretary of State - October 2026 voter registration statistics workbook (OctoberStatistics2026.xlsx), Status sheet, as of 00:30 on 11/01/2026"
+ },
+ {
+  "state": "Colorado",
+  "geography_type": "county",
+  "geography_name": "Eagle",
+  "registered_voters": 40019,
+  "basis": "Total registered = active + inactive (excludes preregistrants)",
+  "report_date": "2026-11-01",
+  "source": "Colorado Secretary of State - October 2026 voter registration statistics workbook (OctoberStatistics2026.xlsx), Status sheet, as of 00:30 on 11/01/2026"
+ },
+ {
+  "state": "Colorado",
+  "geography_type": "county",
+  "geography_name": "El Paso",
+  "registered_voters": 600631,
+  "basis": "Total registered = active + inactive (excludes preregistrants)",
+  "report_date": "2026-11-01",
+  "source": "Colorado Secretary of State - October 2026 voter registration statistics workbook (OctoberStatistics2026.xlsx), Status sheet, as of 00:30 on 11/01/2026"
+ },
+ {
+  "state": "Colorado",
+  "geography_type": "county",
+  "geography_name": "Elbert",
+  "registered_voters": 27408,
+  "basis": "Total registered = active + inactive (excludes preregistrants)",
+  "report_date": "2026-11-01",
+  "source": "Colorado Secretary of State - October 2026 voter registration statistics workbook (OctoberStatistics2026.xlsx), Status sheet, as of 00:30 on 11/01/2026"
+ },
+ {
+  "state": "Colorado",
+  "geography_type": "county",
+  "geography_name": "Fremont",
+  "registered_voters": 35550,
+  "basis": "Total registered = active + inactive (excludes preregistrants)",
+  "report_date": "2026-11-01",
+  "source": "Colorado Secretary of State - October 2026 voter registration statistics workbook (OctoberStatistics2026.xlsx), Status sheet, as of 00:30 on 11/01/2026"
+ },
+ {
+  "state": "Colorado",
+  "geography_type": "county",
+  "geography_name": "Garfield",
+  "registered_voters": 43981,
+  "basis": "Total registered = active + inactive (excludes preregistrants)",
+  "report_date": "2026-11-01",
+  "source": "Colorado Secretary of State - October 2026 voter registration statistics workbook (OctoberStatistics2026.xlsx), Status sheet, as of 00:30 on 11/01/2026"
+ },
+ {
+  "state": "Colorado",
+  "geography_type": "county",
+  "geography_name": "Gilpin",
+  "registered_voters": 5583,
+  "basis": "Total registered = active + inactive (excludes preregistrants)",
+  "report_date": "2026-11-01",
+  "source": "Colorado Secretary of State - October 2026 voter registration statistics workbook (OctoberStatistics2026.xlsx), Status sheet, as of 00:30 on 11/01/2026"
+ },
+ {
+  "state": "Colorado",
+  "geography_type": "county",
+  "geography_name": "Grand",
+  "registered_voters": 14262,
+  "basis": "Total registered = active + inactive (excludes preregistrants)",
+  "report_date": "2026-11-01",
+  "source": "Colorado Secretary of State - October 2026 voter registration statistics workbook (OctoberStatistics2026.xlsx), Status sheet, as of 00:30 on 11/01/2026"
+ },
+ {
+  "state": "Colorado",
+  "geography_type": "county",
+  "geography_name": "Gunnison",
+  "registered_voters": 14585,
+  "basis": "Total registered = active + inactive (excludes preregistrants)",
+  "report_date": "2026-11-01",
+  "source": "Colorado Secretary of State - October 2026 voter registration statistics workbook (OctoberStatistics2026.xlsx), Status sheet, as of 00:30 on 11/01/2026"
+ },
+ {
+  "state": "Colorado",
+  "geography_type": "county",
+  "geography_name": "Hinsdale",
+  "registered_voters": 740,
+  "basis": "Total registered = active + inactive (excludes preregistrants)",
+  "report_date": "2026-11-01",
+  "source": "Colorado Secretary of State - October 2026 voter registration statistics workbook (OctoberStatistics2026.xlsx), Status sheet, as of 00:30 on 11/01/2026"
+ },
+ {
+  "state": "Colorado",
+  "geography_type": "county",
+  "geography_name": "Huerfano",
+  "registered_voters": 6291,
+  "basis": "Total registered = active + inactive (excludes preregistrants)",
+  "report_date": "2026-11-01",
+  "source": "Colorado Secretary of State - October 2026 voter registration statistics workbook (OctoberStatistics2026.xlsx), Status sheet, as of 00:30 on 11/01/2026"
+ },
+ {
+  "state": "Colorado",
+  "geography_type": "county",
+  "geography_name": "Jackson",
+  "registered_voters": 1201,
+  "basis": "Total registered = active + inactive (excludes preregistrants)",
+  "report_date": "2026-11-01",
+  "source": "Colorado Secretary of State - October 2026 voter registration statistics workbook (OctoberStatistics2026.xlsx), Status sheet, as of 00:30 on 11/01/2026"
+ },
+ {
+  "state": "Colorado",
+  "geography_type": "county",
+  "geography_name": "Jefferson",
+  "registered_voters": 479228,
+  "basis": "Total registered = active + inactive (excludes preregistrants)",
+  "report_date": "2026-11-01",
+  "source": "Colorado Secretary of State - October 2026 voter registration statistics workbook (OctoberStatistics2026.xlsx), Status sheet, as of 00:30 on 11/01/2026"
+ },
+ {
+  "state": "Colorado",
+  "geography_type": "county",
+  "geography_name": "Kiowa",
+  "registered_voters": 1108,
+  "basis": "Total registered = active + inactive (excludes preregistrants)",
+  "report_date": "2026-11-01",
+  "source": "Colorado Secretary of State - October 2026 voter registration statistics workbook (OctoberStatistics2026.xlsx), Status sheet, as of 00:30 on 11/01/2026"
+ },
+ {
+  "state": "Colorado",
+  "geography_type": "county",
+  "geography_name": "Kit Carson",
+  "registered_voters": 5289,
+  "basis": "Total registered = active + inactive (excludes preregistrants)",
+  "report_date": "2026-11-01",
+  "source": "Colorado Secretary of State - October 2026 voter registration statistics workbook (OctoberStatistics2026.xlsx), Status sheet, as of 00:30 on 11/01/2026"
+ },
+ {
+  "state": "Colorado",
+  "geography_type": "county",
+  "geography_name": "La Plata",
+  "registered_voters": 50311,
+  "basis": "Total registered = active + inactive (excludes preregistrants)",
+  "report_date": "2026-11-01",
+  "source": "Colorado Secretary of State - October 2026 voter registration statistics workbook (OctoberStatistics2026.xlsx), Status sheet, as of 00:30 on 11/01/2026"
+ },
+ {
+  "state": "Colorado",
+  "geography_type": "county",
+  "geography_name": "Lake",
+  "registered_voters": 6190,
+  "basis": "Total registered = active + inactive (excludes preregistrants)",
+  "report_date": "2026-11-01",
+  "source": "Colorado Secretary of State - October 2026 voter registration statistics workbook (OctoberStatistics2026.xlsx), Status sheet, as of 00:30 on 11/01/2026"
+ },
+ {
+  "state": "Colorado",
+  "geography_type": "county",
+  "geography_name": "Larimer",
+  "registered_voters": 307285,
+  "basis": "Total registered = active + inactive (excludes preregistrants)",
+  "report_date": "2026-11-01",
+  "source": "Colorado Secretary of State - October 2026 voter registration statistics workbook (OctoberStatistics2026.xlsx), Status sheet, as of 00:30 on 11/01/2026"
+ },
+ {
+  "state": "Colorado",
+  "geography_type": "county",
+  "geography_name": "Las Animas",
+  "registered_voters": 11881,
+  "basis": "Total registered = active + inactive (excludes preregistrants)",
+  "report_date": "2026-11-01",
+  "source": "Colorado Secretary of State - October 2026 voter registration statistics workbook (OctoberStatistics2026.xlsx), Status sheet, as of 00:30 on 11/01/2026"
+ },
+ {
+  "state": "Colorado",
+  "geography_type": "county",
+  "geography_name": "Lincoln",
+  "registered_voters": 3562,
+  "basis": "Total registered = active + inactive (excludes preregistrants)",
+  "report_date": "2026-11-01",
+  "source": "Colorado Secretary of State - October 2026 voter registration statistics workbook (OctoberStatistics2026.xlsx), Status sheet, as of 00:30 on 11/01/2026"
+ },
+ {
+  "state": "Colorado",
+  "geography_type": "county",
+  "geography_name": "Logan",
+  "registered_voters": 14021,
+  "basis": "Total registered = active + inactive (excludes preregistrants)",
+  "report_date": "2026-11-01",
+  "source": "Colorado Secretary of State - October 2026 voter registration statistics workbook (OctoberStatistics2026.xlsx), Status sheet, as of 00:30 on 11/01/2026"
+ },
+ {
+  "state": "Colorado",
+  "geography_type": "county",
+  "geography_name": "Mesa",
+  "registered_voters": 128746,
+  "basis": "Total registered = active + inactive (excludes preregistrants)",
+  "report_date": "2026-11-01",
+  "source": "Colorado Secretary of State - October 2026 voter registration statistics workbook (OctoberStatistics2026.xlsx), Status sheet, as of 00:30 on 11/01/2026"
+ },
+ {
+  "state": "Colorado",
+  "geography_type": "county",
+  "geography_name": "Mineral",
+  "registered_voters": 948,
+  "basis": "Total registered = active + inactive (excludes preregistrants)",
+  "report_date": "2026-11-01",
+  "source": "Colorado Secretary of State - October 2026 voter registration statistics workbook (OctoberStatistics2026.xlsx), Status sheet, as of 00:30 on 11/01/2026"
+ },
+ {
+  "state": "Colorado",
+  "geography_type": "county",
+  "geography_name": "Moffat",
+  "registered_voters": 10249,
+  "basis": "Total registered = active + inactive (excludes preregistrants)",
+  "report_date": "2026-11-01",
+  "source": "Colorado Secretary of State - October 2026 voter registration statistics workbook (OctoberStatistics2026.xlsx), Status sheet, as of 00:30 on 11/01/2026"
+ },
+ {
+  "state": "Colorado",
+  "geography_type": "county",
+  "geography_name": "Montezuma",
+  "registered_voters": 22528,
+  "basis": "Total registered = active + inactive (excludes preregistrants)",
+  "report_date": "2026-11-01",
+  "source": "Colorado Secretary of State - October 2026 voter registration statistics workbook (OctoberStatistics2026.xlsx), Status sheet, as of 00:30 on 11/01/2026"
+ },
+ {
+  "state": "Colorado",
+  "geography_type": "county",
+  "geography_name": "Montrose",
+  "registered_voters": 35216,
+  "basis": "Total registered = active + inactive (excludes preregistrants)",
+  "report_date": "2026-11-01",
+  "source": "Colorado Secretary of State - October 2026 voter registration statistics workbook (OctoberStatistics2026.xlsx), Status sheet, as of 00:30 on 11/01/2026"
+ },
+ {
+  "state": "Colorado",
+  "geography_type": "county",
+  "geography_name": "Morgan",
+  "registered_voters": 20712,
+  "basis": "Total registered = active + inactive (excludes preregistrants)",
+  "report_date": "2026-11-01",
+  "source": "Colorado Secretary of State - October 2026 voter registration statistics workbook (OctoberStatistics2026.xlsx), Status sheet, as of 00:30 on 11/01/2026"
+ },
+ {
+  "state": "Colorado",
+  "geography_type": "county",
+  "geography_name": "Otero",
+  "registered_voters": 13573,
+  "basis": "Total registered = active + inactive (excludes preregistrants)",
+  "report_date": "2026-11-01",
+  "source": "Colorado Secretary of State - October 2026 voter registration statistics workbook (OctoberStatistics2026.xlsx), Status sheet, as of 00:30 on 11/01/2026"
+ },
+ {
+  "state": "Colorado",
+  "geography_type": "county",
+  "geography_name": "Ouray",
+  "registered_voters": 5192,
+  "basis": "Total registered = active + inactive (excludes preregistrants)",
+  "report_date": "2026-11-01",
+  "source": "Colorado Secretary of State - October 2026 voter registration statistics workbook (OctoberStatistics2026.xlsx), Status sheet, as of 00:30 on 11/01/2026"
+ },
+ {
+  "state": "Colorado",
+  "geography_type": "county",
+  "geography_name": "Park",
+  "registered_voters": 16792,
+  "basis": "Total registered = active + inactive (excludes preregistrants)",
+  "report_date": "2026-11-01",
+  "source": "Colorado Secretary of State - October 2026 voter registration statistics workbook (OctoberStatistics2026.xlsx), Status sheet, as of 00:30 on 11/01/2026"
+ },
+ {
+  "state": "Colorado",
+  "geography_type": "county",
+  "geography_name": "Phillips",
+  "registered_voters": 3163,
+  "basis": "Total registered = active + inactive (excludes preregistrants)",
+  "report_date": "2026-11-01",
+  "source": "Colorado Secretary of State - October 2026 voter registration statistics workbook (OctoberStatistics2026.xlsx), Status sheet, as of 00:30 on 11/01/2026"
+ },
+ {
+  "state": "Colorado",
+  "geography_type": "county",
+  "geography_name": "Pitkin",
+  "registered_voters": 15264,
+  "basis": "Total registered = active + inactive (excludes preregistrants)",
+  "report_date": "2026-11-01",
+  "source": "Colorado Secretary of State - October 2026 voter registration statistics workbook (OctoberStatistics2026.xlsx), Status sheet, as of 00:30 on 11/01/2026"
+ },
+ {
+  "state": "Colorado",
+  "geography_type": "county",
+  "geography_name": "Prowers",
+  "registered_voters": 7891,
+  "basis": "Total registered = active + inactive (excludes preregistrants)",
+  "report_date": "2026-11-01",
+  "source": "Colorado Secretary of State - October 2026 voter registration statistics workbook (OctoberStatistics2026.xlsx), Status sheet, as of 00:30 on 11/01/2026"
+ },
+ {
+  "state": "Colorado",
+  "geography_type": "county",
+  "geography_name": "Pueblo",
+  "registered_voters": 129354,
+  "basis": "Total registered = active + inactive (excludes preregistrants)",
+  "report_date": "2026-11-01",
+  "source": "Colorado Secretary of State - October 2026 voter registration statistics workbook (OctoberStatistics2026.xlsx), Status sheet, as of 00:30 on 11/01/2026"
+ },
+ {
+  "state": "Colorado",
+  "geography_type": "county",
+  "geography_name": "Rio Blanco",
+  "registered_voters": 5080,
+  "basis": "Total registered = active + inactive (excludes preregistrants)",
+  "report_date": "2026-11-01",
+  "source": "Colorado Secretary of State - October 2026 voter registration statistics workbook (OctoberStatistics2026.xlsx), Status sheet, as of 00:30 on 11/01/2026"
+ },
+ {
+  "state": "Colorado",
+  "geography_type": "county",
+  "geography_name": "Rio Grande",
+  "registered_voters": 9285,
+  "basis": "Total registered = active + inactive (excludes preregistrants)",
+  "report_date": "2026-11-01",
+  "source": "Colorado Secretary of State - October 2026 voter registration statistics workbook (OctoberStatistics2026.xlsx), Status sheet, as of 00:30 on 11/01/2026"
+ },
+ {
+  "state": "Colorado",
+  "geography_type": "county",
+  "geography_name": "Routt",
+  "registered_voters": 22598,
+  "basis": "Total registered = active + inactive (excludes preregistrants)",
+  "report_date": "2026-11-01",
+  "source": "Colorado Secretary of State - October 2026 voter registration statistics workbook (OctoberStatistics2026.xlsx), Status sheet, as of 00:30 on 11/01/2026"
+ },
+ {
+  "state": "Colorado",
+  "geography_type": "county",
+  "geography_name": "Saguache",
+  "registered_voters": 5318,
+  "basis": "Total registered = active + inactive (excludes preregistrants)",
+  "report_date": "2026-11-01",
+  "source": "Colorado Secretary of State - October 2026 voter registration statistics workbook (OctoberStatistics2026.xlsx), Status sheet, as of 00:30 on 11/01/2026"
+ },
+ {
+  "state": "Colorado",
+  "geography_type": "county",
+  "geography_name": "San Juan",
+  "registered_voters": 868,
+  "basis": "Total registered = active + inactive (excludes preregistrants)",
+  "report_date": "2026-11-01",
+  "source": "Colorado Secretary of State - October 2026 voter registration statistics workbook (OctoberStatistics2026.xlsx), Status sheet, as of 00:30 on 11/01/2026"
+ },
+ {
+  "state": "Colorado",
+  "geography_type": "county",
+  "geography_name": "San Miguel",
+  "registered_voters": 6848,
+  "basis": "Total registered = active + inactive (excludes preregistrants)",
+  "report_date": "2026-11-01",
+  "source": "Colorado Secretary of State - October 2026 voter registration statistics workbook (OctoberStatistics2026.xlsx), Status sheet, as of 00:30 on 11/01/2026"
+ },
+ {
+  "state": "Colorado",
+  "geography_type": "county",
+  "geography_name": "Sedgwick",
+  "registered_voters": 1907,
+  "basis": "Total registered = active + inactive (excludes preregistrants)",
+  "report_date": "2026-11-01",
+  "source": "Colorado Secretary of State - October 2026 voter registration statistics workbook (OctoberStatistics2026.xlsx), Status sheet, as of 00:30 on 11/01/2026"
+ },
+ {
+  "state": "Colorado",
+  "geography_type": "county",
+  "geography_name": "Summit",
+  "registered_voters": 25321,
+  "basis": "Total registered = active + inactive (excludes preregistrants)",
+  "report_date": "2026-11-01",
+  "source": "Colorado Secretary of State - October 2026 voter registration statistics workbook (OctoberStatistics2026.xlsx), Status sheet, as of 00:30 on 11/01/2026"
+ },
+ {
+  "state": "Colorado",
+  "geography_type": "county",
+  "geography_name": "Teller",
+  "registered_voters": 23041,
+  "basis": "Total registered = active + inactive (excludes preregistrants)",
+  "report_date": "2026-11-01",
+  "source": "Colorado Secretary of State - October 2026 voter registration statistics workbook (OctoberStatistics2026.xlsx), Status sheet, as of 00:30 on 11/01/2026"
+ },
+ {
+  "state": "Colorado",
+  "geography_type": "county",
+  "geography_name": "Washington",
+  "registered_voters": 3622,
+  "basis": "Total registered = active + inactive (excludes preregistrants)",
+  "report_date": "2026-11-01",
+  "source": "Colorado Secretary of State - October 2026 voter registration statistics workbook (OctoberStatistics2026.xlsx), Status sheet, as of 00:30 on 11/01/2026"
+ },
+ {
+  "state": "Colorado",
+  "geography_type": "county",
+  "geography_name": "Weld",
+  "registered_voters": 266501,
+  "basis": "Total registered = active + inactive (excludes preregistrants)",
+  "report_date": "2026-11-01",
+  "source": "Colorado Secretary of State - October 2026 voter registration statistics workbook (OctoberStatistics2026.xlsx), Status sheet, as of 00:30 on 11/01/2026"
+ },
+ {
+  "state": "Colorado",
+  "geography_type": "county",
+  "geography_name": "Yuma",
+  "registered_voters": 6420,
+  "basis": "Total registered = active + inactive (excludes preregistrants)",
+  "report_date": "2026-11-01",
+  "source": "Colorado Secretary of State - October 2026 voter registration statistics workbook (OctoberStatistics2026.xlsx), Status sheet, as of 00:30 on 11/01/2026"
+ },
+ {
+  "state": "Delaware",
+  "geography_type": "county",
+  "geography_name": "Kent",
+  "registered_voters": 148242,
+  "basis": "Total registered voters",
+  "report_date": "2026-11-01",
+  "source": "Delaware Department of Elections - Voter registration report by political party, November 2026 (vrt_PP20261101)"
+ },
+ {
+  "state": "Delaware",
+  "geography_type": "county",
+  "geography_name": "New Castle",
+  "registered_voters": 441080,
+  "basis": "Total registered voters",
+  "report_date": "2026-11-01",
+  "source": "Delaware Department of Elections - Voter registration report by political party, November 2026 (vrt_PP20261101)"
+ },
+ {
+  "state": "Delaware",
+  "geography_type": "county",
+  "geography_name": "Sussex",
+  "registered_voters": 220309,
+  "basis": "Total registered voters",
+  "report_date": "2026-11-01",
+  "source": "Delaware Department of Elections - Voter registration report by political party, November 2026 (vrt_PP20261101)"
+ },
+ {
+  "state": "Alaska",
+  "geography_type": "house_district",
+  "geography_name": "House District 1",
+  "registered_voters": 15263,
+  "basis": "Total registered voters (election results system; unofficial results)",
+  "report_date": "2026-11-04",
+  "source": "Alaska Division of Elections - 2026 General Election Statement of Votes Cast, HD1.pdf, generated 2026-11-04"
+ },
+ {
+  "state": "Alaska",
+  "geography_type": "house_district",
+  "geography_name": "House District 2",
+  "registered_voters": 16026,
+  "basis": "Total registered voters (election results system; unofficial results)",
+  "report_date": "2026-11-04",
+  "source": "Alaska Division of Elections - 2026 General Election Statement of Votes Cast, HD2.pdf, generated 2026-11-04"
+ },
+ {
+  "state": "Alaska",
+  "geography_type": "house_district",
+  "geography_name": "House District 3",
+  "registered_voters": 16880,
+  "basis": "Total registered voters (election results system; unofficial results)",
+  "report_date": "2026-11-04",
+  "source": "Alaska Division of Elections - 2026 General Election Statement of Votes Cast, HD3.pdf, generated 2026-11-04"
+ },
+ {
+  "state": "Alaska",
+  "geography_type": "house_district",
+  "geography_name": "House District 4",
+  "registered_voters": 15116,
+  "basis": "Total registered voters (election results system; unofficial results)",
+  "report_date": "2026-11-04",
+  "source": "Alaska Division of Elections - 2026 General Election Statement of Votes Cast, HD4.pdf, generated 2026-11-04"
+ },
+ {
+  "state": "Alaska",
+  "geography_type": "house_district",
+  "geography_name": "House District 5",
+  "registered_voters": 13893,
+  "basis": "Total registered voters (election results system; unofficial results)",
+  "report_date": "2026-11-04",
+  "source": "Alaska Division of Elections - 2026 General Election Statement of Votes Cast, HD5.pdf, generated 2026-11-04"
+ },
+ {
+  "state": "Alaska",
+  "geography_type": "house_district",
+  "geography_name": "House District 6",
+  "registered_voters": 18567,
+  "basis": "Total registered voters (election results system; unofficial results)",
+  "report_date": "2026-11-04",
+  "source": "Alaska Division of Elections - 2026 General Election Statement of Votes Cast, HD6.pdf, generated 2026-11-04"
+ },
+ {
+  "state": "Alaska",
+  "geography_type": "house_district",
+  "geography_name": "House District 7",
+  "registered_voters": 17091,
+  "basis": "Total registered voters (election results system; unofficial results)",
+  "report_date": "2026-11-04",
+  "source": "Alaska Division of Elections - 2026 General Election Statement of Votes Cast, HD7.pdf, generated 2026-11-04"
+ },
+ {
+  "state": "Alaska",
+  "geography_type": "house_district",
+  "geography_name": "House District 8",
+  "registered_voters": 17816,
+  "basis": "Total registered voters (election results system; unofficial results)",
+  "report_date": "2026-11-04",
+  "source": "Alaska Division of Elections - 2026 General Election Statement of Votes Cast, HD8.pdf, generated 2026-11-04"
+ },
+ {
+  "state": "Alaska",
+  "geography_type": "house_district",
+  "geography_name": "House District 9",
+  "registered_voters": 16398,
+  "basis": "Total registered voters (election results system; unofficial results)",
+  "report_date": "2026-11-04",
+  "source": "Alaska Division of Elections - 2026 General Election Statement of Votes Cast, HD9.pdf, generated 2026-11-04"
+ },
+ {
+  "state": "Alaska",
+  "geography_type": "house_district",
+  "geography_name": "House District 10",
+  "registered_voters": 15180,
+  "basis": "Total registered voters (election results system; unofficial results)",
+  "report_date": "2026-11-04",
+  "source": "Alaska Division of Elections - 2026 General Election Statement of Votes Cast, HD10.pdf, generated 2026-11-04"
+ },
+ {
+  "state": "Alaska",
+  "geography_type": "house_district",
+  "geography_name": "House District 11",
+  "registered_voters": 15314,
+  "basis": "Total registered voters (election results system; unofficial results)",
+  "report_date": "2026-11-04",
+  "source": "Alaska Division of Elections - 2026 General Election Statement of Votes Cast, HD11.pdf, generated 2026-11-04"
+ },
+ {
+  "state": "Alaska",
+  "geography_type": "house_district",
+  "geography_name": "House District 12",
+  "registered_voters": 15180,
+  "basis": "Total registered voters (election results system; unofficial results)",
+  "report_date": "2026-11-04",
+  "source": "Alaska Division of Elections - 2026 General Election Statement of Votes Cast, HD12.pdf, generated 2026-11-04"
+ },
+ {
+  "state": "Alaska",
+  "geography_type": "house_district",
+  "geography_name": "House District 13",
+  "registered_voters": 15359,
+  "basis": "Total registered voters (election results system; unofficial results)",
+  "report_date": "2026-11-04",
+  "source": "Alaska Division of Elections - 2026 General Election Statement of Votes Cast, HD13.pdf, generated 2026-11-04"
+ },
+ {
+  "state": "Alaska",
+  "geography_type": "house_district",
+  "geography_name": "House District 14",
+  "registered_voters": 14511,
+  "basis": "Total registered voters (election results system; unofficial results)",
+  "report_date": "2026-11-04",
+  "source": "Alaska Division of Elections - 2026 General Election Statement of Votes Cast, HD14.pdf, generated 2026-11-04"
+ },
+ {
+  "state": "Alaska",
+  "geography_type": "house_district",
+  "geography_name": "House District 15",
+  "registered_voters": 15508,
+  "basis": "Total registered voters (election results system; unofficial results)",
+  "report_date": "2026-11-04",
+  "source": "Alaska Division of Elections - 2026 General Election Statement of Votes Cast, HD15.pdf, generated 2026-11-04"
+ },
+ {
+  "state": "Alaska",
+  "geography_type": "house_district",
+  "geography_name": "House District 16",
+  "registered_voters": 15762,
+  "basis": "Total registered voters (election results system; unofficial results)",
+  "report_date": "2026-11-04",
+  "source": "Alaska Division of Elections - 2026 General Election Statement of Votes Cast, HD16.pdf, generated 2026-11-04"
+ },
+ {
+  "state": "Alaska",
+  "geography_type": "house_district",
+  "geography_name": "House District 17",
+  "registered_voters": 14853,
+  "basis": "Total registered voters (election results system; unofficial results)",
+  "report_date": "2026-11-04",
+  "source": "Alaska Division of Elections - 2026 General Election Statement of Votes Cast, HD17.pdf, generated 2026-11-04"
+ },
+ {
+  "state": "Alaska",
+  "geography_type": "house_district",
+  "geography_name": "House District 18",
+  "registered_voters": 11565,
+  "basis": "Total registered voters (election results system; unofficial results)",
+  "report_date": "2026-11-04",
+  "source": "Alaska Division of Elections - 2026 General Election Statement of Votes Cast, HD18.pdf, generated 2026-11-04"
+ },
+ {
+  "state": "Alaska",
+  "geography_type": "house_district",
+  "geography_name": "House District 19",
+  "registered_voters": 13186,
+  "basis": "Total registered voters (election results system; unofficial results)",
+  "report_date": "2026-11-04",
+  "source": "Alaska Division of Elections - 2026 General Election Statement of Votes Cast, HD19.pdf, generated 2026-11-04"
+ },
+ {
+  "state": "Alaska",
+  "geography_type": "house_district",
+  "geography_name": "House District 20",
+  "registered_voters": 14085,
+  "basis": "Total registered voters (election results system; unofficial results)",
+  "report_date": "2026-11-04",
+  "source": "Alaska Division of Elections - 2026 General Election Statement of Votes Cast, HD20.pdf, generated 2026-11-04"
+ },
+ {
+  "state": "Alaska",
+  "geography_type": "house_district",
+  "geography_name": "House District 21",
+  "registered_voters": 15867,
+  "basis": "Total registered voters (election results system; unofficial results)",
+  "report_date": "2026-11-04",
+  "source": "Alaska Division of Elections - 2026 General Election Statement of Votes Cast, HD21.pdf, generated 2026-11-04"
+ },
+ {
+  "state": "Alaska",
+  "geography_type": "house_district",
+  "geography_name": "House District 22",
+  "registered_voters": 14282,
+  "basis": "Total registered voters (election results system; unofficial results)",
+  "report_date": "2026-11-04",
+  "source": "Alaska Division of Elections - 2026 General Election Statement of Votes Cast, HD22.pdf, generated 2026-11-04"
+ },
+ {
+  "state": "Alaska",
+  "geography_type": "house_district",
+  "geography_name": "House District 23",
+  "registered_voters": 16676,
+  "basis": "Total registered voters (election results system; unofficial results)",
+  "report_date": "2026-11-04",
+  "source": "Alaska Division of Elections - 2026 General Election Statement of Votes Cast, HD23.pdf, generated 2026-11-04"
+ },
+ {
+  "state": "Alaska",
+  "geography_type": "house_district",
+  "geography_name": "House District 24",
+  "registered_voters": 15926,
+  "basis": "Total registered voters (election results system; unofficial results)",
+  "report_date": "2026-11-04",
+  "source": "Alaska Division of Elections - 2026 General Election Statement of Votes Cast, HD24.pdf, generated 2026-11-04"
+ },
+ {
+  "state": "Alaska",
+  "geography_type": "house_district",
+  "geography_name": "House District 25",
+  "registered_voters": 17458,
+  "basis": "Total registered voters (election results system; unofficial results)",
+  "report_date": "2026-11-04",
+  "source": "Alaska Division of Elections - 2026 General Election Statement of Votes Cast, HD25.pdf, generated 2026-11-04"
+ },
+ {
+  "state": "Alaska",
+  "geography_type": "house_district",
+  "geography_name": "House District 26",
+  "registered_voters": 17051,
+  "basis": "Total registered voters (election results system; unofficial results)",
+  "report_date": "2026-11-04",
+  "source": "Alaska Division of Elections - 2026 General Election Statement of Votes Cast, HD26.pdf, generated 2026-11-04"
+ },
+ {
+  "state": "Alaska",
+  "geography_type": "house_district",
+  "geography_name": "House District 27",
+  "registered_voters": 17402,
+  "basis": "Total registered voters (election results system; unofficial results)",
+  "report_date": "2026-11-04",
+  "source": "Alaska Division of Elections - 2026 General Election Statement of Votes Cast, HD27.pdf, generated 2026-11-04"
+ },
+ {
+  "state": "Alaska",
+  "geography_type": "house_district",
+  "geography_name": "House District 28",
+  "registered_voters": 16381,
+  "basis": "Total registered voters (election results system; unofficial results)",
+  "report_date": "2026-11-04",
+  "source": "Alaska Division of Elections - 2026 General Election Statement of Votes Cast, HD28.pdf, generated 2026-11-04"
+ },
+ {
+  "state": "Alaska",
+  "geography_type": "house_district",
+  "geography_name": "House District 29",
+  "registered_voters": 17410,
+  "basis": "Total registered voters (election results system; unofficial results)",
+  "report_date": "2026-11-04",
+  "source": "Alaska Division of Elections - 2026 General Election Statement of Votes Cast, HD29.pdf, generated 2026-11-04"
+ },
+ {
+  "state": "Alaska",
+  "geography_type": "house_district",
+  "geography_name": "House District 30",
+  "registered_voters": 18015,
+  "basis": "Total registered voters (election results system; unofficial results)",
+  "report_date": "2026-11-04",
+  "source": "Alaska Division of Elections - 2026 General Election Statement of Votes Cast, HD30.pdf, generated 2026-11-04"
+ },
+ {
+  "state": "Alaska",
+  "geography_type": "house_district",
+  "geography_name": "House District 31",
+  "registered_voters": 14153,
+  "basis": "Total registered voters (election results system; unofficial results)",
+  "report_date": "2026-11-04",
+  "source": "Alaska Division of Elections - 2026 General Election Statement of Votes Cast, HD31.pdf, generated 2026-11-04"
+ },
+ {
+  "state": "Alaska",
+  "geography_type": "house_district",
+  "geography_name": "House District 32",
+  "registered_voters": 11710,
+  "basis": "Total registered voters (election results system; unofficial results)",
+  "report_date": "2026-11-04",
+  "source": "Alaska Division of Elections - 2026 General Election Statement of Votes Cast, HD32.pdf, generated 2026-11-04"
+ },
+ {
+  "state": "Alaska",
+  "geography_type": "house_district",
+  "geography_name": "House District 33",
+  "registered_voters": 16626,
+  "basis": "Total registered voters (election results system; unofficial results)",
+  "report_date": "2026-11-04",
+  "source": "Alaska Division of Elections - 2026 General Election Statement of Votes Cast, HD33.pdf, generated 2026-11-04"
+ },
+ {
+  "state": "Alaska",
+  "geography_type": "house_district",
+  "geography_name": "House District 34",
+  "registered_voters": 15950,
+  "basis": "Total registered voters (election results system; unofficial results)",
+  "report_date": "2026-11-04",
+  "source": "Alaska Division of Elections - 2026 General Election Statement of Votes Cast, HD34.pdf, generated 2026-11-04"
+ },
+ {
+  "state": "Alaska",
+  "geography_type": "house_district",
+  "geography_name": "House District 35",
+  "registered_voters": 15640,
+  "basis": "Total registered voters (election results system; unofficial results)",
+  "report_date": "2026-11-04",
+  "source": "Alaska Division of Elections - 2026 General Election Statement of Votes Cast, HD35.pdf, generated 2026-11-04"
+ },
+ {
+  "state": "Alaska",
+  "geography_type": "house_district",
+  "geography_name": "House District 36",
+  "registered_voters": 16170,
+  "basis": "Total registered voters (election results system; unofficial results)",
+  "report_date": "2026-11-04",
+  "source": "Alaska Division of Elections - 2026 General Election Statement of Votes Cast, HD36.pdf, generated 2026-11-04"
+ },
+ {
+  "state": "Alaska",
+  "geography_type": "house_district",
+  "geography_name": "House District 37",
+  "registered_voters": 9899,
+  "basis": "Total registered voters (election results system; unofficial results)",
+  "report_date": "2026-11-04",
+  "source": "Alaska Division of Elections - 2026 General Election Statement of Votes Cast, HD37.pdf, generated 2026-11-04"
+ },
+ {
+  "state": "Alaska",
+  "geography_type": "house_district",
+  "geography_name": "House District 38",
+  "registered_voters": 10798,
+  "basis": "Total registered voters (election results system; unofficial results)",
+  "report_date": "2026-11-04",
+  "source": "Alaska Division of Elections - 2026 General Election Statement of Votes Cast, HD38.pdf, generated 2026-11-04"
+ },
+ {
+  "state": "Alaska",
+  "geography_type": "house_district",
+  "geography_name": "House District 39",
+  "registered_voters": 10583,
+  "basis": "Total registered voters (election results system; unofficial results)",
+  "report_date": "2026-11-04",
+  "source": "Alaska Division of Elections - 2026 General Election Statement of Votes Cast, HD39.pdf, generated 2026-11-04"
+ },
+ {
+  "state": "Alaska",
+  "geography_type": "house_district",
+  "geography_name": "House District 40",
+  "registered_voters": 9061,
+  "basis": "Total registered voters (election results system; unofficial results)",
+  "report_date": "2026-11-04",
+  "source": "Alaska Division of Elections - 2026 General Election Statement of Votes Cast, HD40.pdf, generated 2026-11-04"
+ }
+]
