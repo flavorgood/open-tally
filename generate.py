@@ -433,10 +433,6 @@ CSS = """
   --bodyserif:Georgia,"Times New Roman",Times,serif;
   --sans:Inter,"Helvetica Neue",Helvetica,Arial,sans-serif;
 }
-@media (prefers-color-scheme: dark){
-  :root{ --bg:#101010; --panel:#101010; --ink:#f2f2ef; --ink2:#a6a6a0; --line:#2b2b28; --line2:#454540;
-    --hover:#171714; }
-}
 *{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%}
 body{margin:0 auto;max-width:1100px;padding:0 22px 56px;background:var(--bg);color:var(--ink);
@@ -931,6 +927,12 @@ def state_adds_lines(d, s, counties_by_state):
 
 def build_front(d, states, counties_by_state):
     body = []
+    # map first — the owner's brief has the map leading the front page
+    fills = {n: (VIOLET if (s["reg_pct_adults"] or 0) > 100 else band(s["reg_pct_adults"]))
+             for n, s in states.items()}
+    body.append("<h2>The Map</h2>")
+    body.append(national_map({f: n for f, n in FIPS_STATE.items()}, fills))
+    body.append(LEGEND)
     body.append("<h2>Election Day vs today</h2>")
     body.append('<p class="edsub">Election Day — Tuesday, November 3, 2026</p>')
     body.append("<h3>Governors</h3>")
@@ -953,12 +955,6 @@ def build_front(d, states, counties_by_state):
         body.append('<h2>What doesn\'t add up</h2><div class="adds">')
         for ln in adds: body.append(f"<div>{ln}</div>")
         body.append("</div>")
-    # map
-    fills = {n: (VIOLET if (s["reg_pct_adults"] or 0) > 100 else band(s["reg_pct_adults"]))
-             for n, s in states.items()}
-    body.append("<h2>The Map</h2>")
-    body.append(national_map({f: n for f, n in FIPS_STATE.items()}, fills))
-    body.append(LEGEND)
     # states as simple linked rows (the full table lives on the Data page)
     body.append('<h2 id="states">Every state</h2>')
     body.append("<table><tr><th class='l'>State</th><th>Registered</th>"
