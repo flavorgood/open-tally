@@ -9,3 +9,4 @@ Nov 6 — September payrolls revised to +60,000 from +29,000 — Bureau of Labor
 Nov 6 — Consumer sentiment 51.0, November preliminary, +3.0 from 48.0 in October — University of Michigan
 Nov 6 — Gas $4.07 national average, −$0.07 from $4.14 on Nov 3 — AAA
 Nov 7 — Gas $4.04 national average, −$0.10 from $4.14 on Nov 3 — AAA
+Nov 8 — Gas $4.02 national average, −$0.12 from $4.14 on Nov 3 — AAA

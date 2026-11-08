@@ -34,7 +34,7 @@ TRACKER = os.path.join(os.path.dirname(BASE), "economic-tracker")
 SPINE_FILES = ["RECORD-LOG.md", "BASELINE-2026-11-03.md",
                "state-factors-expanded.csv", "state-claims-weeks.csv",
                "gas-aaa-2026-11-03.csv", "gas-aaa-2026-11-05.csv",
-               "gas-aaa-2026-11-07.csv"]
+               "gas-aaa-2026-11-07.csv", "gas-aaa-2026-11-08.csv"]
 
 def refresh_spine():
     if not os.path.isdir(TRACKER): return
@@ -427,6 +427,7 @@ def load():
     d["gas3"] = _gas("gas-aaa-2026-11-03.csv")
     d["gas5"] = _gas("gas-aaa-2026-11-05.csv")
     d["gas7"] = _gas("gas-aaa-2026-11-07.csv")
+    d["gas8"] = _gas("gas-aaa-2026-11-08.csv")
     gov, in_spot = {}, False
     for ln in d["baseline_text"].splitlines():
         if ln.startswith("## States that flipped"): in_spot = True; continue
@@ -1236,6 +1237,20 @@ def over_line_counts(d):
         out[r["state"]] = (x + (1 if (pct or 0) > 100 else 0), y + 1)
     return out
 
+def active_only_states(d):
+    """States whose county voter lists in the record count active
+    voters only — their rows say so in the basis. A county over the
+    line on the active list is over the line on the full list too
+    (the full list is larger); the basis is named wherever the
+    over-the-line count prints."""
+    if "active_only" in d: return d["active_only"]
+    out = set()
+    for r in d["roll_co_de"]:
+        b = (r["registration_basis"] or "").lower()
+        if "active" in b and "only" in b: out.add(r["state"])
+    d["active_only"] = out
+    return out
+
 def _link_state(text, st, states):
     return text.replace(esc(st),
         f'<a href="states/{states[st]["slug"]}/index.html">{esc(st)}</a>', 1)
@@ -1282,10 +1297,10 @@ def national_ed_cards(d):
     pv = find(r"Payrolls \+([\d,]+) in October", log)
     card("Payrolls", find(r"Payrolls: (\+[\d,]+)", base), "Sep 2026",
          ("+" + pv) if pv else None, "Oct 2026")
-    g3, g7 = d["gas3"].get("United States"), d["gas7"].get("United States")
+    g3, g7 = d["gas3"].get("United States"), d["gas8"].get("United States")
     card("Gas — national average",
          f"${g3:.2f}" if g3 is not None else None, "Nov 3",
-         f"${g7:.2f}" if g7 is not None else None, "Nov 7")
+         f"${g7:.2f}" if g7 is not None else None, "Nov 8")
     card("Mortgage rate", find(r"Election Day baseline: ([\d.]+%)", log),
          "Election Day", find(r"Mortgage rate ([\d.]+%)", log),
          "week ending Nov 5")
@@ -1536,11 +1551,11 @@ def national_ed_table(d):
         f"{int(pc.replace(',', '')) - int(pb.replace(',', '')):+,}" if pb and pc else "—",
         diff=(int(pc.replace(',', '')) - int(pb.replace(',', ''))) if pb and pc else None,
         up_good=True)
-    g3, g7 = d["gas3"].get("United States"), d["gas7"].get("United States")
+    g3, g7 = d["gas3"].get("United States"), d["gas8"].get("United States")
     gd = (g7 - g3) if (g3 is not None and g7 is not None) else None
     row("Gas — national average",
         f"${g3:.2f}" if g3 is not None else None, "Nov 3",
-        f"${g7:.2f}" if g7 is not None else None, "Nov 7",
+        f"${g7:.2f}" if g7 is not None else None, "Nov 8",
         (("+$" if gd >= 0 else "−$") + f"{abs(gd):.2f}") if gd is not None else "—",
         diff=gd, up_good=False)
     mb = find(r"Election Day baseline: ([\d.]+)%", log)
@@ -1616,7 +1631,7 @@ def state_ed_html(d, s):
         rows.append(("Jobless claims in a week",
                      f"{va:,} (week ended {fmt_date(a['week ended'])})",
                      f"{vb:,} (week ended {fmt_date(bb['week ended'])})", chg, fill))
-    g3, g7 = d["gas3"].get(st), d["gas7"].get(st)
+    g3, g7 = d["gas3"].get(st), d["gas8"].get(st)
     if g3 is not None and g7 is not None:
         diff = round(g7 - g3, 2)
         gtxt = (("+$" if diff > 0 else "−$") + f"{abs(diff):.2f}")
@@ -1626,11 +1641,11 @@ def state_ed_html(d, s):
             chg = gtxt
             fill = GREEN if diff < 0 else ORANGE
         rows.append(("Gas, regular", f"${g3:.2f} (Nov 3)",
-                     f"${g7:.2f} (Nov 7)", chg, fill))
-    # the per-state pair every state has: Nov 5 to Nov 7 (AAA). The
+                     f"${g7:.2f} (Nov 8)", chg, fill))
+    # the per-state pair every state has: Nov 5 to Nov 8 (AAA). The
     # Nov 5 figure is the state baseline — it is never labeled
     # Election Day; only the four states above have a Nov 3 figure.
-    g5, g7b = d["gas5"].get(st), d["gas7"].get(st)
+    g5, g7b = d["gas5"].get(st), d["gas8"].get(st)
     if g5 is not None and g7b is not None:
         diff = round(g7b - g5, 2)
         gtxt = (("+$" if diff > 0 else "−$") + f"{abs(diff):.2f}")
@@ -1640,7 +1655,7 @@ def state_ed_html(d, s):
             chg = gtxt
             fill = GREEN if diff < 0 else ORANGE
         rows.append(("Gas, regular — from Nov 5", f"${g5:.2f} (Nov 5)",
-                     f"${g7b:.2f} (Nov 7)", chg, fill))
+                     f"${g7b:.2f} (Nov 8)", chg, fill))
     fac = d["factors"].get(st, {})
     for fname in ("Average weekly wage", "New business applications",
                   "Building permits", "Labor force participation rate",
@@ -1979,8 +1994,10 @@ def patterns_html(d, states, counties_by_state):
             x, y = olc[st]
             if not x: continue
             unit = "House districts" if st == "Alaska" else "counties"
+            basis = (", counted on the active list"
+                     if st in active_only_states(d) else "")
             out.append(f'<div><a href="states/{states[st]["slug"]}/index.html">'
-                       f'{esc(st)}</a> — {x} of {y} {unit}.</div>')
+                       f'{esc(st)}</a> — {x} of {y} {unit}{basis}.</div>')
         out.append("</div>")
         out.append('<p class="small">The county tables are on each '
                    'state\'s page.</p>')
@@ -2405,7 +2422,7 @@ def count_summary_rows(d, s):
 # Race states whose governor rows carry no verified statewide
 # figures: six with no official figures published yet (collection
 # notes).
-GOV26_NO_VERIFIED = {"Illinois", "Maine", "Massachusetts", "Michigan",
+GOV26_NO_VERIFIED = {"Illinois", "Maine", "Massachusetts",
                      "New Hampshire", "Wisconsin"}
 
 def _gov_party(raw):
@@ -3211,6 +3228,10 @@ def build_state_pages(d, states, counties_by_state, county_info):
                 sents.insert(0, f"{olc[0]} of {olc[1]} counties in {name} "
                                 f"have more registered voters than adults "
                                 f"who live there.")
+                if name in active_only_states(d):
+                    sents.insert(1, f"{name}'s county figures count "
+                                    f"active voters only; the full "
+                                    f"voter list is larger.")
                 precise = True
         if pct_rule or county_rule:
             if (s["reg_pct_adults"] or 0) > 100:

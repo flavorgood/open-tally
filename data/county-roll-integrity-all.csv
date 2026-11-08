@@ -542,3 +542,1191 @@ Virginia,Winchester City,19507,22235,87.7,,Total registered = active + inactive 
 Virginia,Wise,25641,29151,88.0,,Total registered = active + inactive (All Voters),2026-11-01
 Virginia,Wythe,21975,22692,96.8,,Total registered = active + inactive (All Voters),2026-11-01
 Virginia,York,54655,52982,103.2,3.2,Total registered = active + inactive (All Voters),2026-11-01
+Florida,Alachua,167143,227905,73.3,,"Active registered voters only, as published",2026-10-14
+Florida,Baker,17899,21638,82.7,,"Active registered voters only, as published",2026-10-14
+Florida,Bay,128668,139659,92.1,,"Active registered voters only, as published",2026-10-14
+Florida,Bradford,16909,22992,73.5,,"Active registered voters only, as published",2026-10-14
+Florida,Brevard,447257,497095,90.0,,"Active registered voters only, as published",2026-10-14
+Florida,Broward,1103545,1546038,71.4,,"Active registered voters only, as published",2026-10-14
+Florida,Calhoun,7601,10923,69.6,,"Active registered voters only, as published",2026-10-14
+Florida,Charlotte,155843,164240,94.9,,"Active registered voters only, as published",2026-10-14
+Florida,Citrus,121391,131487,92.3,,"Active registered voters only, as published",2026-10-14
+Florida,Clay,156247,166139,94.0,,"Active registered voters only, as published",2026-10-14
+Florida,Collier,265678,313169,84.8,,"Active registered voters only, as published",2026-10-14
+Florida,Columbia,41610,54813,75.9,,"Active registered voters only, as published",2026-10-14
+Florida,DeSoto,16080,27008,59.5,,"Active registered voters only, as published",2026-10-14
+Florida,Dixie,10055,13730,73.2,,"Active registered voters only, as published",2026-10-14
+Florida,Duval,655212,781603,83.8,,"Active registered voters only, as published",2026-10-14
+Florida,Escambia,207445,258145,80.4,,"Active registered voters only, as published",2026-10-14
+Florida,Flagler,100550,96386,104.3,4.3,"Active registered voters only, as published",2026-10-14
+Florida,Franklin,7608,10555,72.1,,"Active registered voters only, as published",2026-10-14
+Florida,Gadsden,26870,34617,77.6,,"Active registered voters only, as published",2026-10-14
+Florida,Gilchrist,12999,14174,91.7,,"Active registered voters only, as published",2026-10-14
+Florida,Glades,6877,10088,68.2,,"Active registered voters only, as published",2026-10-14
+Florida,Gulf,11194,11821,94.7,,"Active registered voters only, as published",2026-10-14
+Florida,Hamilton,7168,11329,63.3,,"Active registered voters only, as published",2026-10-14
+Florida,Hardee,11530,18840,61.2,,"Active registered voters only, as published",2026-10-14
+Florida,Hendry,19438,29444,66.0,,"Active registered voters only, as published",2026-10-14
+Florida,Hernando,138084,158664,87.0,,"Active registered voters only, as published",2026-10-14
+Florida,Highlands,63379,83524,75.9,,"Active registered voters only, as published",2026-10-14
+Florida,Hillsborough,823694,1139031,72.3,,"Active registered voters only, as published",2026-10-14
+Florida,Holmes,11453,15598,73.4,,"Active registered voters only, as published",2026-10-14
+Florida,Indian River,119740,134386,89.1,,"Active registered voters only, as published",2026-10-14
+Florida,Jackson,27516,38271,71.9,,"Active registered voters only, as published",2026-10-14
+Florida,Jefferson,10029,12055,83.2,,"Active registered voters only, as published",2026-10-14
+Florida,Lafayette,4271,6819,62.6,,"Active registered voters only, as published",2026-10-14
+Florida,Lake,283780,312444,90.8,,"Active registered voters only, as published",2026-10-14
+Florida,Lee,504633,628325,80.3,,"Active registered voters only, as published",2026-10-14
+Florida,Leon,184523,236591,78.0,,"Active registered voters only, as published",2026-10-14
+Florida,Levy,30448,34293,88.8,,"Active registered voters only, as published",2026-10-14
+Florida,Liberty,4617,6507,71.0,,"Active registered voters only, as published",2026-10-14
+Florida,Madison,10547,14388,73.3,,"Active registered voters only, as published",2026-10-14
+Florida,Manatee,287882,326633,88.1,,"Active registered voters only, as published",2026-10-14
+Florida,Marion,271268,308357,88.0,,"Active registered voters only, as published",2026-10-14
+Florida,Martin,117229,132255,88.6,,"Active registered voters only, as published",2026-10-14
+Florida,Miami-Dade,1313264,2178620,60.3,,"Active registered voters only, as published",2026-10-14
+Florida,Monroe,54704,70617,77.5,,"Active registered voters only, as published",2026-10-14
+Florida,Nassau,82056,72186,113.7,13.7,"Active registered voters only, as published",2026-10-14
+Florida,Okaloosa,148349,164455,90.2,,"Active registered voters only, as published",2026-10-14
+Florida,Okeechobee,20874,30932,67.5,,"Active registered voters only, as published",2026-10-14
+Florida,Orange,820504,1115798,73.5,,"Active registered voters only, as published",2026-10-14
+Florida,Osceola,238063,297816,79.9,,"Active registered voters only, as published",2026-10-14
+Florida,Palm Beach,889521,1208624,73.6,,"Active registered voters only, as published",2026-10-14
+Florida,Pasco,407676,448026,91.0,,"Active registered voters only, as published",2026-10-14
+Florida,Pinellas,613797,810121,75.8,,"Active registered voters only, as published",2026-10-14
+Florida,Polk,459892,566436,81.2,,"Active registered voters only, as published",2026-10-14
+Florida,Putnam,45370,58184,78.0,,"Active registered voters only, as published",2026-10-14
+Florida,Santa Rosa,144230,145194,99.3,,"Active registered voters only, as published",2026-10-14
+Florida,Sarasota,334228,374464,89.3,,"Active registered voters only, as published",2026-10-14
+Florida,Seminole,343307,370782,92.6,,"Active registered voters only, as published",2026-10-14
+Florida,St. Johns,243887,210601,115.8,15.8,"Active registered voters only, as published",2026-10-14
+Florida,St. Lucie,246187,263741,93.3,,"Active registered voters only, as published",2026-10-14
+Florida,Sumter,130072,120696,107.8,7.8,"Active registered voters only, as published",2026-10-14
+Florida,Suwannee,26996,34279,78.8,,"Active registered voters only, as published",2026-10-14
+Florida,Taylor,11749,17482,67.2,,"Active registered voters only, as published",2026-10-14
+Florida,Union,7316,13093,55.9,,"Active registered voters only, as published",2026-10-14
+Florida,Volusia,401708,458123,87.7,,"Active registered voters only, as published",2026-10-14
+Florida,Wakulla,25929,26854,96.6,,"Active registered voters only, as published",2026-10-14
+Florida,Walton,63946,59955,106.7,6.7,"Active registered voters only, as published",2026-10-14
+Florida,Washington,14960,20174,74.2,,"Active registered voters only, as published",2026-10-14
+Texas,Anderson,31222,47381,65.9,,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Andrews,10820,12948,83.6,,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Angelina,56330,65058,86.6,,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Aransas,19867,19816,100.3,0.3,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Archer,7093,6612,107.3,7.3,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Armstrong,1436,1427,100.6,0.6,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Atascosa,32925,35983,91.5,,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Austin,22824,23157,98.6,,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Bailey,3239,4838,66.9,,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Bandera,19330,17349,111.4,11.4,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Bastrop,65427,73027,89.6,,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Baylor,2387,2636,90.6,,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Bee,15758,25022,63.0,,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Bell,246817,272163,90.7,,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Bexar,1325780,1512388,87.7,,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Blanco,11369,9421,120.7,20.7,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Borden,477,471,101.3,1.3,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Bosque,13761,14456,95.2,,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Bowie,61596,71537,86.1,,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Brazoria,261323,275900,94.7,,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Brazos,147077,185935,79.1,,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Brewster,7119,7846,90.7,,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Briscoe,1022,1113,91.8,,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Brooks,4735,5329,88.9,,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Brown,25916,29878,86.7,,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Burleson,14321,13911,102.9,2.9,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Burnet,39466,38983,101.2,1.2,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Caldwell,28491,34034,83.7,,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Calhoun,13031,15502,84.1,,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Callahan,10636,10696,99.4,,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Cameron,244070,301208,81.0,,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Camp,8510,9345,91.1,,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Carson,4253,4401,96.6,,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Cass,21881,22227,98.4,,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Castro,3467,5277,65.7,,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Chambers,39119,33464,116.9,16.9,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Cherokee,32796,37887,86.6,,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Childress,3580,5318,67.3,,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Clay,8340,8144,102.4,2.4,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Cochran,1486,1817,81.8,,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Coke,2532,2634,96.1,,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Coleman,6144,6165,99.7,,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Collin,788729,786838,100.2,0.2,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Collingsworth,1857,1988,93.4,,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Colorado,14766,16093,91.8,,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Comal,151987,126535,120.1,20.1,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Comanche,10336,10566,97.8,,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Concho,1814,2851,63.6,,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Cooke,31222,31523,99.0,,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Coryell,47037,62606,75.1,,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Cottle,979,1097,89.2,,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Crane,2756,3351,82.2,,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Crockett,2259,2394,94.4,,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Crosby,3557,3812,93.3,,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Culberson,1732,1721,100.6,0.6,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Dallam,2836,5022,56.5,,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Dallas,1493955,1972578,75.7,,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Dawson,6481,9450,68.6,,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Deaf Smith,8821,12949,68.1,,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Delta,4116,4081,100.9,0.9,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Denton,688032,678416,101.4,1.4,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,DeWitt,11657,15418,75.6,,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Dickens,1363,1369,99.6,,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Dimmit,6567,6308,104.1,4.1,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Donley,2463,2591,95.1,,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Duval,7777,7512,103.5,3.5,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Eastland,12664,13986,90.5,,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Ector,84739,119460,70.9,,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Edwards,1488,1140,130.5,30.5,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Ellis,159133,140984,112.9,12.9,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,El Paso,530978,644962,82.3,,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Erath,26965,33837,79.7,,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Falls,10771,13446,80.1,,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Fannin,24550,28127,87.3,,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Fayette,18401,19396,94.9,,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Fisher,2739,2862,95.7,,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Floyd,3582,3929,91.2,,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Foard,779,899,86.7,,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Fort Bend,581636,596993,97.4,,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Franklin,7801,8023,97.2,,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Freestone,13538,15292,88.5,,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Frio,9650,13825,69.8,,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Gaines,10888,14135,77.0,,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Galveston,251059,267382,93.9,,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Garza,2528,4789,52.8,,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Gillespie,22570,21921,103.0,3.0,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Glasscock,857,844,101.5,1.5,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Goliad,5747,5500,104.5,4.5,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Gonzales,13364,14689,91.0,,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Gray,12303,16102,76.4,,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Grayson,104013,103923,100.1,0.1,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Gregg,74495,94003,79.2,,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Grimes,22206,23045,96.4,,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Guadalupe,138088,128222,107.7,7.7,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Hale,18374,24143,76.1,,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Hall,1831,2199,83.3,,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Hamilton,6348,6491,97.8,,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Hansford,2977,3776,78.8,,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Hardeman,2191,2740,80.0,,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Hardin,43968,42632,103.1,3.1,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Harris,2746177,3519584,78.0,,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Harrison,47906,51865,92.4,,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Hartley,2821,4222,66.8,,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Haskell,3445,4332,79.5,,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Hays,203490,185523,109.7,9.7,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Hemphill,2290,2396,95.6,,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Henderson,61329,64930,94.5,,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Hidalgo,466208,608225,76.7,,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Hill,27866,27486,101.4,1.4,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Hockley,14373,15937,90.2,,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Hood,54192,49209,110.1,10.1,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Hopkins,25858,27871,92.8,,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Houston,13919,17886,77.8,,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Howard,16861,26862,62.8,,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Hudspeth,2103,2667,78.9,,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Hunt,77012,76143,101.1,1.1,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Hutchinson,13404,15430,86.9,,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Irion,1221,1184,103.1,3.1,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Jack,5967,6649,89.7,,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Jackson,10054,11340,88.7,,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Jasper,24585,25539,96.3,,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Jeff Davis,1539,1711,89.9,,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Jefferson,148754,195680,76.0,,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Jim Hogg,3405,3516,96.8,,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Jim Wells,26107,28630,91.2,,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Johnson,135277,133965,101.0,1.0,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Jones,11231,16187,69.4,,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Karnes,8281,11855,69.9,,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Kaufman,119211,103646,115.0,15.0,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Kendall,41174,34179,120.5,20.5,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Kenedy,269,267,100.7,0.7,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Kent,566,608,93.1,,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Kerr,39762,43270,91.9,,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Kimble,3353,3557,94.3,,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,King,179,189,94.7,,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Kinney,2195,2574,85.3,,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Kleberg,18028,23791,75.8,,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Knox,2262,2526,89.5,,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Lamar,33431,38400,87.1,,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Lamb,7668,9511,80.6,,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Lampasas,17556,16856,104.2,4.2,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,La Salle,4096,5268,77.8,,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Lavaca,14463,15681,92.2,,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Lee,12262,13173,93.1,,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Leon,12449,12406,100.3,0.3,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Liberty,59345,67304,88.2,,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Limestone,14484,17094,84.7,,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Lipscomb,1878,2304,81.5,,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Live Oak,7686,9296,82.7,,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Llano,18564,18113,102.5,2.5,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Loving,148,40,370.0,270.0,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Lubbock,204340,237542,86.0,,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Lynn,4475,4008,111.7,11.7,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Madison,8576,10701,80.1,,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Marion,7878,8016,98.3,,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Martin,3589,3696,97.1,,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Mason,3320,3202,103.7,3.7,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Matagorda,22526,27147,83.0,,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Maverick,37239,40929,91.0,,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,McCulloch,5380,5985,89.9,,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,McLennan,161164,197391,81.6,,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,McMullen,644,487,132.2,32.2,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Medina,40743,38971,104.5,4.5,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Menard,1474,1602,92.0,,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Midland,99805,123134,81.1,,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Milam,17565,19070,92.1,,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Mills,3643,3569,102.1,2.1,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Mitchell,4473,7215,62.0,,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Montague,15801,15552,101.6,1.6,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Montgomery,487323,458324,106.3,6.3,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Moore,10247,14944,68.6,,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Morris,8815,9300,94.8,,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Motley,829,841,98.6,,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Nacogdoches,40402,50003,80.8,,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Navarro,33825,39248,86.2,,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Newton,9424,9672,97.4,,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Nolan,8835,11028,80.1,,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Nueces,217666,270056,80.6,,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Ochiltree,5221,6991,74.7,,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Oldham,1395,1229,113.5,13.5,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Orange,56955,64476,88.3,,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Palo Pinto,20923,22038,94.9,,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Panola,17896,17176,104.2,4.2,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Parker,133925,111434,120.2,20.2,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Parmer,4516,7029,64.2,,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Pecos,8431,11580,72.8,,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Polk,44574,40664,109.6,9.6,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Potter,59103,88598,66.7,,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Presidio,4373,4672,93.6,,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Rains,9772,9646,101.3,1.3,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Randall,102715,106753,96.2,,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Reagan,1808,2402,75.3,,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Real,2701,2282,118.4,18.4,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Red River,8664,9279,93.4,,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Reeves,8030,11619,69.1,,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Refugio,4922,5244,93.9,,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Roberts,713,626,113.9,13.9,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Robertson,12971,12722,102.0,2.0,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Rockwall,91659,78525,116.7,16.7,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Runnels,6848,7636,89.7,,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Rusk,34488,40718,84.7,,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Sabine,8393,8063,104.1,4.1,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,San Augustine,6045,6286,96.2,,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,San Jacinto,21104,21447,98.4,,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,San Patricio,45611,51377,88.8,,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,San Saba,3774,4606,81.9,,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Schleicher,1779,1867,95.3,,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Scurry,9254,12649,73.2,,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Shackelford,2467,2362,104.4,4.4,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Shelby,16476,18071,91.2,,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Sherman,1366,1974,69.2,,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Smith,164156,177458,92.5,,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Somervell,7577,6968,108.7,8.7,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Starr,36485,46110,79.1,,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Stephens,5908,7127,82.9,,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Sterling,902,1015,88.9,,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Stonewall,960,1003,95.7,,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Sutton,2284,2555,89.4,,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Swisher,3882,5269,73.7,,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Tarrant,1228367,1574046,78.0,,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Taylor,90886,108565,83.7,,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Terrell,622,616,101.0,1.0,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Terry,6202,8582,72.3,,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Throckmorton,1192,1128,105.7,5.7,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Titus,18307,22655,80.8,,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Tom Green,73870,91755,80.5,,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Travis,945505,1016490,93.0,,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Trinity,12380,10982,112.7,12.7,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Tyler,14992,15975,93.8,,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Upshur,31152,30854,101.0,1.0,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Upton,2079,2438,85.3,,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Uvalde,17679,18480,95.7,,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Val Verde,31026,34971,88.7,,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Van Zandt,43058,45970,93.7,,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Victoria,58190,68803,84.6,,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Walker,40280,64843,62.1,,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Waller,46110,43199,106.7,6.7,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Ward,7027,8486,82.8,,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Washington,26247,28261,92.9,,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Webb,150324,186454,80.6,,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Wharton,26520,31314,84.7,,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Wheeler,3347,3773,88.7,,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Wichita,78749,100692,78.2,,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Wilbarger,8256,9921,83.2,,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Willacy,11578,15484,74.8,,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Williamson,472191,453045,104.2,4.2,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Wilson,40405,37771,107.0,7.0,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Winkler,4190,5602,74.8,,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Wise,59841,51836,115.4,15.4,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Wood,36213,36551,99.1,,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Yoakum,4340,5473,79.3,,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Young,12892,13648,94.5,,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Zapata,8263,9592,86.1,,"Total registered = non-suspense + suspense, as published",2026-11
+Texas,Zavala,7580,6919,109.6,9.6,"Total registered = non-suspense + suspense, as published",2026-11
+California,Alameda,983846,1338388,73.5,,"Total registered voters, as published",2026-10-19
+California,Alpine,917,1009,90.9,,"Total registered voters, as published",2026-10-19
+California,Amador,26992,34042,79.3,,"Total registered voters, as published",2026-10-19
+California,Butte,127517,168339,75.8,,"Total registered voters, as published",2026-10-19
+California,Calaveras,32726,37337,87.7,,"Total registered voters, as published",2026-10-19
+California,Colusa,10940,15733,69.5,,"Total registered voters, as published",2026-10-19
+California,Contra Costa,733037,902672,81.2,,"Total registered voters, as published",2026-10-19
+California,Del Norte,15155,22052,68.7,,"Total registered voters, as published",2026-10-19
+California,El Dorado,137930,152083,90.7,,"Total registered voters, as published",2026-10-19
+California,Fresno,530280,730245,72.6,,"Total registered voters, as published",2026-10-19
+California,Glenn,14226,21464,66.3,,"Total registered voters, as published",2026-10-19
+California,Humboldt,86401,109809,78.7,,"Total registered voters, as published",2026-10-19
+California,Imperial,93770,132200,70.9,,"Total registered voters, as published",2026-10-19
+California,Inyo,10926,15180,72.0,,"Total registered voters, as published",2026-10-19
+California,Kern,465832,651739,71.5,,"Total registered voters, as published",2026-10-19
+California,Kings,61136,111935,54.6,,"Total registered voters, as published",2026-10-19
+California,Lake,38010,54080,70.3,,"Total registered voters, as published",2026-10-19
+California,Lassen,15333,27226,56.3,,"Total registered voters, as published",2026-10-19
+California,Los Angeles,5914190,7959791,74.3,,"Total registered voters, as published",2026-10-19
+California,Madera,83662,113229,73.9,,"Total registered voters, as published",2026-10-19
+California,Marin,173844,209451,83.0,,"Total registered voters, as published",2026-10-19
+California,Mariposa,11799,14187,83.2,,"Total registered voters, as published",2026-10-19
+California,Mendocino,53969,72751,74.2,,"Total registered voters, as published",2026-10-19
+California,Merced,137293,200223,68.6,,"Total registered voters, as published",2026-10-19
+California,Modoc,5172,6905,74.9,,"Total registered voters, as published",2026-10-19
+California,Mono,7960,10555,75.4,,"Total registered voters, as published",2026-10-19
+California,Monterey,220213,327777,67.2,,"Total registered voters, as published",2026-10-19
+California,Napa,86473,110473,78.3,,"Total registered voters, as published",2026-10-19
+California,Nevada,76693,84331,90.9,,"Total registered voters, as published",2026-10-19
+California,Orange,1916806,2519658,76.1,,"Total registered voters, as published",2026-10-19
+California,Placer,300368,313117,95.9,,"Total registered voters, as published",2026-10-19
+California,Plumas,12889,16340,78.9,,"Total registered voters, as published",2026-10-19
+California,Riverside,1454472,1823505,79.8,,"Total registered voters, as published",2026-10-19
+California,Sacramento,921313,1217309,75.7,,"Total registered voters, as published",2026-10-19
+California,San Benito,40035,47915,83.6,,"Total registered voters, as published",2026-10-19
+California,San Bernardino,1248960,1629042,76.7,,"Total registered voters, as published",2026-10-19
+California,San Diego,2030182,2608768,77.8,,"Total registered voters, as published",2026-10-19
+California,San Francisco,536037,760738,70.5,,"Total registered voters, as published",2026-10-19
+California,San Joaquin,415611,573400,72.5,,"Total registered voters, as published",2026-10-19
+California,San Luis Obispo,183732,231744,79.3,,"Total registered voters, as published",2026-10-19
+California,San Mateo,449447,610236,73.7,,"Total registered voters, as published",2026-10-19
+California,Santa Barbara,249802,350805,71.2,,"Total registered voters, as published",2026-10-19
+California,Santa Clara,1080711,1529717,70.6,,"Total registered voters, as published",2026-10-19
+California,Santa Cruz,173193,219764,78.8,,"Total registered voters, as published",2026-10-19
+California,Shasta,115780,143512,80.7,,"Total registered voters, as published",2026-10-19
+California,Sierra,2164,2698,80.2,,"Total registered voters, as published",2026-10-19
+California,Siskiyou,27669,35590,77.7,,"Total registered voters, as published",2026-10-19
+California,Solano,276155,354770,77.8,,"Total registered voters, as published",2026-10-19
+California,Sonoma,321074,393152,81.7,,"Total registered voters, as published",2026-10-19
+California,Stanislaus,301333,407908,73.9,,"Total registered voters, as published",2026-10-19
+California,Sutter,55200,74581,74.0,,"Total registered voters, as published",2026-10-19
+California,Tehama,37275,49851,74.8,,"Total registered voters, as published",2026-10-19
+California,Trinity,7600,13419,56.6,,"Total registered voters, as published",2026-10-19
+California,Tulare,228685,331093,69.1,,"Total registered voters, as published",2026-10-19
+California,Tuolumne,35784,46268,77.3,,"Total registered voters, as published",2026-10-19
+California,Ventura,525136,656198,80.0,,"Total registered voters, as published",2026-10-19
+California,Yolo,123012,171256,71.8,,"Total registered voters, as published",2026-10-19
+California,Yuba,46923,59545,78.8,,"Total registered voters, as published",2026-10-19
+Pennsylvania,Adams,77163,83005,93.0,,"Total registered = active + inactive, as published",2026-11-03
+Pennsylvania,Allegheny,925729,1020183,90.7,,"Total registered = active + inactive, as published",2026-11-03
+Pennsylvania,Armstrong,43737,53182,82.2,,"Total registered = active + inactive, as published",2026-11-03
+Pennsylvania,Beaver,114603,136115,84.2,,"Total registered = active + inactive, as published",2026-11-03
+Pennsylvania,Bedford,33079,38284,86.4,,"Total registered = active + inactive, as published",2026-11-03
+Pennsylvania,Berks,275939,333658,82.7,,"Total registered = active + inactive, as published",2026-11-03
+Pennsylvania,Blair,81846,98475,83.1,,"Total registered = active + inactive, as published",2026-11-03
+Pennsylvania,Bradford,39048,46941,83.2,,"Total registered = active + inactive, as published",2026-11-03
+Pennsylvania,Bucks,487385,515340,94.6,,"Total registered = active + inactive, as published",2026-11-03
+Pennsylvania,Butler,144545,155325,93.1,,"Total registered = active + inactive, as published",2026-11-03
+Pennsylvania,Cambria,86186,108388,79.5,,"Total registered = active + inactive, as published",2026-11-03
+Pennsylvania,Cameron,2885,3751,76.9,,"Total registered = active + inactive, as published",2026-11-03
+Pennsylvania,Carbon,45868,52290,87.7,,"Total registered = active + inactive, as published",2026-11-03
+Pennsylvania,Centre,103270,134439,76.8,,"Total registered = active + inactive, as published",2026-11-03
+Pennsylvania,Chester,392304,412886,95.0,,"Total registered = active + inactive, as published",2026-11-03
+Pennsylvania,Clarion,23306,29966,77.8,,"Total registered = active + inactive, as published",2026-11-03
+Pennsylvania,Clearfield,49727,65948,75.4,,"Total registered = active + inactive, as published",2026-11-03
+Pennsylvania,Clinton,22597,29598,76.3,,"Total registered = active + inactive, as published",2026-11-03
+Pennsylvania,Columbia,40802,53098,76.8,,"Total registered = active + inactive, as published",2026-11-03
+Pennsylvania,Crawford,53116,66608,79.7,,"Total registered = active + inactive, as published",2026-11-03
+Pennsylvania,Cumberland,185538,206533,89.8,,"Total registered = active + inactive, as published",2026-11-03
+Pennsylvania,Dauphin,202954,224493,90.4,,"Total registered = active + inactive, as published",2026-11-03
+Pennsylvania,Delaware,413874,449790,92.0,,"Total registered = active + inactive, as published",2026-11-03
+Pennsylvania,Elk,20533,25229,81.4,,"Total registered = active + inactive, as published",2026-11-03
+Pennsylvania,Erie,175343,214341,81.8,,"Total registered = active + inactive, as published",2026-11-03
+Pennsylvania,Fayette,79689,104708,76.1,,"Total registered = active + inactive, as published",2026-11-03
+Pennsylvania,Forest,3274,6323,51.8,,"Total registered = active + inactive, as published",2026-11-03
+Pennsylvania,Franklin,105937,120964,87.6,,"Total registered = active + inactive, as published",2026-11-03
+Pennsylvania,Fulton,10155,11514,88.2,,"Total registered = active + inactive, as published",2026-11-03
+Pennsylvania,Greene,21807,29272,74.5,,"Total registered = active + inactive, as published",2026-11-03
+Pennsylvania,Huntingdon,27943,36075,77.5,,"Total registered = active + inactive, as published",2026-11-03
+Pennsylvania,Indiana,49254,67726,72.7,,"Total registered = active + inactive, as published",2026-11-03
+Pennsylvania,Jefferson,28226,35246,80.1,,"Total registered = active + inactive, as published",2026-11-03
+Pennsylvania,Juniata,14102,18343,76.9,,"Total registered = active + inactive, as published",2026-11-03
+Pennsylvania,Lackawanna,151015,173597,87.0,,"Total registered = active + inactive, as published",2026-11-03
+Pennsylvania,Lancaster,366763,425314,86.2,,"Total registered = active + inactive, as published",2026-11-03
+Pennsylvania,Lawrence,57470,69056,83.2,,"Total registered = active + inactive, as published",2026-11-03
+Pennsylvania,Lebanon,94731,111234,85.2,,"Total registered = active + inactive, as published",2026-11-03
+Pennsylvania,Lehigh,256830,291935,88.0,,"Total registered = active + inactive, as published",2026-11-03
+Pennsylvania,Luzerne,209503,262455,79.8,,"Total registered = active + inactive, as published",2026-11-03
+Pennsylvania,Lycoming,73009,90800,80.4,,"Total registered = active + inactive, as published",2026-11-03
+Pennsylvania,McKean,25381,32321,78.5,,"Total registered = active + inactive, as published",2026-11-03
+Pennsylvania,Mercer,72238,89028,81.1,,"Total registered = active + inactive, as published",2026-11-03
+Pennsylvania,Mifflin,27229,36057,75.5,,"Total registered = active + inactive, as published",2026-11-03
+Pennsylvania,Monroe,118818,134271,88.5,,"Total registered = active + inactive, as published",2026-11-03
+Pennsylvania,Montgomery,628331,674024,93.2,,"Total registered = active + inactive, as published",2026-11-03
+Pennsylvania,Montour,12418,14393,86.3,,"Total registered = active + inactive, as published",2026-11-03
+Pennsylvania,Northampton,234834,251676,93.3,,"Total registered = active + inactive, as published",2026-11-03
+Pennsylvania,Northumberland,55540,73275,75.8,,"Total registered = active + inactive, as published",2026-11-03
+Pennsylvania,Perry,31391,35917,87.4,,"Total registered = active + inactive, as published",2026-11-03
+Pennsylvania,Philadelphia,1104368,1278362,86.4,,"Total registered = active + inactive, as published",2026-11-03
+Pennsylvania,Pike,47641,47447,100.4,0.4,"Total registered = active + inactive, as published",2026-11-03
+Pennsylvania,Potter,11041,13140,84.0,,"Total registered = active + inactive, as published",2026-11-03
+Pennsylvania,Schuylkill,92865,115932,80.1,,"Total registered = active + inactive, as published",2026-11-03
+Pennsylvania,Snyder,24055,31144,77.2,,"Total registered = active + inactive, as published",2026-11-03
+Pennsylvania,Somerset,48578,60695,80.0,,"Total registered = active + inactive, as published",2026-11-03
+Pennsylvania,Sullivan,4500,4857,92.6,,"Total registered = active + inactive, as published",2026-11-03
+Pennsylvania,Susquehanna,27505,30923,88.9,,"Total registered = active + inactive, as published",2026-11-03
+Pennsylvania,Tioga,26886,32720,82.2,,"Total registered = active + inactive, as published",2026-11-03
+Pennsylvania,Union,26619,34680,76.8,,"Total registered = active + inactive, as published",2026-11-03
+Pennsylvania,Venango,32970,40320,81.8,,"Total registered = active + inactive, as published",2026-11-03
+Pennsylvania,Warren,25488,31105,81.9,,"Total registered = active + inactive, as published",2026-11-03
+Pennsylvania,Washington,145798,169191,86.2,,"Total registered = active + inactive, as published",2026-11-03
+Pennsylvania,Wayne,36885,42587,86.6,,"Total registered = active + inactive, as published",2026-11-03
+Pennsylvania,Westmoreland,251525,289614,86.8,,"Total registered = active + inactive, as published",2026-11-03
+Pennsylvania,Wyoming,18568,21073,88.1,,"Total registered = active + inactive, as published",2026-11-03
+Pennsylvania,York,330138,356368,92.6,,"Total registered = active + inactive, as published",2026-11-03
+Oregon,Baker,12978,13380,97.0,,"Total registered voters, as published",2026-10-05
+Oregon,Benton,61633,79692,77.3,,"Total registered voters, as published",2026-10-05
+Oregon,Clackamas,323735,330868,97.8,,"Total registered voters, as published",2026-10-05
+Oregon,Clatsop,31735,33262,95.4,,"Total registered voters, as published",2026-10-05
+Oregon,Columbia,42600,41729,102.1,2.1,"Total registered voters, as published",2026-10-05
+Oregon,Coos,50321,53383,94.3,,"Total registered voters, as published",2026-10-05
+Oregon,Crook,21750,19871,109.5,9.5,"Total registered voters, as published",2026-10-05
+Oregon,Curry,19156,20121,95.2,,"Total registered voters, as published",2026-10-05
+Oregon,Deschutes,167817,158167,106.1,6.1,"Total registered voters, as published",2026-10-05
+Oregon,Douglas,89159,89959,99.1,,"Total registered voters, as published",2026-10-05
+Oregon,Gilliam,1455,1596,91.2,,"Total registered voters, as published",2026-10-05
+Oregon,Grant,5494,5910,93.0,,"Total registered voters, as published",2026-10-05
+Oregon,Harney,5671,5839,97.1,,"Total registered voters, as published",2026-10-05
+Oregon,Hood River,16972,18372,92.4,,"Total registered voters, as published",2026-10-05
+Oregon,Jackson,165721,178032,93.1,,"Total registered voters, as published",2026-10-05
+Oregon,Jefferson,17869,18983,94.1,,"Total registered voters, as published",2026-10-05
+Oregon,Josephine,69977,71749,97.5,,"Total registered voters, as published",2026-10-05
+Oregon,Klamath,51427,54901,93.7,,"Total registered voters, as published",2026-10-05
+Oregon,Lake,5654,6604,85.6,,"Total registered voters, as published",2026-10-05
+Oregon,Lane,282837,313477,90.2,,"Total registered voters, as published",2026-10-05
+Oregon,Lincoln,41033,42380,96.8,,"Total registered voters, as published",2026-10-05
+Oregon,Linn,100739,100402,100.3,0.3,"Total registered voters, as published",2026-10-05
+Oregon,Malheur,18809,23848,78.9,,"Total registered voters, as published",2026-10-05
+Oregon,Marion,232994,262742,88.7,,"Total registered voters, as published",2026-10-05
+Oregon,Morrow,7419,8842,83.9,,"Total registered voters, as published",2026-10-05
+Oregon,Multnomah,586928,666710,88.0,,"Total registered voters, as published",2026-10-05
+Oregon,Polk,64657,67652,95.6,,"Total registered voters, as published",2026-10-05
+Oregon,Sherman,1495,1508,99.1,,"Total registered voters, as published",2026-10-05
+Oregon,Tillamook,21950,22395,98.0,,"Total registered voters, as published",2026-10-05
+Oregon,Umatilla,51809,60393,85.8,,"Total registered voters, as published",2026-10-05
+Oregon,Union,19546,20379,95.9,,"Total registered voters, as published",2026-10-05
+Oregon,Wallowa,6367,6016,105.8,5.8,"Total registered voters, as published",2026-10-05
+Oregon,Wasco,19185,20973,91.5,,"Total registered voters, as published",2026-10-05
+Oregon,Washington,407039,464964,87.5,,"Total registered voters, as published",2026-10-05
+Oregon,Wheeler,1052,1217,86.4,,"Total registered voters, as published",2026-10-05
+Oregon,Yamhill,78282,84336,92.8,,"Total registered voters, as published",2026-10-05
+Arizona,Apache,59530,49105,121.2,21.2,"Total registered = active + inactive, as published",2026-11-03
+Arizona,Cochise,91386,99330,92.0,,"Total registered = active + inactive, as published",2026-11-03
+Arizona,Coconino,107201,115992,92.4,,"Total registered = active + inactive, as published",2026-11-03
+Arizona,Gila,38523,43006,89.6,,"Total registered = active + inactive, as published",2026-11-03
+Arizona,Graham,23012,27715,83.0,,"Total registered = active + inactive, as published",2026-11-03
+Arizona,Greenlee,5158,6843,75.4,,"Total registered = active + inactive, as published",2026-11-03
+Arizona,La Paz,13893,13505,102.9,2.9,"Total registered = active + inactive, as published",2026-11-03
+Arizona,Maricopa,3022045,3382386,89.3,,"Total registered = active + inactive, as published",2026-11-03
+Arizona,Mohave,179790,177461,101.3,1.3,"Total registered = active + inactive, as published",2026-11-03
+Arizona,Navajo,79033,79208,99.8,,"Total registered = active + inactive, as published",2026-11-03
+Arizona,Pima,747519,834265,89.6,,"Total registered = active + inactive, as published",2026-11-03
+Arizona,Pinal,336415,325640,103.3,3.3,"Total registered = active + inactive, as published",2026-11-03
+Arizona,Santa Cruz,34780,35215,98.8,,"Total registered = active + inactive, as published",2026-11-03
+Arizona,Yavapai,197507,199136,99.2,,"Total registered = active + inactive, as published",2026-11-03
+Arizona,Yuma,129264,153169,84.4,,"Total registered = active + inactive, as published",2026-11-03
+South Carolina,Abbeville,15721,19369,81.2,,"Total registered voters, as published",2026-11-02
+South Carolina,Aiken,117779,132926,88.6,,"Total registered voters, as published",2026-11-02
+South Carolina,Allendale,4429,6687,66.2,,"Total registered voters, as published",2026-11-02
+South Carolina,Anderson,132146,157974,83.7,,"Total registered voters, as published",2026-11-02
+South Carolina,Bamberg,7842,10690,73.4,,"Total registered voters, as published",2026-11-02
+South Carolina,Barnwell,13021,15964,81.6,,"Total registered voters, as published",2026-11-02
+South Carolina,Beaufort,143516,151768,94.6,,"Total registered voters, as published",2026-11-02
+South Carolina,Berkeley,165053,173949,94.9,,"Total registered voters, as published",2026-11-02
+South Carolina,Calhoun,10261,11423,89.8,,"Total registered voters, as published",2026-11-02
+South Carolina,Charleston,282240,327897,86.1,,"Total registered voters, as published",2026-11-02
+South Carolina,Cherokee,34184,43551,78.5,,"Total registered voters, as published",2026-11-02
+South Carolina,Chester,20422,25144,81.2,,"Total registered voters, as published",2026-11-02
+South Carolina,Chesterfield,26205,33697,77.8,,"Total registered voters, as published",2026-11-02
+South Carolina,Clarendon,21838,25049,87.2,,"Total registered voters, as published",2026-11-02
+South Carolina,Colleton,24857,30438,81.7,,"Total registered voters, as published",2026-11-02
+South Carolina,Darlington,41569,49141,84.6,,"Total registered voters, as published",2026-11-02
+South Carolina,Dillon,16764,21491,78.0,,"Total registered voters, as published",2026-11-02
+South Carolina,Dorchester,108674,121251,89.6,,"Total registered voters, as published",2026-11-02
+South Carolina,Edgefield,18238,20775,87.8,,"Total registered voters, as published",2026-11-02
+South Carolina,Fairfield,15606,17307,90.2,,"Total registered voters, as published",2026-11-02
+South Carolina,Florence,83367,105699,78.9,,"Total registered voters, as published",2026-11-02
+South Carolina,Georgetown,47777,52140,91.6,,"Total registered voters, as published",2026-11-02
+South Carolina,Greenville,349844,406243,86.1,,"Total registered voters, as published",2026-11-02
+South Carolina,Greenwood,42092,54259,77.6,,"Total registered voters, as published",2026-11-02
+South Carolina,Hampton,11029,14708,75.0,,"Total registered voters, as published",2026-11-02
+South Carolina,Horry,289441,290082,99.8,,"Total registered voters, as published",2026-11-02
+South Carolina,Jasper,27474,23102,118.9,18.9,"Total registered voters, as published",2026-11-02
+South Carolina,Kershaw,42927,50464,85.1,,"Total registered voters, as published",2026-11-02
+South Carolina,Lancaster,71965,74608,96.5,,"Total registered voters, as published",2026-11-02
+South Carolina,Laurens,42541,52791,80.6,,"Total registered voters, as published",2026-11-02
+South Carolina,Lee,10068,13586,74.1,,"Total registered voters, as published",2026-11-02
+South Carolina,Lexington,195746,225405,86.8,,"Total registered voters, as published",2026-11-02
+South Carolina,McCormick,7838,8442,92.8,,"Total registered voters, as published",2026-11-02
+South Carolina,Marion,19772,22841,86.6,,"Total registered voters, as published",2026-11-02
+South Carolina,Marlboro,14351,21584,66.5,,"Total registered voters, as published",2026-11-02
+South Carolina,Newberry,23830,29709,80.2,,"Total registered voters, as published",2026-11-02
+South Carolina,Oconee,55237,63579,86.9,,"Total registered voters, as published",2026-11-02
+South Carolina,Orangeburg,50709,66567,76.2,,"Total registered voters, as published",2026-11-02
+South Carolina,Pickens,78572,107066,73.4,,"Total registered voters, as published",2026-11-02
+South Carolina,Richland,261686,327481,79.9,,"Total registered voters, as published",2026-11-02
+South Carolina,Saluda,11885,14736,80.7,,"Total registered voters, as published",2026-11-02
+South Carolina,Spartanburg,220232,252012,87.4,,"Total registered voters, as published",2026-11-02
+South Carolina,Sumter,61402,81402,75.4,,"Total registered voters, as published",2026-11-02
+South Carolina,Union,16343,21422,76.3,,"Total registered voters, as published",2026-11-02
+South Carolina,Williamsburg,18851,24930,75.6,,"Total registered voters, as published",2026-11-02
+South Carolina,York,194876,213111,91.4,,"Total registered voters, as published",2026-11-02
+Georgia,Appling,12808,13958,91.8,,"total registered voters (active + inactive), Georgia SOS Election Data Hub, as of Oct 15, 2026",2026-10-15
+Georgia,Atkinson,4961,6129,80.9,,"total registered voters (active + inactive), Georgia SOS Election Data Hub, as of Oct 15, 2026",2026-10-15
+Georgia,Bacon,7192,8310,86.5,,"total registered voters (active + inactive), Georgia SOS Election Data Hub, as of Oct 15, 2026",2026-10-15
+Georgia,Baker,2176,2275,95.6,,"total registered voters (active + inactive), Georgia SOS Election Data Hub, as of Oct 15, 2026",2026-10-15
+Georgia,Baldwin,29152,35732,81.6,,"total registered voters (active + inactive), Georgia SOS Election Data Hub, as of Oct 15, 2026",2026-10-15
+Georgia,Banks,15796,13900,113.6,13.6,"total registered voters (active + inactive), Georgia SOS Election Data Hub, as of Oct 15, 2026",2026-10-15
+Georgia,Barrow,70914,62195,114.0,14.0,"total registered voters (active + inactive), Georgia SOS Election Data Hub, as of Oct 15, 2026",2026-10-15
+Georgia,Bartow,92820,83570,111.1,11.1,"total registered voters (active + inactive), Georgia SOS Election Data Hub, as of Oct 15, 2026",2026-10-15
+Georgia,Ben Hill,11408,13165,86.7,,"total registered voters (active + inactive), Georgia SOS Election Data Hub, as of Oct 15, 2026",2026-10-15
+Georgia,Berrien,13127,13690,95.9,,"total registered voters (active + inactive), Georgia SOS Election Data Hub, as of Oct 15, 2026",2026-10-15
+Georgia,Bibb,118060,120902,97.6,,"total registered voters (active + inactive), Georgia SOS Election Data Hub, as of Oct 15, 2026",2026-10-15
+Georgia,Bleckley,8830,9613,91.9,,"total registered voters (active + inactive), Georgia SOS Election Data Hub, as of Oct 15, 2026",2026-10-15
+Georgia,Brantley,13196,13692,96.4,,"total registered voters (active + inactive), Georgia SOS Election Data Hub, as of Oct 15, 2026",2026-10-15
+Georgia,Brooks,11813,12747,92.7,,"total registered voters (active + inactive), Georgia SOS Election Data Hub, as of Oct 15, 2026",2026-10-15
+Georgia,Bryan,39715,31828,124.8,24.8,"total registered voters (active + inactive), Georgia SOS Election Data Hub, as of Oct 15, 2026",2026-10-15
+Georgia,Bulloch,55713,64494,86.4,,"total registered voters (active + inactive), Georgia SOS Election Data Hub, as of Oct 15, 2026",2026-10-15
+Georgia,Burke,18139,18778,96.6,,"total registered voters (active + inactive), Georgia SOS Election Data Hub, as of Oct 15, 2026",2026-10-15
+Georgia,Butts,19884,20360,97.7,,"total registered voters (active + inactive), Georgia SOS Election Data Hub, as of Oct 15, 2026",2026-10-15
+Georgia,Calhoun,3166,4687,67.5,,"total registered voters (active + inactive), Georgia SOS Election Data Hub, as of Oct 15, 2026",2026-10-15
+Georgia,Camden,45633,41808,109.1,9.1,"total registered voters (active + inactive), Georgia SOS Election Data Hub, as of Oct 15, 2026",2026-10-15
+Georgia,Candler,7570,8241,91.9,,"total registered voters (active + inactive), Georgia SOS Election Data Hub, as of Oct 15, 2026",2026-10-15
+Georgia,Carroll,98373,90996,108.1,8.1,"total registered voters (active + inactive), Georgia SOS Election Data Hub, as of Oct 15, 2026",2026-10-15
+Georgia,Catoosa,53011,52448,101.1,1.1,"total registered voters (active + inactive), Georgia SOS Election Data Hub, as of Oct 15, 2026",2026-10-15
+Georgia,Charlton,7520,10135,74.2,,"total registered voters (active + inactive), Georgia SOS Election Data Hub, as of Oct 15, 2026",2026-10-15
+Georgia,Chatham,238853,234715,101.8,1.8,"total registered voters (active + inactive), Georgia SOS Election Data Hub, as of Oct 15, 2026",2026-10-15
+Georgia,Chattahoochee,4986,7199,69.3,,"total registered voters (active + inactive), Georgia SOS Election Data Hub, as of Oct 15, 2026",2026-10-15
+Georgia,Chattooga,16667,19416,85.8,,"total registered voters (active + inactive), Georgia SOS Election Data Hub, as of Oct 15, 2026",2026-10-15
+Georgia,Cherokee,224267,202928,110.5,10.5,"total registered voters (active + inactive), Georgia SOS Election Data Hub, as of Oct 15, 2026",2026-10-15
+Georgia,Clarke,82081,106830,76.8,,"total registered voters (active + inactive), Georgia SOS Election Data Hub, as of Oct 15, 2026",2026-10-15
+Georgia,Clay,2181,2246,97.1,,"total registered voters (active + inactive), Georgia SOS Election Data Hub, as of Oct 15, 2026",2026-10-15
+Georgia,Clayton,211056,220578,95.7,,"total registered voters (active + inactive), Georgia SOS Election Data Hub, as of Oct 15, 2026",2026-10-15
+Georgia,Clinch,4468,5034,88.8,,"total registered voters (active + inactive), Georgia SOS Election Data Hub, as of Oct 15, 2026",2026-10-15
+Georgia,Cobb,577297,591848,97.5,,"total registered voters (active + inactive), Georgia SOS Election Data Hub, as of Oct 15, 2026",2026-10-15
+Georgia,Coffee,26234,32419,80.9,,"total registered voters (active + inactive), Georgia SOS Election Data Hub, as of Oct 15, 2026",2026-10-15
+Georgia,Colquitt,28881,34193,84.5,,"total registered voters (active + inactive), Georgia SOS Election Data Hub, as of Oct 15, 2026",2026-10-15
+Georgia,Columbia,127186,114823,110.8,10.8,"total registered voters (active + inactive), Georgia SOS Election Data Hub, as of Oct 15, 2026",2026-10-15
+Georgia,Cook,12307,12938,95.1,,"total registered voters (active + inactive), Georgia SOS Election Data Hub, as of Oct 15, 2026",2026-10-15
+Georgia,Coweta,123219,111155,110.9,10.9,"total registered voters (active + inactive), Georgia SOS Election Data Hub, as of Oct 15, 2026",2026-10-15
+Georgia,Crawford,9320,9606,97.0,,"total registered voters (active + inactive), Georgia SOS Election Data Hub, as of Oct 15, 2026",2026-10-15
+Georgia,Crisp,14016,15570,90.0,,"total registered voters (active + inactive), Georgia SOS Election Data Hub, as of Oct 15, 2026",2026-10-15
+Georgia,Dade,14641,12987,112.7,12.7,"total registered voters (active + inactive), Georgia SOS Election Data Hub, as of Oct 15, 2026",2026-10-15
+Georgia,Dawson,28339,21441,132.2,32.2,"total registered voters (active + inactive), Georgia SOS Election Data Hub, as of Oct 15, 2026",2026-10-15
+Georgia,DeKalb,576716,595276,96.9,,"total registered voters (active + inactive), Georgia SOS Election Data Hub, as of Oct 15, 2026",2026-10-15
+Georgia,Decatur,18703,22443,83.3,,"total registered voters (active + inactive), Georgia SOS Election Data Hub, as of Oct 15, 2026",2026-10-15
+Georgia,Dodge,12562,15709,80.0,,"total registered voters (active + inactive), Georgia SOS Election Data Hub, as of Oct 15, 2026",2026-10-15
+Georgia,Dooly,6609,9187,71.9,,"total registered voters (active + inactive), Georgia SOS Election Data Hub, as of Oct 15, 2026",2026-10-15
+Georgia,Dougherty,66886,66266,100.9,0.9,"total registered voters (active + inactive), Georgia SOS Election Data Hub, as of Oct 15, 2026",2026-10-15
+Georgia,Douglas,116334,108428,107.3,7.3,"total registered voters (active + inactive), Georgia SOS Election Data Hub, as of Oct 15, 2026",2026-10-15
+Georgia,Early,7587,8315,91.2,,"total registered voters (active + inactive), Georgia SOS Election Data Hub, as of Oct 15, 2026",2026-10-15
+Georgia,Echols,2300,2709,84.9,,"total registered voters (active + inactive), Georgia SOS Election Data Hub, as of Oct 15, 2026",2026-10-15
+Georgia,Effingham,55214,47295,116.7,16.7,"total registered voters (active + inactive), Georgia SOS Election Data Hub, as of Oct 15, 2026",2026-10-15
+Georgia,Elbert,14423,15493,93.1,,"total registered voters (active + inactive), Georgia SOS Election Data Hub, as of Oct 15, 2026",2026-10-15
+Georgia,Emanuel,15756,17320,91.0,,"total registered voters (active + inactive), Georgia SOS Election Data Hub, as of Oct 15, 2026",2026-10-15
+Georgia,Evans,6910,8127,85.0,,"total registered voters (active + inactive), Georgia SOS Election Data Hub, as of Oct 15, 2026",2026-10-15
+Georgia,Fannin,22549,21188,106.4,6.4,"total registered voters (active + inactive), Georgia SOS Election Data Hub, as of Oct 15, 2026",2026-10-15
+Georgia,Fayette,100149,91798,109.1,9.1,"total registered voters (active + inactive), Georgia SOS Election Data Hub, as of Oct 15, 2026",2026-10-15
+Georgia,Floyd,70218,76295,92.0,,"total registered voters (active + inactive), Georgia SOS Election Data Hub, as of Oct 15, 2026",2026-10-15
+Georgia,Forsyth,185643,181193,102.5,2.5,"total registered voters (active + inactive), Georgia SOS Election Data Hub, as of Oct 15, 2026",2026-10-15
+Georgia,Franklin,18404,18307,100.5,0.5,"total registered voters (active + inactive), Georgia SOS Election Data Hub, as of Oct 15, 2026",2026-10-15
+Georgia,Fulton,872314,847182,103.0,3.0,"total registered voters (active + inactive), Georgia SOS Election Data Hub, as of Oct 15, 2026",2026-10-15
+Georgia,Gilmer,26587,25417,104.6,4.6,"total registered voters (active + inactive), Georgia SOS Election Data Hub, as of Oct 15, 2026",2026-10-15
+Georgia,Glascock,2263,2236,101.2,1.2,"total registered voters (active + inactive), Georgia SOS Election Data Hub, as of Oct 15, 2026",2026-10-15
+Georgia,Glynn,69321,66468,104.3,4.3,"total registered voters (active + inactive), Georgia SOS Election Data Hub, as of Oct 15, 2026",2026-10-15
+Georgia,Gordon,43992,43500,101.1,1.1,"total registered voters (active + inactive), Georgia SOS Election Data Hub, as of Oct 15, 2026",2026-10-15
+Georgia,Grady,16817,19962,84.2,,"total registered voters (active + inactive), Georgia SOS Election Data Hub, as of Oct 15, 2026",2026-10-15
+Georgia,Greene,17727,15358,115.4,15.4,"total registered voters (active + inactive), Georgia SOS Election Data Hub, as of Oct 15, 2026",2026-10-15
+Georgia,Gwinnett,668107,709484,94.2,,"total registered voters (active + inactive), Georgia SOS Election Data Hub, as of Oct 15, 2026",2026-10-15
+Georgia,Habersham,34161,35878,95.2,,"total registered voters (active + inactive), Georgia SOS Election Data Hub, as of Oct 15, 2026",2026-10-15
+Georgia,Hall,158201,153844,102.8,2.8,"total registered voters (active + inactive), Georgia SOS Election Data Hub, as of Oct 15, 2026",2026-10-15
+Georgia,Hancock,6320,7487,84.4,,"total registered voters (active + inactive), Georgia SOS Election Data Hub, as of Oct 15, 2026",2026-10-15
+Georgia,Haralson,25084,22854,109.8,9.8,"total registered voters (active + inactive), Georgia SOS Election Data Hub, as of Oct 15, 2026",2026-10-15
+Georgia,Harris,30816,26799,115.0,15.0,"total registered voters (active + inactive), Georgia SOS Election Data Hub, as of Oct 15, 2026",2026-10-15
+Georgia,Hart,21274,20436,104.1,4.1,"total registered voters (active + inactive), Georgia SOS Election Data Hub, as of Oct 15, 2026",2026-10-15
+Georgia,Heard,9492,8698,109.1,9.1,"total registered voters (active + inactive), Georgia SOS Election Data Hub, as of Oct 15, 2026",2026-10-15
+Georgia,Henry,206418,179973,114.7,14.7,"total registered voters (active + inactive), Georgia SOS Election Data Hub, as of Oct 15, 2026",2026-10-15
+Georgia,Houston,130033,122118,106.5,6.5,"total registered voters (active + inactive), Georgia SOS Election Data Hub, as of Oct 15, 2026",2026-10-15
+Georgia,Irwin,6585,7547,87.3,,"total registered voters (active + inactive), Georgia SOS Election Data Hub, as of Oct 15, 2026",2026-10-15
+Georgia,Jackson,71797,56451,127.2,27.2,"total registered voters (active + inactive), Georgia SOS Election Data Hub, as of Oct 15, 2026",2026-10-15
+Georgia,Jasper,13600,11118,122.3,22.3,"total registered voters (active + inactive), Georgia SOS Election Data Hub, as of Oct 15, 2026",2026-10-15
+Georgia,Jeff Davis,9406,10856,86.6,,"total registered voters (active + inactive), Georgia SOS Election Data Hub, as of Oct 15, 2026",2026-10-15
+Georgia,Jefferson,11786,12301,95.8,,"total registered voters (active + inactive), Georgia SOS Election Data Hub, as of Oct 15, 2026",2026-10-15
+Georgia,Jenkins,5497,7005,78.5,,"total registered voters (active + inactive), Georgia SOS Election Data Hub, as of Oct 15, 2026",2026-10-15
+Georgia,Johnson,5930,7474,79.3,,"total registered voters (active + inactive), Georgia SOS Election Data Hub, as of Oct 15, 2026",2026-10-15
+Georgia,Jones,22707,21575,105.2,5.2,"total registered voters (active + inactive), Georgia SOS Election Data Hub, as of Oct 15, 2026",2026-10-15
+Georgia,Lamar,16027,14541,110.2,10.2,"total registered voters (active + inactive), Georgia SOS Election Data Hub, as of Oct 15, 2026",2026-10-15
+Georgia,Lanier,6700,7326,91.5,,"total registered voters (active + inactive), Georgia SOS Election Data Hub, as of Oct 15, 2026",2026-10-15
+Georgia,Laurens,36690,37734,97.2,,"total registered voters (active + inactive), Georgia SOS Election Data Hub, as of Oct 15, 2026",2026-10-15
+Georgia,Lee,25724,24676,104.2,4.2,"total registered voters (active + inactive), Georgia SOS Election Data Hub, as of Oct 15, 2026",2026-10-15
+Georgia,Liberty,46037,48014,95.9,,"total registered voters (active + inactive), Georgia SOS Election Data Hub, as of Oct 15, 2026",2026-10-15
+Georgia,Lincoln,6893,6270,109.9,9.9,"total registered voters (active + inactive), Georgia SOS Election Data Hub, as of Oct 15, 2026",2026-10-15
+Georgia,Long,14280,11234,127.1,27.1,"total registered voters (active + inactive), Georgia SOS Election Data Hub, as of Oct 15, 2026",2026-10-15
+Georgia,Lowndes,84044,89031,94.4,,"total registered voters (active + inactive), Georgia SOS Election Data Hub, as of Oct 15, 2026",2026-10-15
+Georgia,Lumpkin,26360,27689,95.2,,"total registered voters (active + inactive), Georgia SOS Election Data Hub, as of Oct 15, 2026",2026-10-15
+Georgia,Macon,7442,9938,74.9,,"total registered voters (active + inactive), Georgia SOS Election Data Hub, as of Oct 15, 2026",2026-10-15
+Georgia,Madison,24274,23112,105.0,5.0,"total registered voters (active + inactive), Georgia SOS Election Data Hub, as of Oct 15, 2026",2026-10-15
+Georgia,Marion,5451,5854,93.1,,"total registered voters (active + inactive), Georgia SOS Election Data Hub, as of Oct 15, 2026",2026-10-15
+Georgia,McDuffie,16783,16615,101.0,1.0,"total registered voters (active + inactive), Georgia SOS Election Data Hub, as of Oct 15, 2026",2026-10-15
+Georgia,McIntosh,10632,9040,117.6,17.6,"total registered voters (active + inactive), Georgia SOS Election Data Hub, as of Oct 15, 2026",2026-10-15
+Georgia,Meriwether,18227,16526,110.3,10.3,"total registered voters (active + inactive), Georgia SOS Election Data Hub, as of Oct 15, 2026",2026-10-15
+Georgia,Miller,4036,4749,85.0,,"total registered voters (active + inactive), Georgia SOS Election Data Hub, as of Oct 15, 2026",2026-10-15
+Georgia,Mitchell,14434,17065,84.6,,"total registered voters (active + inactive), Georgia SOS Election Data Hub, as of Oct 15, 2026",2026-10-15
+Georgia,Monroe,24893,21913,113.6,13.6,"total registered voters (active + inactive), Georgia SOS Election Data Hub, as of Oct 15, 2026",2026-10-15
+Georgia,Montgomery,5954,6792,87.7,,"total registered voters (active + inactive), Georgia SOS Election Data Hub, as of Oct 15, 2026",2026-10-15
+Georgia,Morgan,17700,15574,113.7,13.7,"total registered voters (active + inactive), Georgia SOS Election Data Hub, as of Oct 15, 2026",2026-10-15
+Georgia,Murray,28072,30210,92.9,,"total registered voters (active + inactive), Georgia SOS Election Data Hub, as of Oct 15, 2026",2026-10-15
+Georgia,Muscogee,145400,157052,92.6,,"total registered voters (active + inactive), Georgia SOS Election Data Hub, as of Oct 15, 2026",2026-10-15
+Georgia,Newton,96827,84748,114.3,14.3,"total registered voters (active + inactive), Georgia SOS Election Data Hub, as of Oct 15, 2026",2026-10-15
+Georgia,Oconee,34601,30221,114.5,14.5,"total registered voters (active + inactive), Georgia SOS Election Data Hub, as of Oct 15, 2026",2026-10-15
+Georgia,Oglethorpe,12511,11639,107.5,7.5,"total registered voters (active + inactive), Georgia SOS Election Data Hub, as of Oct 15, 2026",2026-10-15
+Georgia,Paulding,142639,123998,115.0,15.0,"total registered voters (active + inactive), Georgia SOS Election Data Hub, as of Oct 15, 2026",2026-10-15
+Georgia,Peach,21639,22111,97.9,,"total registered voters (active + inactive), Georgia SOS Election Data Hub, as of Oct 15, 2026",2026-10-15
+Georgia,Pickens,29521,26799,110.2,10.2,"total registered voters (active + inactive), Georgia SOS Election Data Hub, as of Oct 15, 2026",2026-10-15
+Georgia,Pierce,14315,14899,96.1,,"total registered voters (active + inactive), Georgia SOS Election Data Hub, as of Oct 15, 2026",2026-10-15
+Georgia,Pike,16489,14337,115.0,15.0,"total registered voters (active + inactive), Georgia SOS Election Data Hub, as of Oct 15, 2026",2026-10-15
+Georgia,Polk,29850,32238,92.6,,"total registered voters (active + inactive), Georgia SOS Election Data Hub, as of Oct 15, 2026",2026-10-15
+Georgia,Pulaski,6501,8012,81.1,,"total registered voters (active + inactive), Georgia SOS Election Data Hub, as of Oct 15, 2026",2026-10-15
+Georgia,Putnam,18549,17847,103.9,3.9,"total registered voters (active + inactive), Georgia SOS Election Data Hub, as of Oct 15, 2026",2026-10-15
+Georgia,Quitman,1734,1870,92.7,,"total registered voters (active + inactive), Georgia SOS Election Data Hub, as of Oct 15, 2026",2026-10-15
+Georgia,Rabun,14860,13767,107.9,7.9,"total registered voters (active + inactive), Georgia SOS Election Data Hub, as of Oct 15, 2026",2026-10-15
+Georgia,Randolph,4549,4977,91.4,,"total registered voters (active + inactive), Georgia SOS Election Data Hub, as of Oct 15, 2026",2026-10-15
+Georgia,Richmond,150904,160899,93.8,,"total registered voters (active + inactive), Georgia SOS Election Data Hub, as of Oct 15, 2026",2026-10-15
+Georgia,Rockdale,71698,71503,100.3,0.3,"total registered voters (active + inactive), Georgia SOS Election Data Hub, as of Oct 15, 2026",2026-10-15
+Georgia,Schley,3270,3328,98.3,,"total registered voters (active + inactive), Georgia SOS Election Data Hub, as of Oct 15, 2026",2026-10-15
+Georgia,Screven,10919,10893,100.2,0.2,"total registered voters (active + inactive), Georgia SOS Election Data Hub, as of Oct 15, 2026",2026-10-15
+Georgia,Seminole,6358,7277,87.4,,"total registered voters (active + inactive), Georgia SOS Election Data Hub, as of Oct 15, 2026",2026-10-15
+Georgia,Spalding,54237,52123,104.1,4.1,"total registered voters (active + inactive), Georgia SOS Election Data Hub, as of Oct 15, 2026",2026-10-15
+Georgia,Stephens,21415,21163,101.2,1.2,"total registered voters (active + inactive), Georgia SOS Election Data Hub, as of Oct 15, 2026",2026-10-15
+Georgia,Stewart,2918,4617,63.2,,"total registered voters (active + inactive), Georgia SOS Election Data Hub, as of Oct 15, 2026",2026-10-15
+Georgia,Sumter,19068,23036,82.8,,"total registered voters (active + inactive), Georgia SOS Election Data Hub, as of Oct 15, 2026",2026-10-15
+Georgia,Talbot,4833,4783,101.0,1.0,"total registered voters (active + inactive), Georgia SOS Election Data Hub, as of Oct 15, 2026",2026-10-15
+Georgia,Taliaferro,1350,1289,104.7,4.7,"total registered voters (active + inactive), Georgia SOS Election Data Hub, as of Oct 15, 2026",2026-10-15
+Georgia,Tattnall,13310,17654,75.4,,"total registered voters (active + inactive), Georgia SOS Election Data Hub, as of Oct 15, 2026",2026-10-15
+Georgia,Taylor,5788,6120,94.6,,"total registered voters (active + inactive), Georgia SOS Election Data Hub, as of Oct 15, 2026",2026-10-15
+Georgia,Telfair,6636,10190,65.1,,"total registered voters (active + inactive), Georgia SOS Election Data Hub, as of Oct 15, 2026",2026-10-15
+Georgia,Terrell,6774,7204,94.0,,"total registered voters (active + inactive), Georgia SOS Election Data Hub, as of Oct 15, 2026",2026-10-15
+Georgia,Thomas,33839,35037,96.6,,"total registered voters (active + inactive), Georgia SOS Election Data Hub, as of Oct 15, 2026",2026-10-15
+Georgia,Tift,29071,31224,93.1,,"total registered voters (active + inactive), Georgia SOS Election Data Hub, as of Oct 15, 2026",2026-10-15
+Georgia,Toombs,18207,20261,89.9,,"total registered voters (active + inactive), Georgia SOS Election Data Hub, as of Oct 15, 2026",2026-10-15
+Georgia,Towns,11794,10923,108.0,8.0,"total registered voters (active + inactive), Georgia SOS Election Data Hub, as of Oct 15, 2026",2026-10-15
+Georgia,Treutlen,4587,4934,93.0,,"total registered voters (active + inactive), Georgia SOS Election Data Hub, as of Oct 15, 2026",2026-10-15
+Georgia,Troup,50819,52581,96.6,,"total registered voters (active + inactive), Georgia SOS Election Data Hub, as of Oct 15, 2026",2026-10-15
+Georgia,Turner,6164,6960,88.6,,"total registered voters (active + inactive), Georgia SOS Election Data Hub, as of Oct 15, 2026",2026-10-15
+Georgia,Twiggs,6471,6589,98.2,,"total registered voters (active + inactive), Georgia SOS Election Data Hub, as of Oct 15, 2026",2026-10-15
+Georgia,Union,23780,20808,114.3,14.3,"total registered voters (active + inactive), Georgia SOS Election Data Hub, as of Oct 15, 2026",2026-10-15
+Georgia,Upson,20837,21711,96.0,,"total registered voters (active + inactive), Georgia SOS Election Data Hub, as of Oct 15, 2026",2026-10-15
+Georgia,Walker,49923,52794,94.6,,"total registered voters (active + inactive), Georgia SOS Election Data Hub, as of Oct 15, 2026",2026-10-15
+Georgia,Walton,85081,73098,116.4,16.4,"total registered voters (active + inactive), Georgia SOS Election Data Hub, as of Oct 15, 2026",2026-10-15
+Georgia,Ware,22842,27788,82.2,,"total registered voters (active + inactive), Georgia SOS Election Data Hub, as of Oct 15, 2026",2026-10-15
+Georgia,Warren,4188,4159,100.7,0.7,"total registered voters (active + inactive), Georgia SOS Election Data Hub, as of Oct 15, 2026",2026-10-15
+Georgia,Washington,14107,15709,89.8,,"total registered voters (active + inactive), Georgia SOS Election Data Hub, as of Oct 15, 2026",2026-10-15
+Georgia,Wayne,21336,23105,92.3,,"total registered voters (active + inactive), Georgia SOS Election Data Hub, as of Oct 15, 2026",2026-10-15
+Georgia,Webster,1804,1847,97.7,,"total registered voters (active + inactive), Georgia SOS Election Data Hub, as of Oct 15, 2026",2026-10-15
+Georgia,Wheeler,3481,6217,56.0,,"total registered voters (active + inactive), Georgia SOS Election Data Hub, as of Oct 15, 2026",2026-10-15
+Georgia,White,24376,22482,108.4,8.4,"total registered voters (active + inactive), Georgia SOS Election Data Hub, as of Oct 15, 2026",2026-10-15
+Georgia,Whitfield,66302,76262,86.9,,"total registered voters (active + inactive), Georgia SOS Election Data Hub, as of Oct 15, 2026",2026-10-15
+Georgia,Wilcox,5023,7218,69.6,,"total registered voters (active + inactive), Georgia SOS Election Data Hub, as of Oct 15, 2026",2026-10-15
+Georgia,Wilkes,7243,7651,94.7,,"total registered voters (active + inactive), Georgia SOS Election Data Hub, as of Oct 15, 2026",2026-10-15
+Georgia,Wilkinson,7026,7026,100.0,,"total registered voters (active + inactive), Georgia SOS Election Data Hub, as of Oct 15, 2026",2026-10-15
+Georgia,Worth,14668,16444,89.2,,"total registered voters (active + inactive), Georgia SOS Election Data Hub, as of Oct 15, 2026",2026-10-15
+Washington,Adams,8832,13630,64.8,,"active registered voters only (SOS Voter Demographics dashboard, last update Nov 2, 2026)",2026-11-02
+Washington,Asotin,15012,17729,84.7,,"active registered voters only (SOS Voter Demographics dashboard, last update Nov 2, 2026)",2026-11-02
+Washington,Benton,139791,152644,91.6,,"active registered voters only (SOS Voter Demographics dashboard, last update Nov 2, 2026)",2026-11-02
+Washington,Chelan,55045,61405,89.6,,"active registered voters only (SOS Voter Demographics dashboard, last update Nov 2, 2026)",2026-11-02
+Washington,Clallam,60071,64588,93.0,,"active registered voters only (SOS Voter Demographics dashboard, last update Nov 2, 2026)",2026-11-02
+Washington,Clark,363083,385835,94.1,,"active registered voters only (SOS Voter Demographics dashboard, last update Nov 2, 2026)",2026-11-02
+Washington,Columbia,3002,3277,91.6,,"active registered voters only (SOS Voter Demographics dashboard, last update Nov 2, 2026)",2026-11-02
+Washington,Cowlitz,78726,85596,92.0,,"active registered voters only (SOS Voter Demographics dashboard, last update Nov 2, 2026)",2026-11-02
+Washington,Douglas,28686,32199,89.1,,"active registered voters only (SOS Voter Demographics dashboard, last update Nov 2, 2026)",2026-11-02
+Washington,Ferry,5444,5831,93.4,,"active registered voters only (SOS Voter Demographics dashboard, last update Nov 2, 2026)",2026-11-02
+Washington,Franklin,50321,66302,75.9,,"active registered voters only (SOS Voter Demographics dashboard, last update Nov 2, 2026)",2026-11-02
+Washington,Garfield,1685,1799,93.7,,"active registered voters only (SOS Voter Demographics dashboard, last update Nov 2, 2026)",2026-11-02
+Washington,Grant,53108,70900,74.9,,"active registered voters only (SOS Voter Demographics dashboard, last update Nov 2, 2026)",2026-11-02
+Washington,Grays Harbor,52724,60530,87.1,,"active registered voters only (SOS Voter Demographics dashboard, last update Nov 2, 2026)",2026-11-02
+Washington,Island,66205,71175,93.0,,"active registered voters only (SOS Voter Demographics dashboard, last update Nov 2, 2026)",2026-11-02
+Washington,Jefferson,28991,28951,100.1,0.1,"active registered voters only (SOS Voter Demographics dashboard, last update Nov 2, 2026)",2026-11-02
+Washington,King,1459864,1813470,80.5,,"active registered voters only (SOS Voter Demographics dashboard, last update Nov 2, 2026)",2026-11-02
+Washington,Kitsap,204026,219552,92.9,,"active registered voters only (SOS Voter Demographics dashboard, last update Nov 2, 2026)",2026-11-02
+Washington,Kittitas,32482,36115,89.9,,"active registered voters only (SOS Voter Demographics dashboard, last update Nov 2, 2026)",2026-11-02
+Washington,Klickitat,16862,18296,92.2,,"active registered voters only (SOS Voter Demographics dashboard, last update Nov 2, 2026)",2026-11-02
+Washington,Lewis,59933,64000,93.6,,"active registered voters only (SOS Voter Demographics dashboard, last update Nov 2, 2026)",2026-11-02
+Washington,Lincoln,8922,8582,104.0,4.0,"active registered voters only (SOS Voter Demographics dashboard, last update Nov 2, 2026)",2026-11-02
+Washington,Mason,48603,53265,91.2,,"active registered voters only (SOS Voter Demographics dashboard, last update Nov 2, 2026)",2026-11-02
+Washington,Okanogan,27271,32978,82.7,,"active registered voters only (SOS Voter Demographics dashboard, last update Nov 2, 2026)",2026-11-02
+Washington,Pacific,18094,19358,93.5,,"active registered voters only (SOS Voter Demographics dashboard, last update Nov 2, 2026)",2026-11-02
+Washington,Pend Oreille,11105,10878,102.1,2.1,"active registered voters only (SOS Voter Demographics dashboard, last update Nov 2, 2026)",2026-11-02
+Washington,Pierce,600940,709366,84.7,,"active registered voters only (SOS Voter Demographics dashboard, last update Nov 2, 2026)",2026-11-02
+Washington,San Juan,15212,15258,99.7,,"active registered voters only (SOS Voter Demographics dashboard, last update Nov 2, 2026)",2026-11-02
+Washington,Skagit,92246,101710,90.7,,"active registered voters only (SOS Voter Demographics dashboard, last update Nov 2, 2026)",2026-11-02
+Washington,Skamania,9098,9798,92.9,,"active registered voters only (SOS Voter Demographics dashboard, last update Nov 2, 2026)",2026-11-02
+Washington,Snohomish,547781,639797,85.6,,"active registered voters only (SOS Voter Demographics dashboard, last update Nov 2, 2026)",2026-11-02
+Washington,Spokane,375966,421551,89.2,,"active registered voters only (SOS Voter Demographics dashboard, last update Nov 2, 2026)",2026-11-02
+Washington,Stevens,36873,36608,100.7,0.7,"active registered voters only (SOS Voter Demographics dashboard, last update Nov 2, 2026)",2026-11-02
+Washington,Thurston,214573,231089,92.9,,"active registered voters only (SOS Voter Demographics dashboard, last update Nov 2, 2026)",2026-11-02
+Washington,Wahkiakum,3724,3655,101.9,1.9,"active registered voters only (SOS Voter Demographics dashboard, last update Nov 2, 2026)",2026-11-02
+Washington,Walla Walla,39235,49597,79.1,,"active registered voters only (SOS Voter Demographics dashboard, last update Nov 2, 2026)",2026-11-02
+Washington,Whatcom,170187,182483,93.3,,"active registered voters only (SOS Voter Demographics dashboard, last update Nov 2, 2026)",2026-11-02
+Washington,Whitman,24601,40521,60.7,,"active registered voters only (SOS Voter Demographics dashboard, last update Nov 2, 2026)",2026-11-02
+Washington,Yakima,137961,184371,74.8,,"active registered voters only (SOS Voter Demographics dashboard, last update Nov 2, 2026)",2026-11-02
+New York,Albany,221450,255875,86.5,,"Total registered = active + inactive, as published",2026-11-01
+New York,Allegany,28227,36863,76.6,,"Total registered = active + inactive, as published",2026-11-01
+New York,Broome,134311,161645,83.1,,"Total registered = active + inactive, as published",2026-11-01
+New York,Cattaraugus,51557,60217,85.6,,"Total registered = active + inactive, as published",2026-11-01
+New York,Cayuga,51442,61212,84.0,,"Total registered = active + inactive, as published",2026-11-01
+New York,Chautauqua,85843,101314,84.7,,"Total registered = active + inactive, as published",2026-11-01
+New York,Chemung,56133,66485,84.4,,"Total registered = active + inactive, as published",2026-11-01
+New York,Chenango,32572,37509,86.8,,"Total registered = active + inactive, as published",2026-11-01
+New York,Clinton,54265,65038,83.4,,"Total registered = active + inactive, as published",2026-11-01
+New York,Columbia,50049,50848,98.4,,"Total registered = active + inactive, as published",2026-11-01
+New York,Cortland,31324,37850,82.8,,"Total registered = active + inactive, as published",2026-11-01
+New York,Delaware,32097,36549,87.8,,"Total registered = active + inactive, as published",2026-11-01
+New York,Dutchess,223642,239623,93.3,,"Total registered = active + inactive, as published",2026-11-01
+New York,Erie,668890,762120,87.8,,"Total registered = active + inactive, as published",2026-11-01
+New York,Essex,27369,30642,89.3,,"Total registered = active + inactive, as published",2026-11-01
+New York,Franklin,29042,37865,76.7,,"Total registered = active + inactive, as published",2026-11-01
+New York,Fulton,36133,42718,84.6,,"Total registered = active + inactive, as published",2026-11-01
+New York,Genesee,40530,46834,86.5,,"Total registered = active + inactive, as published",2026-11-01
+New York,Greene,35309,39625,89.1,,"Total registered = active + inactive, as published",2026-11-01
+New York,Hamilton,4457,4441,100.4,0.4,"Total registered = active + inactive, as published",2026-11-01
+New York,Herkimer,42742,47722,89.6,,"Total registered = active + inactive, as published",2026-11-01
+New York,Jefferson,67682,90038,75.2,,"Total registered = active + inactive, as published",2026-11-01
+New York,Lewis,19850,20422,97.2,,"Total registered = active + inactive, as published",2026-11-01
+New York,Livingston,42440,50109,84.7,,"Total registered = active + inactive, as published",2026-11-01
+New York,Madison,47212,54863,86.1,,"Total registered = active + inactive, as published",2026-11-01
+New York,Monroe,537422,605130,88.8,,"Total registered = active + inactive, as published",2026-11-01
+New York,Montgomery,32049,38248,83.8,,"Total registered = active + inactive, as published",2026-11-01
+New York,Nassau,1071540,1098884,97.5,,"Total registered = active + inactive, as published",2026-11-01
+New York,Niagara,151708,170508,89.0,,"Total registered = active + inactive, as published",2026-11-01
+New York,Oneida,143954,182459,78.9,,"Total registered = active + inactive, as published",2026-11-01
+New York,Onondaga,334202,377786,88.5,,"Total registered = active + inactive, as published",2026-11-01
+New York,Ontario,85262,90306,94.4,,"Total registered = active + inactive, as published",2026-11-01
+New York,Orange,276205,299303,92.3,,"Total registered = active + inactive, as published",2026-11-01
+New York,Orleans,26623,32190,82.7,,"Total registered = active + inactive, as published",2026-11-01
+New York,Oswego,81324,92794,87.6,,"Total registered = active + inactive, as published",2026-11-01
+New York,Otsego,39889,48464,82.3,,"Total registered = active + inactive, as published",2026-11-01
+New York,Putnam,78228,78270,99.9,,"Total registered = active + inactive, as published",2026-11-01
+New York,Rensselaer,115895,130081,89.1,,"Total registered = active + inactive, as published",2026-11-01
+New York,Rockland,227758,239516,95.1,,"Total registered = active + inactive, as published",2026-11-01
+New York,Saratoga,193259,188616,102.5,2.5,"Total registered = active + inactive, as published",2026-11-01
+New York,Schenectady,110345,124281,88.8,,"Total registered = active + inactive, as published",2026-11-01
+New York,Schoharie,22135,24341,90.9,,"Total registered = active + inactive, as published",2026-11-01
+New York,Schuyler,13404,14508,92.4,,"Total registered = active + inactive, as published",2026-11-01
+New York,Seneca,21960,26820,81.9,,"Total registered = active + inactive, as published",2026-11-01
+New York,St.Lawrence,65958,86264,76.5,,"Total registered = active + inactive, as published",2026-11-01
+New York,Steuben,65516,73447,89.2,,"Total registered = active + inactive, as published",2026-11-01
+New York,Suffolk,1148885,1214412,94.6,,"Total registered = active + inactive, as published",2026-11-01
+New York,Sullivan,55962,61786,90.6,,"Total registered = active + inactive, as published",2026-11-01
+New York,Tioga,35213,38075,92.5,,"Total registered = active + inactive, as published",2026-11-01
+New York,Tompkins,68396,90048,76.0,,"Total registered = active + inactive, as published",2026-11-01
+New York,Ulster,139942,149457,93.6,,"Total registered = active + inactive, as published",2026-11-01
+New York,Warren,51000,54003,94.4,,"Total registered = active + inactive, as published",2026-11-01
+New York,Washington,41761,49492,84.4,,"Total registered = active + inactive, as published",2026-11-01
+New York,Wayne,62650,71744,87.3,,"Total registered = active + inactive, as published",2026-11-01
+New York,Westchester,693360,782442,88.6,,"Total registered = active + inactive, as published",2026-11-01
+New York,Wyoming,26092,32895,79.3,,"Total registered = active + inactive, as published",2026-11-01
+New York,Yates,14955,19090,78.3,,"Total registered = active + inactive, as published",2026-11-01
+New York,Bronx,801380,1123075,71.4,,"Total registered = active + inactive, as published",2026-11-01
+New York,Kings,1709695,2140371,79.9,,"Total registered = active + inactive, as published",2026-11-01
+New York,New York,1190410,1461740,81.4,,"Total registered = active + inactive, as published",2026-11-01
+New York,Queens,1380472,1949469,70.8,,"Total registered = active + inactive, as published",2026-11-01
+New York,Richmond,343426,389393,88.2,,"Total registered = active + inactive, as published",2026-11-01
+Tennessee,Anderson,53647,60836,88.2,,"Total registered = ending active + ending inactive, as published",2026-06-01
+Tennessee,Bedford,31198,37654,82.9,,"Total registered = ending active + ending inactive, as published",2026-06-01
+Tennessee,Benton,11392,12773,89.2,,"Total registered = ending active + ending inactive, as published",2026-06-01
+Tennessee,Bledsoe,9461,12310,76.9,,"Total registered = ending active + ending inactive, as published",2026-06-01
+Tennessee,Blount,100818,107665,93.6,,"Total registered = ending active + ending inactive, as published",2026-06-01
+Tennessee,Bradley,81033,84901,95.4,,"Total registered = ending active + ending inactive, as published",2026-06-01
+Tennessee,Campbell,23724,31248,75.9,,"Total registered = ending active + ending inactive, as published",2026-06-01
+Tennessee,Cannon,10230,11408,89.7,,"Total registered = ending active + ending inactive, as published",2026-06-01
+Tennessee,Carroll,17684,22484,78.7,,"Total registered = ending active + ending inactive, as published",2026-06-01
+Tennessee,Carter,36733,45897,80.0,,"Total registered = ending active + ending inactive, as published",2026-06-01
+Tennessee,Cheatham,30013,32259,93.0,,"Total registered = ending active + ending inactive, as published",2026-06-01
+Tennessee,Chester,11205,13491,83.1,,"Total registered = ending active + ending inactive, as published",2026-06-01
+Tennessee,Claiborne,21652,25936,83.5,,"Total registered = ending active + ending inactive, as published",2026-06-01
+Tennessee,Clay,5623,6038,93.1,,"Total registered = ending active + ending inactive, as published",2026-06-01
+Tennessee,Cocke,25569,28934,88.4,,"Total registered = ending active + ending inactive, as published",2026-06-01
+Tennessee,Coffee,38545,44600,86.4,,"Total registered = ending active + ending inactive, as published",2026-06-01
+Tennessee,Crockett,8792,10643,82.6,,"Total registered = ending active + ending inactive, as published",2026-06-01
+Tennessee,Cumberland,49144,50574,97.2,,"Total registered = ending active + ending inactive, as published",2026-06-01
+Tennessee,Davidson,471230,572818,82.3,,"Total registered = ending active + ending inactive, as published",2026-06-01
+Tennessee,Decatur,7291,9122,79.9,,"Total registered = ending active + ending inactive, as published",2026-06-01
+Tennessee,DeKalb,14215,15664,90.7,,"Total registered = ending active + ending inactive, as published",2026-06-01
+Tennessee,Dickson,37634,42204,89.2,,"Total registered = ending active + ending inactive, as published",2026-06-01
+Tennessee,Dyer,22692,27943,81.2,,"Total registered = ending active + ending inactive, as published",2026-06-01
+Tennessee,Fayette,32901,34105,96.5,,"Total registered = ending active + ending inactive, as published",2026-06-01
+Tennessee,Fentress,14809,14688,100.8,0.8,"Total registered = ending active + ending inactive, as published",2026-06-01
+Tennessee,Franklin,29558,34398,85.9,,"Total registered = ending active + ending inactive, as published",2026-06-01
+Tennessee,Gibson,32114,38270,83.9,,"Total registered = ending active + ending inactive, as published",2026-06-01
+Tennessee,Giles,21037,23982,87.7,,"Total registered = ending active + ending inactive, as published",2026-06-01
+Tennessee,Grainger,16789,18704,89.8,,"Total registered = ending active + ending inactive, as published",2026-06-01
+Tennessee,Greene,47871,56339,85.0,,"Total registered = ending active + ending inactive, as published",2026-06-01
+Tennessee,Grundy,9006,10768,83.6,,"Total registered = ending active + ending inactive, as published",2026-06-01
+Tennessee,Hamblen,39220,49514,79.2,,"Total registered = ending active + ending inactive, as published",2026-06-01
+Tennessee,Hamilton,272571,289447,94.2,,"Total registered = ending active + ending inactive, as published",2026-06-01
+Tennessee,Hancock,4532,5278,85.9,,"Total registered = ending active + ending inactive, as published",2026-06-01
+Tennessee,Hardeman,15032,20791,72.3,,"Total registered = ending active + ending inactive, as published",2026-06-01
+Tennessee,Hardin,18056,21369,84.5,,"Total registered = ending active + ending inactive, as published",2026-06-01
+Tennessee,Hawkins,39079,45408,86.1,,"Total registered = ending active + ending inactive, as published",2026-06-01
+Tennessee,Haywood,10635,13841,76.8,,"Total registered = ending active + ending inactive, as published",2026-06-01
+Tennessee,Henderson,18170,21559,84.3,,"Total registered = ending active + ending inactive, as published",2026-06-01
+Tennessee,Henry,21796,25561,85.3,,"Total registered = ending active + ending inactive, as published",2026-06-01
+Tennessee,Hickman,16044,19743,81.3,,"Total registered = ending active + ending inactive, as published",2026-06-01
+Tennessee,Houston,5790,6501,89.1,,"Total registered = ending active + ending inactive, as published",2026-06-01
+Tennessee,Humphreys,12614,14658,86.1,,"Total registered = ending active + ending inactive, as published",2026-06-01
+Tennessee,Jackson,8827,9418,93.7,,"Total registered = ending active + ending inactive, as published",2026-06-01
+Tennessee,Jefferson,38473,43731,88.0,,"Total registered = ending active + ending inactive, as published",2026-06-01
+Tennessee,Johnson,12001,14811,81.0,,"Total registered = ending active + ending inactive, as published",2026-06-01
+Tennessee,Knox,334029,378602,88.2,,"Total registered = ending active + ending inactive, as published",2026-06-01
+Tennessee,Lake,3346,5967,56.1,,"Total registered = ending active + ending inactive, as published",2026-06-01
+Tennessee,Lauderdale,12991,19634,66.2,,"Total registered = ending active + ending inactive, as published",2026-06-01
+Tennessee,Lawrence,28119,33353,84.3,,"Total registered = ending active + ending inactive, as published",2026-06-01
+Tennessee,Lewis,9109,9757,93.4,,"Total registered = ending active + ending inactive, as published",2026-06-01
+Tennessee,Lincoln,24078,27475,87.6,,"Total registered = ending active + ending inactive, as published",2026-06-01
+Tennessee,Loudon,45976,44686,102.9,2.9,"Total registered = ending active + ending inactive, as published",2026-06-01
+Tennessee,Macon,16307,19078,85.5,,"Total registered = ending active + ending inactive, as published",2026-06-01
+Tennessee,Madison,61959,77242,80.2,,"Total registered = ending active + ending inactive, as published",2026-06-01
+Tennessee,Marion,21440,22917,93.6,,"Total registered = ending active + ending inactive, as published",2026-06-01
+Tennessee,Marshall,23278,26287,88.6,,"Total registered = ending active + ending inactive, as published",2026-06-01
+Tennessee,Maury,76342,77854,98.1,,"Total registered = ending active + ending inactive, as published",2026-06-01
+Tennessee,McMinn,35934,42012,85.5,,"Total registered = ending active + ending inactive, as published",2026-06-01
+Tennessee,McNairy,16327,20415,80.0,,"Total registered = ending active + ending inactive, as published",2026-06-01
+Tennessee,Meigs,9334,10101,92.4,,"Total registered = ending active + ending inactive, as published",2026-06-01
+Tennessee,Monroe,34996,36473,96.0,,"Total registered = ending active + ending inactive, as published",2026-06-01
+Tennessee,Montgomery,154796,160622,96.4,,"Total registered = ending active + ending inactive, as published",2026-06-01
+Tennessee,Moore,5529,5128,107.8,7.8,"Total registered = ending active + ending inactive, as published",2026-06-01
+Tennessee,Morgan,12161,16898,72.0,,"Total registered = ending active + ending inactive, as published",2026-06-01
+Tennessee,Obion,18997,24096,78.8,,"Total registered = ending active + ending inactive, as published",2026-06-01
+Tennessee,Overton,16317,17637,92.5,,"Total registered = ending active + ending inactive, as published",2026-06-01
+Tennessee,Perry,5810,6570,88.4,,"Total registered = ending active + ending inactive, as published",2026-06-01
+Tennessee,Pickett,4235,4090,103.5,3.5,"Total registered = ending active + ending inactive, as published",2026-06-01
+Tennessee,Polk,14084,14253,98.8,,"Total registered = ending active + ending inactive, as published",2026-06-01
+Tennessee,Putnam,52412,63201,82.9,,"Total registered = ending active + ending inactive, as published",2026-06-01
+Tennessee,Rhea,22484,25634,87.7,,"Total registered = ending active + ending inactive, as published",2026-06-01
+Tennessee,Roane,39441,42981,91.8,,"Total registered = ending active + ending inactive, as published",2026-06-01
+Tennessee,Robertson,51576,55560,92.8,,"Total registered = ending active + ending inactive, as published",2026-06-01
+Tennessee,Rutherford,218323,255546,85.4,,"Total registered = ending active + ending inactive, as published",2026-06-01
+Tennessee,Scott,13812,16531,83.6,,"Total registered = ending active + ending inactive, as published",2026-06-01
+Tennessee,Sequatchie,11556,12505,92.4,,"Total registered = ending active + ending inactive, as published",2026-06-01
+Tennessee,Sevier,73072,78359,93.3,,"Total registered = ending active + ending inactive, as published",2026-06-01
+Tennessee,Shelby,578784,706063,82.0,,"Total registered = ending active + ending inactive, as published",2026-06-01
+Tennessee,Smith,13642,15324,89.0,,"Total registered = ending active + ending inactive, as published",2026-06-01
+Tennessee,Stewart,10195,10756,94.8,,"Total registered = ending active + ending inactive, as published",2026-06-01
+Tennessee,Sullivan,116996,127939,91.4,,"Total registered = ending active + ending inactive, as published",2026-06-01
+Tennessee,Sumner,142169,149662,95.0,,"Total registered = ending active + ending inactive, as published",2026-06-01
+Tennessee,Tipton,40229,46052,87.4,,"Total registered = ending active + ending inactive, as published",2026-06-01
+Tennessee,Trousdale,6787,9424,72.0,,"Total registered = ending active + ending inactive, as published",2026-06-01
+Tennessee,Unicoi,12031,14713,81.8,,"Total registered = ending active + ending inactive, as published",2026-06-01
+Tennessee,Union,12760,15355,83.1,,"Total registered = ending active + ending inactive, as published",2026-06-01
+Tennessee,Van Buren,4845,4836,100.2,0.2,"Total registered = ending active + ending inactive, as published",2026-06-01
+Tennessee,Warren,25795,31461,82.0,,"Total registered = ending active + ending inactive, as published",2026-06-01
+Tennessee,Washington,92818,107694,86.2,,"Total registered = ending active + ending inactive, as published",2026-06-01
+Tennessee,Wayne,10314,13337,77.3,,"Total registered = ending active + ending inactive, as published",2026-06-01
+Tennessee,Weakley,18711,26499,70.6,,"Total registered = ending active + ending inactive, as published",2026-06-01
+Tennessee,White,18943,21367,88.7,,"Total registered = ending active + ending inactive, as published",2026-06-01
+Tennessee,Williamson,189685,179443,105.7,5.7,"Total registered = ending active + ending inactive, as published",2026-06-01
+Tennessee,Wilson,113061,112798,100.2,0.2,"Total registered = ending active + ending inactive, as published",2026-06-01
+Maryland,Allegany,48095,56039,85.8,,"Total registered = active + inactive, as published",2026-10
+Maryland,Anne Arundel,458359,456018,100.5,0.5,"Total registered = active + inactive, as published",2026-10
+Maryland,Baltimore City,432608,471700,91.7,,"Total registered = active + inactive, as published",2026-10
+Maryland,Baltimore County,616757,669511,92.1,,"Total registered = active + inactive, as published",2026-10
+Maryland,Calvert,75555,70925,106.5,6.5,"Total registered = active + inactive, as published",2026-10
+Maryland,Caroline,24396,25372,96.2,,"Total registered = active + inactive, as published",2026-10
+Maryland,Carroll,139735,135048,103.5,3.5,"Total registered = active + inactive, as published",2026-10
+Maryland,Cecil,80389,80465,99.9,,"Total registered = active + inactive, as published",2026-10
+Maryland,Charles,140856,126667,111.2,11.2,"Total registered = active + inactive, as published",2026-10
+Maryland,Dorchester,25534,25733,99.2,,"Total registered = active + inactive, as published",2026-10
+Maryland,Frederick,227484,207660,109.5,9.5,"Total registered = active + inactive, as published",2026-10
+Maryland,Garrett,22501,23335,96.4,,"Total registered = active + inactive, as published",2026-10
+Maryland,Harford,212530,202309,105.1,5.1,"Total registered = active + inactive, as published",2026-10
+Maryland,Howard,258116,251136,102.8,2.8,"Total registered = active + inactive, as published",2026-10
+Maryland,Kent,15309,16164,94.7,,"Total registered = active + inactive, as published",2026-10
+Maryland,Montgomery,771659,819119,94.2,,"Total registered = active + inactive, as published",2026-10
+Maryland,Prince George's,665239,756049,88.0,,"Total registered = active + inactive, as published",2026-10
+Maryland,Queen Anne's,44480,39108,113.7,13.7,"Total registered = active + inactive, as published",2026-10
+Maryland,Saint Mary's,86449,86370,100.1,0.1,"Total registered = active + inactive, as published",2026-10
+Maryland,Somerset,15428,20381,75.7,,"Total registered = active + inactive, as published",2026-10
+Maryland,Talbot,31053,30682,101.2,1.2,"Total registered = active + inactive, as published",2026-10
+Maryland,Washington,114240,121143,94.3,,"Total registered = active + inactive, as published",2026-10
+Maryland,Wicomico,73640,80944,91.0,,"Total registered = active + inactive, as published",2026-10
+Maryland,Worcester,47551,43324,109.8,9.8,"Total registered = active + inactive, as published",2026-10
+Utah,Beaver,3847,4910,78.4,,active registered voters only,2026-11-02
+Utah,Box Elder,33827,39411,85.8,,active registered voters only,2026-11-02
+Utah,Cache,70585,94161,75.0,,active registered voters only,2026-11-02
+Utah,Carbon,10911,15185,71.9,,active registered voters only,2026-11-02
+Utah,Daggett,688,716,96.1,,active registered voters only,2026-11-02
+Utah,Davis,200033,246384,81.2,,active registered voters only,2026-11-02
+Utah,Duchesne,10440,13268,78.7,,active registered voters only,2026-11-02
+Utah,Emery,5754,6956,82.7,,active registered voters only,2026-11-02
+Utah,Garfield,3250,3881,83.7,,active registered voters only,2026-11-02
+Utah,Grand,5873,7622,77.1,,active registered voters only,2026-11-02
+Utah,Iron,32827,41030,80.0,,active registered voters only,2026-11-02
+Utah,Juab,7677,7756,99.0,,active registered voters only,2026-11-02
+Utah,Kane,5113,5915,86.4,,active registered voters only,2026-11-02
+Utah,Millard,7264,8935,81.3,,active registered voters only,2026-11-02
+Utah,Morgan,8313,7996,104.0,4.0,active registered voters only,2026-11-02
+Utah,Piute,1112,1092,101.8,1.8,active registered voters only,2026-11-02
+Utah,Rich,1591,1743,91.3,,active registered voters only,2026-11-02
+Utah,Salt Lake,604683,874895,69.1,,active registered voters only,2026-11-02
+Utah,San Juan,8095,10342,78.3,,active registered voters only,2026-11-02
+Utah,Sanpete,15536,20434,76.0,,active registered voters only,2026-11-02
+Utah,Sevier,12493,15073,82.9,,active registered voters only,2026-11-02
+Utah,Summit,29388,32006,91.8,,active registered voters only,2026-11-02
+Utah,Tooele,41900,48739,86.0,,active registered voters only,2026-11-02
+Utah,Uintah,18088,23846,75.9,,active registered voters only,2026-11-02
+Utah,Utah,374875,443266,84.6,,active registered voters only,2026-11-02
+Utah,Wasatch,21951,24210,90.7,,active registered voters only,2026-11-02
+Utah,Washington,113079,132737,85.2,,active registered voters only,2026-11-02
+Utah,Wayne,1835,1950,94.1,,active registered voters only,2026-11-02
+Utah,Weber,133227,189592,70.3,,active registered voters only,2026-11-02
+Kansas,Allen,8886,9789,90.8,,"Total registered voters, as published (Kansas counts inactive voters inside this total; their share is published separately)",2026-10-01
+Kansas,Anderson,5848,5831,100.3,0.3,"Total registered voters, as published (Kansas counts inactive voters inside this total; their share is published separately)",2026-10-01
+Kansas,Atchison,11191,12749,87.8,,"Total registered voters, as published (Kansas counts inactive voters inside this total; their share is published separately)",2026-10-01
+Kansas,Barber,2857,3292,86.8,,"Total registered voters, as published (Kansas counts inactive voters inside this total; their share is published separately)",2026-10-01
+Kansas,Barton,17140,19337,88.6,,"Total registered voters, as published (Kansas counts inactive voters inside this total; their share is published separately)",2026-10-01
+Kansas,Bourbon,12797,10704,119.6,19.6,"Total registered voters, as published (Kansas counts inactive voters inside this total; their share is published separately)",2026-10-01
+Kansas,Brown,6632,7159,92.6,,"Total registered voters, as published (Kansas counts inactive voters inside this total; their share is published separately)",2026-10-01
+Kansas,Butler,50639,50070,101.1,1.1,"Total registered voters, as published (Kansas counts inactive voters inside this total; their share is published separately)",2026-10-01
+Kansas,Chase,1876,2045,91.7,,"Total registered voters, as published (Kansas counts inactive voters inside this total; their share is published separately)",2026-10-01
+Kansas,Chautauqua,2308,2641,87.4,,"Total registered voters, as published (Kansas counts inactive voters inside this total; their share is published separately)",2026-10-01
+Kansas,Cherokee,15814,14861,106.4,6.4,"Total registered voters, as published (Kansas counts inactive voters inside this total; their share is published separately)",2026-10-01
+Kansas,Cheyenne,2018,2040,98.9,,"Total registered voters, as published (Kansas counts inactive voters inside this total; their share is published separately)",2026-10-01
+Kansas,Clark,1468,1517,96.8,,"Total registered voters, as published (Kansas counts inactive voters inside this total; their share is published separately)",2026-10-01
+Kansas,Clay,6085,6260,97.2,,"Total registered voters, as published (Kansas counts inactive voters inside this total; their share is published separately)",2026-10-01
+Kansas,Cloud,5765,6995,82.4,,"Total registered voters, as published (Kansas counts inactive voters inside this total; their share is published separately)",2026-10-01
+Kansas,Coffey,6062,6424,94.4,,"Total registered voters, as published (Kansas counts inactive voters inside this total; their share is published separately)",2026-10-01
+Kansas,Comanche,1130,1293,87.4,,"Total registered voters, as published (Kansas counts inactive voters inside this total; their share is published separately)",2026-10-01
+Kansas,Cowley,20655,26392,78.3,,"Total registered voters, as published (Kansas counts inactive voters inside this total; their share is published separately)",2026-10-01
+Kansas,Crawford,28071,30158,93.1,,"Total registered voters, as published (Kansas counts inactive voters inside this total; their share is published separately)",2026-10-01
+Kansas,Decatur,2031,2200,92.3,,"Total registered voters, as published (Kansas counts inactive voters inside this total; their share is published separately)",2026-10-01
+Kansas,Dickinson,13932,14099,98.8,,"Total registered voters, as published (Kansas counts inactive voters inside this total; their share is published separately)",2026-10-01
+Kansas,Doniphan,5044,5856,86.1,,"Total registered voters, as published (Kansas counts inactive voters inside this total; their share is published separately)",2026-10-01
+Kansas,Douglas,80985,96316,84.1,,"Total registered voters, as published (Kansas counts inactive voters inside this total; their share is published separately)",2026-10-01
+Kansas,Edwards,1840,2262,81.3,,"Total registered voters, as published (Kansas counts inactive voters inside this total; their share is published separately)",2026-10-01
+Kansas,Elk,1889,1923,98.2,,"Total registered voters, as published (Kansas counts inactive voters inside this total; their share is published separately)",2026-10-01
+Kansas,Ellis,20620,22952,89.8,,"Total registered voters, as published (Kansas counts inactive voters inside this total; their share is published separately)",2026-10-01
+Kansas,Ellsworth,3842,5177,74.2,,"Total registered voters, as published (Kansas counts inactive voters inside this total; their share is published separately)",2026-10-01
+Kansas,Finney,20992,27176,77.2,,"Total registered voters, as published (Kansas counts inactive voters inside this total; their share is published separately)",2026-10-01
+Kansas,Ford,17181,23674,72.6,,"Total registered voters, as published (Kansas counts inactive voters inside this total; their share is published separately)",2026-10-01
+Kansas,Franklin,19490,19927,97.8,,"Total registered voters, as published (Kansas counts inactive voters inside this total; their share is published separately)",2026-10-01
+Kansas,Geary,19198,25963,73.9,,"Total registered voters, as published (Kansas counts inactive voters inside this total; their share is published separately)",2026-10-01
+Kansas,Gove,1897,2018,94.0,,"Total registered voters, as published (Kansas counts inactive voters inside this total; their share is published separately)",2026-10-01
+Kansas,Graham,1819,1908,95.3,,"Total registered voters, as published (Kansas counts inactive voters inside this total; their share is published separately)",2026-10-01
+Kansas,Grant,3806,5156,73.8,,"Total registered voters, as published (Kansas counts inactive voters inside this total; their share is published separately)",2026-10-01
+Kansas,Gray,3307,4050,81.7,,"Total registered voters, as published (Kansas counts inactive voters inside this total; their share is published separately)",2026-10-01
+Kansas,Greeley,847,956,88.6,,"Total registered voters, as published (Kansas counts inactive voters inside this total; their share is published separately)",2026-10-01
+Kansas,Greenwood,4631,4729,97.9,,"Total registered voters, as published (Kansas counts inactive voters inside this total; their share is published separately)",2026-10-01
+Kansas,Hamilton,1312,1792,73.2,,"Total registered voters, as published (Kansas counts inactive voters inside this total; their share is published separately)",2026-10-01
+Kansas,Harper,3867,4167,92.8,,"Total registered voters, as published (Kansas counts inactive voters inside this total; their share is published separately)",2026-10-01
+Kansas,Harvey,23244,25911,89.7,,"Total registered voters, as published (Kansas counts inactive voters inside this total; their share is published separately)",2026-10-01
+Kansas,Haskell,2237,2640,84.7,,"Total registered voters, as published (Kansas counts inactive voters inside this total; their share is published separately)",2026-10-01
+Kansas,Hodgeman,1273,1295,98.3,,"Total registered voters, as published (Kansas counts inactive voters inside this total; their share is published separately)",2026-10-01
+Kansas,Jackson,9285,9843,94.3,,"Total registered voters, as published (Kansas counts inactive voters inside this total; their share is published separately)",2026-10-01
+Kansas,Jefferson,14214,14077,101.0,1.0,"Total registered voters, as published (Kansas counts inactive voters inside this total; their share is published separately)",2026-10-01
+Kansas,Jewell,2228,2307,96.6,,"Total registered voters, as published (Kansas counts inactive voters inside this total; their share is published separately)",2026-10-01
+Kansas,Johnson,475032,461998,102.8,2.8,"Total registered voters, as published (Kansas counts inactive voters inside this total; their share is published separately)",2026-10-01
+Kansas,Kearny,2202,2833,77.7,,"Total registered voters, as published (Kansas counts inactive voters inside this total; their share is published separately)",2026-10-01
+Kansas,Kingman,5674,5794,97.9,,"Total registered voters, as published (Kansas counts inactive voters inside this total; their share is published separately)",2026-10-01
+Kansas,Kiowa,1513,1898,79.7,,"Total registered voters, as published (Kansas counts inactive voters inside this total; their share is published separately)",2026-10-01
+Kansas,Labette,13728,15103,90.9,,"Total registered voters, as published (Kansas counts inactive voters inside this total; their share is published separately)",2026-10-01
+Kansas,Lane,1122,1237,90.7,,"Total registered voters, as published (Kansas counts inactive voters inside this total; their share is published separately)",2026-10-01
+Kansas,Leavenworth,58584,62172,94.2,,"Total registered voters, as published (Kansas counts inactive voters inside this total; their share is published separately)",2026-10-01
+Kansas,Lincoln,2115,2261,93.5,,"Total registered voters, as published (Kansas counts inactive voters inside this total; their share is published separately)",2026-10-01
+Kansas,Linn,7873,7418,106.1,6.1,"Total registered voters, as published (Kansas counts inactive voters inside this total; their share is published separately)",2026-10-01
+Kansas,Logan,1919,2067,92.8,,"Total registered voters, as published (Kansas counts inactive voters inside this total; their share is published separately)",2026-10-01
+Kansas,Lyon,20783,25093,82.8,,"Total registered voters, as published (Kansas counts inactive voters inside this total; their share is published separately)",2026-10-01
+Kansas,Marion,8149,9237,88.2,,"Total registered voters, as published (Kansas counts inactive voters inside this total; their share is published separately)",2026-10-01
+Kansas,Marshall,7246,7639,94.9,,"Total registered voters, as published (Kansas counts inactive voters inside this total; their share is published separately)",2026-10-01
+Kansas,McPherson,19632,23584,83.2,,"Total registered voters, as published (Kansas counts inactive voters inside this total; their share is published separately)",2026-10-01
+Kansas,Meade,3190,2985,106.9,6.9,"Total registered voters, as published (Kansas counts inactive voters inside this total; their share is published separately)",2026-10-01
+Kansas,Miami,26437,25740,102.7,2.7,"Total registered voters, as published (Kansas counts inactive voters inside this total; their share is published separately)",2026-10-01
+Kansas,Mitchell,4213,4460,94.5,,"Total registered voters, as published (Kansas counts inactive voters inside this total; their share is published separately)",2026-10-01
+Kansas,Montgomery,21400,24064,88.9,,"Total registered voters, as published (Kansas counts inactive voters inside this total; their share is published separately)",2026-10-01
+Kansas,Morris,4046,4230,95.7,,"Total registered voters, as published (Kansas counts inactive voters inside this total; their share is published separately)",2026-10-01
+Kansas,Morton,2060,2043,100.8,0.8,"Total registered voters, as published (Kansas counts inactive voters inside this total; their share is published separately)",2026-10-01
+Kansas,Nemaha,7477,7593,98.5,,"Total registered voters, as published (Kansas counts inactive voters inside this total; their share is published separately)",2026-10-01
+Kansas,Neosho,11090,11978,92.6,,"Total registered voters, as published (Kansas counts inactive voters inside this total; their share is published separately)",2026-10-01
+Kansas,Ness,1966,2150,91.4,,"Total registered voters, as published (Kansas counts inactive voters inside this total; their share is published separately)",2026-10-01
+Kansas,Norton,3464,4400,78.7,,"Total registered voters, as published (Kansas counts inactive voters inside this total; their share is published separately)",2026-10-01
+Kansas,Osage,12176,12113,100.5,0.5,"Total registered voters, as published (Kansas counts inactive voters inside this total; their share is published separately)",2026-10-01
+Kansas,Osborne,2573,2753,93.5,,"Total registered voters, as published (Kansas counts inactive voters inside this total; their share is published separately)",2026-10-01
+Kansas,Ottawa,3912,4411,88.7,,"Total registered voters, as published (Kansas counts inactive voters inside this total; their share is published separately)",2026-10-01
+Kansas,Pawnee,3584,4974,72.1,,"Total registered voters, as published (Kansas counts inactive voters inside this total; their share is published separately)",2026-10-01
+Kansas,Phillips,3995,3870,103.2,3.2,"Total registered voters, as published (Kansas counts inactive voters inside this total; their share is published separately)",2026-10-01
+Kansas,Pottawatomie,19319,17895,108.0,8.0,"Total registered voters, as published (Kansas counts inactive voters inside this total; their share is published separately)",2026-10-01
+Kansas,Pratt,5721,6982,81.9,,"Total registered voters, as published (Kansas counts inactive voters inside this total; their share is published separately)",2026-10-01
+Kansas,Rawlins,1957,1983,98.7,,"Total registered voters, as published (Kansas counts inactive voters inside this total; their share is published separately)",2026-10-01
+Kansas,Reno,41881,48143,87.0,,"Total registered voters, as published (Kansas counts inactive voters inside this total; their share is published separately)",2026-10-01
+Kansas,Republic,3505,3679,95.3,,"Total registered voters, as published (Kansas counts inactive voters inside this total; their share is published separately)",2026-10-01
+Kansas,Rice,6596,7242,91.1,,"Total registered voters, as published (Kansas counts inactive voters inside this total; their share is published separately)",2026-10-01
+Kansas,Riley,40629,59685,68.1,,"Total registered voters, as published (Kansas counts inactive voters inside this total; their share is published separately)",2026-10-01
+Kansas,Rooks,3589,3833,93.6,,"Total registered voters, as published (Kansas counts inactive voters inside this total; their share is published separately)",2026-10-01
+Kansas,Rush,2209,2371,93.2,,"Total registered voters, as published (Kansas counts inactive voters inside this total; their share is published separately)",2026-10-01
+Kansas,Russell,4621,5178,89.2,,"Total registered voters, as published (Kansas counts inactive voters inside this total; their share is published separately)",2026-10-01
+Kansas,Saline,37791,41737,90.5,,"Total registered voters, as published (Kansas counts inactive voters inside this total; their share is published separately)",2026-10-01
+Kansas,Scott,3494,3802,91.9,,"Total registered voters, as published (Kansas counts inactive voters inside this total; their share is published separately)",2026-10-01
+Kansas,Sedgwick,349829,392877,89.0,,"Total registered voters, as published (Kansas counts inactive voters inside this total; their share is published separately)",2026-10-01
+Kansas,Seward,11483,15257,75.3,,"Total registered voters, as published (Kansas counts inactive voters inside this total; their share is published separately)",2026-10-01
+Kansas,Shawnee,117658,137135,85.8,,"Total registered voters, as published (Kansas counts inactive voters inside this total; their share is published separately)",2026-10-01
+Kansas,Sheridan,1833,1839,99.7,,"Total registered voters, as published (Kansas counts inactive voters inside this total; their share is published separately)",2026-10-01
+Kansas,Sherman,3703,4482,82.6,,"Total registered voters, as published (Kansas counts inactive voters inside this total; their share is published separately)",2026-10-01
+Kansas,Smith,2849,2860,99.6,,"Total registered voters, as published (Kansas counts inactive voters inside this total; their share is published separately)",2026-10-01
+Kansas,Stafford,2637,3114,84.7,,"Total registered voters, as published (Kansas counts inactive voters inside this total; their share is published separately)",2026-10-01
+Kansas,Stanton,1000,1486,67.3,,"Total registered voters, as published (Kansas counts inactive voters inside this total; their share is published separately)",2026-10-01
+Kansas,Stevens,3365,3757,89.6,,"Total registered voters, as published (Kansas counts inactive voters inside this total; their share is published separately)",2026-10-01
+Kansas,Sumner,15686,16920,92.7,,"Total registered voters, as published (Kansas counts inactive voters inside this total; their share is published separately)",2026-10-01
+Kansas,Thomas,5456,6052,90.2,,"Total registered voters, as published (Kansas counts inactive voters inside this total; their share is published separately)",2026-10-01
+Kansas,Trego,2088,2225,93.8,,"Total registered voters, as published (Kansas counts inactive voters inside this total; their share is published separately)",2026-10-01
+Kansas,Wabaunsee,5341,5196,102.8,2.8,"Total registered voters, as published (Kansas counts inactive voters inside this total; their share is published separately)",2026-10-01
+Kansas,Wallace,1168,1124,103.9,3.9,"Total registered voters, as published (Kansas counts inactive voters inside this total; their share is published separately)",2026-10-01
+Kansas,Washington,3278,4230,77.5,,"Total registered voters, as published (Kansas counts inactive voters inside this total; their share is published separately)",2026-10-01
+Kansas,Wichita,1238,1574,78.7,,"Total registered voters, as published (Kansas counts inactive voters inside this total; their share is published separately)",2026-10-01
+Kansas,Wilson,5042,6605,76.3,,"Total registered voters, as published (Kansas counts inactive voters inside this total; their share is published separately)",2026-10-01
+Kansas,Woodson,2260,2452,92.2,,"Total registered voters, as published (Kansas counts inactive voters inside this total; their share is published separately)",2026-10-01
+Kansas,Wyandotte,94886,123572,76.8,,"Total registered voters, as published (Kansas counts inactive voters inside this total; their share is published separately)",2026-10-01
+Oklahoma,Adair,11812,14420,81.9,,"Total registered voters, as published",2026-11-01
+Oklahoma,Alfalfa,3028,4560,66.4,,"Total registered voters, as published",2026-11-01
+Oklahoma,Atoka,8428,11081,76.1,,"Total registered voters, as published",2026-11-01
+Oklahoma,Beaver,3199,3748,85.4,,"Total registered voters, as published",2026-11-01
+Oklahoma,Beckham,11902,17013,70.0,,"Total registered voters, as published",2026-11-01
+Oklahoma,Blaine,5635,6548,86.1,,"Total registered voters, as published",2026-11-01
+Oklahoma,Bryan,30747,35266,87.2,,"Total registered voters, as published",2026-11-01
+Oklahoma,Caddo,14450,21082,68.5,,"Total registered voters, as published",2026-11-01
+Oklahoma,Canadian,113750,112734,100.9,0.9,"Total registered voters, as published",2026-11-01
+Oklahoma,Carter,31800,36685,86.7,,"Total registered voters, as published",2026-11-01
+Oklahoma,Cherokee,28957,35989,80.5,,"Total registered voters, as published",2026-11-01
+Oklahoma,Choctaw,9260,10956,84.5,,"Total registered voters, as published",2026-11-01
+Oklahoma,Cimarron,1349,1738,77.6,,"Total registered voters, as published",2026-11-01
+Oklahoma,Cleveland,182859,228702,80.0,,"Total registered voters, as published",2026-11-01
+Oklahoma,Coal,3871,4052,95.5,,"Total registered voters, as published",2026-11-01
+Oklahoma,Comanche,63556,92171,69.0,,"Total registered voters, as published",2026-11-01
+Oklahoma,Cotton,3819,4215,90.6,,"Total registered voters, as published",2026-11-01
+Oklahoma,Craig,8613,11079,77.7,,"Total registered voters, as published",2026-11-01
+Oklahoma,Creek,46261,54882,84.3,,"Total registered voters, as published",2026-11-01
+Oklahoma,Custer,15822,21464,73.7,,"Total registered voters, as published",2026-11-01
+Oklahoma,Delaware,28613,32320,88.5,,"Total registered voters, as published",2026-11-01
+Oklahoma,Dewey,3057,3336,91.6,,"Total registered voters, as published",2026-11-01
+Oklahoma,Ellis,2537,2891,87.8,,"Total registered voters, as published",2026-11-01
+Oklahoma,Garfield,34528,46510,74.2,,"Total registered voters, as published",2026-11-01
+Oklahoma,Garvin,16680,19448,85.8,,"Total registered voters, as published",2026-11-01
+Oklahoma,Grady,37467,41626,90.0,,"Total registered voters, as published",2026-11-01
+Oklahoma,Grant,2922,3191,91.6,,"Total registered voters, as published",2026-11-01
+Oklahoma,Greer,2930,4341,67.5,,"Total registered voters, as published",2026-11-01
+Oklahoma,Harmon,1405,1879,74.8,,"Total registered voters, as published",2026-11-01
+Oklahoma,Harper,1911,2446,78.1,,"Total registered voters, as published",2026-11-01
+Oklahoma,Haskell,7107,8753,81.2,,"Total registered voters, as published",2026-11-01
+Oklahoma,Hughes,7205,10538,68.4,,"Total registered voters, as published",2026-11-01
+Oklahoma,Jackson,13615,18698,72.8,,"Total registered voters, as published",2026-11-01
+Oklahoma,Jefferson,3558,4058,87.7,,"Total registered voters, as published",2026-11-01
+Oklahoma,Johnston,6277,7949,79.0,,"Total registered voters, as published",2026-11-01
+Oklahoma,Kay,26377,33077,79.7,,"Total registered voters, as published",2026-11-01
+Oklahoma,Kingfisher,9555,11145,85.7,,"Total registered voters, as published",2026-11-01
+Oklahoma,Kiowa,4911,6491,75.7,,"Total registered voters, as published",2026-11-01
+Oklahoma,Latimer,6212,7306,85.0,,"Total registered voters, as published",2026-11-01
+Oklahoma,Leflore,30569,36659,83.4,,"Total registered voters, as published",2026-11-01
+Oklahoma,Lincoln,22316,25422,87.8,,"Total registered voters, as published",2026-11-01
+Oklahoma,Logan,36287,36713,98.8,,"Total registered voters, as published",2026-11-01
+Oklahoma,Love,6881,7826,87.9,,"Total registered voters, as published",2026-11-01
+Oklahoma,Major,4676,5832,80.2,,"Total registered voters, as published",2026-11-01
+Oklahoma,Marshall,10618,11782,90.1,,"Total registered voters, as published",2026-11-01
+Oklahoma,Mayes,25865,29692,87.1,,"Total registered voters, as published",2026-11-01
+Oklahoma,McClain,31197,30780,101.4,1.4,"Total registered voters, as published",2026-11-01
+Oklahoma,McCurtain,17910,23042,77.7,,"Total registered voters, as published",2026-11-01
+Oklahoma,McIntosh,12999,15220,85.4,,"Total registered voters, as published",2026-11-01
+Oklahoma,Murray,8782,10663,82.4,,"Total registered voters, as published",2026-11-01
+Oklahoma,Muskogee,39025,51051,76.4,,"Total registered voters, as published",2026-11-01
+Oklahoma,Noble,7058,8364,84.4,,"Total registered voters, as published",2026-11-01
+Oklahoma,Nowata,6817,7211,94.5,,"Total registered voters, as published",2026-11-01
+Oklahoma,Okfuskee,6219,8946,69.5,,"Total registered voters, as published",2026-11-01
+Oklahoma,Oklahoma,472993,601822,78.6,,"Total registered voters, as published",2026-11-01
+Oklahoma,Okmulgee,22345,28236,79.1,,"Total registered voters, as published",2026-11-01
+Oklahoma,Osage,30265,35510,85.2,,"Total registered voters, as published",2026-11-01
+Oklahoma,Ottawa,18913,23192,81.5,,"Total registered voters, as published",2026-11-01
+Oklahoma,Pawnee,10252,11906,86.1,,"Total registered voters, as published",2026-11-01
+Oklahoma,Payne,45724,66441,68.8,,"Total registered voters, as published",2026-11-01
+Oklahoma,Pittsburg,27773,34104,81.4,,"Total registered voters, as published",2026-11-01
+Oklahoma,Pontotoc,23843,28970,82.3,,"Total registered voters, as published",2026-11-01
+Oklahoma,Pottawatomie,44363,55464,80.0,,"Total registered voters, as published",2026-11-01
+Oklahoma,Pushmataha,7274,8446,86.1,,"Total registered voters, as published",2026-11-01
+Oklahoma,Roger Mills,2380,2586,92.0,,"Total registered voters, as published",2026-11-01
+Oklahoma,Rogers,67693,72407,93.5,,"Total registered voters, as published",2026-11-01
+Oklahoma,Seminole,12832,17777,72.2,,"Total registered voters, as published",2026-11-01
+Oklahoma,Sequoyah,25179,29959,84.0,,"Total registered voters, as published",2026-11-01
+Oklahoma,Stephens,28204,32922,85.7,,"Total registered voters, as published",2026-11-01
+Oklahoma,Texas,9140,15122,60.4,,"Total registered voters, as published",2026-11-01
+Oklahoma,Tillman,4033,5261,76.7,,"Total registered voters, as published",2026-11-01
+Oklahoma,Tulsa,404678,505837,80.0,,"Total registered voters, as published",2026-11-01
+Oklahoma,Wagoner,56517,60513,93.4,,"Total registered voters, as published",2026-11-01
+Oklahoma,Washington,35079,40133,87.4,,"Total registered voters, as published",2026-11-01
+Oklahoma,Washita,6789,8072,84.1,,"Total registered voters, as published",2026-11-01
+Oklahoma,Woods,5078,6920,73.4,,"Total registered voters, as published",2026-11-01
+Oklahoma,Woodward,11184,15507,72.1,,"Total registered voters, as published",2026-11-01
+West Virginia,Barbour,9649,12330,78.3,,"Total registered voters, as published",2026-10-13
+West Virginia,Berkeley,103283,93351,110.6,10.6,"Total registered voters, as published",2026-10-13
+West Virginia,Boone,13670,17266,79.2,,"Total registered voters, as published",2026-10-13
+West Virginia,Braxton,7838,10087,77.7,,"Total registered voters, as published",2026-10-13
+West Virginia,Brooke,15159,18495,82.0,,"Total registered voters, as published",2026-10-13
+West Virginia,Cabell,56536,76413,74.0,,"Total registered voters, as published",2026-10-13
+West Virginia,Calhoun,4563,5009,91.1,,"Total registered voters, as published",2026-10-13
+West Virginia,Clay,5113,6320,80.9,,"Total registered voters, as published",2026-10-13
+West Virginia,Doddridge,4229,6424,65.8,,"Total registered voters, as published",2026-10-13
+West Virginia,Fayette,25852,32082,80.6,,"Total registered voters, as published",2026-10-13
+West Virginia,Gilmer,3817,6276,60.8,,"Total registered voters, as published",2026-10-13
+West Virginia,Grant,7516,8922,84.2,,"Total registered voters, as published",2026-10-13
+West Virginia,Greenbrier,23940,26614,90.0,,"Total registered voters, as published",2026-10-13
+West Virginia,Hampshire,15442,18579,83.1,,"Total registered voters, as published",2026-10-13
+West Virginia,Hancock,18945,23688,80.0,,"Total registered voters, as published",2026-10-13
+West Virginia,Hardy,9289,11275,82.4,,"Total registered voters, as published",2026-10-13
+West Virginia,Harrison,43835,52001,84.3,,"Total registered voters, as published",2026-10-13
+West Virginia,Jackson,18537,21854,84.8,,"Total registered voters, as published",2026-10-13
+West Virginia,Jefferson,49411,44965,109.9,9.9,"Total registered voters, as published",2026-10-13
+West Virginia,Kanawha,121002,145391,83.2,,"Total registered voters, as published",2026-10-13
+West Virginia,Lewis,10353,13500,76.7,,"Total registered voters, as published",2026-10-13
+West Virginia,Lincoln,11782,15918,74.0,,"Total registered voters, as published",2026-10-13
+West Virginia,Logan,21571,26129,82.6,,"Total registered voters, as published",2026-10-13
+West Virginia,Marion,37668,44894,83.9,,"Total registered voters, as published",2026-10-13
+West Virginia,Marshall,19926,24723,80.6,,"Total registered voters, as published",2026-10-13
+West Virginia,Mason,15650,20215,77.4,,"Total registered voters, as published",2026-10-13
+West Virginia,McDowell,11729,15723,74.6,,"Total registered voters, as published",2026-10-13
+West Virginia,Mercer,38974,47634,81.8,,"Total registered voters, as published",2026-10-13
+West Virginia,Mineral,19666,21433,91.8,,"Total registered voters, as published",2026-10-13
+West Virginia,Mingo,17034,18632,91.4,,"Total registered voters, as published",2026-10-13
+West Virginia,Monongalia,67328,88063,76.5,,"Total registered voters, as published",2026-10-13
+West Virginia,Monroe,9854,9895,99.6,,"Total registered voters, as published",2026-10-13
+West Virginia,Morgan,14298,13950,102.5,2.5,"Total registered voters, as published",2026-10-13
+West Virginia,Nicholas,15567,19777,78.7,,"Total registered voters, as published",2026-10-13
+West Virginia,Ohio,27418,34307,79.9,,"Total registered voters, as published",2026-10-13
+West Virginia,Pendleton,4890,5102,95.8,,"Total registered voters, as published",2026-10-13
+West Virginia,Pleasants,4807,6215,77.3,,"Total registered voters, as published",2026-10-13
+West Virginia,Pocahontas,5585,6523,85.6,,"Total registered voters, as published",2026-10-13
+West Virginia,Preston,19962,27778,71.9,,"Total registered voters, as published",2026-10-13
+West Virginia,Putnam,39299,44467,88.4,,"Total registered voters, as published",2026-10-13
+West Virginia,Raleigh,50116,59099,84.8,,"Total registered voters, as published",2026-10-13
+West Virginia,Randolph,17456,22746,76.7,,"Total registered voters, as published",2026-10-13
+West Virginia,Ritchie,5829,6813,85.6,,"Total registered voters, as published",2026-10-13
+West Virginia,Roane,8572,11137,77.0,,"Total registered voters, as published",2026-10-13
+West Virginia,Summers,8135,9877,82.4,,"Total registered voters, as published",2026-10-13
+West Virginia,Taylor,10671,13263,80.5,,"Total registered voters, as published",2026-10-13
+West Virginia,Tucker,5187,5490,94.5,,"Total registered voters, as published",2026-10-13
+West Virginia,Tyler,5617,6639,84.6,,"Total registered voters, as published",2026-10-13
+West Virginia,Upshur,14453,18849,76.7,,"Total registered voters, as published",2026-10-13
+West Virginia,Wayne,26253,30509,86.1,,"Total registered voters, as published",2026-10-13
+West Virginia,Webster,5053,6714,75.3,,"Total registered voters, as published",2026-10-13
+West Virginia,Wetzel,9915,11639,85.2,,"Total registered voters, as published",2026-10-13
+West Virginia,Wirt,3483,4111,84.7,,"Total registered voters, as published",2026-10-13
+West Virginia,Wood,55979,66918,83.7,,"Total registered voters, as published",2026-10-13
+West Virginia,Wyoming,12591,16908,74.5,,"Total registered voters, as published",2026-10-13

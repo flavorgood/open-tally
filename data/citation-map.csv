@@ -822,3 +822,19 @@ gas-aaa-2026-11-07.csv,Washington,aaa-gas-daily
 gas-aaa-2026-11-07.csv,West Virginia,aaa-gas-daily
 gas-aaa-2026-11-07.csv,Wisconsin,aaa-gas-daily
 gas-aaa-2026-11-07.csv,Wyoming,aaa-gas-daily
+county-registered-all.csv,Florida,fl-doe-registration-2026
+county-registered-all.csv,Texas,tx-sos-registration-2026
+county-registered-all.csv,California,ca-sos-registration-2026
+county-registered-all.csv,Pennsylvania,pa-dos-registration-2026
+county-registered-all.csv,Oregon,or-sos-registration-2026
+county-registered-all.csv,Arizona,az-sos-registration-2026
+county-registered-all.csv,South Carolina,sc-elections-registration-2026
+county-registered-all.csv,Georgia,ga-sos-registration-2026
+county-registered-all.csv,Washington,wa-sos-registration-2026
+county-registered-all.csv,New York,ny-sbe-registration-2026
+county-registered-all.csv,Tennessee,tn-sos-registration-2026
+county-registered-all.csv,Maryland,md-sbe-registration-2026
+county-registered-all.csv,Utah,ut-lg-registration-2026
+county-registered-all.csv,Kansas,ks-sos-registration-2026
+county-registered-all.csv,Oklahoma,ok-seb-registration-2026
+county-registered-all.csv,West Virginia,wv-sos-registration-2026
