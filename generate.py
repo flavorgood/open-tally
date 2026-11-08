@@ -59,7 +59,8 @@ BALLOTS26_FILES = {"Alabama": "al", "Colorado": "co", "North Carolina": "nc",
                    "New York": "ny", "West Virginia": "wv",
                    "South Carolina": "sc", "Oklahoma": "ok",
                    "Oregon": "or", "Tennessee": "tn",
-                   "Vermont": "vt", "Iowa": "ia"}
+                   "Vermont": "vt", "Iowa": "ia",
+                   "Indiana": "in", "Missouri": "mo"}
 BALLOTS26_LABEL = {"Alabama": "Ballots cast",
                    "Colorado": "Ballots returned (Nov 5)",
                    "North Carolina": "Votes — U.S. Senate race",
@@ -86,6 +87,8 @@ BALLOTS26_LABEL = {"Alabama": "Ballots cast",
                    "Tennessee": "Votes — Governor's race",
                    "Vermont": "Votes — Governor's race (towns added up)",
                    "Iowa": "Votes — Governor's race",
+                   "Indiana": "Votes — Secretary of State race",
+                   "Missouri": "Votes — State Auditor race",
                    "Montana": "Ballots cast"}
 # combination-quadrants.csv group values in the owner's plain words
 QUAD_LABELS = {"high rolls / high ballots": "Big voter list · many ballots",
@@ -1716,6 +1719,24 @@ def ballots26_note(d, st):
                 f'{1891605 - parts:,} more; the state publishes no '
                 f'county figures for ballots counted. Both numbers '
                 f'stand as published.</p>')
+    if st == "Indiana":
+        return (f'<p class="src">The 92 county figures add up to '
+                f'{parts:,} — the sum of the five candidates the '
+                f'Secretary of State\'s results portal displays '
+                f'statewide (Bayh 1,004,067; Engling 826,017; Ballard '
+                f'69,857; Shillings 36,308; Delano 70); the portal '
+                f'prints no combined total. The count is still in '
+                f'progress: 95.3% of precincts were reporting as of '
+                f'November 7.</p>')
+    if st == "Missouri":
+        return (f'<p class="src">The 115 county figures add up to '
+                f'{parts:,}. The Secretary of State\'s page prints a '
+                f'separate Kansas City row of 96,991 votes '
+                f'(Fitzpatrick 14,986; Wilson 79,985; Coffell 2,020); '
+                f'all 116 printed rows together add up to 2,083,601 '
+                f'— the statewide total the page displays, candidate '
+                f'by candidate. The county figures stand as printed, '
+                f'net of Kansas City; nothing has been adjusted.</p>')
     pub = {"Alabama": (1693621, "the statewide total the Secretary of State published"),
            "Colorado": (2761449, "the total in the Secretary of State's release"),
            "Minnesota": (2830125, "the statewide Governor total in the Secretary of State's file"),
@@ -3231,6 +3252,7 @@ def build_data(d, states, counties_by_state):
             "county-ballots-sc.csv", "county-ballots-ok.csv",
             "county-ballots-or.csv", "county-ballots-tn.csv",
             "county-ballots-vt.csv", "county-ballots-ia.csv",
+            "county-ballots-in.csv", "county-ballots-mo.csv",
             "governor-results-2026.csv",
             "county-history-eavs-older.csv",
             "anomalies-vs-history.csv", "PAST-ELECTION-DAYS.md",
