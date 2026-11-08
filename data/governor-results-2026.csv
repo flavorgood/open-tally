@@ -18,7 +18,7 @@ MD,Wes Moore and Aruna Miller,Democratic,1306941,Dan Cox and Rob Krop,Republican
 MA,,,,,,,,,no statewide general-election tabulation posted,,https://electionstats.state.ma.us/elections/search/year_from:1970/year_to:2026
 MI,,,,,,,,,official portal unreachable in this pass,,https://mielections.us/election/results/2026GEN_CENR.html
 MN,Amy Klobuchar and Ben Schierer,Democratic-Farmer-Labor,1569714,Lisa Demuth and Ryan Wilson,Republican,1206576,2830125,sum of printed candidates,Unofficial,2026-11-03,https://electionresultsfiles.sos.mn.gov/20261103/allracesbycounty.txt
-NE,Jim Pillen and Joe Kelly,Republican,,Lynne Walz and Ben Steffen,Democratic,,,,Unofficial,2026-11-06,https://electionresults.nebraska.gov/resultsSW.aspx?type=SWALL&map=ORM
+NE,Jim Pillen and Joe Kelly,Republican,381335,Lynne Walz and Ben Steffen,Democratic,321145,755863,displayed TOTAL VOTES on the SOS results page,unofficial,2026-11-07,https://electionresults.nebraska.gov/resultsSW.aspx?type=SW&map=CTY
 NV,,,,,,,,,unofficial - portal not extractable in this pass,,https://silverstateelection.nv.gov/
 NH,,,,,,,,,official summary file not readable in this pass,,https://www.sos.nh.gov/2026-general-election-results
 NM,DEB HAALAND AND STEPHANIE GARCIA RICHARD,Democrat,416176,GREGGORY D HULL AND DAVID M GALLEGOS,Republican,309436,725612,displayed,unofficial,2026-11-08,https://electionresults.sos.nm.gov/resultsSW.aspx?type=SW&map=CTY
