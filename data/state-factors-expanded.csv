@@ -1,0 +1,307 @@
+state,factor,value,unit,period,source
+Alabama,Average weekly wage,1292,USD per week,Q1 2026,"BLS QCEW (USDL-26-1424, Table 3)"
+Alaska,Average weekly wage,1519,USD per week,Q1 2026,"BLS QCEW (USDL-26-1424, Table 3)"
+Arizona,Average weekly wage,1495,USD per week,Q1 2026,"BLS QCEW (USDL-26-1424, Table 3)"
+Arkansas,Average weekly wage,1291,USD per week,Q1 2026,"BLS QCEW (USDL-26-1424, Table 3)"
+California,Average weekly wage,1986,USD per week,Q1 2026,"BLS QCEW (USDL-26-1424, Table 3)"
+Colorado,Average weekly wage,1774,USD per week,Q1 2026,"BLS QCEW (USDL-26-1424, Table 3)"
+Connecticut,Average weekly wage,2080,USD per week,Q1 2026,"BLS QCEW (USDL-26-1424, Table 3)"
+Delaware,Average weekly wage,1606,USD per week,Q1 2026,"BLS QCEW (USDL-26-1424, Table 3)"
+District of Columbia,Average weekly wage,2725,USD per week,Q1 2026,"BLS QCEW (USDL-26-1424, Table 3)"
+Florida,Average weekly wage,1518,USD per week,Q1 2026,"BLS QCEW (USDL-26-1424, Table 3)"
+Georgia,Average weekly wage,1539,USD per week,Q1 2026,"BLS QCEW (USDL-26-1424, Table 3)"
+Hawaii,Average weekly wage,1387,USD per week,Q1 2026,"BLS QCEW (USDL-26-1424, Table 3)"
+Idaho,Average weekly wage,1254,USD per week,Q1 2026,"BLS QCEW (USDL-26-1424, Table 3)"
+Illinois,Average weekly wage,1731,USD per week,Q1 2026,"BLS QCEW (USDL-26-1424, Table 3)"
+Indiana,Average weekly wage,1356,USD per week,Q1 2026,"BLS QCEW (USDL-26-1424, Table 3)"
+Iowa,Average weekly wage,1301,USD per week,Q1 2026,"BLS QCEW (USDL-26-1424, Table 3)"
+Kansas,Average weekly wage,1286,USD per week,Q1 2026,"BLS QCEW (USDL-26-1424, Table 3)"
+Kentucky,Average weekly wage,1248,USD per week,Q1 2026,"BLS QCEW (USDL-26-1424, Table 3)"
+Louisiana,Average weekly wage,1274,USD per week,Q1 2026,"BLS QCEW (USDL-26-1424, Table 3)"
+Maine,Average weekly wage,1327,USD per week,Q1 2026,"BLS QCEW (USDL-26-1424, Table 3)"
+Maryland,Average weekly wage,1676,USD per week,Q1 2026,"BLS QCEW (USDL-26-1424, Table 3)"
+Massachusetts,Average weekly wage,2201,USD per week,Q1 2026,"BLS QCEW (USDL-26-1424, Table 3)"
+Michigan,Average weekly wage,1445,USD per week,Q1 2026,"BLS QCEW (USDL-26-1424, Table 3)"
+Minnesota,Average weekly wage,1630,USD per week,Q1 2026,"BLS QCEW (USDL-26-1424, Table 3)"
+Mississippi,Average weekly wage,1051,USD per week,Q1 2026,"BLS QCEW (USDL-26-1424, Table 3)"
+Missouri,Average weekly wage,1354,USD per week,Q1 2026,"BLS QCEW (USDL-26-1424, Table 3)"
+Montana,Average weekly wage,1229,USD per week,Q1 2026,"BLS QCEW (USDL-26-1424, Table 3)"
+Nebraska,Average weekly wage,1274,USD per week,Q1 2026,"BLS QCEW (USDL-26-1424, Table 3)"
+Nevada,Average weekly wage,1391,USD per week,Q1 2026,"BLS QCEW (USDL-26-1424, Table 3)"
+New Hampshire,Average weekly wage,1656,USD per week,Q1 2026,"BLS QCEW (USDL-26-1424, Table 3)"
+New Jersey,Average weekly wage,1879,USD per week,Q1 2026,"BLS QCEW (USDL-26-1424, Table 3)"
+New Mexico,Average weekly wage,1235,USD per week,Q1 2026,"BLS QCEW (USDL-26-1424, Table 3)"
+New York,Average weekly wage,2363,USD per week,Q1 2026,"BLS QCEW (USDL-26-1424, Table 3)"
+North Carolina,Average weekly wage,1515,USD per week,Q1 2026,"BLS QCEW (USDL-26-1424, Table 3)"
+North Dakota,Average weekly wage,1333,USD per week,Q1 2026,"BLS QCEW (USDL-26-1424, Table 3)"
+Ohio,Average weekly wage,1417,USD per week,Q1 2026,"BLS QCEW (USDL-26-1424, Table 3)"
+Oklahoma,Average weekly wage,1235,USD per week,Q1 2026,"BLS QCEW (USDL-26-1424, Table 3)"
+Oregon,Average weekly wage,1481,USD per week,Q1 2026,"BLS QCEW (USDL-26-1424, Table 3)"
+Pennsylvania,Average weekly wage,1550,USD per week,Q1 2026,"BLS QCEW (USDL-26-1424, Table 3)"
+Rhode Island,Average weekly wage,1487,USD per week,Q1 2026,"BLS QCEW (USDL-26-1424, Table 3)"
+South Carolina,Average weekly wage,1296,USD per week,Q1 2026,"BLS QCEW (USDL-26-1424, Table 3)"
+South Dakota,Average weekly wage,1211,USD per week,Q1 2026,"BLS QCEW (USDL-26-1424, Table 3)"
+Tennessee,Average weekly wage,1426,USD per week,Q1 2026,"BLS QCEW (USDL-26-1424, Table 3)"
+Texas,Average weekly wage,1646,USD per week,Q1 2026,"BLS QCEW (USDL-26-1424, Table 3)"
+Utah,Average weekly wage,1415,USD per week,Q1 2026,"BLS QCEW (USDL-26-1424, Table 3)"
+Vermont,Average weekly wage,1322,USD per week,Q1 2026,"BLS QCEW (USDL-26-1424, Table 3)"
+Virginia,Average weekly wage,1665,USD per week,Q1 2026,"BLS QCEW (USDL-26-1424, Table 3)"
+Washington,Average weekly wage,1998,USD per week,Q1 2026,"BLS QCEW (USDL-26-1424, Table 3)"
+West Virginia,Average weekly wage,1188,USD per week,Q1 2026,"BLS QCEW (USDL-26-1424, Table 3)"
+Wisconsin,Average weekly wage,1353,USD per week,Q1 2026,"BLS QCEW (USDL-26-1424, Table 3)"
+Wyoming,Average weekly wage,1287,USD per week,Q1 2026,"BLS QCEW (USDL-26-1424, Table 3)"
+Alabama,Electricity price - all sectors,13.27,cents per kWh,Aug 2026,EIA Electric Power Monthly Table 5.6.A (Form EIA-861M)
+Alaska,Electricity price - all sectors,25.32,cents per kWh,Aug 2026,EIA Electric Power Monthly Table 5.6.A (Form EIA-861M)
+Arizona,Electricity price - all sectors,13.63,cents per kWh,Aug 2026,EIA Electric Power Monthly Table 5.6.A (Form EIA-861M)
+Arkansas,Electricity price - all sectors,11.33,cents per kWh,Aug 2026,EIA Electric Power Monthly Table 5.6.A (Form EIA-861M)
+California,Electricity price - all sectors,29.02,cents per kWh,Aug 2026,EIA Electric Power Monthly Table 5.6.A (Form EIA-861M)
+Colorado,Electricity price - all sectors,14.36,cents per kWh,Aug 2026,EIA Electric Power Monthly Table 5.6.A (Form EIA-861M)
+Connecticut,Electricity price - all sectors,21.62,cents per kWh,Aug 2026,EIA Electric Power Monthly Table 5.6.A (Form EIA-861M)
+Delaware,Electricity price - all sectors,15.82,cents per kWh,Aug 2026,EIA Electric Power Monthly Table 5.6.A (Form EIA-861M)
+District of Columbia,Electricity price - all sectors,23.66,cents per kWh,Aug 2026,EIA Electric Power Monthly Table 5.6.A (Form EIA-861M)
+Florida,Electricity price - all sectors,13.3,cents per kWh,Aug 2026,EIA Electric Power Monthly Table 5.6.A (Form EIA-861M)
+Georgia,Electricity price - all sectors,14.6,cents per kWh,Aug 2026,EIA Electric Power Monthly Table 5.6.A (Form EIA-861M)
+Hawaii,Electricity price - all sectors,43.04,cents per kWh,Aug 2026,EIA Electric Power Monthly Table 5.6.A (Form EIA-861M)
+Idaho,Electricity price - all sectors,11.09,cents per kWh,Aug 2026,EIA Electric Power Monthly Table 5.6.A (Form EIA-861M)
+Illinois,Electricity price - all sectors,15.44,cents per kWh,Aug 2026,EIA Electric Power Monthly Table 5.6.A (Form EIA-861M)
+Indiana,Electricity price - all sectors,12.96,cents per kWh,Aug 2026,EIA Electric Power Monthly Table 5.6.A (Form EIA-861M)
+Iowa,Electricity price - all sectors,12.07,cents per kWh,Aug 2026,EIA Electric Power Monthly Table 5.6.A (Form EIA-861M)
+Kansas,Electricity price - all sectors,12.63,cents per kWh,Aug 2026,EIA Electric Power Monthly Table 5.6.A (Form EIA-861M)
+Kentucky,Electricity price - all sectors,11.14,cents per kWh,Aug 2026,EIA Electric Power Monthly Table 5.6.A (Form EIA-861M)
+Louisiana,Electricity price - all sectors,9.86,cents per kWh,Aug 2026,EIA Electric Power Monthly Table 5.6.A (Form EIA-861M)
+Maine,Electricity price - all sectors,24.21,cents per kWh,Aug 2026,EIA Electric Power Monthly Table 5.6.A (Form EIA-861M)
+Maryland,Electricity price - all sectors,18.78,cents per kWh,Aug 2026,EIA Electric Power Monthly Table 5.6.A (Form EIA-861M)
+Massachusetts,Electricity price - all sectors,26.42,cents per kWh,Aug 2026,EIA Electric Power Monthly Table 5.6.A (Form EIA-861M)
+Michigan,Electricity price - all sectors,16.71,cents per kWh,Aug 2026,EIA Electric Power Monthly Table 5.6.A (Form EIA-861M)
+Minnesota,Electricity price - all sectors,13.75,cents per kWh,Aug 2026,EIA Electric Power Monthly Table 5.6.A (Form EIA-861M)
+Mississippi,Electricity price - all sectors,12.14,cents per kWh,Aug 2026,EIA Electric Power Monthly Table 5.6.A (Form EIA-861M)
+Missouri,Electricity price - all sectors,13.85,cents per kWh,Aug 2026,EIA Electric Power Monthly Table 5.6.A (Form EIA-861M)
+Montana,Electricity price - all sectors,12.55,cents per kWh,Aug 2026,EIA Electric Power Monthly Table 5.6.A (Form EIA-861M)
+Nebraska,Electricity price - all sectors,10.49,cents per kWh,Aug 2026,EIA Electric Power Monthly Table 5.6.A (Form EIA-861M)
+Nevada,Electricity price - all sectors,11.21,cents per kWh,Aug 2026,EIA Electric Power Monthly Table 5.6.A (Form EIA-861M)
+New Hampshire,Electricity price - all sectors,23.45,cents per kWh,Aug 2026,EIA Electric Power Monthly Table 5.6.A (Form EIA-861M)
+New Jersey,Electricity price - all sectors,21.29,cents per kWh,Aug 2026,EIA Electric Power Monthly Table 5.6.A (Form EIA-861M)
+New Mexico,Electricity price - all sectors,10.08,cents per kWh,Aug 2026,EIA Electric Power Monthly Table 5.6.A (Form EIA-861M)
+New York,Electricity price - all sectors,24.6,cents per kWh,Aug 2026,EIA Electric Power Monthly Table 5.6.A (Form EIA-861M)
+North Carolina,Electricity price - all sectors,12.34,cents per kWh,Aug 2026,EIA Electric Power Monthly Table 5.6.A (Form EIA-861M)
+North Dakota,Electricity price - all sectors,8.91,cents per kWh,Aug 2026,EIA Electric Power Monthly Table 5.6.A (Form EIA-861M)
+Ohio,Electricity price - all sectors,13.93,cents per kWh,Aug 2026,EIA Electric Power Monthly Table 5.6.A (Form EIA-861M)
+Oklahoma,Electricity price - all sectors,11.81,cents per kWh,Aug 2026,EIA Electric Power Monthly Table 5.6.A (Form EIA-861M)
+Oregon,Electricity price - all sectors,11.78,cents per kWh,Aug 2026,EIA Electric Power Monthly Table 5.6.A (Form EIA-861M)
+Pennsylvania,Electricity price - all sectors,15.99,cents per kWh,Aug 2026,EIA Electric Power Monthly Table 5.6.A (Form EIA-861M)
+Rhode Island,Electricity price - all sectors,25.34,cents per kWh,Aug 2026,EIA Electric Power Monthly Table 5.6.A (Form EIA-861M)
+South Carolina,Electricity price - all sectors,12.46,cents per kWh,Aug 2026,EIA Electric Power Monthly Table 5.6.A (Form EIA-861M)
+South Dakota,Electricity price - all sectors,12.42,cents per kWh,Aug 2026,EIA Electric Power Monthly Table 5.6.A (Form EIA-861M)
+Tennessee,Electricity price - all sectors,11.93,cents per kWh,Aug 2026,EIA Electric Power Monthly Table 5.6.A (Form EIA-861M)
+Texas,Electricity price - all sectors,11.23,cents per kWh,Aug 2026,EIA Electric Power Monthly Table 5.6.A (Form EIA-861M)
+Utah,Electricity price - all sectors,11.17,cents per kWh,Aug 2026,EIA Electric Power Monthly Table 5.6.A (Form EIA-861M)
+Vermont,Electricity price - all sectors,20.01,cents per kWh,Aug 2026,EIA Electric Power Monthly Table 5.6.A (Form EIA-861M)
+Virginia,Electricity price - all sectors,13.15,cents per kWh,Aug 2026,EIA Electric Power Monthly Table 5.6.A (Form EIA-861M)
+Washington,Electricity price - all sectors,11.97,cents per kWh,Aug 2026,EIA Electric Power Monthly Table 5.6.A (Form EIA-861M)
+West Virginia,Electricity price - all sectors,11.74,cents per kWh,Aug 2026,EIA Electric Power Monthly Table 5.6.A (Form EIA-861M)
+Wisconsin,Electricity price - all sectors,14.78,cents per kWh,Aug 2026,EIA Electric Power Monthly Table 5.6.A (Form EIA-861M)
+Wyoming,Electricity price - all sectors,10.21,cents per kWh,Aug 2026,EIA Electric Power Monthly Table 5.6.A (Form EIA-861M)
+Alabama,New business applications,7482,applications,Sep 2026,Census Bureau Business Formation Statistics
+Alaska,New business applications,1698,applications,Sep 2026,Census Bureau Business Formation Statistics
+Arizona,New business applications,14760,applications,Sep 2026,Census Bureau Business Formation Statistics
+Arkansas,New business applications,4329,applications,Sep 2026,Census Bureau Business Formation Statistics
+California,New business applications,57316,applications,Sep 2026,Census Bureau Business Formation Statistics
+Colorado,New business applications,14437,applications,Sep 2026,Census Bureau Business Formation Statistics
+Connecticut,New business applications,5353,applications,Sep 2026,Census Bureau Business Formation Statistics
+Delaware,New business applications,5604,applications,Sep 2026,Census Bureau Business Formation Statistics
+District of Columbia,New business applications,1411,applications,Sep 2026,Census Bureau Business Formation Statistics
+Florida,New business applications,63415,applications,Sep 2026,Census Bureau Business Formation Statistics
+Georgia,New business applications,25157,applications,Sep 2026,Census Bureau Business Formation Statistics
+Hawaii,New business applications,1577,applications,Sep 2026,Census Bureau Business Formation Statistics
+Idaho,New business applications,3721,applications,Sep 2026,Census Bureau Business Formation Statistics
+Illinois,New business applications,17863,applications,Sep 2026,Census Bureau Business Formation Statistics
+Indiana,New business applications,9401,applications,Sep 2026,Census Bureau Business Formation Statistics
+Iowa,New business applications,3633,applications,Sep 2026,Census Bureau Business Formation Statistics
+Kansas,New business applications,4016,applications,Sep 2026,Census Bureau Business Formation Statistics
+Kentucky,New business applications,7361,applications,Sep 2026,Census Bureau Business Formation Statistics
+Louisiana,New business applications,7697,applications,Sep 2026,Census Bureau Business Formation Statistics
+Maine,New business applications,1722,applications,Sep 2026,Census Bureau Business Formation Statistics
+Maryland,New business applications,10233,applications,Sep 2026,Census Bureau Business Formation Statistics
+Massachusetts,New business applications,8010,applications,Sep 2026,Census Bureau Business Formation Statistics
+Michigan,New business applications,15125,applications,Sep 2026,Census Bureau Business Formation Statistics
+Minnesota,New business applications,9056,applications,Sep 2026,Census Bureau Business Formation Statistics
+Mississippi,New business applications,5754,applications,Sep 2026,Census Bureau Business Formation Statistics
+Missouri,New business applications,16042,applications,Sep 2026,Census Bureau Business Formation Statistics
+Montana,New business applications,3283,applications,Sep 2026,Census Bureau Business Formation Statistics
+Nebraska,New business applications,2252,applications,Sep 2026,Census Bureau Business Formation Statistics
+Nevada,New business applications,5719,applications,Sep 2026,Census Bureau Business Formation Statistics
+New Hampshire,New business applications,1979,applications,Sep 2026,Census Bureau Business Formation Statistics
+New Jersey,New business applications,17327,applications,Sep 2026,Census Bureau Business Formation Statistics
+New Mexico,New business applications,4957,applications,Sep 2026,Census Bureau Business Formation Statistics
+New York,New business applications,29455,applications,Sep 2026,Census Bureau Business Formation Statistics
+North Carolina,New business applications,19199,applications,Sep 2026,Census Bureau Business Formation Statistics
+North Dakota,New business applications,895,applications,Sep 2026,Census Bureau Business Formation Statistics
+Ohio,New business applications,16755,applications,Sep 2026,Census Bureau Business Formation Statistics
+Oklahoma,New business applications,6260,applications,Sep 2026,Census Bureau Business Formation Statistics
+Oregon,New business applications,5926,applications,Sep 2026,Census Bureau Business Formation Statistics
+Pennsylvania,New business applications,16050,applications,Sep 2026,Census Bureau Business Formation Statistics
+Rhode Island,New business applications,1283,applications,Sep 2026,Census Bureau Business Formation Statistics
+South Carolina,New business applications,9720,applications,Sep 2026,Census Bureau Business Formation Statistics
+South Dakota,New business applications,1355,applications,Sep 2026,Census Bureau Business Formation Statistics
+Tennessee,New business applications,10648,applications,Sep 2026,Census Bureau Business Formation Statistics
+Texas,New business applications,54196,applications,Sep 2026,Census Bureau Business Formation Statistics
+Utah,New business applications,9731,applications,Sep 2026,Census Bureau Business Formation Statistics
+Vermont,New business applications,857,applications,Sep 2026,Census Bureau Business Formation Statistics
+Virginia,New business applications,14163,applications,Sep 2026,Census Bureau Business Formation Statistics
+Washington,New business applications,11327,applications,Sep 2026,Census Bureau Business Formation Statistics
+West Virginia,New business applications,1919,applications,Sep 2026,Census Bureau Business Formation Statistics
+Wisconsin,New business applications,7057,applications,Sep 2026,Census Bureau Business Formation Statistics
+Wyoming,New business applications,8044,applications,Sep 2026,Census Bureau Business Formation Statistics
+Alabama,Building permits,1558,housing units,Sep 2026,Census Bureau Building Permits Survey
+Alaska,Building permits,59,housing units,Sep 2026,Census Bureau Building Permits Survey
+Arizona,Building permits,2107,housing units,Sep 2026,Census Bureau Building Permits Survey
+Arkansas,Building permits,899,housing units,Sep 2026,Census Bureau Building Permits Survey
+California,Building permits,9329,housing units,Sep 2026,Census Bureau Building Permits Survey
+Colorado,Building permits,1949,housing units,Sep 2026,Census Bureau Building Permits Survey
+Connecticut,Building permits,408,housing units,Sep 2026,Census Bureau Building Permits Survey
+Delaware,Building permits,521,housing units,Sep 2026,Census Bureau Building Permits Survey
+District of Columbia,Building permits,303,housing units,Sep 2026,Census Bureau Building Permits Survey
+Florida,Building permits,14649,housing units,Sep 2026,Census Bureau Building Permits Survey
+Georgia,Building permits,5038,housing units,Sep 2026,Census Bureau Building Permits Survey
+Hawaii,Building permits,283,housing units,Sep 2026,Census Bureau Building Permits Survey
+Idaho,Building permits,1580,housing units,Sep 2026,Census Bureau Building Permits Survey
+Illinois,Building permits,1263,housing units,Sep 2026,Census Bureau Building Permits Survey
+Indiana,Building permits,2918,housing units,Sep 2026,Census Bureau Building Permits Survey
+Iowa,Building permits,1063,housing units,Sep 2026,Census Bureau Building Permits Survey
+Kansas,Building permits,2162,housing units,Sep 2026,Census Bureau Building Permits Survey
+Kentucky,Building permits,1738,housing units,Sep 2026,Census Bureau Building Permits Survey
+Louisiana,Building permits,1028,housing units,Sep 2026,Census Bureau Building Permits Survey
+Maine,Building permits,585,housing units,Sep 2026,Census Bureau Building Permits Survey
+Maryland,Building permits,745,housing units,Sep 2026,Census Bureau Building Permits Survey
+Massachusetts,Building permits,1515,housing units,Sep 2026,Census Bureau Building Permits Survey
+Michigan,Building permits,1871,housing units,Sep 2026,Census Bureau Building Permits Survey
+Minnesota,Building permits,2584,housing units,Sep 2026,Census Bureau Building Permits Survey
+Mississippi,Building permits,711,housing units,Sep 2026,Census Bureau Building Permits Survey
+Missouri,Building permits,1747,housing units,Sep 2026,Census Bureau Building Permits Survey
+Montana,Building permits,352,housing units,Sep 2026,Census Bureau Building Permits Survey
+Nebraska,Building permits,934,housing units,Sep 2026,Census Bureau Building Permits Survey
+Nevada,Building permits,1236,housing units,Sep 2026,Census Bureau Building Permits Survey
+New Hampshire,Building permits,459,housing units,Sep 2026,Census Bureau Building Permits Survey
+New Jersey,Building permits,1990,housing units,Sep 2026,Census Bureau Building Permits Survey
+New Mexico,Building permits,743,housing units,Sep 2026,Census Bureau Building Permits Survey
+New York,Building permits,4260,housing units,Sep 2026,Census Bureau Building Permits Survey
+North Carolina,Building permits,5817,housing units,Sep 2026,Census Bureau Building Permits Survey
+North Dakota,Building permits,605,housing units,Sep 2026,Census Bureau Building Permits Survey
+Ohio,Building permits,2143,housing units,Sep 2026,Census Bureau Building Permits Survey
+Oklahoma,Building permits,923,housing units,Sep 2026,Census Bureau Building Permits Survey
+Oregon,Building permits,1054,housing units,Sep 2026,Census Bureau Building Permits Survey
+Pennsylvania,Building permits,2185,housing units,Sep 2026,Census Bureau Building Permits Survey
+Rhode Island,Building permits,166,housing units,Sep 2026,Census Bureau Building Permits Survey
+South Carolina,Building permits,3530,housing units,Sep 2026,Census Bureau Building Permits Survey
+South Dakota,Building permits,471,housing units,Sep 2026,Census Bureau Building Permits Survey
+Tennessee,Building permits,4535,housing units,Sep 2026,Census Bureau Building Permits Survey
+Texas,Building permits,16162,housing units,Sep 2026,Census Bureau Building Permits Survey
+Utah,Building permits,1646,housing units,Sep 2026,Census Bureau Building Permits Survey
+Vermont,Building permits,152,housing units,Sep 2026,Census Bureau Building Permits Survey
+Virginia,Building permits,2641,housing units,Sep 2026,Census Bureau Building Permits Survey
+Washington,Building permits,2157,housing units,Sep 2026,Census Bureau Building Permits Survey
+West Virginia,Building permits,290,housing units,Sep 2026,Census Bureau Building Permits Survey
+Wisconsin,Building permits,1836,housing units,Sep 2026,Census Bureau Building Permits Survey
+Wyoming,Building permits,132,housing units,Sep 2026,Census Bureau Building Permits Survey
+Alabama,Labor force participation rate,56.8,%,Sep 2026,BLS LAUS
+Alaska,Labor force participation rate,65.3,%,Sep 2026,BLS LAUS
+Arizona,Labor force participation rate,59.7,%,Sep 2026,BLS LAUS
+Arkansas,Labor force participation rate,59.1,%,Sep 2026,BLS LAUS
+California,Labor force participation rate,61.4,%,Sep 2026,BLS LAUS
+Colorado,Labor force participation rate,65.2,%,Sep 2026,BLS LAUS
+Connecticut,Labor force participation rate,62.1,%,Sep 2026,BLS LAUS
+Delaware,Labor force participation rate,57.8,%,Sep 2026,BLS LAUS
+District of Columbia,Labor force participation rate,70.3,%,Sep 2026,BLS LAUS
+Florida,Labor force participation rate,57.3,%,Sep 2026,BLS LAUS
+Georgia,Labor force participation rate,61.1,%,Sep 2026,BLS LAUS
+Hawaii,Labor force participation rate,61.3,%,Sep 2026,BLS LAUS
+Idaho,Labor force participation rate,61.4,%,Sep 2026,BLS LAUS
+Illinois,Labor force participation rate,63.0,%,Sep 2026,BLS LAUS
+Indiana,Labor force participation rate,63.1,%,Sep 2026,BLS LAUS
+Iowa,Labor force participation rate,66.9,%,Sep 2026,BLS LAUS
+Kansas,Labor force participation rate,66.4,%,Sep 2026,BLS LAUS
+Kentucky,Labor force participation rate,57.9,%,Sep 2026,BLS LAUS
+Louisiana,Labor force participation rate,58.3,%,Sep 2026,BLS LAUS
+Maine,Labor force participation rate,58.5,%,Sep 2026,BLS LAUS
+Maryland,Labor force participation rate,63.7,%,Sep 2026,BLS LAUS
+Massachusetts,Labor force participation rate,65.4,%,Sep 2026,BLS LAUS
+Michigan,Labor force participation rate,58.5,%,Sep 2026,BLS LAUS
+Minnesota,Labor force participation rate,66.7,%,Sep 2026,BLS LAUS
+Mississippi,Labor force participation rate,54.5,%,Sep 2026,BLS LAUS
+Missouri,Labor force participation rate,63.3,%,Sep 2026,BLS LAUS
+Montana,Labor force participation rate,61.4,%,Sep 2026,BLS LAUS
+Nebraska,Labor force participation rate,69.2,%,Sep 2026,BLS LAUS
+Nevada,Labor force participation rate,62.3,%,Sep 2026,BLS LAUS
+New Hampshire,Labor force participation rate,64.8,%,Sep 2026,BLS LAUS
+New Jersey,Labor force participation rate,63.7,%,Sep 2026,BLS LAUS
+New Mexico,Labor force participation rate,56.6,%,Sep 2026,BLS LAUS
+New York,Labor force participation rate,61.3,%,Sep 2026,BLS LAUS
+North Carolina,Labor force participation rate,57.8,%,Sep 2026,BLS LAUS
+North Dakota,Labor force participation rate,68.9,%,Sep 2026,BLS LAUS
+Ohio,Labor force participation rate,61.2,%,Sep 2026,BLS LAUS
+Oklahoma,Labor force participation rate,61.9,%,Sep 2026,BLS LAUS
+Oregon,Labor force participation rate,62.6,%,Sep 2026,BLS LAUS
+Pennsylvania,Labor force participation rate,62.6,%,Sep 2026,BLS LAUS
+Rhode Island,Labor force participation rate,62.0,%,Sep 2026,BLS LAUS
+South Carolina,Labor force participation rate,58.8,%,Sep 2026,BLS LAUS
+South Dakota,Labor force participation rate,66.3,%,Sep 2026,BLS LAUS
+Tennessee,Labor force participation rate,59.3,%,Sep 2026,BLS LAUS
+Texas,Labor force participation rate,64.2,%,Sep 2026,BLS LAUS
+Utah,Labor force participation rate,66.5,%,Sep 2026,BLS LAUS
+Vermont,Labor force participation rate,62.1,%,Sep 2026,BLS LAUS
+Virginia,Labor force participation rate,62.7,%,Sep 2026,BLS LAUS
+Washington,Labor force participation rate,62.0,%,Sep 2026,BLS LAUS
+West Virginia,Labor force participation rate,53.8,%,Sep 2026,BLS LAUS
+Wisconsin,Labor force participation rate,64.9,%,Sep 2026,BLS LAUS
+Wyoming,Labor force participation rate,60.2,%,Sep 2026,BLS LAUS
+Alabama,Poverty rate,14.7,%,2025,Census Bureau ACS 1-year 2025 (Table B17001)
+Alaska,Poverty rate,11.0,%,2025,Census Bureau ACS 1-year 2025 (Table B17001)
+Arizona,Poverty rate,11.8,%,2025,Census Bureau ACS 1-year 2025 (Table B17001)
+Arkansas,Poverty rate,15.0,%,2025,Census Bureau ACS 1-year 2025 (Table B17001)
+California,Poverty rate,11.4,%,2025,Census Bureau ACS 1-year 2025 (Table B17001)
+Colorado,Poverty rate,9.2,%,2025,Census Bureau ACS 1-year 2025 (Table B17001)
+Connecticut,Poverty rate,9.1,%,2025,Census Bureau ACS 1-year 2025 (Table B17001)
+Delaware,Poverty rate,9.5,%,2025,Census Bureau ACS 1-year 2025 (Table B17001)
+District of Columbia,Poverty rate,15.9,%,2025,Census Bureau ACS 1-year 2025 (Table B17001)
+Florida,Poverty rate,11.2,%,2025,Census Bureau ACS 1-year 2025 (Table B17001)
+Georgia,Poverty rate,12.3,%,2025,Census Bureau ACS 1-year 2025 (Table B17001)
+Hawaii,Poverty rate,9.3,%,2025,Census Bureau ACS 1-year 2025 (Table B17001)
+Idaho,Poverty rate,9.7,%,2025,Census Bureau ACS 1-year 2025 (Table B17001)
+Illinois,Poverty rate,11.5,%,2025,Census Bureau ACS 1-year 2025 (Table B17001)
+Indiana,Poverty rate,11.9,%,2025,Census Bureau ACS 1-year 2025 (Table B17001)
+Iowa,Poverty rate,11.0,%,2025,Census Bureau ACS 1-year 2025 (Table B17001)
+Kansas,Poverty rate,10.2,%,2025,Census Bureau ACS 1-year 2025 (Table B17001)
+Kentucky,Poverty rate,15.9,%,2025,Census Bureau ACS 1-year 2025 (Table B17001)
+Louisiana,Poverty rate,18.1,%,2025,Census Bureau ACS 1-year 2025 (Table B17001)
+Maine,Poverty rate,9.9,%,2025,Census Bureau ACS 1-year 2025 (Table B17001)
+Maryland,Poverty rate,9.6,%,2025,Census Bureau ACS 1-year 2025 (Table B17001)
+Massachusetts,Poverty rate,9.8,%,2025,Census Bureau ACS 1-year 2025 (Table B17001)
+Michigan,Poverty rate,12.6,%,2025,Census Bureau ACS 1-year 2025 (Table B17001)
+Minnesota,Poverty rate,9.0,%,2025,Census Bureau ACS 1-year 2025 (Table B17001)
+Mississippi,Poverty rate,18.0,%,2025,Census Bureau ACS 1-year 2025 (Table B17001)
+Missouri,Poverty rate,11.5,%,2025,Census Bureau ACS 1-year 2025 (Table B17001)
+Montana,Poverty rate,11.1,%,2025,Census Bureau ACS 1-year 2025 (Table B17001)
+Nebraska,Poverty rate,10.2,%,2025,Census Bureau ACS 1-year 2025 (Table B17001)
+Nevada,Poverty rate,11.4,%,2025,Census Bureau ACS 1-year 2025 (Table B17001)
+New Hampshire,Poverty rate,6.2,%,2025,Census Bureau ACS 1-year 2025 (Table B17001)
+New Jersey,Poverty rate,8.7,%,2025,Census Bureau ACS 1-year 2025 (Table B17001)
+New Mexico,Poverty rate,15.5,%,2025,Census Bureau ACS 1-year 2025 (Table B17001)
+New York,Poverty rate,13.8,%,2025,Census Bureau ACS 1-year 2025 (Table B17001)
+North Carolina,Poverty rate,12.1,%,2025,Census Bureau ACS 1-year 2025 (Table B17001)
+North Dakota,Poverty rate,9.0,%,2025,Census Bureau ACS 1-year 2025 (Table B17001)
+Ohio,Poverty rate,12.4,%,2025,Census Bureau ACS 1-year 2025 (Table B17001)
+Oklahoma,Poverty rate,14.4,%,2025,Census Bureau ACS 1-year 2025 (Table B17001)
+Oregon,Poverty rate,11.7,%,2025,Census Bureau ACS 1-year 2025 (Table B17001)
+Pennsylvania,Poverty rate,11.2,%,2025,Census Bureau ACS 1-year 2025 (Table B17001)
+Rhode Island,Poverty rate,9.5,%,2025,Census Bureau ACS 1-year 2025 (Table B17001)
+South Carolina,Poverty rate,13.3,%,2025,Census Bureau ACS 1-year 2025 (Table B17001)
+South Dakota,Poverty rate,11.8,%,2025,Census Bureau ACS 1-year 2025 (Table B17001)
+Tennessee,Poverty rate,12.6,%,2025,Census Bureau ACS 1-year 2025 (Table B17001)
+Texas,Poverty rate,12.7,%,2025,Census Bureau ACS 1-year 2025 (Table B17001)
+Utah,Poverty rate,8.6,%,2025,Census Bureau ACS 1-year 2025 (Table B17001)
+Vermont,Poverty rate,9.2,%,2025,Census Bureau ACS 1-year 2025 (Table B17001)
+Virginia,Poverty rate,9.4,%,2025,Census Bureau ACS 1-year 2025 (Table B17001)
+Washington,Poverty rate,10.3,%,2025,Census Bureau ACS 1-year 2025 (Table B17001)
+West Virginia,Poverty rate,16.0,%,2025,Census Bureau ACS 1-year 2025 (Table B17001)
+Wisconsin,Poverty rate,10.3,%,2025,Census Bureau ACS 1-year 2025 (Table B17001)
+Wyoming,Poverty rate,10.1,%,2025,Census Bureau ACS 1-year 2025 (Table B17001)
