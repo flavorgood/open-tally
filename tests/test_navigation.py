@@ -32,7 +32,7 @@ def run():
         assert page.locator('[data-filter-table=counties] tr:visible').count() == 26
         page.get_by_role('button',name='Next',exact=True).click()
         assert page.locator('.filter-pager span').inner_text() == 'Page 2 of 11'
-        page.get_by_label('Search counties').fill('Harris')
+        page.get_by_label('Search counties').fill('Harris County')
         assert page.locator('[data-filter-table=counties] tr:visible').count() == 2
         assert page.locator('[data-filter-table=counties] tr:visible').last.inner_text().startswith('Harris County')
         page.get_by_role('button',name='Clear',exact=True).click()

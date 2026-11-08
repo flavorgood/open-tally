@@ -90,7 +90,7 @@
       const target = new URL(link.getAttribute('href'), window.location.href);
       if (target.origin !== location.origin || !/\/(?:states\/[^/]+|counties\/[^/]+\/[^/]+)\/index\.html$/.test(target.pathname)) return;
       target.searchParams.set('year', year);
-      link.href = target.pathname + target.search + target.hash;
+      link.setAttribute('href', target.pathname + target.search + target.hash);
     });
   }
   radios.forEach(radio => radio.addEventListener('change', () => {

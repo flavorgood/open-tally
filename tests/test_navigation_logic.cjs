@@ -16,7 +16,9 @@ class Element {
   after(node) { (this.afterNodes ||= []).push(node); }
   append(node) { this.children.push(node); }
   setAttribute(k,v) { this.attrs[k]=v; }
-  getAttribute(k) { return k==='href'?this.href:this.attrs[k]; }
+  getAttribute(k) { return this.attrs[k] ?? (k==='href'?this.href:null); }
+  get href() { return this.attrs.href ?? this._href; }
+  set href(value) { this._href=value; }
   querySelector(selector) { return this.querySelectorAll(selector)[0] || null; }
   querySelectorAll(selector) {
     if(selector==='tr') return this.rows || [];
@@ -80,10 +82,13 @@ files.beforeNodes[0].querySelector('input').fill('CITATIONS');assert.deepEqual(v
 console.log('PASS: source-file search');
 const radios=['2026','2024','2022'].map(year=>{const r=new Element('input');r.id='yr'+year;r.checked=year==='2026';return r;});
 const links=['../../../states/texas/index.html#counties','../../../states/index.html','https://source.test/record','../other/index.html'].map(href=>{const a=new Element('a');a.href=href;return a;});
+const svg=new Element('a');svg.setAttribute('href','../../../states/alaska/index.html');
+Object.defineProperty(svg,'href',{get(){return {baseVal:svg.attrs.href};},set(){throw new Error('SVG href is read-only');}});
+links.unshift(svg);
 const test=run({radios,links,href:'https://preview.test/counties/texas/harris-county/index.html?year=2024'});
-assert.equal(radios[1].checked,true);assert.equal(links[0].href,'/states/texas/index.html?year=2024#counties');
-assert.equal(links[1].href,'../../../states/index.html');assert.equal(links[2].href,'https://source.test/record');
+assert.equal(radios[1].checked,true);assert.equal(links[0].getAttribute('href'),'/states/alaska/index.html?year=2024');assert.equal(links[1].href,'/states/texas/index.html?year=2024#counties');
+assert.equal(links[2].href,'../../../states/index.html');assert.equal(links[3].href,'https://source.test/record');
 radios.forEach(r=>r.checked=r.id==='yr2022');radios[2].dispatchEvent({type:'change'});
-assert.equal(test.location.searchParams.get('year'),'2022');assert.match(links[0].href,/year=2022#counties/);
+assert.equal(test.location.searchParams.get('year'),'2022');assert.match(links[1].href,/year=2022#counties/);
 test.location.search='?year=2024';radios.forEach(r=>r.checked=r.id==='yr2022');test.listeners.popstate();assert.equal(radios[1].checked,true);
-console.log('PASS: initial year, year change URL, same-origin place links, hash preservation and history restore');
+console.log('PASS: initial year, year change URL, HTML/SVG place links, hash preservation and history restore');
