@@ -57,7 +57,8 @@ BALLOTS26_FILES = {"Alabama": "al", "Colorado": "co", "North Carolina": "nc",
                    "Florida": "fl", "Arizona": "az", "Ohio": "oh",
                    "Louisiana": "la", "Hawaii": "hi", "Georgia": "ga",
                    "New York": "ny", "West Virginia": "wv",
-                   "South Carolina": "sc"}
+                   "South Carolina": "sc", "Oklahoma": "ok",
+                   "Oregon": "or"}
 BALLOTS26_LABEL = {"Alabama": "Ballots cast",
                    "Colorado": "Ballots returned (Nov 5)",
                    "North Carolina": "Votes — U.S. Senate race",
@@ -79,6 +80,8 @@ BALLOTS26_LABEL = {"Alabama": "Ballots cast",
                    "New York": "Votes — Governor's race",
                    "West Virginia": "Votes — U.S. Senate race",
                    "South Carolina": "Votes — Governor's race",
+                   "Oklahoma": "Votes — Governor's race",
+                   "Oregon": "Votes — Governor's race",
                    "Montana": "Ballots cast"}
 # combination-quadrants.csv group values in the owner's plain words
 QUAD_LABELS = {"high rolls / high ballots": "Big voter list · many ballots",
@@ -201,14 +204,28 @@ def resolve_county_rows(rows, counties_by_state, field):
     """Join data-file rows to Census counties on normalized names.
     Returns {(state, county_key): row}; a row joins the first of its
     name variants that names a real county in its state, and a row
-    naming no county in the file is dropped, as an unmatched join was."""
-    valid = {(c_st, c["_nkey"]) for c_st, clist in counties_by_state.items() for c in clist}
+    naming no county in the file is dropped, as an unmatched join was.
+    A name spelled with its words run together ("Leflore" in
+    Oklahoma's file, for Le Flore County) joins the same county: the
+    squashed spelling is tried after the exact one, on both sides of
+    the join, and the row is filed under the Census county's key."""
+    valid = {}
+    for c_st, clist in counties_by_state.items():
+        for c in clist:
+            valid[(c_st, c["_nkey"])] = c["_nkey"]
+    for c_st, clist in counties_by_state.items():
+        for c in clist:
+            sq = (c["_nkey"][0].replace(" ", ""), c["_nkey"][1])
+            valid.setdefault((c_st, sq), c["_nkey"])
     out = {}
     for r in rows:
         st = r["state"]
-        for k in county_key_variants(r[field]):
-            if (st, k) in valid:
-                out[(st, k)] = r
+        keys = list(county_key_variants(r[field]))
+        keys += [(k[0].replace(" ", ""), k[1]) for k in keys]
+        for k in keys:
+            hit = valid.get((st, k))
+            if hit is not None:
+                out[(st, hit)] = r
                 break
     return out
 
@@ -332,6 +349,33 @@ def load():
     for st, suf in BALLOTS26_FILES.items():
         with open(f"{SRC}/county-ballots-{suf}.csv") as f:
             d["ballots26_rows"][st] = list(csv.DictReader(f))
+    # 2026 Governor results, one row per state that held a race, from
+    # each state's own published results (governor-results-2026.csv;
+    # the notes file in the tracker folder carries its flags: AK and
+    # KS uncalled, TN/VT/IA recorded but not read off the official
+    # portal, nine states with no official statewide figures yet).
+    usps = {"AL": "Alabama", "AK": "Alaska", "AZ": "Arizona",
+            "AR": "Arkansas", "CA": "California", "CO": "Colorado",
+            "CT": "Connecticut", "DE": "Delaware",
+            "DC": "District of Columbia", "FL": "Florida",
+            "GA": "Georgia", "HI": "Hawaii", "ID": "Idaho",
+            "IL": "Illinois", "IN": "Indiana", "IA": "Iowa",
+            "KS": "Kansas", "KY": "Kentucky", "LA": "Louisiana",
+            "ME": "Maine", "MD": "Maryland", "MA": "Massachusetts",
+            "MI": "Michigan", "MN": "Minnesota", "MS": "Mississippi",
+            "MO": "Missouri", "MT": "Montana", "NE": "Nebraska",
+            "NV": "Nevada", "NH": "New Hampshire", "NJ": "New Jersey",
+            "NM": "New Mexico", "NY": "New York",
+            "NC": "North Carolina", "ND": "North Dakota",
+            "OH": "Ohio", "OK": "Oklahoma", "OR": "Oregon",
+            "PA": "Pennsylvania", "RI": "Rhode Island",
+            "SC": "South Carolina", "SD": "South Dakota",
+            "TN": "Tennessee", "TX": "Texas", "UT": "Utah",
+            "VT": "Vermont", "VA": "Virginia", "WA": "Washington",
+            "WV": "West Virginia", "WI": "Wisconsin", "WY": "Wyoming"}
+    with open(f"{SRC}/governor-results-2026.csv") as f:
+        d["gov26"] = {usps[r["state"]]: r for r in csv.DictReader(f)
+                      if r["state"] in usps}
     # --- Election Day vs today spine (frozen baseline + dated record) ---
     with open(f"{SRC}/BASELINE-2026-11-03.md") as f:
         d["baseline_text"] = f.read()
@@ -1390,16 +1434,7 @@ def state_ed_html(d, s):
     Today | Change — with claims and gas where newer numbers exist, and
     the Election Day baseline factors with 'No newer number yet.'"""
     st = s["name"]
-    gov = None
-    if st in d["gov_flips"] and st != "Alaska":
-        gov = (f"Governor — the office changed from Republican to "
-               f"Democrat. {d['gov_flips'][st]}, a Democrat, won.")
-    elif st == "Alaska" and "Alaska" in d["gov_flips"]:
-        gov = (f"Governor — projected for {d['gov_flips']['Alaska']}, "
-               f"a Democrat. Not yet called.")
-    elif st == "Kansas" and "Kansas governor: not yet called" in d["baseline_text"]:
-        gov = ("Governor — not called. The Democrat is narrowly ahead. "
-               "A Democrat held the office going in.")
+    gov = gov_line_html(d, st)
     rows = []
     if st in d["flip_unemp"]:
         rows.append(("Unemployment rate",
@@ -1452,7 +1487,7 @@ def state_ed_html(d, s):
             rows.append((fname, f"{val} ({r['period']})", None, None, GREY))
     if not gov and not rows: return ""
     out = ['<h2 id="election-day">Election Day vs today</h2>']
-    if gov: out.append(f'<div class="govline">{esc(gov)}</div>')
+    if gov: out.append(f'<div class="govline">{gov}</div>')
     if rows:
         out.append("<table><tr><th class='l'>Measure</th><th>Election Day</th>"
                    "<th>Today</th><th>Change</th></tr>")
@@ -1661,6 +1696,14 @@ def ballots26_note(d, st):
                 f'votes; the rest are two more candidates — Addison '
                 f'with 16,123 and Hakim with 9,077 — and 1,143 '
                 f'write-in votes.</p>')
+    if st == "Oregon":
+        return (f'<p class="src">The 36 county figures add up to '
+                f'{parts:,} — the statewide Governor total on the '
+                f'Secretary of State\'s results page. The same page '
+                f'puts ballots counted at 1,891,605, which is '
+                f'{1891605 - parts:,} more; the state publishes no '
+                f'county figures for ballots counted. Both numbers '
+                f'stand as published.</p>')
     pub = {"Alabama": (1693621, "the statewide total the Secretary of State published"),
            "Colorado": (2761449, "the total in the Secretary of State's release"),
            "Minnesota": (2830125, "the statewide Governor total in the Secretary of State's file"),
@@ -1674,6 +1717,7 @@ def ballots26_note(d, st):
            "Georgia": (4181543, "the sum of the statewide candidate totals the Secretary of State's results site displays; the site prints no combined total"),
            "New York": (6102694, "the statewide Governor total the State Board's election-night site displays"),
            "West Virginia": (456128, "the statewide Senate total in the Secretary of State's file"),
+           "Oklahoma": (1120930, "the statewide total displayed on the State Election Board's portal"),
            "Montana": (486746, "the statewide total the Secretary of State published")}
     if st in pub:
         total, who = pub[st]
@@ -2130,22 +2174,106 @@ def count_summary_rows(d, s):
             f'<tr><td class="l">Registered % of adults</td>{pct_td}</tr>'
             "</table>")
 
-def panel_gov_html(d, name):
-    """A front-panel governor line, in the words the state pages
-    already use. Only the states the Election Day record names get
-    one; the party word wears its party's color."""
+# Race states whose governor rows carry no verified statewide
+# figures: nine with no official figures published yet (collection
+# notes), plus TN, VT and IA, whose rows were not read directly off
+# the official portal in this pass and stay unpublished here.
+GOV26_NO_VERIFIED = {"Illinois", "Maine", "Massachusetts", "Michigan",
+                     "Nebraska", "Nevada", "New Hampshire", "Texas",
+                     "Wisconsin", "Tennessee", "Vermont", "Iowa"}
+
+def _gov_party(raw):
+    """The plain party word for a governor-results party string, and
+    its color where party is the meaning: blue for a Democrat, red
+    for a Republican, no color for anyone else."""
+    low = (raw or "").strip().lower()
+    if "democratic-farmer-labor" in low:
+        return "Democratic-Farmer-Labor", DEM_BLUE
+    if low in ("d", "dem") or "dem" in low or low.startswith("(d)"):
+        return "Democrat", DEM_BLUE
+    if low in ("r", "rep") or "rep" in low or low.startswith("(r)"):
+        return "Republican", REP_RED
+    if low == "ind": return "Independent", None
+    if "constitution" in low: return "Constitution", None
+    return (raw or "").strip(), None
+
+def _gov_party_span(raw):
+    word, color = _gov_party(raw)
+    if color: return f'<span style="color:{color}">{word}</span>'
+    return esc(word)
+
+def _gov_name(raw):
+    """A candidate name as printed in the file; a name printed in
+    all capitals is set in ordinary case, nothing else changed."""
+    n = (raw or "").strip()
+    if n and n.upper() == n and any(c.isalpha() for c in n):
+        return n.title()
+    return n
+
+def gov_line_html(d, st):
+    """The governor line for one state, shared by the front panel
+    and the state page's Election Day block. Figures come from
+    governor-results-2026.csv: verified rows print the winner, the
+    runner-up and both vote counts with the file's status and date;
+    Alaska and Kansas print both leaders and 'Not called', never a
+    winner; race states without verified figures print the standing
+    sentence and nothing from the file. Flip wording the Election
+    Day record already carries stays, and the file's figures govern
+    where both cover a state. States with no 2026 Governor's race
+    and no line in the record get no line."""
     dem = f'<span style="color:{DEM_BLUE}">Democrat</span>'
     rep = f'<span style="color:{REP_RED}">Republican</span>'
-    if name in d["gov_flips"] and name != "Alaska":
-        return (f'<div class="govline">Governor — the office changed from '
-                f'{rep} to {dem}. {esc(d["gov_flips"][name])}, a {dem}, won.</div>')
-    if name == "Alaska" and "Alaska" in d["gov_flips"]:
-        return (f'<div class="govline">Governor — projected for '
-                f'{esc(d["gov_flips"]["Alaska"])}, a {dem}. Not yet called.</div>')
-    if name == "Kansas" and "Kansas governor: not yet called" in d["baseline_text"]:
-        return (f'<div class="govline">Governor — not called. The {dem} is '
-                f'narrowly ahead. A {dem} held the office going in.</div>')
-    return ""
+    flip = None
+    if st in d["gov_flips"] and st != "Alaska":
+        flip = (f"Governor — the office changed from {rep} to {dem}. "
+                f"{esc(d['gov_flips'][st])}, a {dem}, won.")
+    row = d["gov26"].get(st)
+    if row is None:
+        if flip: return flip
+        if st == "Alaska" and "Alaska" in d["gov_flips"]:
+            return (f"Governor — projected for "
+                    f"{esc(d['gov_flips']['Alaska'])}, a {dem}. "
+                    f"Not yet called.")
+        if st == "Kansas" and \
+                "Kansas governor: not yet called" in d["baseline_text"]:
+            return (f"Governor — not called. The {dem} is narrowly "
+                    f"ahead. A {dem} held the office going in.")
+        return ""
+    status = (row["status"] or "").strip()
+    wv, rv = num(row["winner_votes"]), num(row["runner_up_votes"])
+    if "uncalled" in status.lower():
+        line = (f"Governor — not called. "
+                f"{esc(_gov_name(row['winner']))} "
+                f"({_gov_party_span(row['winner_party'])}) leads with "
+                f"{wv:,} votes; {esc(_gov_name(row['runner_up']))} "
+                f"({_gov_party_span(row['runner_up_party'])}) has "
+                f"{rv:,}.")
+        if st == "Kansas":
+            line += f" A {dem} held the office going in."
+        line += f" Unofficial, as of {fmt_date(row['as_of'])}."
+        return line
+    if st in GOV26_NO_VERIFIED or wv is None or rv is None:
+        sent = ("Governor: no verified statewide figures in the "
+                "record yet.")
+        return f"{flip} {sent}" if flip else sent
+    status_disp = status[:1].upper() + status[1:]
+    if flip:
+        return (f"{flip} {esc(_gov_name(row['winner']))} received "
+                f"{wv:,} votes; {esc(_gov_name(row['runner_up']))} "
+                f"received {rv:,}. {esc(status_disp)}, as of "
+                f"{fmt_date(row['as_of'])}.")
+    return (f"Governor — {esc(_gov_name(row['winner']))} "
+            f"({_gov_party_span(row['winner_party'])}) won with "
+            f"{wv:,} votes. {esc(_gov_name(row['runner_up']))} "
+            f"({_gov_party_span(row['runner_up_party'])}) received "
+            f"{rv:,}. {esc(status_disp)}, as of "
+            f"{fmt_date(row['as_of'])}.")
+
+def panel_gov_html(d, name):
+    """A front-panel governor line — the same governor line the
+    state page's Election Day block carries."""
+    inner = gov_line_html(d, name)
+    return f'<div class="govline">{inner}</div>' if inner else ""
 
 def state_panel_html(d, s, br, cr):
     """One state's panel for the front map, embedded in the page's
@@ -3087,7 +3215,8 @@ def build_data(d, states, counties_by_state):
             "county-ballots-oh.csv", "county-ballots-la.csv",
             "county-ballots-hi.csv", "county-ballots-ga.csv",
             "county-ballots-ny.csv", "county-ballots-wv.csv",
-            "county-ballots-sc.csv",
+            "county-ballots-sc.csv", "county-ballots-ok.csv",
+            "county-ballots-or.csv", "governor-results-2026.csv",
             "county-history-eavs-older.csv",
             "anomalies-vs-history.csv", "PAST-ELECTION-DAYS.md",
             "state-economics-tracker.csv", "flags.csv",

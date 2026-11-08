@@ -1,0 +1,37 @@
+state,winner,winner_party,winner_votes,runner_up,runner_up_party,runner_up_votes,total_votes,total_basis,status,as_of,source_url
+AL,Tommy Tuberville,REP,872561,Doug Jones,DEM,806253,1684735,sum of printed candidates,unofficial,2026-11-04,https://www2.alabamavotes.gov/electionNight/statewideResultsByContest.aspx?ecode=1001305
+AK,Kreiss-Tomkins/Johnson,DEM/NON,103837,Wilson/Shower,REP,61734,211948,displayed,unofficial - uncalled,2026-11-04,https://www.elections.alaska.gov/enr/26GENR/results/ElectionSummaryReportRPT.pdf
+AZ,Katie Hobbs / John Giles,Democratic,1417447,Andy Biggs / Sine Kerr,Republican,1082850,2549311,displayed,unofficial,2026-11-08,https://app.enhancedvoting.com/cdn/results/Arizona/export-110326GeneralElection.json
+AR,Sarah Huckabee Sanders,Republican,477090,Fred Love,Democratic,341645,885615,sum of printed candidates,unofficial,2026-11-04,https://arkansas.tally-enr.com/
+CA,Xavier Becerra,DEM,6723534,Steve Hilton,REP,3544713,10268247,displayed,semi-official,2026-11-07,https://electionresults.sos.ca.gov/
+CO,Phil Weiser / Lesley Dahlkemper,Democratic,1616483,Victor Marx / George Washington Markert,Republican,880764,2646765,sum of printed candidates,unofficial,2026-11-07,https://results.enr.clarityelections.com/CO/127407/web.345435/#/summary
+CT,Ned Lamont / Susan Bysiewicz,Democratic,770539,Ryan Fazio / Matt Corey,Republican,524135,1294727,displayed,unofficial,2026-11-05,https://ctemspublic.pcctg.net/
+FL,Byron Donalds,REP,4135701,David Jolly,DEM,4029461,8270224,displayed,unofficial,2026-11-06,https://floridaelectionwatch.gov/StateOffices/Governor
+GA,Keisha Lance Bottoms,Dem,2271816,Rick Jackson,Rep,1909727,4181543,sum of printed candidates,unofficial,2026-11-07,https://results.sos.ga.gov/
+HI,Josh Green,(D) Democratic,278652,Gary Cordery,(R) Republican,104926,383578,sum of printed candidates,preliminary,2026-11-04,https://elections.hawaii.gov/election-results/
+ID,Brad Little,Republican,407253,Terri Pickens,Democratic,230760,715182,sum of printed candidates,unofficial,2026-11-03,https://results.voteidaho.gov/results/public/id/nov2026
+IL,,,,,,,,,unofficial - no official statewide general total posted,,https://www.elections.il.gov/ElectionOperations/ElectionVoteTotals.aspx
+IA,Rob Sand,DEM,757326,Zach Lahn,REP,607415,1366516,displayed,unofficial,2026-11-04,https://electionresults.iowa.gov/
+KS,Cindy Holscher,D,551243,Ty Masterson,R,543599,1094842,displayed,unofficial - uncalled,2026-11-06,https://ent.sos.ks.gov/statewide.html
+ME,,,,,,,,,unofficial - no statewide tabulation published,2026-11-04,https://www.maine.gov/sos/news/uniformed-service-and-overseas-voters-uocava-results-november-3-2026-federal-and-governor
+MD,Wes Moore and Aruna Miller,Democratic,1306941,Dan Cox and Rob Krop,Republican,651406,2045846,displayed,Unofficial,2026-11-07,https://elections.maryland.gov/elections/2026/general_results/gen_results_2026_1.html
+MA,,,,,,,,,no statewide general-election tabulation posted,,https://electionstats.state.ma.us/elections/search/year_from:1970/year_to:2026
+MI,,,,,,,,,official portal unreachable in this pass,,https://mielections.us/election/results/2026GEN_CENR.html
+MN,Amy Klobuchar and Ben Schierer,Democratic-Farmer-Labor,1569714,Lisa Demuth and Ryan Wilson,Republican,1206576,2830125,sum of printed candidates,Unofficial,2026-11-03,https://electionresultsfiles.sos.mn.gov/20261103/allracesbycounty.txt
+NE,Jim Pillen and Joe Kelly,Republican,,Lynne Walz and Ben Steffen,Democratic,,,,Unofficial,2026-11-06,https://electionresults.nebraska.gov/resultsSW.aspx?type=SWALL&map=ORM
+NV,,,,,,,,,unofficial - portal not extractable in this pass,,https://silverstateelection.nv.gov/
+NH,,,,,,,,,official summary file not readable in this pass,,https://www.sos.nh.gov/2026-general-election-results
+NM,DEB HAALAND AND STEPHANIE GARCIA RICHARD,Democrat,416176,GREGGORY D HULL AND DAVID M GALLEGOS,Republican,309436,725612,displayed,unofficial,2026-11-08,https://electionresults.sos.nm.gov/resultsSW.aspx?type=SW&map=CTY
+NY,Kathy C. Hochul / Adrienne E. Adams,DEM + WOR,3613985,Bruce A. Blakeman / Todd Hood,REP + CON + Vote Affordable,2414376,6102694,displayed,Unofficial,2026-11-06,https://nyenr.elections.ny.gov/
+OH,Acton / Pepper,D,2404178,Ramaswamy / McColley,R,2039730,4597270,displayed,Unofficial Canvass,2026-11-07,https://publicfiles.ohiosos.gov/election-results/enr/EMSReportingGeneralElectionResults.xlsx
+OK,Mike Mazzei,REP,582039,Cyndi Munson,DEM,514776,1120930,"displayed total on the Board's portal (all five candidates: 582,039 + 514,776 + 5,014 + 11,660 + 7,441 = 1,120,930)",unofficial,2026-11-07,https://results.okelections.gov/OKER/?elecDate=20261103
+OR,Tina Kotek,"Democrat, Working Families",999912,Christine Drazan,"Republican, Libertarian",819516,1875422,displayed total on the SOS results page,unofficial,2026-11-07,https://results.oregonvotes.gov/resultsSW.aspx?type=SWPAR&map=CTY
+PA,Josh Shapiro,DEM,3012327,Stacy Garrity,REP,1908513,4985374,sum of printed candidates,unofficial,2026-11-07,https://electionreturns.pa.gov/
+RI,Helena Buonanno Foulkes,DEM,207216,Kenneth Block,Ind,99785,359223,sum of printed candidates,unofficial,2026-11-08,https://electionresults.ri.gov/results/public/rhodeisland/elections/2026StatewideGeneralElection
+SC,Alan Wilson / Mike Reichenbach,REP,1051010,Jermaine Johnson / Sam Skardon,DEM,960269,2037622,displayed,unofficial,2026-11-07,https://scvotes.gov/2026-general-election-results/
+SD,Larry Rhoden and Tony Venhuizen,Republican,193334,Dan Ahlers and Steven McCleerey,Democratic,111161,304495,displayed,Unofficial,2026-11-06,https://electionresults.sd.gov/ResultsSW.aspx?type=SWALL&map=ORM
+TN,Marsha Blackburn,Republican,957136,Jerri Green,Democratic,902953,2102474,"sum of the 15 candidates printed on the dashboard (no total displayed)",Final Unofficial Results,2026-11-03,https://elections.tn.gov/categories/governor/offices
+TX,Gina Hinojosa,Democratic,,Greg Abbott,Republican,,,,"unofficial - official ENR blocked, votes not recorded",,https://goelect.txelections.civixapps.com/ivis-enr-ui/races
+VT,Phil Scott,Republican,162042,Amanda Janoo,Democratic/Progressive,141631,308651,sum of printed candidates,Unofficial,2026-11-05,https://sos.vermont.gov/elections/election-info-resources/elections-results-data
+WI,,,,,,,,,no official statewide total exists yet,,https://myvote.wi.gov/en-us/Election-Results
+WY,Eric Barlow,Republican,128480,Rebecca Bextel,Constitution,31438,188072,sum of printed candidates,Unofficial,2026-11-03,https://sos.wyo.gov/Elections/Docs/2026/2026GeneralResults.aspx
