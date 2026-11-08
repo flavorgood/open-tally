@@ -5,7 +5,7 @@ host-agnostic static site (HTML/CSS, no JS needed for content) to site/
 beside this file. Python stdlib only. The map step reads us-atlas TopoJSON
 from data/maps/ (see fetch_maps(), which refetches only if a file is missing).
 """
-import csv, json, math, os, re, shutil, sys, urllib.request
+import csv, io, json, math, os, re, shutil, sys, urllib.request
 from html import escape as esc
 
 BASE = os.path.dirname(os.path.abspath(__file__))
@@ -56,7 +56,8 @@ BALLOTS26_FILES = {"Alabama": "al", "Colorado": "co", "North Carolina": "nc",
                    "Kansas": "ks", "Virginia": "va", "Pennsylvania": "pa",
                    "Florida": "fl", "Arizona": "az", "Ohio": "oh",
                    "Louisiana": "la", "Hawaii": "hi", "Georgia": "ga",
-                   "New York": "ny", "West Virginia": "wv"}
+                   "New York": "ny", "West Virginia": "wv",
+                   "South Carolina": "sc"}
 BALLOTS26_LABEL = {"Alabama": "Ballots cast",
                    "Colorado": "Ballots returned (Nov 5)",
                    "North Carolina": "Votes — U.S. Senate race",
@@ -77,6 +78,7 @@ BALLOTS26_LABEL = {"Alabama": "Ballots cast",
                    "Georgia": "Votes — Governor's race",
                    "New York": "Votes — Governor's race",
                    "West Virginia": "Votes — U.S. Senate race",
+                   "South Carolina": "Votes — Governor's race",
                    "Montana": "Ballots cast"}
 # combination-quadrants.csv group values in the owner's plain words
 QUAD_LABELS = {"high rolls / high ballots": "Big voter list · many ballots",
@@ -805,6 +807,27 @@ html{scroll-snap-type:y proximity;scroll-padding-top:56px}
   scrollbar-width:none}
 .yr-tabs::-webkit-scrollbar{display:none}
 .yr-tabs label{white-space:nowrap}
+}
+.panelcol{border-top:2px solid var(--ink);padding-top:10px;margin-top:16px}
+.spanel h3{font-family:var(--serif);font-size:25px;font-weight:800;
+  letter-spacing:-.01em;text-transform:none;color:var(--ink);margin:2px 0 8px}
+.spanel .govline{margin:8px 0}
+.mapsum{border-top:2px solid var(--ink);padding-top:10px;margin-top:16px}
+@media (min-width:1024px){
+.mapflex{display:flex;gap:30px;align-items:flex-start}
+.mapcol{flex:1.6 1 0;min-width:0}
+.panelcol{flex:1 1 0;min-width:260px;margin-top:0}
+.mapsum{flex:1 1 0;min-width:260px;margin-top:0}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(225px,1fr));
+  gap:8px 26px}
+.statelist{columns:5}
+.pgrid{display:grid;grid-template-columns:1fr 1fr;gap:8px 38px;align-items:start}
+.pgrid .wide{grid-column:1/-1}
+.yrsw{display:flex;gap:30px;align-items:flex-start}
+.yr-tabs{flex-direction:column;margin:12px 0}
+.yr-pane{flex:1 1 0;min-width:0}
+.paneflex{display:flex;gap:30px;align-items:flex-start}
+.paneflex .panecol{flex:1 1 0;min-width:0}
 }
 """
 
@@ -1630,6 +1653,14 @@ def ballots26_note(d, st):
                 f'Converse, Lincoln, and Park counties could not be '
                 f'read, and no statewide total could be read either. '
                 f'Nothing has been filled in.</p>')
+    if st == "South Carolina":
+        return (f'<p class="src">The 46 county figures add up to '
+                f'{parts:,} — the statewide Vote Cast for the Governor '
+                f'contest in the State Election Commission\'s file. '
+                f'The two leading candidates hold 2,011,279 of those '
+                f'votes; the rest are two more candidates — Addison '
+                f'with 16,123 and Hakim with 9,077 — and 1,143 '
+                f'write-in votes.</p>')
     pub = {"Alabama": (1693621, "the statewide total the Secretary of State published"),
            "Colorado": (2761449, "the total in the Secretary of State's release"),
            "Minnesota": (2830125, "the statewide Governor total in the Secretary of State's file"),
@@ -1659,7 +1690,8 @@ def patterns_html(d, states, counties_by_state):
     in the data files, in plain words, each linked to the full table
     behind it. Summaries only; no number is computed here that the
     files do not carry, beyond the sums the builders already make."""
-    out = ['<h2 id="patterns">Patterns</h2>']
+    blocks = []
+    out = []
     # (a) counties over the line: the violet headline, then each
     # measured state's own count, linked to its county table
     olc = over_line_counts(d)
@@ -1680,6 +1712,7 @@ def patterns_html(d, states, counties_by_state):
         out.append("</div>")
         out.append('<p class="small">The county tables are on each '
                    'state\'s page.</p>')
+    blocks.append("\n".join(out)); out = []
     # (b) the four-way split: voter-list size against ballots, states
     # grouped in plain words with their two real numbers
     out.append("<h3>Voter lists and ballots, combined</h3>")
@@ -1718,6 +1751,7 @@ def patterns_html(d, states, counties_by_state):
     out.append('<p class="small">The full table: '
                '<a href="data/index.html#combined">Data — voter lists '
                'and ballots, combined</a></p>')
+    blocks.append("\n".join(out)); out = []
     # (c) 2026 next to past elections: the same side-by-side numbers
     # as the full table, change cells filled by direction
     out.append("<h3>2026 next to past elections</h3>")
@@ -1730,6 +1764,7 @@ def patterns_html(d, states, counties_by_state):
     out.append('<p class="small">The full table: '
                '<a href="data/index.html#next-to-past">Data — 2026 next '
                'to past elections</a></p>')
+    blocks.append("\n".join(out)); out = []
     # (d) official numbers that disagree with each other, as violet
     # blocks carrying both numbers
     out.append("<h3>Numbers that do not agree</h3>")
@@ -1749,7 +1784,15 @@ def patterns_html(d, states, counties_by_state):
         if row:
             snt = _link_state(esc(flag_sentence(d, row, states[st])), st, states)
             out.append(f'<p class="bigflag">{snt}</p>')
-    return "\n".join(out)
+    blocks.append("\n".join(out))
+    # the blocks compose in columns across a wide screen; the
+    # side-by-side history table (third block) spans both columns
+    grid = ['<div class="pgrid">']
+    for i, b in enumerate(blocks):
+        cls = "pblock wide" if i == 2 else "pblock"
+        grid.append(f'<div class="{cls}">{b}</div>')
+    grid.append('</div>')
+    return "\n".join(['<h2 id="patterns">Patterns</h2>'] + grid)
 
 def front_adds_lines(d, states, counties_by_state):
     """The front-page "What doesn't add up" lines, built from the data:
@@ -2052,14 +2095,160 @@ ANOMS_SRC = ('<p class="src">2026 figures: as published on this site. '
              '2022 and 2018 figures: U.S. Election Assistance Commission, '
              'EAVS reports, and state election offices.</p>')
 
+DEM_BLUE = "#2563eb"  # party color: blue is a Democrat's, here as everywhere
+REP_RED = "#dc2626"   # party color: red is a Republican's
+
+def ballots_basis(d, s):
+    """The plain label for what a state's 2026 ballots figure is,
+    from the record's own flags and status: a top-race vote total
+    is labeled as one, an unfinished count says so."""
+    fr = d["state_flags"].get((s["name"], "ballots_cast"))
+    if fr:
+        lab = fr["flag_label"]
+        if lab == "Top-race votes": return "Votes — top race"
+        if lab == "Estimate": return "Votes — Governor's race"
+        if lab == "Count incomplete": return "Ballots cast — count incomplete"
+    if s["status"] == "still counting":
+        return "Ballots cast — still counting"
+    return "Ballots cast"
+
+def count_summary_rows(d, s):
+    """A state's headline count as a small table: the ballots figure
+    under its own label, the voter list and the adults as the two
+    real counts, and the filled share cell. The same figures the
+    state page's count tables carry — nothing computed anew."""
+    if s["registered"] is None:
+        reg_txt = "No registration" if s["name"] == "North Dakota" else "—"
+    else:
+        reg_txt = fmt_int(s["registered"])
+    pct_td, _r = pct_td_html(d, s["reg_pct_adults"], None)
+    return ("<table>"
+            f'<tr><td class="l">{esc(ballots_basis(d, s))}</td>'
+            f'<td>{fmt_int(s["ballots"])}</td></tr>'
+            f'<tr><td class="l">Registered voters</td><td>{reg_txt}</td></tr>'
+            f'<tr><td class="l">Adults (2020)</td><td>{fmt_int(s["vap"])}</td></tr>'
+            f'<tr><td class="l">Registered % of adults</td>{pct_td}</tr>'
+            "</table>")
+
+def panel_gov_html(d, name):
+    """A front-panel governor line, in the words the state pages
+    already use. Only the states the Election Day record names get
+    one; the party word wears its party's color."""
+    dem = f'<span style="color:{DEM_BLUE}">Democrat</span>'
+    rep = f'<span style="color:{REP_RED}">Republican</span>'
+    if name in d["gov_flips"] and name != "Alaska":
+        return (f'<div class="govline">Governor — the office changed from '
+                f'{rep} to {dem}. {esc(d["gov_flips"][name])}, a {dem}, won.</div>')
+    if name == "Alaska" and "Alaska" in d["gov_flips"]:
+        return (f'<div class="govline">Governor — projected for '
+                f'{esc(d["gov_flips"]["Alaska"])}, a {dem}. Not yet called.</div>')
+    if name == "Kansas" and "Kansas governor: not yet called" in d["baseline_text"]:
+        return (f'<div class="govline">Governor — not called. The {dem} is '
+                f'narrowly ahead. A {dem} held the office going in.</div>')
+    return ""
+
+def state_panel_html(d, s, br, cr):
+    """One state's panel for the front map, embedded in the page's
+    static HTML for all 51 states and shown beside the map when the
+    state is tapped: its governor result where the record carries
+    one, its 2026 count, and — for the map's two economy shadings —
+    its economy rank and direction in that view."""
+    st = s["name"]
+    e = d["econ"].get(st)
+    base_words = {"green": "Getting better", "yellow": "Mixed",
+                  "orange": "Getting worse"}
+    cur_words = {"green": "Better", "yellow": "Mixed", "orange": "Worse",
+                 "grey": "No new numbers yet"}
+    def econ_view(rank_map, color_fn, words, rank_lab):
+        if st == "District of Columbia" or e is None:
+            return ('<p class="small">District of Columbia is not '
+                    'ranked.</p>')
+        return ("<table>"
+                f'<tr><td class="l">{rank_lab}</td>'
+                f'<td>{rank_map[st]} of 50</td></tr>'
+                f'<tr><td class="l">Direction</td>'
+                f'<td>{words[color_fn(e)]}</td></tr></table>')
+    pv_base = econ_view(br, econ_baseline_color, base_words,
+                        "Economy rank — Election Day")
+    pv_cur = econ_view(cr, econ_today_color, cur_words,
+                       "Economy rank — today")
+    return (f'<div class="spanel" id="sp-{s["slug"]}" hidden>'
+            f'<h3>{esc(st)}</h3>'
+            + panel_gov_html(d, st)
+            + f'<div class="pview pv-list">{count_summary_rows(d, s)}</div>'
+            + f'<div class="pview pv-base" hidden>{pv_base}</div>'
+            + f'<div class="pview pv-cur" hidden>{pv_cur}</div>'
+            + f'<p class="small"><a href="states/{s["slug"]}/index.html">'
+              'Full record</a></p></div>')
+
+# The one script on the site, on the front page only: tapping a
+# state on the map opens its panel beside the map instead of
+# leaving the page, and the panel follows the shading switch.
+# Every figure it shows is already in the page's static HTML.
+FRONT_SCRIPT = """<script>
+(function(){
+  var panels = {};
+  var list = document.querySelectorAll('.spanel');
+  for (var i = 0; i < list.length; i++) panels[list[i].id.slice(3)] = list[i];
+  var hint = document.getElementById('panelhint');
+  var current = null;
+  function view(){
+    var c = document.querySelector('input[name="frontmap"]:checked');
+    return c ? c.id.replace('frontmap-', '') : 'list';
+  }
+  function setView(){
+    if (!current) return;
+    var v = view();
+    var pv = current.querySelectorAll('.pview');
+    for (var i = 0; i < pv.length; i++)
+      pv[i].hidden = !pv[i].classList.contains('pv-' + v);
+  }
+  function show(slug){
+    var p = panels[slug];
+    if (!p) return;
+    if (current) current.hidden = true;
+    current = p;
+    p.hidden = false;
+    if (hint) hint.hidden = true;
+    setView();
+    if (window.innerWidth < 1024)
+      document.getElementById('statepanel').scrollIntoView({block: 'nearest'});
+  }
+  var links = document.querySelectorAll('.maptoggle .map a');
+  for (var i = 0; i < links.length; i++){
+    (function(a){
+      a.addEventListener('click', function(ev){
+        var m = (a.getAttribute('href') || '').match(/states\\/([^/]+)\\//);
+        if (m && panels[m[1]]){ ev.preventDefault(); show(m[1]); }
+      });
+    })(links[i]);
+  }
+  var radios = document.querySelectorAll('input[name="frontmap"]');
+  for (var i = 0; i < radios.length; i++)
+    radios[i].addEventListener('change', setView);
+})();
+</script>"""
+
 def build_front(d, states, counties_by_state):
     jump = [("map", "The Map"), ("election-day", "Election Day vs today"),
             ("patterns", "Patterns"), ("states", "Every state"),
             ("record", "The record")]
     mods = []
-    # one map, leading the front page, its shadings on a switch
-    mods.append(mod("\n".join(
-        ['<h2 id="map">The Map</h2>', front_map_block(d, states)])))
+    # one map, leading the front page, its shadings on a switch;
+    # beside it, a panel per state (all 51 in the static HTML) that
+    # the one front-page script opens when a state is tapped
+    br, cr = econ_ranks(d)
+    panels = "".join(state_panel_html(d, states[n], br, cr)
+                     for n in sorted(states))
+    mods.append(mod("\n".join([
+        '<h2 id="map">The Map</h2>',
+        '<div class="mapflex"><div class="mapcol">',
+        front_map_block(d, states),
+        '</div><div class="panelcol" id="statepanel">',
+        '<p class="small" id="panelhint">Tap a state on the map for '
+        'its numbers.</p>',
+        panels,
+        '</div></div>'])))
     # Election Day vs today as summaries: governor cards, then the
     # country's headline figures as cards (the full national table
     # lives on the Data page)
@@ -2127,7 +2316,9 @@ def build_front(d, states, counties_by_state):
     seg.append('<p class="small"><a href="data/index.html">Data</a> · '
                '<a href="definitions/index.html">Definitions</a></p>')
     mods.append(mod("\n".join(seg)))
-    write("index.html", page("Open Tally", "\n".join(mods), depth=0, jump=jump))
+    write("index.html", page("Open Tally",
+                             "\n".join(mods) + "\n" + FRONT_SCRIPT,
+                             depth=0, jump=jump))
 
 def build_states_page(d, states):
     """The States page: the every-state count table that used to sit
@@ -2237,6 +2428,9 @@ def build_state_pages(d, states, counties_by_state, county_info):
                         f'../../counties/{s["slug"]}/{c["_slug"]}/index.html'
                         for c in clist}
         cmap = state_map(name, fips_names, fills, county_links)
+        # on a wide screen the module composes sideways: the county
+        # map on the left, the state's count summary beside it
+        seg_map.append('<div class="mapflex"><div class="mapcol">')
         if cmap:
             # the county map is this page's map — a separate state
             # outline above it would draw the same state twice
@@ -2258,6 +2452,10 @@ def build_state_pages(d, states, counties_by_state, county_info):
                         f'&nbsp; {chip(None)}No data</div>')
         else:
             seg_map.append(LEGEND)
+        seg_map.append('</div>')
+        seg_map.append(f'<div class="mapsum"><h3>Count summary</h3>'
+                       f'{count_summary_rows(d, s)}</div>')
+        seg_map.append('</div>')
         ed = state_ed_html(d, s)
         seg_adds = []
         adds = state_adds_lines(d, s, counties_by_state)
@@ -2389,6 +2587,10 @@ def build_state_pages(d, states, counties_by_state, county_info):
                              'both figures.</p>')
             else:
                 return f"<p>No data published for {year}.</p>"
+            # the year's county map rides in its own list: where a
+            # pane carries both a table and a map, the two compose
+            # side by side on a wide screen (paneflex)
+            mparts = []
             if name == "Alaska":
                 parts.append(f'<p class="src">No county figures '
                              f'published for {year} — Alaska reports '
@@ -2413,22 +2615,27 @@ def build_state_pages(d, states, counties_by_state, county_info):
                     parts.append(f'<p class="src">No county figures '
                                  f'published for {year}.</p>')
                 elif name == "North Dakota":
-                    parts.append(f'<p class="src">County shading: '
+                    mparts.append(f'<p class="src">County shading: '
                                  f'{year} — ballots per 100 adults.</p>')
-                    parts.append(state_map(name, fips_names, yfills,
+                    mparts.append(state_map(name, fips_names, yfills,
                                            county_links))
-                    parts.append('<div class="legend">Ballots per 100 adults: '
+                    mparts.append('<div class="legend">Ballots per 100 adults: '
                                  f'{chip(80)}Under 90 &nbsp; {chip(95)}90 – 100 &nbsp; '
                                  f'{vchip()}More ballots than adults who live there '
                                  f'&nbsp; {chip(None)}No data</div>')
                 else:
-                    parts.append(f'<p class="src">County shading: '
+                    mparts.append(f'<p class="src">County shading: '
                                  f'{year} — registered voters as a '
                                  f'share of adults.</p>')
-                    parts.append(state_map(name, fips_names, yfills,
+                    mparts.append(state_map(name, fips_names, yfills,
                                            county_links))
-                    parts.append(LEGEND)
-            return "\n".join(parts)
+                    mparts.append(LEGEND)
+            body = "\n".join(parts)
+            if mparts:
+                return (f'<div class="paneflex"><div class="panecol">'
+                        f'{body}</div><div class="panecol">'
+                        + "\n".join(mparts) + '</div></div>')
+            return body
 
         panes = [("2026", "\n".join(p26))]
         for y in EAVS_YEARS:
@@ -2467,6 +2674,7 @@ def build_state_pages(d, states, counties_by_state, county_info):
                     + ("<th>Registered % of citizen adults</th>" if has_roll else "")
                     + "</tr>")
         ck = county_reg_key(d, name)
+        county_csv_rows = []
         for c in clist:
             key = (name, c["_nkey"])
             rr = roll_co_de.get(key)
@@ -2499,10 +2707,37 @@ def build_state_pages(d, states, counties_by_state, county_info):
                                   f'{fmt_int(bv)}</a></td>')
                 else:
                     bal26_cell = "<td>—</td>"
+            _csv_row = [c["county_name"],
+                        "" if reg is None else reg,
+                        num(c["voting_age_population_2020"]) or "",
+                        "" if pct is None else pct]
+            if has_b26:
+                _csv_row.append("" if bv is None else bv)
+            if est_any:
+                _csv_row += ["" if ea is None else ea,
+                             "" if epct is None else epct]
+            if has_roll:
+                _csv_row.append("" if cpct is None else cpct)
+            county_csv_rows.append(_csv_row)
             seg_counties.append(f'<tr><td class="l"><a href="../../counties/{s["slug"]}/{c["_slug"]}/index.html">{esc(c["county_name"])}</a></td>'
                         f'<td>{reg_c}</td><td>{linked(d, "census-pl-94171", fmt_int(num(c["voting_age_population_2020"])))}</td>'
                         f'{pct_td_c}{bal26_cell}{est_cell}{cvap_cell}</tr>')
         seg_counties.append("</table>")
+        # the counties table as a file beside the page — exactly the
+        # rows the table shows, in the same order and columns
+        _hdr = ["County", "Registered", "Adults (2020)",
+                "Registered % of adults"]
+        if has_b26: _hdr.append(BALLOTS26_LABEL[name])
+        if est_any: _hdr += ["Adults (2025 estimate)",
+                             "Registered % of adults (2025 estimate)"]
+        if has_roll: _hdr.append("Registered % of citizen adults")
+        _buf = io.StringIO()
+        _w = csv.writer(_buf)
+        _w.writerow(_hdr)
+        _w.writerows(county_csv_rows)
+        write(f'states/{s["slug"]}/counties.csv', _buf.getvalue())
+        seg_counties.append('<p class="small"><a href="counties.csv">'
+                            'Download this table (CSV)</a></p>')
         if name != "Alaska":
             note26 = ballots26_note(d, name)
             if note26: seg_counties.append(note26)
@@ -2736,6 +2971,99 @@ def county_anoms_table(d, counties_by_state):
                'offices. Adults: U.S. Census Bureau, 2020 Census.</p>')
     return "\n".join(out)
 
+def _write_dl(dl, name, fields, rows, counts):
+    """One combined download as a CSV/JSON pair. Returns nothing;
+    the row counts land in counts for the Data page's listing."""
+    with open(os.path.join(dl, name + ".csv"), "w", newline="") as f:
+        w = csv.DictWriter(f, fieldnames=fields)
+        w.writeheader()
+        for r in rows: w.writerow(r)
+    with open(os.path.join(dl, name + ".json"), "w") as f:
+        json.dump(rows, f, indent=1)
+    counts[name + ".csv"] = len(rows)
+    counts[name + ".json"] = len(rows)
+
+def build_downloads(d, states):
+    """The combined download files in site/downloads/, built from
+    the same loaded data the pages render: every folded-in state's
+    counties and their 2026 ballots, every measured county's voter
+    list against its adults, and the year-switch series state by
+    state and year as the panes present it. Returns {file: rows}."""
+    dl = os.path.join(OUT, "downloads")
+    os.makedirs(dl, exist_ok=True)
+    counts = {}
+    brows = []
+    for st in sorted(set(BALLOTS26_FILES) | {"Montana"}):
+        if st == "Montana":
+            srows = [{"county": r["county"],
+                      "ballots_cast": r["ballots_cast"],
+                      "source": r["source"],
+                      "source_url": r["source_url"]}
+                     for r in d["mt_ballots"]]
+        else:
+            srows = d["ballots26_rows"][st]
+        for r in srows:
+            brows.append({"state": st, "county": r["county"],
+                          "ballots": num(r["ballots_cast"]),
+                          "basis": BALLOTS26_LABEL[st],
+                          "source": r["source"],
+                          "source_url": r["source_url"]})
+    _write_dl(dl, "county-ballots-2026",
+              ["state", "county", "ballots", "basis", "source",
+               "source_url"], brows, counts)
+    vrows = []
+    for r in d["roll_co_de"]:
+        vrows.append({"state": r["state"], "county": r["county"],
+                      "registered_voters": num(r["registered_voters"]),
+                      "adults": num(r["voting_age_population_2020"]),
+                      "registered_per_100_adults":
+                          fnum(r["registered_pct_of_vap"])})
+    for r in d["roll_ak"]:
+        vrows.append({"state": "Alaska", "county": r["district"],
+                      "registered_voters": num(r["registered_voters"]),
+                      "adults": num(r["voting_age_population_2020"]),
+                      "registered_per_100_adults":
+                          fnum(r["registered_pct_of_vap"])})
+    _write_dl(dl, "county-voter-list",
+              ["state", "county", "registered_voters", "adults",
+               "registered_per_100_adults"], vrows, counts)
+    hist = {}
+    for r in d["hist_states"]:
+        hist.setdefault(r["state"], {})[r["election_year"]] = r
+    srows = []
+    for name in sorted(states):
+        s = states[name]
+        for y in YEARS:
+            if y == "2026":
+                reg, bal, tp = s["registered"], s["ballots"], s["turnout_pct"]
+                basis = "State election offices — 2026 collection"
+            elif name in hist and y in hist[name]:
+                row = hist[name][y]
+                reg, bal = num(row["registered_voters"]), num(row["ballots_cast"])
+                tp = fnum(row["turnout_pct_registered"])
+                basis = "State history series"
+            elif name == "Alaska" and y in d["ak_eavs"]:
+                reg, bal = d["ak_eavs"][y]
+                tp = (round(bal / reg * 100, 1)
+                      if (reg and bal is not None) else None)
+                basis = "Federal survey (EAVS) — statewide jurisdiction"
+            elif (name, y) in d["eavs_sums"]:
+                e = d["eavs_sums"][(name, y)]
+                reg, bal = e["reg"], e["bal"]
+                tp = (round(e["mbal"] / e["mreg"] * 100, 1)
+                      if e["mreg"] else None)
+                basis = "Federal survey (EAVS) — counties added up"
+            else:
+                reg = bal = tp = None
+                basis = "No data published"
+            srows.append({"state": name, "year": int(y),
+                          "registered_voters": reg, "ballots_cast": bal,
+                          "turnout_pct_registered": tp, "basis": basis})
+    _write_dl(dl, "state-figures-by-year",
+              ["state", "year", "registered_voters", "ballots_cast",
+               "turnout_pct_registered", "basis"], srows, counts)
+    return counts
+
 def build_data(d, states, counties_by_state):
     os.makedirs(os.path.join(OUT, "data"), exist_ok=True)
     csvs = ["turnout-2026-11-03.csv", "census-registered-2026.csv", "vap-2020-pl.csv",
@@ -2759,6 +3087,7 @@ def build_data(d, states, counties_by_state):
             "county-ballots-oh.csv", "county-ballots-la.csv",
             "county-ballots-hi.csv", "county-ballots-ga.csv",
             "county-ballots-ny.csv", "county-ballots-wv.csv",
+            "county-ballots-sc.csv",
             "county-history-eavs-older.csv",
             "anomalies-vs-history.csv", "PAST-ELECTION-DAYS.md",
             "state-economics-tracker.csv", "flags.csv",
@@ -2803,7 +3132,21 @@ def build_data(d, states, counties_by_state):
     with open(os.path.join(OUT, "data", "registered-share-of-adults.json"), "w") as f:
         json.dump(ri, f, indent=1)
     files = sorted(os.listdir(os.path.join(OUT, "data")))
-    body = ["<h1>Data</h1>", "<table><tr><th class='l'>File</th><th>Size</th></tr>"]
+    body = ["<h1>Data</h1>"]
+    # the combined files lead the page: the whole record, in files,
+    # each with its row count, above the per-file listing
+    dlc = d.get("dl_counts", {})
+    if dlc:
+        body.append("<h2>The whole record, in files</h2>")
+        body.append("<table><tr><th class='l'>File</th><th>Rows</th></tr>")
+        for fn in ("county-ballots-2026.csv", "county-ballots-2026.json",
+                   "county-voter-list.csv", "county-voter-list.json",
+                   "state-figures-by-year.csv",
+                   "state-figures-by-year.json"):
+            body.append(f'<tr><td class="l"><a href="../downloads/{fn}">'
+                        f'{fn}</a></td><td>{dlc.get(fn, 0):,}</td></tr>')
+        body.append("</table>")
+    body.append("<table><tr><th class='l'>File</th><th>Size</th></tr>")
     for fn in files:
         sz = os.path.getsize(os.path.join(OUT, "data", fn))
         body.append(f'<tr><td class="l"><a href="{fn}">{esc(fn)}</a></td><td>{sz:,} bytes</td></tr>')
@@ -3064,6 +3407,7 @@ def main():
     build_rankings_page(d, states)
     build_state_pages(d, states, counties_by_state, None)
     n_counties = build_county_pages(d, states, counties_by_state)
+    d["dl_counts"] = build_downloads(d, states)
     build_data(d, states, counties_by_state)
     build_definitions(d)
     print(f"states: {len(states)}  county pages: {n_counties}")
