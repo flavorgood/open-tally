@@ -17,6 +17,14 @@ GREEN, YELLOW, ORANGE, GREY = "#15803d", "#eab308", "#ea580c", "#9ca3af"
 VIOLET = "#7C3AED"
 PL_URL = ""  # set in main() from citations.csv
 
+# The standing notice printed under the masthead on every page, in the
+# owner's words: the count is still moving, and every figure is only
+# what an office published, when it published it.
+STANDING_NOTICE = ("The count is still being updated. Every figure here "
+                   "comes from the office named beside it, dated when it "
+                   "was read. Where no office has published a figure, "
+                   "this page shows no data.")
+
 # The Election Day vs today spine lives in the tracker folder: the
 # daily updates land there, so every generation first refreshes the
 # spine inputs in data/ from it. Where the tracker folder does not
@@ -47,7 +55,8 @@ BALLOTS26_FILES = {"Alabama": "al", "Colorado": "co", "North Carolina": "nc",
                    "Minnesota": "mn", "Maryland": "md", "California": "ca",
                    "Kansas": "ks", "Virginia": "va", "Pennsylvania": "pa",
                    "Florida": "fl", "Arizona": "az", "Ohio": "oh",
-                   "Louisiana": "la", "Hawaii": "hi"}
+                   "Louisiana": "la", "Hawaii": "hi", "Georgia": "ga",
+                   "New York": "ny", "West Virginia": "wv"}
 BALLOTS26_LABEL = {"Alabama": "Ballots cast",
                    "Colorado": "Ballots returned (Nov 5)",
                    "North Carolina": "Votes — U.S. Senate race",
@@ -65,6 +74,9 @@ BALLOTS26_LABEL = {"Alabama": "Ballots cast",
                    "Ohio": "Votes — Governor's race",
                    "Louisiana": "Votes — U.S. Senate race",
                    "Hawaii": "Ballots cast",
+                   "Georgia": "Votes — Governor's race",
+                   "New York": "Votes — Governor's race",
+                   "West Virginia": "Votes — U.S. Senate race",
                    "Montana": "Ballots cast"}
 # combination-quadrants.csv group values in the owner's plain words
 QUAD_LABELS = {"high rolls / high ballots": "Big voter list · many ballots",
@@ -683,6 +695,8 @@ tr.hl td{font-weight:700}
 .legend{font-size:13px;color:var(--ink2);margin:10px 0 16px;line-height:1.7}
 .small{font-size:13.5px;color:var(--ink2);line-height:1.6}
 .src{font-size:13px;color:var(--ink2);margin:6px 0 14px;line-height:1.55}
+.notice{font-size:13.5px;color:var(--ink2);line-height:1.55;
+  padding:10px 0;border-bottom:1px solid var(--line);margin:0}
 .log{font-size:15px;line-height:1.55}
 .log div{padding:13px 0;border-top:1px solid var(--line)}
 .log div:first-child{border-top:0;padding-top:2px}
@@ -816,6 +830,7 @@ def page(title, body, depth=0, src_html=None, jump=None):
 </head>
 <body>
 <header class="site-head"><div class="wordmark">Open <span class="accent">Tally</span></div><nav class="mainnav"><a href="{root}index.html#states">States</a><a href="{root}data/index.html">Data</a><a href="{root}definitions/index.html">Definitions</a></nav></header>
+<p class="notice">{STANDING_NOTICE}</p>
 {jump_html}{body}
 <div class="footer"><span>Open Tally</span><span>{src_html}</span></div>
 <nav class="botnav"><div class="botnav-in"><a href="{root}index.html">The Map</a><a href="{root}states/index.html">States</a><a href="{root}rankings/index.html">Rankings</a><a href="{root}data/index.html">Data</a><a href="{root}definitions/index.html">Definitions</a></div></nav>
@@ -1625,6 +1640,9 @@ def ballots26_note(d, st):
            "Florida": (8270224, "the statewide Governor total published from the same system"),
            "Arizona": (2549311, "the statewide Governor total in the same file"),
            "Ohio": (4597270, "the statewide total row in the Secretary of State's file"),
+           "Georgia": (4181543, "the sum of the statewide candidate totals the Secretary of State's results site displays; the site prints no combined total"),
+           "New York": (6102694, "the statewide Governor total the State Board's election-night site displays"),
+           "West Virginia": (456128, "the statewide Senate total in the Secretary of State's file"),
            "Montana": (486746, "the statewide total the Secretary of State published")}
     if st in pub:
         total, who = pub[st]
@@ -1890,6 +1908,22 @@ def state_adds_lines(d, s, counties_by_state):
                      "county's summary; the votes in the Senate race "
                      "add up to 478,783. Both numbers stand as "
                      "published.")
+    if st == "Georgia":
+        lines.append("In Fulton County, the state's own export prints "
+                     "the winning candidate's county total as 337,159, "
+                     "while her precinct figures in the same export add "
+                     "up to 337,156 — 3 apart. The county total is the "
+                     "one shown on this page; nothing has been adjusted.")
+    if st == "New York":
+        lines.append("Westchester County's figure — 338,393 — is "
+                     "incomplete as published. The State Board's site "
+                     "carries this warning, word for word: \"Please be "
+                     "advised that these results do not include a "
+                     "significant number of unscanned emergency Election "
+                     "Day ballots from Westchester County. Accordingly, "
+                     "the results are incomplete and are subject to "
+                     "change as additional ballots are scanned and "
+                     "tabulated.\"")
     return lines
 
 NAT_HIST_KEY = {"2014": "eac-eavs-2014", "2016": "eac-eavs-2016",
@@ -2723,7 +2757,9 @@ def build_data(d, states, counties_by_state):
             "county-ballots-va.csv", "county-ballots-pa.csv",
             "county-ballots-fl.csv", "county-ballots-az.csv",
             "county-ballots-oh.csv", "county-ballots-la.csv",
-            "county-ballots-hi.csv", "county-history-eavs-older.csv",
+            "county-ballots-hi.csv", "county-ballots-ga.csv",
+            "county-ballots-ny.csv", "county-ballots-wv.csv",
+            "county-history-eavs-older.csv",
             "anomalies-vs-history.csv", "PAST-ELECTION-DAYS.md",
             "state-economics-tracker.csv", "flags.csv",
             "county-registered-co-de-ak.csv", "county-registered-co-de-ak.json",
