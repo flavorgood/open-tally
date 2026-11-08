@@ -63,7 +63,8 @@ BALLOTS26_FILES = {"Alabama": "al", "Colorado": "co", "North Carolina": "nc",
                    "Indiana": "in", "Missouri": "mo",
                    "North Dakota": "nd",
                    "South Dakota": "sd",
-                   "Nebraska": "ne"}
+                   "Nebraska": "ne",
+                   "Utah": "ut"}
 BALLOTS26_LABEL = {"Alabama": "Ballots cast",
                    "Colorado": "Ballots returned (Nov 5)",
                    "North Carolina": "Votes — U.S. Senate race",
@@ -95,6 +96,7 @@ BALLOTS26_LABEL = {"Alabama": "Ballots cast",
                    "North Dakota": "Votes — Representative in Congress race",
                    "South Dakota": "Votes — Governor's race",
                    "Nebraska": "Votes — Governor's race",
+                   "Utah": "Votes — Constitutional Amendment B",
                    "Montana": "Ballots cast"}
 # combination-quadrants.csv group values in the owner's plain words
 QUAD_LABELS = {"high rolls / high ballots": "Big voter list · many ballots",
@@ -1765,6 +1767,12 @@ def ballots26_note(d, st):
                 f'same page puts ballots cast statewide at 767,046, '
                 f'which is {767046 - parts:,} more. Both numbers '
                 f'stand as published.</p>')
+    if st == "Utah":
+        return (f'<p class="src">The 29 county figures add up to '
+                f'{parts:,} — the statewide total for Constitutional '
+                f'Amendment B in the state\'s media export. The '
+                f'export publishes no ballots-cast figure; nothing '
+                f'else is recorded.</p>')
     pub = {"Alabama": (1693621, "the statewide total the Secretary of State published"),
            "Colorado": (2761449, "the total in the Secretary of State's release"),
            "Minnesota": (2830125, "the statewide Governor total in the Secretary of State's file"),
@@ -3282,7 +3290,7 @@ def build_data(d, states, counties_by_state):
             "county-ballots-vt.csv", "county-ballots-ia.csv",
             "county-ballots-in.csv", "county-ballots-mo.csv",
             "county-ballots-nd.csv", "county-ballots-sd.csv",
-            "county-ballots-ne.csv",
+            "county-ballots-ne.csv", "county-ballots-ut.csv",
             "governor-results-2026.csv",
             "county-history-eavs-older.csv",
             "anomalies-vs-history.csv", "PAST-ELECTION-DAYS.md",
