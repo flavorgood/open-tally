@@ -426,65 +426,97 @@ def state_map(state_name, county_fips_names, fills):
 
 # ---------------------------------------------------------------- rendering
 CSS = """
+:root{
+  --bg:#ffffff; --panel:#ffffff; --ink:#111111; --ink2:#5f5f5f; --line:#e4e4e0; --line2:#c9c9c4;
+  --hover:#f7f7f5;
+  --serif:"Playfair Display",Georgia,"Times New Roman",Times,serif;
+  --bodyserif:Georgia,"Times New Roman",Times,serif;
+  --sans:Inter,"Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+@media (prefers-color-scheme: dark){
+  :root{ --bg:#101010; --panel:#101010; --ink:#f2f2ef; --ink2:#a6a6a0; --line:#2b2b28; --line2:#454540;
+    --hover:#171714; }
+}
 *{box-sizing:border-box}
-body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;color:#191922;background:#fff;margin:0 auto;max-width:1080px;padding:0 20px 56px;line-height:1.55;font-size:16px}
-a{color:#1d4ed8;text-decoration:none}
-a:hover{text-decoration:underline}
-.site-head{border-bottom:1px solid #e5e5ef;padding:22px 0 14px;margin-bottom:6px}
-.wordmark{font-size:34px;font-weight:800;letter-spacing:-.5px;color:#191922}
-.wordmark .accent{color:#7C3AED}
-.tagline{font-size:15px;color:#55556a;margin-top:2px}
-.mainnav{display:flex;gap:22px;margin-top:12px;font-size:14.5px;font-weight:600}
-.mainnav a{color:#191922}
-.mainnav a:hover{color:#7C3AED;text-decoration:none}
-.crumb{font-size:13.5px;color:#666674;margin:14px 0 0}
-.crumb a{color:#666674}
-h1{font-size:32px;font-weight:800;letter-spacing:-.4px;margin:14px 0 6px}
-h2{font-size:21px;font-weight:700;margin:38px 0 12px;padding-bottom:6px;border-bottom:3px solid #7C3AED}
-h3{font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:#55556a;margin:22px 0 8px}
-.edsub{font-size:14px;color:#55556a;margin:-4px 0 10px}
-.cards{display:flex;flex-wrap:wrap;gap:12px;margin:12px 0 4px}
-.card{background:#f6f6f9;border:1px solid #e7e7ef;border-radius:12px;padding:16px 18px;flex:1 1 230px}
-.card.vio{background:#f4efff;border-color:#e0d4fc}
-.card .v{font-size:31px;font-weight:800;line-height:1.15;letter-spacing:-.3px}
-.card .k{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:#55556a;margin-top:5px}
-.card .sub{font-size:13.5px;color:#44445a;margin-top:7px;line-height:1.5}
-.govline{background:#f4efff;border:1px solid #e0d4fc;border-radius:12px;padding:14px 18px;font-size:16.5px;margin:12px 0}
-table{border-collapse:collapse;width:100%;font-size:14.5px;margin:10px 0 18px}
-th{font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:#666674;text-align:right;padding:8px;border-bottom:2px solid #d9d9e4;font-weight:700;position:sticky;top:0;background:#fff}
+html{-webkit-text-size-adjust:100%}
+body{margin:0 auto;max-width:1100px;padding:0 22px 56px;background:var(--bg);color:var(--ink);
+  font-family:var(--sans);font-size:15.5px;line-height:1.5;
+  font-variant-numeric:tabular-nums;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+a:hover{text-decoration:underline;text-underline-offset:3px}
+.site-head{padding:26px 0 12px;border-bottom:4px double var(--ink)}
+.wordmark{font-family:var(--serif);font-size:clamp(42px,6.5vw,64px);font-weight:800;
+  letter-spacing:-.015em;line-height:1.04;color:var(--ink)}
+.wordmark .accent{color:var(--ink)}
+.tagline{font-family:var(--bodyserif);font-style:italic;font-size:20px;line-height:1.55;
+  color:var(--ink);max-width:42em;margin:16px 0 0}
+.mainnav{display:flex;gap:26px;margin-top:16px;font-size:12.5px;font-weight:700;
+  letter-spacing:.15em;text-transform:uppercase}
+.mainnav a{color:var(--ink2)}
+.mainnav a:hover{color:var(--ink);text-decoration:underline;text-underline-offset:5px}
+.crumb{font-size:12px;font-weight:600;letter-spacing:.13em;text-transform:uppercase;
+  color:var(--ink2);margin:20px 0 0}
+.crumb a{color:var(--ink2)}
+h1{font-family:var(--serif);font-size:34px;font-weight:800;letter-spacing:-.01em;
+  line-height:1.1;margin:14px 0 6px}
+h2{font-size:13px;font-weight:700;letter-spacing:.17em;text-transform:uppercase;
+  margin:52px 0 18px;color:var(--ink)}
+h3{font-size:11.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--ink2);margin:26px 0 10px}
+.edsub{font-size:12px;font-weight:600;letter-spacing:.15em;text-transform:uppercase;
+  color:var(--ink2);margin:-6px 0 14px}
+.cards{display:flex;flex-wrap:wrap;border-top:2px solid var(--ink);
+  border-bottom:1px solid var(--line2);padding:20px 0 18px;margin:14px 0 4px}
+.card{flex:1 1 240px;padding:2px 20px;border-left:1px solid var(--line);min-width:0}
+.card:first-child{padding-left:0;border-left:0}
+.card .v{font-size:30px;font-weight:800;letter-spacing:-.025em;line-height:1.1;margin:5px 0 2px}
+.card .k{font-size:11px;font-weight:600;letter-spacing:.13em;text-transform:uppercase;
+  color:var(--ink2);margin-top:5px}
+.card .sub{font-size:13.5px;color:var(--ink2);margin-top:6px;line-height:1.5}
+.govline{border-top:2px solid var(--ink);padding:16px 0 2px;font-size:16.5px;margin:14px 0}
+table{border-collapse:collapse;width:100%;font-size:14.5px;margin:14px 0 18px}
+th{font-size:11px;font-weight:600;letter-spacing:.11em;text-transform:uppercase;
+  color:var(--ink2);text-align:right;padding:2px 10px 9px;border-bottom:2px solid var(--ink)}
 th.l,td.l{text-align:left}
-td{border-bottom:1px solid #ececf2;text-align:right;padding:7px 8px;font-variant-numeric:tabular-nums}
-table tr:nth-child(even) td{background:#fafafc}
-tr.hl td{font-weight:bold}
-.chip{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:6px;border:1px solid rgba(0,0,0,.25)}
-.map{width:100%;height:auto;display:block;margin:10px 0}
-.map path{stroke:#fff;stroke-width:.6}
-.legend{font-size:13.5px;color:#44445a;margin:6px 0 14px}
-.small{font-size:13.5px;color:#55556a}
-.src{font-size:13px;color:#55556a;margin:4px 0 14px}
-.log{font-size:15px;line-height:1.8}
-.log div{padding:3px 0;border-bottom:1px solid #f0f0f5}
+td{border-bottom:1px solid var(--line);text-align:right;padding:8px 10px}
+td.l{white-space:normal}
+tr.hl td{font-weight:700}
+.chip{display:inline-block;width:11px;height:11px;border-radius:2px;margin-right:7px}
+.map{width:100%;height:auto;display:block;margin:14px 0}
+.map path{stroke:var(--panel);stroke-width:1.1}
+.legend{font-size:13px;color:var(--ink2);margin:10px 0 16px;line-height:1.7}
+.small{font-size:13.5px;color:var(--ink2);line-height:1.6}
+.src{font-size:13px;color:var(--ink2);margin:6px 0 14px;line-height:1.55}
+.log{font-size:15px;line-height:1.55}
+.log div{padding:13px 0;border-top:1px solid var(--line)}
+.log div:first-child{border-top:0;padding-top:2px}
 dl.defs{font-size:15.5px;line-height:1.6}
-dl.defs dt{font-weight:700;margin-top:12px}
-dl.defs dd{margin:2px 0 0 0;color:#33333f}
-.footer{border-top:1px solid #e5e5ef;margin-top:44px;padding-top:10px;font-size:13px;color:#55556a;display:flex;justify-content:space-between}
+dl.defs dt{font-weight:700;margin-top:14px}
+dl.defs dd{margin:2px 0 0 0;color:var(--ink2)}
+.footer{border-top:1px solid var(--ink);margin-top:64px;padding-top:15px;font-size:13px;
+  color:var(--ink2);line-height:1.6;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 a.cite{color:inherit;text-decoration:underline dotted;text-underline-offset:2px}
-.flag{background:#7C3AED;color:#fff;padding:1px 6px;border-radius:4px;font-weight:700;white-space:nowrap}
+.flag{background:#7C3AED;color:#fff;padding:1px 6px;border-radius:3px;font-weight:700;white-space:nowrap}
 .flag a.cite{color:#fff}
 .flaglab{color:#7C3AED;font-weight:700;font-size:12.5px;margin-left:6px;white-space:nowrap}
-.flags div{font-size:14.5px;margin:4px 0}
-.adds{font-size:16px;line-height:1.6}
-.adds div{margin:5px 0}
-.plainline{background:#f4efff;border:1px solid #e0d4fc;border-radius:12px;padding:13px 16px;font-size:16.5px;font-weight:600;margin:14px 0 4px}
-@media (max-width:700px){
-body{padding:0 13px 44px;font-size:15px}
-.wordmark{font-size:27px}
-h1{font-size:26px}
-h2{font-size:19px;margin-top:30px}
-.card{flex:1 1 150px;padding:13px 14px}
-.card .v{font-size:24px}
-table{display:block;overflow-x:auto;white-space:nowrap}
+.flags div{font-size:14.5px;margin:6px 0;line-height:1.55}
+.adds{font-size:15.5px;line-height:1.55}
+.adds div{padding:10px 0;border-top:1px solid var(--line)}
+.adds div:first-child{border-top:0;padding-top:0}
+.adds a,td.l a{font-weight:600}
+.plainline{border-top:2px solid var(--ink);padding:14px 0 2px;font-size:16.5px;
+  font-weight:600;margin:14px 0 4px}
+@media (max-width:760px){
+body{padding:0 16px 48px}
+.tagline{font-size:18px}
+h1{font-size:29px}
+h2{margin-top:46px}
+.card{flex:1 1 160px;padding:2px 14px}
+.card .v{font-size:25px}
+table{display:block;overflow-x:auto;-webkit-overflow-scrolling:touch;white-space:nowrap}
+td.l{white-space:nowrap}
 .govline,.plainline{font-size:15.5px}
+.footer{flex-direction:column;gap:2px}
 }
 """
 
@@ -499,6 +531,9 @@ def page(title, body, depth=0, src_html=None):
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{esc(title)} — Open Tally</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Inter:wght@400;500;600;700;800&display=swap">
 <style>{CSS}</style>
 </head>
 <body>
