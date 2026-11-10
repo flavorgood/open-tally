@@ -18,7 +18,7 @@ class NavigationTests(unittest.TestCase):
             with self.subTest(path=path):
                 doc=page(path)
                 nav=doc.xpath('//nav[@aria-label="Primary"]/a')
-                self.assertEqual([a.text for a in nav],['Overview','States & Counties','Compare','Data & Sources'])
+                self.assertEqual([a.xpath("./span[last()]")[0].text for a in nav],['Overview','States & Counties','Compare','Data & Sources'])
                 self.assertEqual(len(doc.xpath('//nav[@aria-label="Primary"]/a[@aria-current="page"]')),1)
                 self.assertEqual(len(doc.xpath('//main[@id="main-content"]')),1)
                 self.assertFalse(doc.xpath('//nav[@class="botnav"]'))

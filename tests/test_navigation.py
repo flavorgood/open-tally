@@ -1,5 +1,6 @@
 """Browser regression checks. Build with python generate.py; serve site on port 8767."""
-import json
+import json, os, mimetypes
+from urllib.parse import urlparse, unquote
 from pathlib import Path
 from playwright.sync_api import sync_playwright
 
@@ -10,19 +11,33 @@ ARTIFACTS.mkdir(exist_ok=True)
 def run():
     results = []
     with sync_playwright() as p:
-        browser = p.chromium.launch(executable_path='/usr/bin/chromium', headless=True, args=['--no-sandbox'])
-        page = browser.new_page(viewport={'width':1280,'height':900})
+        browser = p.chromium.launch(executable_path=os.environ.get('BROWSER_EXECUTABLE','/usr/bin/chromium'), headless=True, args=['--no-sandbox'])
+        def local_route(route):
+            url=urlparse(route.request.url)
+            if url.hostname!='127.0.0.1':
+                return route.abort()
+            root=Path(__file__).resolve().parents[1]/'site'
+            path=(root/unquote(url.path).lstrip('/')).resolve()
+            if root not in path.parents or not path.is_file():
+                return route.fulfill(status=404,body='Not found')
+            return route.fulfill(body=path.read_bytes(),content_type=mimetypes.guess_type(path)[0] or 'application/octet-stream')
+        browser_context=browser.new_context()
+        browser_context.route('**/*',local_route)
+        page = browser_context.new_page()
+        page.set_viewport_size({'width':1280,'height':900})
         errors = []
         page.on('pageerror', lambda error: errors.append(str(error)))
         page.goto(BASE + '/index.html', wait_until='domcontentloaded')
-        assert page.get_by_role('navigation',name='Primary').get_by_role('link').all_text_contents() == ['Overview','States & Counties','Compare','Data & Sources']
-        assert page.locator('nav.mainnav a[aria-current=page]').inner_text() == 'Overview'
+        assert page.get_by_role('navigation',name='Primary').locator('a > span:last-child').all_text_contents() == ['Overview','States & Counties','Compare','Data & Sources']
+        assert page.locator('nav.mainnav a[aria-current=page] > span:last-child').inner_text() == 'Overview'
         page.get_by_label('Start with a state').fill('TX')
         page.get_by_role('button',name='Find my state').click()
         page.wait_for_url('**/states/index.html?q=TX')
         assert page.locator('[data-filter-table=states] tr:visible').count() == 2
         assert page.locator('[data-filter-table=states] tr:visible').last.inner_text().startswith('Texas')
         page.get_by_role('button',name='Clear',exact=True).click()
+        assert page.locator('[data-filter-table=states] tr:visible').count() == 13
+        page.get_by_role('button',name='Show all 51',exact=True).click()
         assert page.locator('[data-filter-table=states] tr:visible').count() == 52
         page.get_by_label('Search states').fill('zzzz')
         assert page.locator('.filter-empty').is_visible()
@@ -61,19 +76,22 @@ def run():
         assert page.locator('.section-index a').count() >= 10
         anchors = page.locator('.section-index a').evaluate_all('(links)=>links.map(a=>a.hash.slice(1))')
         assert all(page.locator('[id="'+anchor+'"]').count()==1 for anchor in anchors)
+        page.get_by_text('Source files',exact=True).filter(visible=True).last.click()
         page.get_by_label('Search files').fill('county')
         assert page.locator('[data-filter-table=files] tr:visible').count() >= 2
         results.append('Data section index targets and source file filtering pass')
-        for width in [1280,390]:
+        for width in [1280,768,390,320]:
             page.set_viewport_size({'width':width,'height':900})
             for path,name in [('/index.html','home'),('/states/texas/index.html#counties','texas'),('/counties/texas/harris-county/index.html?year=2024','harris'),('/data/index.html','data')]:
                 page.goto(BASE+path,wait_until='domcontentloaded')
-                assert page.evaluate('document.documentElement.scrollWidth <= window.innerWidth + 1'), (width,path,'overflow')
+                assert page.evaluate('document.documentElement.scrollWidth <= window.innerWidth + 1'), (width,path,'overflow',page.evaluate('Array.from(document.querySelectorAll("body *")).filter(e=>e.getBoundingClientRect().right>innerWidth+1).slice(0,10).map(e=>[e.tagName,e.className,e.getBoundingClientRect().right])'))
                 page.screenshot(path=str(ARTIFACTS/f'{name}-{width}.png'),full_page=False)
-        results.append('No horizontal page overflow at 1280px and 390px; screenshots saved')
+        results.append('No horizontal page overflow at 320px, 390px, 768px and 1280px; screenshots saved')
         assert not errors, errors
         # Progressive fallback: no JavaScript still exposes every county and radio year panes.
-        fallback=browser.new_page(java_script_enabled=False,viewport={'width':390,'height':900})
+        fallback_context=browser.new_context(java_script_enabled=False,viewport={'width':390,'height':900})
+        fallback_context.route('**/*',local_route)
+        fallback=fallback_context.new_page()
         fallback.goto(BASE+'/states/texas/index.html',wait_until='domcontentloaded')
         assert fallback.locator('[data-filter-table=counties] tr').count()==255
         fallback.locator('.yr-tabs label[for=yr2024]').click()

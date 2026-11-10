@@ -1086,7 +1086,7 @@ body.yrb .footer{margin-bottom:148px}
 }
 """
 
-def section_index(body):
+def section_index(body, collapsible=False):
     """Add stable, static links to every top-level section of long reference pages."""
     links = []
     used = set(re.findall(r'\bid=["\']([^"\']+)', body))
@@ -1105,6 +1105,13 @@ def section_index(body):
         links.append(f'<li><a href="#{esc(anchor)}">{label}</a></li>')
         return f'<h2{attrs}>{label}</h2>'
     body = re.sub(r"<h2([^>]*)>(.*?)</h2>", heading, body, flags=re.S)
+    if collapsible:
+        chunks = re.split(r"(<h2[^>]*>.*?</h2>)", body, flags=re.S)
+        rebuilt = [chunks[0]]
+        for i in range(1, len(chunks), 2):
+            label = re.sub(r"<[^>]+>", "", chunks[i])
+            rebuilt.append('<details class="supporting-record reference-section"><summary>' + label + '</summary>' + chunks[i] + chunks[i + 1] + '</details>')
+        body = "".join(rebuilt)
     index = ('<nav class="section-index" aria-label="On this page">'
              '<h2>On this page</h2><ul>' + "".join(links) + '</ul></nav>')
     return re.sub(r"(</h1>)", lambda m: m.group(1) + index, body, count=1)
@@ -1132,7 +1139,7 @@ def page(title, body, depth=0, src_html=None, jump=None, yearbar=None):
                     ("data", "data/index.html", "Data & Sources")]
     nav = "".join(f'<a href="{root}{path}"' +
                   (' aria-current="page"' if key == active else '') +
-                  f'>{label}</a>' for key, path, label in destinations)
+                  f'><span class="nav-symbol" aria-hidden="true">{dict(overview="◫", states="⌖", rankings="≡", data="▤")[key]}</span><span>{label}</span></a>' for key, path, label in destinations)
     jump_html = ""
     if jump:
         jump_html = ('<nav class="jumpbar" aria-label="On this page"><span class="jumpbar-label">On this page</span>' + "".join(
@@ -1148,6 +1155,8 @@ def page(title, body, depth=0, src_html=None, jump=None, yearbar=None):
                       f'<span class="yrlab">{year_label}</span>{items}'
                       f'</div></nav>\n')
         bodycls = ' class="yrb"'
+    if yearbar and yearbar[0] == "fyr":
+        body = body.replace('<h2 id="map">The Map</h2>', '<h2 id="map">The Map</h2>' + yrbar_html, 1)
     return f"""<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -1163,11 +1172,10 @@ def page(title, body, depth=0, src_html=None, jump=None, yearbar=None):
 </head>
 <body{bodycls}>
 <a class="skip-link" href="#main-content">Skip to content</a>
-<header class="site-head"><div class="wordmark"><a href="{root}index.html" aria-label="Open Tally home">Open <span class="accent">Tally</span></a></div><nav class="mainnav" aria-label="Primary">{nav}</nav></header>
-<p class="notice">{STANDING_NOTICE}</p>
+<header class="site-head"><div class="brand-lockup"><div class="wordmark"><a href="{root}index.html" aria-label="Open Tally home">Open <span class="accent">Tally</span></a></div><span class="brand-caption">Public records. In view.</span></div><nav class="mainnav" aria-label="Primary">{nav}</nav></header>
+<details class="record-notice"><summary>The count is still being updated. <span>About the records</span></summary><p class="notice">{STANDING_NOTICE}</p></details>
 {jump_html}<main id="main-content">{body}</main>
 <div class="footer"><span>Open Tally · <a href="{root}definitions/index.html">Definitions & methods</a> · <a href="#main-content">Back to top</a></span><span>{src_html}</span></div>
-{yrbar_html}
 </body>
 </html>"""
 
@@ -3467,7 +3475,11 @@ def build_front(d, states, counties_by_state):
             '<input id="find-state" name="q" type="search" '
             'placeholder="State name or abbreviation" autocomplete="off">'
             '</div><button type="submit">Find my state</button></form>'
-            '<p class="context-note">Choose your state, then search its counties.</p></section>']
+            '<p class="context-note">Choose your state, then search its counties.</p></section>'
+            '<nav class="explore-grid" aria-label="Explore records">'
+            '<a href="#election-day"><span>Election results</span><small>Governors, Senate & House</small></a>'
+            '<a href="rankings/index.html"><span>Compare states</span><small>See places side by side</small></a>'
+            '<a href="data/index.html"><span>Go to the source</span><small>Read & download the records</small></a></nav>']
     # one map, leading the front page at the full width of its
     # module; beside it, the country's numbers before any tap, then
     # a panel per state (all 51 in the static HTML) that the one
@@ -3542,6 +3554,10 @@ def build_front(d, states, counties_by_state):
     seg.append('<p class="small"><a href="data/index.html">Data</a> · '
                '<a href="definitions/index.html">Definitions</a></p>')
     mods.append(mod("\n".join(seg)))
+    # Keep the complete record in the document; let readers choose supporting sections.
+    for index, label in ((1, "Explore the map"), (3, "Compare published figures"),
+                         (4, "Browse all states"), (5, "Latest record updates")):
+        mods[index] = '<details class="supporting-record home-section"><summary>' + label + '</summary>' + mods[index] + '</details>'
     write("index.html", page("Open Tally",
                              "\n".join(mods) + "\n" + FRONT_SCRIPT,
                              depth=0, jump=jump, yearbar=("fyr", YEARS)))
@@ -4121,21 +4137,20 @@ def build_state_pages(d, states, counties_by_state, county_info):
         # summary, then the detail
         head = seg_map[:2]
         seg_map_body = seg_map[2:]
-        mods = []
-        if ed:
-            mods.append(mod("\n".join(head + [ed])))
-            mods.append(mod("\n".join(seg_map_body)))
-        else:
-            mods.append(mod("\n".join(seg_map)))
-        if seg_adds: mods.append(mod("\n".join(seg_adds)))
+        mods = ["\n".join(head)]
+        mods.append('<a class="county-shortcut" href="#counties">Find a county in ' + esc(name) + ' <span aria-hidden="true">↓</span></a>')
         mods.append(mod("\n".join(seg_count)))
-        if seg_past: mods.append(mod("\n".join(seg_past)))
+        mods.append('<details class="supporting-record"><summary>Explore the county map</summary>' + mod("\n".join(seg_map_body)) + "</details>")
         mods.append(mod("\n".join(seg_counties)))
+        if ed:
+            mods.append('<details class="supporting-record"><summary>Election Day results & economic context</summary>' + mod(ed) + '</details>')
+        if seg_adds: mods.append(mod("\n".join(seg_adds)))
+        if seg_past: mods.append('<details class="supporting-record"><summary>Compare past elections</summary>' + mod("\n".join(seg_past)) + "</details>")
         if seg_tail: mods.append(mod("\n".join(seg_tail)))
         # the cleaned top jump bar: the page's main sections only,
         # at most five, in page order
         jump = []
-        if ed: jump.append(("election-day", "Election Day vs today"))
+        if ed: jump.append(("election-day", "Results & context"))
         if outline: jump.append(("map", "Map"))
         jump.append(("count", "The count"))
         if seg_past: jump.append(("next-to-past", "Past elections"))
@@ -4243,6 +4258,7 @@ def build_county_pages(d, states, counties_by_state):
                 panes.append((year, pane))
             body = [f'<div class="crumb"><a href="../../../index.html">Overview</a> · <a href="../../../states/index.html">States & Counties</a> · <a href="../../../states/{s["slug"]}/index.html#counties">{esc(name)}</a></div>',
                     f"<h1>{esc(c['county_name'])}</h1>",
+                    '<details class="supporting-record"><summary>2026 overview & population context</summary>',
                     '<p class="context-note">Overview: 2026 election records. Select a different year in The count below.</p>']
             if reg and pop and reg > pop:
                 body.append(f'<p class="bigflag">More registered voters '
@@ -4281,6 +4297,7 @@ def build_county_pages(d, states, counties_by_state):
                     f"{round(bval0 / vap * 100, 1):.1f} ballots for "
                     f"every 100 adults."))
             body.append(MEASURE_NOTE)
+            body.append("</details>")
             body.append('<h2 id="count">The count</h2>')
             body.append(year_switch(panes))
             if any_eavs:
@@ -4726,7 +4743,7 @@ def build_data(d, states, counties_by_state):
     for ln in reversed(d["log_lines"]):
         body.append(f"<div>{esc(ln)}</div>")
     body.append("</div>")
-    write("data/index.html", page("Data & Sources", section_index("\n".join(body)), depth=1))
+    write("data/index.html", page("Data & Sources", section_index("\n".join(body), collapsible=True), depth=1))
 
 def build_definitions(d):
     defs = [

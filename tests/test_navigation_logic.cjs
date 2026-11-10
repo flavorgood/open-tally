@@ -5,7 +5,7 @@ const fs = require('node:fs');
 const vm = require('node:vm');
 const source = fs.readFileSync(require('node:path').join(__dirname, '../assets/navigation.js'), 'utf8');
 class Element {
-  constructor(tag='div') { this.tag=tag; this.dataset={}; this.listeners={}; this.children=[]; this.value=''; this.hidden=false; this.textContent=''; this.disabled=false; this.attrs={}; }
+  constructor(tag='div') { this.tag=tag; this.dataset={}; this.listeners={}; this.children=[]; this.value=''; this.hidden=false; this.textContent=''; this.disabled=false; this.attrs={}; this.classList={add(){}}; }
   addEventListener(type, fn) { (this.listeners[type] ||= []).push(fn); }
   dispatchEvent(event) { for(const fn of this.listeners[event.type] || []) fn(event); }
   click() { if(!this.disabled) this.dispatchEvent({type:'click'}); }
@@ -21,6 +21,7 @@ class Element {
   set href(value) { this._href=value; }
   querySelector(selector) { return this.querySelectorAll(selector)[0] || null; }
   querySelectorAll(selector) {
+    if(selector==='th' || selector==='[colspan], [rowspan]') return [];
     if(selector==='tr') return this.rows || [];
     if(selector==='td') return this.cells || [];
     if(selector==='button') return this.children.filter(e=>e.tag==='button');
@@ -46,6 +47,7 @@ function table(kind, names) {
 function run({tables=[],radios=[],links=[],href='https://preview.test/index.html'}={}) {
   const created=[],listeners={},location=new URL(href);
   const document={
+    getElementById(){return null;},
     querySelectorAll(selector){ return ({'[data-filter-table]':tables,'main table':tables,'.yr-in':radios,'a[href]':links})[selector] || []; },
     createElement(tag){const e=new Element(tag);created.push(e);return e;}
   };
