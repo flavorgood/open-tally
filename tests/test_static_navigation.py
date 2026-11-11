@@ -63,7 +63,8 @@ class NavigationTests(unittest.TestCase):
             doc=page(path)
             for note in doc.xpath('//p[@class="measure-note"]'):
                 text=note.text_content().lower()
-                self.assertIn('2020 census',text)
+                self.assertIn('2025',text)
+                self.assertIn('estimate',text)
                 self.assertNotIn('invalid',text)
                 self.assertNotIn('fraud',text)
             self.assertNotIn("What doesn't add up",' '.join(doc.xpath('//h2/text()')))
