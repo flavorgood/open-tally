@@ -4,9 +4,9 @@ AK,"Peltola, Mary",DEM,102962,"Sullivan, Dan S.",REP,102325,214428,displayed,uno
 AZ,,,,,,,,,No Senate race in 2026,,
 AR,,,,,,,,,unofficial - portal not extractable in this pass,,https://arkansas.tally-enr.com/
 CA,,,,,,,,,No Senate race in 2026,,
-CO,,,,,,,,,unofficial - portal not extractable in this pass,,https://results.enr.clarityelections.com/CO/127407/web.345435/#/summary
+CO,John Hickenlooper,Democratic,1609163,Mark Baisley,Republican,932741,2662053,displayed Vote Cast total on the SOS Clarity ENR,unofficial,2026-11-08,https://results.enr.clarityelections.com/CO/127407/web.345435/#/detail/20
 CT,,,,,,,,,No Senate race in 2026,,
-DE,,,,,,,,,unofficial - portal not extractable in this pass,,https://elections.delaware.gov/results/enr/GE2026.html
+DE,Chris Coons,Democratic,240347,Michael Katz,Republican,137764,378111,sum of the two printed candidates — the ENR prints no race total,unofficial,2026-11-08,https://elections.delaware.gov/results/enr/GE2026.html
 FL,Ashley Moody,REP,4211455,Angie Nixon,DEM,3974148,8280268,displayed,unofficial,2026-11-06,https://floridaelectionwatch.gov/TrackCounty/DES
 GA,Jon Ossoff,Dem,2466695,Mike Collins,Rep,1712587,4179282,sum of printed candidates,unofficial,2026-11-07,https://results.sos.ga.gov/results/public/Georgia/11032026GeneralAndSpecialElection
 HI,,,,,,,,,No Senate race in 2026,,
@@ -27,7 +27,7 @@ MO,,,,,,,,,No Senate race in 2026,,
 MT,Kurt Alme,Republican,232916,Seth Bodnar,Independent,181674,482014,displayed TOTAL VOTES on the SOS results app,unofficial,2026-11-08,https://electionresults.mt.gov/resultsSW.aspx?type=FED&map=CTY
 NE,Pete Ricketts,Republican,378244,Dan Osborn,By Petition,331250,754367,displayed,unofficial,2026-11-06,https://electionresults.nebraska.gov/resultsSW.aspx?type=SW&map=CTY
 NV,,,,,,,,,No Senate race in 2026,,
-NH,,,,,,,,,official summary file not readable in this pass,,https://www.sos.nh.gov/2026-general-election-results
+NH,Chris Pappas,Democratic,355976,John E. Sununu,Republican,268682,637531,"sum of the four printed candidate totals in the SOS US Senator Summary file (the file prints per-candidate totals, no race total)",unofficial,2026-11-08,https://www.sos.nh.gov/sites/g/files/ehbemt561/files/media/media_document/2026-ge-us-senator-summary.xlsx
 NJ,Cory Booker,DEM,,Justin Murphy,REP,,,,unofficial - no official statewide general total posted,,https://www.nj.gov/state/elections/election-night-results.shtml
 NM,BEN R LUJAN,Democrat,458756,LARRY E MARKER,Republican,266434,725190,displayed,unofficial,2026-11-07,https://electionresults.sos.nm.gov/resultsSW.aspx?type=FED&map=CTY
 NY,,,,,,,,,No Senate race in 2026,,

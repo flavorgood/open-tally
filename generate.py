@@ -1497,39 +1497,87 @@ def governor_ed_cards(d):
     return cards
 
 def senate_ed_lines(d):
-    """The national U.S. Senate picture in plain lines, from
-    senate-results-2026-notes.md: the count before Election Day
-    and on the results this file has verified, the seats that
-    were voted on and the seats that were not on any ballot, the
-    verified flips, and what is still open. The after count
-    covers only what is decided — the seats that were not on
-    the ballot plus the races with a verified winner — and an
-    undecided seat is counted for no party, so the count can
-    still move."""
+    """The national U.S. Senate picture in plain lines. The count
+    after Election Day is computed from senate-results-2026.csv
+    at build time and covers only what is decided: the 65 seats
+    that were not on the ballot (31 Republicans, 32 Democrats,
+    2 Independents — the before count of 53 / 45 / 2 minus the
+    22 Republican and 13 Democratic seats that were voted on;
+    senate-results-2026-notes.md) plus the races with a verified
+    winner. A seat whose race is not decided is never carried
+    for the party that held it: Alaska is not called, with the
+    Democrat leading the first choices, so it stands in no
+    party's count until the ranked-choice count lands. The open
+    races are named, each with its state. (Computed, not typed,
+    so the count cannot go stale against the file again.)"""
     flips = [s for s in ("Iowa", "Kansas", "North Carolina", "Ohio",
                          "South Carolina", "Texas")
              if s in SEN26_FLIPS]
-    return [
+
+    def party_family(p):
+        p = (p or "").strip().upper()
+        if p.startswith("DEM") or p == "D":
+            return "D"
+        if p.startswith("REP") or p == "R":
+            return "R"
+        return None
+
+    won = {"R": 0, "D": 0}
+    open_states = []
+    for st, row in d["sen26"].items():
+        status = (row["status"] or "").strip()
+        if status == "No Senate race in 2026":
+            continue
+        if (num(row["winner_votes"]) is not None
+                and "uncalled" not in status.lower()):
+            fam = party_family(row["winner_party"])
+            if fam:
+                won[fam] += 1
+        else:
+            open_states.append(st)
+    r_after, d_after = 31 + won["R"], 32 + won["D"]
+    decided = r_after + d_after + 2
+    lines = [
         "U.S. Senate before Election Day: 53 Republicans, "
-        "45 Democrats, 2 Independents. On the races decided so "
-        "far — the seats that were not on the ballot plus the "
-        "races with a verified winner — the count stands at "
-        "43 Republicans, 45 Democrats, 2 Independents: 90 of "
-        "the 100 seats. 10 seats are not decided yet, and no "
-        "undecided seat is counted for either party.",
+        "45 Democrats, 2 Independents.",
+        f"On the races decided so far — the seats that were not "
+        f"on the ballot plus the races with a verified winner — "
+        f"the count stands at {r_after} Republicans, "
+        f"{d_after} Democrats, 2 Independents: {decided} of the "
+        f"100 seats. {len(open_states)} seats are not decided "
+        f"yet, and no undecided seat is counted for either party.",
         "35 seats were voted on (held going in by 22 Republicans "
         "and 13 Democrats). 65 seats were not on the ballot and "
         "do not change.",
         "Changed from Republican to Democrat: "
         + ", ".join(flips) + ".",
-        "Not decided: Alaska is not called — Peltola, Mary, "
-        "the Democrat, leads the first choices 102,962 to "
-        "102,325, and the ranked-choice count lands November "
-        "18, 2026; Mississippi has published no statewide "
-        "total; Arkansas, Colorado, Delaware, Illinois, Maine, "
-        "Massachusetts, New Hampshire and New Jersey have "
-        "published no verified statewide figures yet.",
     ]
+    ak = d["sen26"].get("Alaska")
+    open_bits = []
+    if ak is not None and "Alaska" in open_states:
+        open_bits.append(
+            f"Alaska is not called — "
+            f"{esc(_gov_name(ak['winner']))}, the Democrat, leads "
+            f"the first choices {num(ak['winner_votes']):,} to "
+            f"{num(ak['runner_up_votes']):,}, and the ranked-choice "
+            f"count lands November 18, 2026")
+    if "Mississippi" in open_states:
+        open_bits.append("Mississippi is still counting and has "
+                         "published no statewide total")
+    no_figs = [s for s in ("Arkansas", "Illinois", "Maine",
+                           "Massachusetts", "New Jersey")
+               if s in open_states]
+    if no_figs:
+        names = (", ".join(no_figs[:-1])
+                 + (" and " if len(no_figs) > 1 else "")
+                 + no_figs[-1])
+        open_bits.append(f"{names} "
+                         + ("have" if len(no_figs) > 1 else "has")
+                         + " published no verified statewide "
+                         "figures yet")
+    if open_bits:
+        lines.append("Not decided: " + "; ".join(open_bits) + ".")
+    return lines
 
 # ---------------------------------------------------------------- tracker economics
 # Ranking method recovered from the tracker artifact (its COMP table and
@@ -2503,7 +2551,14 @@ def ballots26_note(d, st):
     pub = {"Alabama": (1693621, "the statewide total the Secretary of State published"),
            "Colorado": (2761449, "the total in the Secretary of State's release"),
            "Minnesota": (2830125, "the statewide Governor total in the Secretary of State's file"),
-           "Maryland": (2033639, "the statewide Governor total on the State Board's statewide page"),
+           # Maryland's county figures come from the Board's county
+           # detail page (refreshed Nov 7, 7:34 PM; they add to
+           # 2,033,639); the Board's statewide page refreshed later
+           # that evening (9:37 PM) and prints 2,045,846 — the total
+           # the governor file carries (governor-results-2026-
+           # notes.md). The pair therefore disagrees and both
+           # numbers print.
+           "Maryland": (2045846, "the statewide Governor total on the State Board's statewide page"),
            "Kansas": (1099896, "the statewide Senate total on the Secretary of State's statewide page"),
            "Virginia": (3590246, "the statewide Senate total the Department of Elections' results site displays"),
            "Pennsylvania": (4985374, "the sum of the statewide candidate totals the Department of State displays"),
