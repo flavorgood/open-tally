@@ -1502,23 +1502,33 @@ def senate_ed_lines(d):
     and on the results this file has verified, the seats that
     were voted on and the seats that were not on any ballot, the
     verified flips, and what is still open. The after count
-    carries its 'on verified results' qualifier — Alaska and
-    Mississippi are still counting and Maine has published no
-    statewide count, so the count can still move."""
+    covers only what is decided — the seats that were not on
+    the ballot plus the races with a verified winner — and an
+    undecided seat is counted for no party, so the count can
+    still move."""
     flips = [s for s in ("Iowa", "Kansas", "North Carolina", "Ohio",
                          "South Carolina", "Texas")
              if s in SEN26_FLIPS]
     return [
         "U.S. Senate before Election Day: 53 Republicans, "
-        "45 Democrats, 2 Independents. On verified results: "
-        "47 Republicans, 51 Democrats, 2 Independents.",
+        "45 Democrats, 2 Independents. On the races decided so "
+        "far — the seats that were not on the ballot plus the "
+        "races with a verified winner — the count stands at "
+        "43 Republicans, 45 Democrats, 2 Independents: 90 of "
+        "the 100 seats. 10 seats are not decided yet, and no "
+        "undecided seat is counted for either party.",
         "35 seats were voted on (held going in by 22 Republicans "
         "and 13 Democrats). 65 seats were not on the ballot and "
         "do not change.",
         "Changed from Republican to Democrat: "
         + ", ".join(flips) + ".",
-        "Still counting: Alaska and Mississippi. Maine has "
-        "published no statewide count.",
+        "Not decided: Alaska is not called — Peltola, Mary, "
+        "the Democrat, leads the first choices 102,962 to "
+        "102,325, and the ranked-choice count lands November "
+        "18, 2026; Mississippi has published no statewide "
+        "total; Arkansas, Colorado, Delaware, Illinois, Maine, "
+        "Massachusetts, New Hampshire and New Jersey have "
+        "published no verified statewide figures yet.",
     ]
 
 # ---------------------------------------------------------------- tracker economics
