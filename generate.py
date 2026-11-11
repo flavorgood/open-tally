@@ -3889,13 +3889,20 @@ def build_state_pages(d, states, counties_by_state, county_info):
                     f"In {year}, {esc(name)}'s counties add up to "
                     f"{fmt_int(e['reg'])} registered voters and "
                     f"{fmt_int(e['bal'])} ballots cast."))
+                cov = ""
+                if tp is not None and e["nmatch"] < e["nc"]:
+                    cov = (f' — {e["nmatch"]} of the {e["nc"]} '
+                           f'counties in this sum, holding '
+                           f'{fmt_int(e["mreg"])} of the '
+                           f'{fmt_int(e["reg"])} registered voters '
+                           f'added up above')
                 parts.append('<p class="src">State figures added up '
                              'from this state\'s counties in the '
                              'federal survey file — U.S. Election '
                              'Assistance Commission, Election '
                              'Administration and Voting Survey. '
                              'Turnout uses the counties that published '
-                             'both figures.</p>')
+                             f'both figures{cov}.</p>')
             else:
                 return f"<p>No data published for {year}.</p>"
             # the year's county map rides in its own list: where a
@@ -4467,6 +4474,7 @@ def build_downloads(d, states):
     for name in sorted(states):
         s = states[name]
         for y in YEARS:
+            cov = ""
             if y == "2026":
                 reg, bal, tp = s["registered"], s["ballots"], s["turnout_pct"]
                 basis = s["count_label"] + " — " + s["source"]
@@ -4486,18 +4494,26 @@ def build_downloads(d, states):
                 tp = (round(e["mbal"] / e["mreg"] * 100, 1)
                       if e["mreg"] else None)
                 basis = "Federal survey (EAVS) — counties added up"
+                if tp is None:
+                    cov = ""
+                elif e["nmatch"] < e["nc"]:
+                    cov = (f'{e["nmatch"]} of {e["nc"]} counties '
+                           f'in the sum')
+                else:
+                    cov = f'all {e["nc"]} counties in the sum'
             else:
                 reg = bal = tp = None
                 basis = "No data published"
             srows.append({"state": name, "year": int(y),
                           "registered_voters": reg, "ballots_cast": bal,
-                          "turnout_pct_registered": tp, "basis": basis,
+                          "turnout_pct_registered": tp,
+                          "turnout_coverage": cov, "basis": basis,
                           "reported_count": s["published_count"] if y == "2026" else bal,
                           "measure_type": s["count_kind"] if y == "2026" else "ballots_cast",
                           "source_and_reporting_date": s["source"] if y == "2026" else basis})
     _write_dl(dl, "state-figures-by-year",
               ["state", "year", "registered_voters", "ballots_cast",
-               "turnout_pct_registered", "basis", "reported_count", "measure_type", "source_and_reporting_date"], srows, counts)
+               "turnout_pct_registered", "turnout_coverage", "basis", "reported_count", "measure_type", "source_and_reporting_date"], srows, counts)
     return counts
 
 def build_data(d, states, counties_by_state):
@@ -4872,6 +4888,9 @@ def main():
     # the state published. Turnout uses the counties that published
     # both figures (a matched set), never two different county sets
     # divided. Only rows that join to a county on the site count.
+    # The sum also counts its counties (nc) and the matched counties
+    # (nmatch), so a turnout drawn from part of the sum is labeled
+    # with the coverage it actually has.
     site_fips = {(c["state"], c["county_fips"])
                  for cl in counties_by_state.values() for c in cl}
     sums = {}
@@ -4884,13 +4903,16 @@ def main():
                 if reg is None and bal is None: continue
                 e = sums.setdefault((r["state"], y),
                                     {"reg": None, "bal": None,
-                                     "mreg": 0, "mbal": 0})
+                                     "mreg": 0, "mbal": 0,
+                                     "nc": 0, "nmatch": 0})
+                e["nc"] += 1
                 if reg is not None:
                     e["reg"] = (e["reg"] or 0) + reg
                 if bal is not None:
                     e["bal"] = (e["bal"] or 0) + bal
                 if reg is not None and bal is not None:
                     e["mreg"] += reg; e["mbal"] += bal
+                    e["nmatch"] += 1
     d["eavs_sums"] = sums
     # Alaska is a single statewide jurisdiction in EAVS (fips 02000):
     # those rows are the state's own published figures in the survey,
