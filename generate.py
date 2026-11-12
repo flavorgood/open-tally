@@ -4475,6 +4475,7 @@ def build_downloads(d, states):
         s = states[name]
         for y in YEARS:
             cov = ""
+            matched_reg = matched_bal = None
             if y == "2026":
                 reg, bal, tp = s["registered"], s["ballots"], s["turnout_pct"]
                 basis = s["count_label"] + " — " + s["source"]
@@ -4491,6 +4492,7 @@ def build_downloads(d, states):
             elif (name, y) in d["eavs_sums"]:
                 e = d["eavs_sums"][(name, y)]
                 reg, bal = e["reg"], e["bal"]
+                matched_reg, matched_bal = e["mreg"], e["mbal"]
                 tp = (round(e["mbal"] / e["mreg"] * 100, 1)
                       if e["mreg"] else None)
                 basis = "Federal survey (EAVS) — counties added up"
@@ -4507,13 +4509,18 @@ def build_downloads(d, states):
             srows.append({"state": name, "year": int(y),
                           "registered_voters": reg, "ballots_cast": bal,
                           "turnout_pct_registered": tp,
-                          "turnout_coverage": cov, "basis": basis,
+                          "turnout_coverage": cov,
+                          "turnout_matched_registered_voters": matched_reg,
+                          "turnout_matched_ballots_cast": matched_bal,
+                          "basis": basis,
                           "reported_count": s["published_count"] if y == "2026" else bal,
                           "measure_type": s["count_kind"] if y == "2026" else "ballots_cast",
                           "source_and_reporting_date": s["source"] if y == "2026" else basis})
     _write_dl(dl, "state-figures-by-year",
               ["state", "year", "registered_voters", "ballots_cast",
-               "turnout_pct_registered", "turnout_coverage", "basis", "reported_count", "measure_type", "source_and_reporting_date"], srows, counts)
+               "turnout_pct_registered", "turnout_coverage",
+               "turnout_matched_registered_voters", "turnout_matched_ballots_cast",
+               "basis", "reported_count", "measure_type", "source_and_reporting_date"], srows, counts)
     return counts
 
 def build_data(d, states, counties_by_state):
